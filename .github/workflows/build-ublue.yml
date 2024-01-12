@@ -116,7 +116,7 @@ jobs:
           )
           if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
              [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
-                 BUILD_TAGS += (
+                 BUILD_TAGS+=(
                    "${{ github.ref_name }}"
                    "${{ github.ref_name }}-${TIMESTAMP}"
                  )
