@@ -90,10 +90,15 @@ if you wish to disable that, you need to just remove the line that includes blin
 
 See [the just-page in the Universal Blue documentation](https://universal-blue.org/guide/just/) for more information.
 
-## Testing
+## Tags
 
-**Do ALL testing in the [testing](https://github.com/noahdotpy/.myublue/tree/testing) branch**
+The built images are tagged in the following way:
 
-If you want to be on the image from the testing branch, then you can use the `testing` tag.
-For example:
-* `rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/mykinoite:testing`
+> **Tip** You can also check the tags by clicking on the package you want (eg: mykinoite) in the `Packages` area of the sidebar on the right
+
+- [version]-[branch]
+- [version]-[branch]-[timestamp]
+- [branch]
+- [branch]-[timestamp]
+- [timestamp]
+- latest
