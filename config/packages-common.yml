@@ -5,6 +5,7 @@ repos:
 install:
   - bismuth
   - espanso-wayland
+  - firejail
   - piper
   - qt5-qtwebsockets
   - qt6-qtwebsockets
