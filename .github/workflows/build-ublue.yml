@@ -110,20 +110,25 @@ jobs:
           COMMIT_TAGS+=("pr-${{ github.event.number }}${MAJOR_VERSION:+-$MAJOR_VERSION}")
           COMMIT_TAGS+=("${SHA_SHORT}${MAJOR_VERSION:+-$MAJOR_VERSION}")
 
-          if [[ ${{ github.ref_name }} == "testing" ]]; then
-             BUILD_TAGS=("${MAJOR_VERSION}-testing" "${MAJOR_VERSION}-testing-${TIMESTAMP}")
-             if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
-                [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
-                 BUILD_TAGS+=("${TIMESTAMP}")
-                 BUILD_TAGS+=("testing")
-             fi
-          elif [[ ${{ github.ref_name }} == "live" ]]; then
-             BUILD_TAGS=("${MAJOR_VERSION}" "${MAJOR_VERSION}-${TIMESTAMP}")
-             if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
-                [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
-                 BUILD_TAGS+=("${TIMESTAMP}")
-                 BUILD_TAGS+=("latest")
-             fi
+          BUILD_TAGS+=(
+            "${{github.ref_name}}" # eg: testing
+            "${MAJOR_VERSION}-${{ github.ref_name }}" # eg: 39-testing
+            "${MAJOR_VERSION}-${{ github.ref_name }}-${TIMESTAMP}" # eg: 39-testing-20231230
+          )
+          if [[ "${{ matrix.is_latest_version }}" == "true" ]] && \
+             [[ "${{ matrix.is_stable_version }}" == "true" ]]; then
+                 BUILD_TAGS+=(
+                     "${TIMESTAMP}-${{ github.ref_name }}"
+                     "${{ github.ref_name }}"
+                 )
+                 BUILD_TAGS+=("${TIMESTAMP}-${{ github.ref_name }}")
+                 BUILD_TAGS+=("${{ github.ref_name }}")
+                 if [[ ${{ github.ref_name }} == "live" ]]; then
+                     BUILD_TAGS+=(
+                         "${TIMESTAMP}"
+                         "latest"
+                     )
+                 fi
           fi
 
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
