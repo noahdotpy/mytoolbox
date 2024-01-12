@@ -83,7 +83,7 @@ Note that this release-iso action is not a replacement for a full-blown release 
 
 The [`just`](https://just.systems/) command runner is included in all `ublue-os/main`-derived images.
 
-> **Tip**: Type `just` to list the just recipes available.
+> **Tip** Type `just` to list the just recipes available.
 
 The file `/usr/share/ublue-os/just/custom.just` is intended for the custom just commands (recipes) you wish to include in your image.
 if you wish to disable that, you need to just remove the line that includes bling.just.
