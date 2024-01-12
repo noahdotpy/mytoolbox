@@ -4,3 +4,7 @@ rules:
     upstream: ublue-os:template
     mergeMethod: hardreset
     mergeUnstable: false
+  - base: live
+    upstream: noahdotpy:template
+    mergeMethod: rebase
+    mergeUnstable: false
