@@ -9,10 +9,10 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 modules:
-  - from-file: common-bling.yml
-  - from-file: common-files.yml
-  - from-file: common-packages.yml
-  - from-file: common-scripts.yml
+  - from-file: bling-common.yml
+  - from-file: files-common.yml
+  - from-file: packages-common.yml
+  - from-file: scripts-common.yml
 
   # - type: files
   #   files:
