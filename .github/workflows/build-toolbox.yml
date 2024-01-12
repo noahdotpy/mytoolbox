@@ -10,8 +10,8 @@ on:
       - live
     paths-ignore:
       - '**/README.md'
-      - 'config/'
-      - 'modules/'
+      - '/config/'
+      - '/modules/'
 env:
     IMAGE_NAME: mybox
     IMAGE_TAGS: latest
