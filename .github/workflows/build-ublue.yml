@@ -12,9 +12,14 @@ on: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-wor
     branches:
       - live
       - testing
-    paths-ignore: # don't rebuild if only documentation has changed
-      - "**.md"
-      - "/toolboxes/"
+    paths:
+      - '/config/'
+      - '/modules/'
+      - '/.github/workflows/build-ublue.yml/'
+      - '/cosign.pub'
+      - '/build.sh'
+      - '/boot_menu.yml'
+      - '/Containerfile'
   pull_request:
   workflow_dispatch:
 
