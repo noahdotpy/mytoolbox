@@ -1,5 +1,8 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: noahdotpy/myublue
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: mybazzite
+        info: Bazzite (KDE Gaming)
+      - label: mykinoite
+        info: Kinoite (KDE)
