@@ -8,10 +8,11 @@ on:
   push:
     branches:
       - live
-    paths:
-      - '/toolboxes/'
-      - '/.github/workflows/build-toolbox.yml/'
-      - '/cosign.pub'
+    paths-ignore:
+      - '/config/**'
+      - '/modules/**'
+      - '**/*.md'
+      - '/.justfile'
   workflow_dispatch:
 env:
     IMAGE_NAME: mybox
