@@ -2,3 +2,5 @@
 type: files
 add:
   - common/usr: /usr
+remove:
+  - /etc/profile.d/ublue-os-just.sh
