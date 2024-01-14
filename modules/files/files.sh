@@ -36,12 +36,13 @@ fi
 if [[ ${#RMV_FILES[@]} -gt 0 ]]; then
 	echo "Removing files from image"
 	for TARGET in "${RMV_FILES[@]}"; do
-    if ! [ -e "$TARGET" ]; then
+		TARGET=$(echo $TARGET | xargs)
+		if ! [ -e "$TARGET" ]; then
 			echo "File or Directory $TARGET Already Does Not Exist, Skipping Removal..."
-      continue
-    fi
+			continue
+		fi
 
-    rm -rf $TARGET
-    echo "Removing $TARGET"
+		rm -rf $TARGET
+		echo "Removing $TARGET"
 	done
 fi
