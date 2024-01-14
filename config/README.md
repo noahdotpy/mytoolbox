@@ -16,6 +16,21 @@ At the top of the recipe, there are four *mandatory* configuration options.
 
 ## Modules
 
+---
+
+### Specification
+
+**Modules should always be in this order, for modules to be applied consistently**
+
+Variant-specific modules should always be applied straight after the common one
+
+- packages
+- bling
+- files
+- scripts
+
+---
+
 The core of startingpoint's configuration is built around the idea of modules. Modules are scripts in the [`../modules`](../modules/) directory that you configure under `modules:` in the recipe. They are executed in order, and can run arbitrary shell commands and write any files.
 
 This repository fetches some useful default modules from [`ublue-os/bling`](https://github.com/ublue-os/bling/), like [`rpm-ostree`](https://universal-blue.org/tinker/modules/rpm-ostree) for pseudo-declarative package management, [`bling`](https://universal-blue.org/tinker/modules/bling) for pulling extra components from [`ublue-os/bling`](https://github.com/ublue-os/bling), and [`files`](https://universal-blue.org/tinker/modules/files) for copying files from the `config/files/` directory into your image.
