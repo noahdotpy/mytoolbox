@@ -29,6 +29,19 @@ Variant-specific modules should always be applied straight after the common one
 - files
 - scripts
 
+#### Example
+
+` config/recipe.yml`
+```yaml
+# ... #
+modules:
+  - from-file: packages-common.yml
+  - from-file: packages-kinoite.yml
+  - from-file: bling-common.yml
+  - from-file: files-common.yml
+  - from-file: scripts-common.yml
+```
+
 ---
 
 The core of startingpoint's configuration is built around the idea of modules. Modules are scripts in the [`../modules`](../modules/) directory that you configure under `modules:` in the recipe. They are executed in order, and can run arbitrary shell commands and write any files.
