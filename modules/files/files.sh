@@ -36,7 +36,7 @@ fi
 if [[ ${#RMV_FILES[@]} -gt 0 ]]; then
 	echo "Removing files from image"
 	for TARGET in "${RMV_FILES[@]}"; do
-    if ! [ -d "$TARGET" ]; then
+    if ! [ -e "$TARGET" ]; then
 			echo "File or Directory $TARGET Already Does Not Exist, Skipping Removal..."
       continue
     fi
