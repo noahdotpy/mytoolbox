@@ -1,4 +1,4 @@
-# https://universal-blue.org/tinker/modules/files/
+# https://github.com/noahdotpy/myublue/blob/live/modules/files/README.md
 type: files
-files:
+add:
   - common/usr: /usr
