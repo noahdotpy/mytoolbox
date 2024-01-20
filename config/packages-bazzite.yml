@@ -2,3 +2,5 @@
 type: rpm-ostree
 remove:
   - steam
+  - webapp-manager
+  - lutris
