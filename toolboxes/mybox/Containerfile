@@ -14,7 +14,7 @@ RUN rm /extra-packages
 RUN   ln -fs /bin/sh /usr/bin/sh && \
 
       # Use host for these directories
-      ln -fs /run/host/nix /nix
+      ln -fs /run/host/nix /nix && \
 
       # Use host for these programs
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
