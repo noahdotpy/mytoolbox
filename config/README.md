@@ -36,7 +36,7 @@ Variant-specific modules should always be applied straight after the common one
 # ... #
 modules:
   - from-file: packages-common.yml
-  - from-file: packages-kinoite.yml
+  - from-file: packages-gnome.yml
   - from-file: bling-common.yml
   - from-file: files-common.yml
   - from-file: scripts-common.yml

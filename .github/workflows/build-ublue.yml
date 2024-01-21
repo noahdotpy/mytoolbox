@@ -40,8 +40,8 @@ jobs:
         # Add recipes for all the images you want to build here.
         # Don't add module configuration files, you will get errors.
         recipe:
-          - recipe-bazzite.yml
-          - recipe-kinoite.yml
+          - recipe-gnome.yml
+          - recipe-plasma.yml
 # !!!
 
     steps:

@@ -2,7 +2,7 @@ ublue_variants:
   - label: noahdotpy/myublue
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: mybazzite
-        info: Bazzite (KDE Gaming)
-      - label: mykinoite
-        info: Kinoite (KDE)
+      - label: mygnome
+        info: Bazzite (Gnome Gaming)
+      - label: myplasma
+        info: Bazzite (KDE Plasma Gaming)
