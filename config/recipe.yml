@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: mygnome
+name: myublue
 # description will be included in the image's metadata
 description: This is my personal OS image based on ublue-os/bazzite-gnome running on a Lenovo Ideapad S145-14IWL with an Intel i3.
 
@@ -9,7 +9,7 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 modules:
-  - from-file: packages-common.yml
-  - from-file: bling-common.yml
-  - from-file: files-common.yml
-  - from-file: scripts-common.yml
+  - from-file: packages.yml
+  - from-file: bling.yml
+  - from-file: files.yml
+  - from-file: scripts.yml
