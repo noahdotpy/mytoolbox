@@ -111,8 +111,6 @@ jobs:
           COMMIT_TAGS+=("${SHA_SHORT}${MAJOR_VERSION:+-$MAJOR_VERSION}")
           
           BUILD_TAGS+=(
-            "${{SHA_SHORT}}"
-            "${MAJOR_VERSION}-${{SHA_SHORT}}"
             "${MAJOR_VERSION}-${{ github.ref_name }}"
             "${MAJOR_VERSION}-${{ github.ref_name }}-${TIMESTAMP}"
             "${{ github.ref_name }}"
