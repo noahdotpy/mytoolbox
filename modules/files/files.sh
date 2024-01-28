@@ -6,9 +6,9 @@ set -oue pipefail
 get_yaml_array ADD_FILES '.add[]' "$1"
 get_yaml_array RMV_FILES '.remove[]' "$1"
 
-cd "$CONFIG_DIRECTORY/files"
-
 if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
+	cd "$CONFIG_DIRECTORY/files"
+
 	echo "Adding files to image"
 	for pair in "${ADD_FILES[@]}"; do
 		FILE="$PWD/$(echo $pair | yq 'to_entries | .[0].key')"
