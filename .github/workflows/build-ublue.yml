@@ -41,6 +41,7 @@ jobs:
         # Don't add module configuration files, you will get errors.
         recipe:
           - bluefin.yml
+          - mybazzite.yml
 # !!!
 
     steps:
