@@ -1,10 +1,5 @@
 # My custom uBlue images
 
-> **Warning**
-> These images are made only for my hardware and may not work on yours, but they could, feel free to try.
-> Anyone that uses AMD/Intel should have no problems booting, but I can't tell you any more than that.
-> Some changes I have made will only affect a certain type of laptop (e.g, I made custom scripts to handle my lenovo laptop's battery conservation mode)
-
 [![build-ublue](https://github.com/noahdotpy/myublue/actions/workflows/build-ublue.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-ublue.yml)
 
 This is a constantly updating repository which hosts my custom [ostree images](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want.

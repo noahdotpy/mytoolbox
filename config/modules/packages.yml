@@ -3,20 +3,6 @@ type: rpm-ostree
 repos:
   - https://copr.fedorainfracloud.org/coprs/eclipseo/espanso/repo/fedora-%OS_VERSION%/eclipseo-espanso-fedora-%OS_VERSION%.repo
 install:
-  - bismuth
   - chromium
-  - espanso-wayland
-  - firejail
   - piper
-  - qt5-qtwebsockets
-  - qt6-qtwebsockets
-  - tldr
-  - virt-manager
-  - vorta
-  - wl-clipboard
   - zsh
-remove:
-  - steam
-  - webapp-manager
-  - lutris
-

@@ -2,4 +2,3 @@
 type: script
 scripts:
   - signing.sh # this sets up the proper policy & signing files for signed images to work
-  - extend-just-imports.sh
