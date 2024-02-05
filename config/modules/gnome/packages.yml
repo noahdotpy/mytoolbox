@@ -1,5 +1,6 @@
 # https://universal-blue.org/tinker/modules/rpm-ostree/
 type: rpm-ostree
 install:
+  - kvantum
   - libgda
   - libgda-sqlite
