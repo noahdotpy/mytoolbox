@@ -5,4 +5,5 @@ install:
   - kvantum
   - libgda
   - libgda-sqlite
-  - qgnomeplatform
+  - qgnomeplatform-qt5
+  - qgnomeplatform-qt6
