@@ -11,17 +11,22 @@ RUN apk update && \
     grep -v '^#' /extra-packages | xargs apk add
 RUN rm /extra-packages
 
-RUN   ln -fs /bin/sh /usr/bin/sh && \
+# Install Vib
+RUN wget https://github.com/Vanilla-OS/Vib/releases/latest/download/vib && \
+    chmod +x vib && \
+    mv vib ~/.local/bin
 
-      # Use host for these directories
-      ln -fs /run/host/nix /nix && \
+RUN ln -fs /bin/sh /usr/bin/sh && \
 
-      # Use host for these programs
-      ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
-      ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \ 
-      ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
-      ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
-      ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/nix && \
-      ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/ujust && \
-      ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update
+    # Use host for these directories
+    ln -fs /run/host/nix /nix && \
+
+    # Use host for these programs
+    ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
+    ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \ 
+    ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
+    ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
+    ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/nix && \
+    ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/ujust && \
+    ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/transactional-update
      
