@@ -11,11 +11,6 @@ RUN apk update && \
     grep -v '^#' /extra-packages | xargs apk add
 RUN rm /extra-packages
 
-# Install Vib
-RUN wget https://github.com/Vanilla-OS/Vib/releases/latest/download/vib && \
-    chmod +x vib && \
-    mv vib ~/.local/bin
-
 RUN ln -fs /bin/sh /usr/bin/sh && \
 
     # Use host for these directories
