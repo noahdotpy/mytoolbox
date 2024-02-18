@@ -3,4 +3,5 @@ type: rpm-ostree
 install:
   - chromium
   - cryfs
+  - syncthing
   - zsh
