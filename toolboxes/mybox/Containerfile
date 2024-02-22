@@ -7,7 +7,7 @@ LABEL com.github.containers.toolbox="true" \
 
 COPY toolboxes/mybox/extra-packages /
 RUN dnf upgrade --refresh && \
-    grep -v '^#' /extra-packages | xargs dnf install
+    grep -v '^#' /extra-packages | xargs dnf install -y
 RUN rm /extra-packages
 
 RUN ln -fs /bin/sh /usr/bin/sh && \
