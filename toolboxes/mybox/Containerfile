@@ -6,8 +6,8 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="noahdotpy@proton.me"
 
 COPY toolboxes/mybox/extra-packages /
-RUN apk update -y && \
-    apk upgrade -y && \
+RUN apt update -y && \
+    apt upgrade -y && \
     grep -v '^#' /extra-packages | xargs apt install -y
 RUN rm /extra-packages
 
