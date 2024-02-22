@@ -1,4 +1,4 @@
-FROM quay.io/toolbx-images/alpine-toolbox:edge
+FROM registry.fedoraproject.org/fedora-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
@@ -6,9 +6,8 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="noahdotpy@proton.me"
 
 COPY toolboxes/mybox/extra-packages /
-RUN apk update && \
-    apk upgrade && \
-    grep -v '^#' /extra-packages | xargs apk add
+RUN dnf upgrade --refresh && \
+    grep -v '^#' /extra-packages | xargs dnf install
 RUN rm /extra-packages
 
 RUN ln -fs /bin/sh /usr/bin/sh && \
@@ -16,8 +15,9 @@ RUN ln -fs /bin/sh /usr/bin/sh && \
     # Use host for these directories
     ln -fs /run/host/nix /nix && \
 
-    # Use host for these programs
+    # Use host for these binaries
     ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
+    ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/distrobox && \
     ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \ 
     ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
     ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/rpm-ostree && \
