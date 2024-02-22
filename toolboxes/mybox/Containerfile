@@ -1,4 +1,4 @@
-FROM quay.io/toolbx-images/alpine-toolbox:edge
+FROM quay.io/toolbx-images/ubuntu-toolbox:23.10
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
@@ -6,9 +6,9 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="noahdotpy@proton.me"
 
 COPY toolboxes/mybox/extra-packages /
-RUN apk update && \
-    apk upgrade && \
-    grep -v '^#' /extra-packages | xargs apk add
+RUN apk update -y && \
+    apk upgrade -y && \
+    grep -v '^#' /extra-packages | xargs apt install -y
 RUN rm /extra-packages
 
 RUN ln -fs /bin/sh /usr/bin/sh && \
