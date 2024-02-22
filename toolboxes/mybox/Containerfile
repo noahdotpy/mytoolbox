@@ -6,7 +6,7 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="noahdotpy@proton.me"
 
 COPY toolboxes/mybox/extra-packages /
-RUN dnf upgrade --refresh -y && \
+RUN dnf upgrade --refresh && \
     grep -v '^#' /extra-packages | xargs dnf install -y
 RUN rm /extra-packages
 
