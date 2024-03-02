@@ -6,8 +6,8 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="noahdotpy@proton.me"
 
 COPY toolboxes/mybox/extra-packages /
-RUN pacman -Syu && \
-    cat /extra-packages | xargs pacman -Syu 
+RUN pacman -Syu --noconfirm && \
+    cat /extra-packages | xargs pacman -Syu --noconfirm
 RUN rm /extra-packages
 
 RUN ln -fs /bin/sh /usr/bin/sh && \
