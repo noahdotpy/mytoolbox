@@ -1,4 +1,4 @@
-FROM quay.io/toolbx-images/archlinux-toolbox:latest
+FROM quay.io/toolbx-images/alpine-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
@@ -6,8 +6,8 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="noahdotpy@proton.me"
 
 COPY toolboxes/mybox/extra-packages /
-RUN pacman -Syu --noconfirm && \
-    cat /extra-packages | xargs pacman -Syu --noconfirm
+RUN apk update && \
+    cat /extra-packages | xargs apk add
 RUN rm /extra-packages
 
 RUN ln -fs /bin/sh /usr/bin/sh && \
