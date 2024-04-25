@@ -1,6 +1,6 @@
 # https://github.com/noahdotpy/myublue/blob/live/modules/files/README.md
 type: files
-# add:
-#   - usr: /usr
+add:
+  - usr: /usr
 remove:
   - /etc/profile.d/ublue-os-just.sh
