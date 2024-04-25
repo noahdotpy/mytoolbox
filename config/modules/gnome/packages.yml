@@ -1,9 +1,0 @@
-# https://universal-blue.org/tinker/modules/rpm-ostree/
-type: rpm-ostree
-install:
-  - gnome-shell-extension-pop-shell
-  - kvantum
-  - libgda
-  - libgda-sqlite
-  - qgnomeplatform-qt5
-  - qgnomeplatform-qt6
