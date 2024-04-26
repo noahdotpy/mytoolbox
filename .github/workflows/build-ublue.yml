@@ -22,8 +22,15 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
-          # !! Add your recipes here 
+          # !! Add your recipes here
+          - aurora-dx-gts.yml
+          - aurora-dx-latest.yml
+          - aurora-gts.yml
+          - aurora-latest.yml
           - bazzite-gnome.yml
+          - bazzite-plasma.yml
+          - bluefin-dx-gts.yml
+          - bluefin-dx-latest.yml
           - bluefin-gts.yml
           - bluefin-latest.yml
     steps:
