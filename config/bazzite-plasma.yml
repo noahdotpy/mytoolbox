@@ -4,7 +4,7 @@ name: bazzite-plasma
 description: This is my personal OS image based on ublue-os/bazzite (AMD/Intel).
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-plasma
+base-image: ghcr.io/ublue-os/bazzite
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
