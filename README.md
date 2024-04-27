@@ -48,7 +48,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 - 3. Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/aurora-dx-gts::latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/aurora-dx-gts:latest
   ```
 - 4. Reboot again to complete the installation
   ```
