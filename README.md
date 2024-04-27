@@ -40,7 +40,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 - 1. First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/myublue:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/aurora-dx-gts:latest
   ```
 - 2. Reboot to complete the rebase:
   ```
@@ -48,7 +48,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 - 3. Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/myublue:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/aurora-dx-gts::latest
   ```
 - 4. Reboot again to complete the installation
   ```
@@ -58,7 +58,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
 
 ```
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/myublue:20230403
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/aurora-dx-gts::20230403
 ```
 
 This repository by default also supports signing.
@@ -89,7 +89,7 @@ See [the just-page in the Universal Blue documentation](https://universal-blue.o
 
 The built images are tagged in the following way:
 
-> **Tip** You can also check the tags by clicking on the package you want (eg: myublue) in the `Packages` area of the sidebar on the right
+> **Tip** You can also check the tags by clicking on the package you want (eg: aurora-dx-gts:) in the `Packages` area of the sidebar on the right
 
 - [version]-[branch]
 - [version]-[branch]-[timestamp]
