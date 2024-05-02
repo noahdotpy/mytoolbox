@@ -12,5 +12,6 @@ modules:
   - from-file: modules/packages.yml
   - from-file: modules/files.yml
   - from-file: modules/scripts.yml
+  - from-file: modules/dx/packages.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
