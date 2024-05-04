@@ -1,5 +1,7 @@
 # https://universal-blue.org/tinker/modules/rpm-ostree/
 type: rpm-ostree
+repo:
+  - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
 install:
   - cliphist
   - hyprland-contrib
@@ -16,5 +18,4 @@ install:
   - waybar
   - wlogout
   - xdg-desktop-portal-hyprland
-repo:
-  - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
+
