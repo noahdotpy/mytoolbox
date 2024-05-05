@@ -21,6 +21,8 @@ install:
   - nwg-panel
   - qt5ct
   - qt6ct
+  - blueberry
+  - nm-applet
   - swaylock
   - waybar
   - wlogout
