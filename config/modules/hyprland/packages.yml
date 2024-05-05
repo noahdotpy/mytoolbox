@@ -18,6 +18,7 @@ install:
   - kitty
   - nwg-clipman
   - nwg-look
+  - nwg-panel
   - qt5ct
   - qt6ct
   - swaylock
