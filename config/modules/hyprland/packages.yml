@@ -22,7 +22,7 @@ install:
   - qt5ct
   - qt6ct
   - blueberry
-  - nm-applet
+  - network-manager-applet
   - swaylock
   - waybar
   - wlogout
