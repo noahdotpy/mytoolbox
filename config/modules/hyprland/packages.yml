@@ -21,7 +21,6 @@ install:
   - nwg-panel
   - qt5ct
   - qt6ct
-  - blueberry
   - network-manager-applet
   - swaylock
   - waybar
