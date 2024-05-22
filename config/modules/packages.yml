@@ -1,6 +1,7 @@
 # https://universal-blue.org/tinker/modules/rpm-ostree/
 type: rpm-ostree
 install:
+  - ImageMagick
   - chromium
   - cryfs
   - lzip
