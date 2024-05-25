@@ -1,2 +1,2 @@
 modules:
-  - from-file: aurora/files.yml
+  - from-file: modules/aurora/files.yml
