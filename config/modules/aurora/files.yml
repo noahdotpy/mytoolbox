@@ -1,0 +1,4 @@
+# https://github.com/noahdotpy/myublue/blob/live/modules/files/README.md
+type: files
+add:
+  - aurora/usr: /usr
