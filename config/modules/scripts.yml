@@ -1,4 +1,0 @@
-# https://universal-blue.org/tinker/modules/script/
-type: script
-scripts:
-  - signing.sh # this sets up the proper policy & signing files for signed images to work
