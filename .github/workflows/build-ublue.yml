@@ -23,16 +23,16 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - aurora-dx-gts.yml
-          - aurora-dx-latest.yml
-          - aurora-gts.yml
-          - aurora-latest.yml
           - bazzite-gnome.yml
           - bazzite-plasma.yml
-          - bluefin-dx-gts.yml
-          - bluefin-dx-latest.yml
-          - bluefin-gts.yml
-          - bluefin-latest.yml
+          - bluefin-gnome-dx-gts.yml
+          - bluefin-gnome-dx-latest.yml
+          - bluefin-gnome-gts.yml
+          - bluefin-gnome-latest.yml
+          - bluefin-plasma-dx-gts.yml
+          - bluefin-plasma-dx-latest.yml
+          - bluefin-plasma-gts.yml
+          - bluefin-plasma-latest.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
