@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: bluefin-dx-gts
+name: bluefin-gnome-dx-gts
 # description will be included in the image's metadata
 description: This is my personal OS image based on ublue-os/bluefin-dx (AMD/Intel).
 
