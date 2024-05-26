@@ -10,6 +10,6 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 modules:
   - from-file: modules/init.yml
-  - from-file: modules/aurora/init.yml
+  - from-file: modules/bluefin-plasma/init.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
