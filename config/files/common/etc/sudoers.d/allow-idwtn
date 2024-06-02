@@ -1,0 +1,3 @@
+noah   ALL=(ALL) NOPASSWD: /usr/libexec/idwtn-script
+noah   ALL=(ALL) NOPASSWD: /usr/bin/idwtn-set disallow
+noah   ALL=(ALL) NOPASSWD: /usr/bin/set-file-to /etc/idwtn-config disallow
