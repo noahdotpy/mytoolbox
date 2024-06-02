@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+# arg 1 = file to override
+# arg 2 = text to put in file
+
+echo $2 | tee $1 > /dev/null

@@ -1,0 +1,6 @@
+[Unit]
+Description=IDWTN service
+
+[Service]
+Type=oneshot
+ExecStart=sudo /usr/libexec/idwtn-disable-or-enable

@@ -1,4 +1,4 @@
-# https://universal-blue.org/tinker/modules/rpm-ostree/
+# https://blue-build.org/reference/modules/rpm-ostree/
 type: rpm-ostree
 repos:
   - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo

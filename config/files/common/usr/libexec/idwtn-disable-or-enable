@@ -1,0 +1,41 @@
+#!/usr/bin/bash
+
+# I Don't Want To Network (IDWTN)
+
+function enable-networking {
+	iptables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP
+	ip6tables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP
+	echo "Networking currently enabled for user $USERNAME. You may need to reboot your computer."
+}
+
+function disable-networking {
+	iptables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP
+	ip6tables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP
+	echo "Networking currently disabled for user $USERNAME."
+}
+
+USERNAME="noah"
+
+TIME_START="08:30"
+TIME_END="15:00"
+
+CURRENT_TIME=$(date +"%H:%M")
+DAY_OF_WEEK=$(date +%u)
+
+CONFIG_FILE="/etc/idwtn-config"
+CONFIG=$(cat $CONFIG_FILE)
+
+echo "Networking config is set to: '$CONFIG'"
+
+if [[ "$CONFIG" = "disallow" ]]; then
+	disable-networking
+elif [[ "$CONFIG" = "allow" ]]; then
+	enable-networking
+elif [[ "$CONFIG" = "schedule" ]]; then
+	# If day == wednesday and time_is_between(8:30-15:00); then: enable networking; else: disable networking.
+	if [[ "$CURRENT_TIME" > "$TIME_START" && "$CURRENT_TIME" < "$TIME_END" && "$DAY_OF_WEEK" = "3" ]]; then
+		enable-networking
+	else
+		disable-networking
+	fi
+fi
