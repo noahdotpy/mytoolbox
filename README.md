@@ -2,6 +2,8 @@
 
 [![build-ublue](https://github.com/noahdotpy/myublue/actions/workflows/build-ublue.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-ublue.yml)
 
+This repository is solely intended for only my purpose and may not work completely for your machine/workflow/something else.
+
 This is a constantly updating repository which hosts my custom [ostree images](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want.
 GitHub will build this image, and then host it on [ghcr.io](https://github.com/features/packages).
 The users can then tell the computer to boot off of that image.
