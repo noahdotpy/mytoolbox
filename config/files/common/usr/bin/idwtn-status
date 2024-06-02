@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+# I Don't Want To Network (IDWTN)
+
+CONFIG_FILE="/etc/idwtn-config"
+CONFIG=$(cat $CONFIG_FILE)
+echo "IDWTN config is set to: '$CONFIG'"
