@@ -5,13 +5,13 @@
 function enable-networking {
 	iptables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
 	ip6tables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
-	echo "Networking currently enabled for user $USERNAME. You may need to reboot your computer."
+	echo "Networking enabled for user $USERNAME."
 }
 
 function disable-networking {
 	iptables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
 	ip6tables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
-	echo "Networking currently disabled for user $USERNAME."
+	echo "Networking disabled for user $USERNAME."
 }
 
 USERNAME="noah"
@@ -38,4 +38,6 @@ elif [[ "$CONFIG" = "schedule" ]]; then
 	else
 		disable-networking
 	fi
+else
+	echo "Config is not a valid option. Must be 'disallow', 'allow' or 'schedule'"
 fi

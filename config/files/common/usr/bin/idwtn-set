@@ -7,7 +7,7 @@ NEW_OPTION=$1
 
 if [[ "$NEW_OPTION" != "schedule" && "$NEW_OPTION" != "allow" && "$NEW_OPTION" != "disallow" ]]; then
 	echo "# You must use one of these: schedule, allow, disallow. Only lowercase is acceptable."
-	echo "schedule - use the programmed schedule in the idwtn-disable-or-enable shell script"
+	echo "schedule - use the programmed schedule in /usr/libexec/idwtn-script"
 	echo "allow - always allow networking"
 	echo "disallow - always disallow networking"
 	exit 1
