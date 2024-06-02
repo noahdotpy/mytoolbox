@@ -2,4 +2,4 @@
 
 # I Don't Want To Network (IDWTN)
 
-sudo /usr/libexec/idwtn-script >/dev/null 2>&1
+sudo /usr/libexec/idwtn-script &>/dev/null
