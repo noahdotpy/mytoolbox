@@ -6,6 +6,8 @@ set -oue pipefail
 get_yaml_array ADD_FILES '.add[]' "$1"
 get_yaml_array RMV_FILES '.remove[]' "$1"
 
+shopt -s dotglob
+
 if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 	cd "$CONFIG_DIRECTORY/files"
 
@@ -18,14 +20,16 @@ if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 				mkdir -p "$DEST"
 			fi
 			echo "Copying $FILE to $DEST"
-			cp -r "$FILE"/* $DEST
+			cp -rf "$FILE"/* $DEST
+			rm -f "$DEST"/.gitkeep
 		elif [ -f "$FILE" ]; then
 			DEST_DIR=$(dirname "$DEST")
 			if [ ! -d "$DEST_DIR" ]; then
 				mkdir -p "$DEST_DIR"
 			fi
 			echo "Copying $FILE to $DEST"
-			cp $FILE $DEST
+			cp -f $FILE $DEST
+			rm -f "$DEST"/.gitkeep
 		else
 			echo "File or Directory $FILE Does Not Exist in $CONFIG_DIRECTORY/files"
 			exit 1
@@ -38,7 +42,7 @@ if [[ ${#RMV_FILES[@]} -gt 0 ]]; then
 	for TARGET in "${RMV_FILES[@]}"; do
 		TARGET=$(echo $TARGET | xargs)
 		if ! [ -e "$TARGET" ]; then
-			echo "File or Directory $TARGET Already Does Not Exist, Skipping Removal..."
+			echo "File or Directory $TARGET Already Does Not Exist"
 			continue
 		fi
 
@@ -46,3 +50,5 @@ if [[ ${#RMV_FILES[@]} -gt 0 ]]; then
 		echo "Removing $TARGET"
 	done
 fi
+
+shopt -u dotglob
