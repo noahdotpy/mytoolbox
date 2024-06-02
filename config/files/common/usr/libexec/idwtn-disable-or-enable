@@ -3,14 +3,14 @@
 # I Don't Want To Network (IDWTN)
 
 function enable-networking {
-	iptables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP
-	ip6tables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP
+	iptables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
+	ip6tables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
 	echo "Networking currently enabled for user $USERNAME. You may need to reboot your computer."
 }
 
 function disable-networking {
-	iptables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP
-	ip6tables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP
+	iptables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
+	ip6tables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
 	echo "Networking currently disabled for user $USERNAME."
 }
 
