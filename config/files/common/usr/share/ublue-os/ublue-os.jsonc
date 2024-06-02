@@ -35,19 +35,7 @@
       "type": "uptime",
       "key": "󰅐"
     },
-    {
-      "type": "command",
-      "key": "󰔠",
-      "text": "date -d$(ls -alct / --time-style=full-iso|tail -1|awk '{print $6}') +'Forged on %b %d %G'",
-      "shell": "/bin/bash"
-    },
     "break",
-    {
-      "type": "command",
-      "key": "󰾰",
-      "text": "cat /sys/devices/virtual/dmi/id/product_name",
-      "shell": "/bin/bash"
-    },
     {
       "type": "cpu",
       "key": "󰻠"
