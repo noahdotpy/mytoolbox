@@ -1,6 +1,0 @@
-// Allow all users to upgrade system
-polkit.addRule(function(action, subject) {
-    if (action.id == "org.projectatomic.rpmostree1.upgrade") {
-        return polkit.Result.YES;
-    }
-});
