@@ -3,4 +3,7 @@
 # I Don't Want To Network (IDWTN)
 
 CONFIG_FILE="/etc/idwtn-config"
-cat $CONFIG_FILE
+echo "config: $(cat $CONFIG_FILE)"
+
+STATUS_FILE="/usr/share/idwtn-status"
+echo "status: $(cat $STATUS_FILE)"
