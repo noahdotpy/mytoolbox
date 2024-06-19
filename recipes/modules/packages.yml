@@ -1,9 +1,12 @@
 # https://blue-build.org/reference/modules/rpm-ostree/
 type: rpm-ostree
+repos:
+  - https://copr.fedorainfracloud.org/coprs/johanh/timekpr-next/repo/fedora-%OS_VERSION%/johanh-timekpr-next-fedora-%OS_VERSION%.repo
 install:
   - ImageMagick
   - chromium
   - cryfs
   - lzip
+  - timekpr-next
   - waydroid
   - zsh
