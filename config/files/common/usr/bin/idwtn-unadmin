@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+# I Don't Want To Network (IDWTN)
+
+USERNAME="admin"
+
+gpasswd -d $USERNAME wheel
