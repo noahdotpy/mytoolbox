@@ -2,6 +2,6 @@
 
 # I Don't Want To Network (IDWTN)
 
-USERNAME="admin"
+USERNAME="noah"
 
 usermod -aG wheel $USERNAME

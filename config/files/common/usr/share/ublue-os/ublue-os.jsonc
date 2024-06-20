@@ -89,7 +89,7 @@
     {
       "type": "command",
       "key": "󰖩",
-      "text": "echo IDWTN is on mode: $(/usr/bin/idwtn-status)",
+      "text": "echo IDWTN: $(/usr/bin/idwtn-status)",
       "shell": "/bin/bash"
     },
   ]
