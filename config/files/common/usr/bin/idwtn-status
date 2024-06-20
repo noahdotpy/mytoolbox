@@ -5,4 +5,13 @@
 CONFIG_FILE="/etc/idwtn-config"
 STATUS_FILE="/etc/idwtn-status"
 
-echo "config: $(cat $CONFIG_FILE), status: $(cat $STATUS_FILE)"
+CONFIG=$(cat $CONFIG_FILE)
+STATUS=$(cat $STATUS_FILE)
+
+if [[ "$STATUS" = "1" ]]; then
+	STATUS="on"
+else
+	STATUS="off"
+fi
+
+echo "config: $(cat $CONFIG), status: $(cat $STATUS)"
