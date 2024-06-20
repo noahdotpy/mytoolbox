@@ -27,7 +27,7 @@ DAY_OF_WEEK=$(date +%u)
 CONFIG_FILE="/etc/idwtn-config"
 CONFIG=$(cat $CONFIG_FILE)
 
-STATUS_FILE="/usr/share/idwtn-status"
+STATUS_FILE="/etc/idwtn-status"
 
 echo "Networking config is set to: '$CONFIG'"
 

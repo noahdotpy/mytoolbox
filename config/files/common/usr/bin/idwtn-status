@@ -5,5 +5,5 @@
 CONFIG_FILE="/etc/idwtn-config"
 echo "config: $(cat $CONFIG_FILE)"
 
-STATUS_FILE="/usr/share/idwtn-status"
+STATUS_FILE="/etc/idwtn-status"
 echo "status: $(cat $STATUS_FILE)"
