@@ -2,7 +2,7 @@
 
 # I Don't Want To Network (IDWTN)
 
-CHOICES=$(ugum choose --no-limit clipboard disallow-network unadmin --header "Choose which options you want for lockdown:")
+CHOICES=$(ugum choose --no-limit clipboard disallow-network unadmin --header "Choose which options you want for lockdown:" | xargs)
 
 CONFIRM_RESPONSE=$(ugum choose Yes No --header "Lockdown with these options: '$CHOICES'?")
 if [ "$CONFIRM_RESPONSE" = "Yes" ]; then
@@ -17,11 +17,16 @@ if [ "$CONFIRM_RESPONSE" = "Yes" ]; then
 		sudo /usr/bin/idwtn-unadmin
 	fi
 
-	notify-send "Locking down with these choices: $CHOICES" -u critical
+	notify-send "Locked down with these choices: $CHOICES" -u critical
 
 	SHUTDOWN_RESPONSE=$(ugum choose Yes No --header "Do you want to shutdown your computer?")
 	if [ "$SHUTDOWN_RESPONSE" = "Yes" ]; then
-		systemctl poweroff
+		CONFIRM_RESPONSE=$(ugum choose Yes No --header "Are you sure you want to shutdown your computer?")
+		if [[ "$CONFIRM_RESPONSE" == "Yes" ]]; then
+			systemctl poweroff
+		else
+			exit
+		fi
 	fi
 
 else
