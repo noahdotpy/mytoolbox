@@ -14,4 +14,4 @@ else
 	STATUS="off"
 fi
 
-echo "config: $(cat $CONFIG), status: $(cat $STATUS)"
+echo "config: $CONFIG, status: $STATUS"
