@@ -1,4 +1,4 @@
 # https://github.com/noahdotpy/myublue/blob/live/modules/files/README.md
 type: files
 add:
-  - bluefin-plasma/usr: /usr
+  - bluefin-gnome/usr: /usr
