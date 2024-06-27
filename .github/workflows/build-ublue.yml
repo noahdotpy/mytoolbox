@@ -25,13 +25,21 @@ jobs:
           # !! Add your recipes here
           - bazzite-gnome.yml
           - bazzite-plasma.yml
+          - bluefin-gnome-dx-gts-lts.yml
           - bluefin-gnome-dx-gts.yml
+          - bluefin-gnome-dx-latest-lts.yml
           - bluefin-gnome-dx-latest.yml
+          - bluefin-gnome-gts-lts.yml
           - bluefin-gnome-gts.yml
+          - bluefin-gnome-latest-lts.yml
           - bluefin-gnome-latest.yml
+          - bluefin-plasma-dx-gts-lts.yml
           - bluefin-plasma-dx-gts.yml
+          - bluefin-plasma-dx-latest-lts.yml
           - bluefin-plasma-dx-latest.yml
+          - bluefin-plasma-gts-lts.yml
           - bluefin-plasma-gts.yml
+          - bluefin-plasma-latest-lts.yml
           - bluefin-plasma-latest.yml
     steps:
        # the build is fully handled by the reusable github action
