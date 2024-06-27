@@ -40,10 +40,10 @@ and just some essential guidance on how to make custom images.
 
 - gts
   - Tracks one version behind the current fedora version
+- stable
+  - Tracks a few weeks behind latest with a more tested kernel
 - latest
   - Tracks current fedora version
-- stable
-  - The same as latest, except with slightly slower kernel updates, using the CoreOS kernel update
 
 ## Tags
 
