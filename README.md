@@ -39,11 +39,11 @@ and just some essential guidance on how to make custom images.
   - An image meant for developers
 
 - gts
-  - Tracks one version behind the current fedora version
+  - Tracks one version behind the current fedora version.
 - stable
-  - Tracks a few weeks behind latest with a more tested kernel
+  - Tracks a few weeks behind latest with a more tested kernel. Stable is also built weekly instead of the usual daily.
 - latest
-  - Tracks current fedora version
+  - Tracks current fedora version.
 
 ## Tags
 
