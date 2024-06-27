@@ -1,15 +1,14 @@
 name: bluebuild
 on:
   schedule:
-    - cron: "00 17 * * *" # build at 17:00 UTC every day 
-                          # (20 minutes after last ublue images start building)
+    - cron: "00 17 * * *"
   push:
-    paths-ignore: # don't rebuild if only documentation has changed
+    paths-ignore:
       - '/toolboxes/**'
       - "**.md"
       
   pull_request:
-  workflow_dispatch: # allow manually triggering builds
+  workflow_dispatch:
 jobs:
   bluebuild:
     name: Build Custom Image
@@ -19,30 +18,25 @@ jobs:
       packages: write
       id-token: write
     strategy:
-      fail-fast: false # stop GH from cancelling all matrix builds if one fails
+      fail-fast: false
       matrix:
         recipe:
-          # !! Add your recipes here
+          - aurora-dx-gts.yml
+          - aurora-dx-latest.yml
+          - aurora-dx-stable.yml
+          - aurora-gts.yml
+          - aurora-latest.yml
+          - aurora-stable.yml
           - bazzite-gnome.yml
           - bazzite-plasma.yml
-          - bluefin-gnome-dx-gts-lts.yml
-          - bluefin-gnome-dx-gts.yml
-          - bluefin-gnome-dx-latest-lts.yml
-          - bluefin-gnome-dx-latest.yml
-          - bluefin-gnome-gts-lts.yml
-          - bluefin-gnome-gts.yml
-          - bluefin-gnome-latest-lts.yml
-          - bluefin-gnome-latest.yml
-          - bluefin-plasma-dx-gts-lts.yml
-          - bluefin-plasma-dx-gts.yml
-          - bluefin-plasma-dx-latest-lts.yml
-          - bluefin-plasma-dx-latest.yml
-          - bluefin-plasma-gts-lts.yml
-          - bluefin-plasma-gts.yml
-          - bluefin-plasma-latest-lts.yml
-          - bluefin-plasma-latest.yml
+          - bluefin-dx-gts.yml
+          - bluefin-dx-latest.yml
+          - bluefin-dx-stable.yml
+          - bluefin-gts.yml
+          - bluefin-latest.yml
+          - bluefin-stable.yml
+
     steps:
-       # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.5
         with:

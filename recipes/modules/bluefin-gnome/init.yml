@@ -1,2 +1,0 @@
-modules:
-  - from-file: modules/bluefin-gnome/packages.yml

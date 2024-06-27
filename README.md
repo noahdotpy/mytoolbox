@@ -34,15 +34,16 @@ and just some essential guidance on how to make custom images.
 
 > **Tip** You can check out all images built from this repository by clicking the packages heading on the sidebar
 
-### Bluefin variants
+### Aurora/Bluefin variants
 - dx
   - An image meant for developers
+
 - gts
   - Tracks one version behind the current fedora version
 - latest
   - Tracks current fedora version
-- lts
-  - Uses LTS kernel
+- stable
+  - The same as latest, except with slightly slower kernel updates, using the CoreOS kernel update
 
 ## Tags
 
@@ -50,11 +51,11 @@ The built images are tagged in the following way:
 
 > **Tip** You can also check the tags by clicking on the package you want (eg: bluefin-gnome-dx-gts) in the `Packages` area of the sidebar on the right
 
-- `latest`
-- `commit-version`
-- `timestamp`
-- `timestamp-version`
-- `version`
+- `latest` - latest build
+- `{commit}-{version}` - c376c87-40
+- `{timestamp}` - 20240627
+- `{timestamp}-{version}`- 20240627-40
+- `{version}` - 40
 
 ## Installation
 
