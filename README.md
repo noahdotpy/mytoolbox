@@ -49,7 +49,7 @@ and just some essential guidance on how to make custom images.
 
 The built images are tagged in the following way:
 
-> **Tip** You can also check the tags by clicking on the package you want (eg: bluefin-gnome-dx-gts) in the `Packages` area of the sidebar on the right
+> **Tip** You can also check the tags by clicking on the package you want (eg: bluefin-dx-gts) in the `Packages` area of the sidebar on the right
 
 - `latest` - latest build
 - `{commit}-{version}` - c376c87-40
@@ -69,7 +69,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 - 1. First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-gnome-dx-gts:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx-gts:latest
   ```
 - 2. Reboot to complete the rebase:
   ```
@@ -77,7 +77,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 - 3. Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/bluefin-gnome-dx-gts:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/bluefin-dx-gts:latest
   ```
 - 4. Reboot again to complete the installation
   ```
