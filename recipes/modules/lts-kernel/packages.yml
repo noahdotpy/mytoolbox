@@ -1,0 +1,7 @@
+# https://blue-build.org/reference/modules/rpm-ostree/
+type: rpm-ostree
+repos:
+  - https://copr.fedorainfracloud.org/coprs/kwizart/kernel-longterm-6.6/repo/fedora-%OS_VERSION%/kwizart-kernel-longterm-6.6-fedora-%OS_VERSION%.repo
+install:
+  - kernel-longterm
+  - kernel-longterm-devel

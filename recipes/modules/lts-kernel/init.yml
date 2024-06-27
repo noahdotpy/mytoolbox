@@ -1,0 +1,2 @@
+modules:
+  - from-file: modules/lts-kernel/packages.yml
