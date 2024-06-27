@@ -1,3 +1,2 @@
 modules:
-  - from-file: modules/bluefin-gnome/files.yml
   - from-file: modules/bluefin-gnome/packages.yml
