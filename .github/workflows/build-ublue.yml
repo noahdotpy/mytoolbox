@@ -1,4 +1,4 @@
-name: bluebuild
+name: build ublue
 on:
   schedule:
     - cron: "00 17 * * *" # 17:00 UTC every day
