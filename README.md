@@ -30,6 +30,32 @@ Documentation around making custom images exists in two separate places:
 * Inside this repository for documentation specific to the ins and outs of the template (like module documentation),
 and just some essential guidance on how to make custom images.
 
+## Images
+
+> **Tip** You can check out all images built from this repository by clicking the packages heading on the sidebar
+
+### Bluefin variants
+- dx
+  - An image meant for developers
+- gts
+  - Tracks one version behind the current fedora version
+- latest
+  - Tracks current fedora version
+- lts
+  - Uses LTS kernel
+
+## Tags
+
+The built images are tagged in the following way:
+
+> **Tip** You can also check the tags by clicking on the package you want (eg: bluefin-gnome-dx-gts) in the `Packages` area of the sidebar on the right
+
+- `latest`
+- `commit-version`
+- `timestamp`
+- `timestamp-version`
+- `version`
+
 ## Installation
 
 > **Warning**
@@ -42,7 +68,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 - 1. First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/aurora-dx-gts:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-gnome-dx-gts:latest
   ```
 - 2. Reboot to complete the rebase:
   ```
@@ -50,7 +76,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 - 3. Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/aurora-dx-gts:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/bluefin-gnome-dx-gts:latest
   ```
 - 4. Reboot again to complete the installation
   ```
@@ -86,16 +112,3 @@ The file `/usr/share/ublue-os/just/custom.just` is intended for the custom just 
 if you wish to disable that, you need to just remove the line that includes bling.just.
 
 See [the just-page in the Universal Blue documentation](https://universal-blue.org/guide/just/) for more information.
-
-## Tags
-
-The built images are tagged in the following way:
-
-> **Tip** You can also check the tags by clicking on the package you want (eg: aurora-dx-gts:) in the `Packages` area of the sidebar on the right
-
-- [version]-[branch]
-- [version]-[branch]-[timestamp]
-- [branch]
-- [branch]-[timestamp]
-- [timestamp]
-- latest
