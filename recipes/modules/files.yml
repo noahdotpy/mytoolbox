@@ -5,3 +5,5 @@ add:
   - common/etc: /etc
 remove:
   - /etc/profile.d/ublue-os-just.sh
+  - /usr/share/sounds/Yaru/stereo/desktop-login.oga
+  - /usr/share/sounds/Yaru/stereo/desktop-logoff.oga
