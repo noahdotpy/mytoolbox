@@ -21,15 +21,11 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - aurora-dx-gts.yml
           - aurora-dx-latest.yml
-          - aurora-gts.yml
           - aurora-latest.yml
           - bazzite-gnome.yml
           - bazzite-plasma.yml
-          - bluefin-dx-gts.yml
           - bluefin-dx-latest.yml
-          - bluefin-gts.yml
           - bluefin-latest.yml
 
     steps:

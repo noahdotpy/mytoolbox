@@ -17,7 +17,7 @@ and the [uBlue tinkering documentation](https://universal-blue.org/tinker/make-y
 The easiest way to start customizing is by looking at and modifying `config/recipe.yml`.
 It's documented using comments and should be pretty easy to understand.
 
-If you want to add custom configuration files, you can just add them in the `/usr/etc/` directory, 
+If you want to add custom configuration files, you can just add them in the `/usr/etc/` directory,
 which is the official OSTree "configuration template" directory and will be applied to `/etc/` on boot.
 `config/files/usr` is copied into your image's `/usr` by default.
 If you need to add other directories in the root of your image, that can be done using the `files` module.
@@ -26,24 +26,24 @@ Writing to `/var/` in the image builds of OSTree-based distros isn't supported a
 For more information about customization, see [the README in the config directory](config/README.md)
 
 Documentation around making custom images exists in two separate places:
-* [The Tinkerer's Guide on the website](https://universal-blue.org/tinker/make-your-own/) for general documentation around making custom images, best practices, tutorials, and so on.
-* Inside this repository for documentation specific to the ins and outs of the template (like module documentation),
-and just some essential guidance on how to make custom images.
+
+- [The Tinkerer's Guide on the website](https://universal-blue.org/tinker/make-your-own/) for general documentation around making custom images, best practices, tutorials, and so on.
+- Inside this repository for documentation specific to the ins and outs of the template (like module documentation),
+  and just some essential guidance on how to make custom images.
 
 ## Images
 
 > **Tip** You can check out all images built from this repository by clicking the packages heading on the sidebar
 
 ### Aurora/Bluefin variants
-- dx
-  - An image meant for developers
 
-- gts
-  - Tracks one version behind the current fedora version.
-- stable
-  - Tracks a few weeks behind latest with a more tested kernel. Stable is also built weekly instead of the usual daily.
-- latest
-  - Tracks current fedora version.
+- dx is an image mainly meant for developers
+
+|                       | GTS    | Stable | Latest   |
+| --------------------- | ------ | ------ | -------- |
+| Fedora version        | 39     | 40     | 40       |
+| Kernel version        | Gated  | Gated  | Upstream |
+| Image build frequency | Weekly | Weekly | Daily    |
 
 ## Tags
 
@@ -59,8 +59,7 @@ The built images are tagged in the following way:
 
 ## Installation
 
-> **Warning**
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) and should not be used in production, try it in a VM for a while!
+> **Warning** > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) and should not be used in production, try it in a VM for a while!
 
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
@@ -97,7 +96,7 @@ That build will still always use the Fedora version specified in `recipe.yml`, s
 
 ## ISO
 
-This template includes a simple Github Action to build and release an ISO of your image. 
+This template includes a simple Github Action to build and release an ISO of your image.
 
 The Action uses [isogenerator](https://github.com/ublue-os/isogenerator) and works in a similar manner to the official Universal Blue ISO. If you have any issues, you should first check [the documentation page on installation](https://universal-blue.org/installation/). The ISO is a netinstaller and should always pull the latest version of your image.
 
