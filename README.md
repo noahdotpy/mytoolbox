@@ -78,7 +78,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   systemctl reboot
   ```
 
-## ISO
+## ISO (recommended as it gives a clean slate)
 
 This repository includes a justfile recipe to build ISOs locally from the GHCR registry.
 
@@ -86,3 +86,7 @@ You can do this by running:
 ```
 just build-iso-ghcr bluefin-dx-gts
 ```
+
+### After the installation
+
+You will need to use the password 'fedora' to enroll the secure boot key if you are using secure boot.
