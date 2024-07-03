@@ -24,5 +24,5 @@ just-fix:
     just --unstable --fmt -f ${project_root}/justfile || { exit 1; }
 
 # Create ISO from ghcr image
-build-iso-ghcr image="" tag="latest":
+build-iso-ghcr image tag="latest":
     @{{ project_root }}/scripts/build-iso-ghcr.sh {{ image }} {{ tag }}
