@@ -1,8 +1,11 @@
 # My custom uBlue images
 
 [![build-bazzite](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml)
+
 [![build-gts-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml)
+
 [![build-latest-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml)
+
 [![build-stable-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml)
 
 This repository is solely intended for only my purpose and may not work completely for your machine/workflow/something else.
