@@ -26,8 +26,8 @@ echo "image_name: $image_name"
 echo "image_tag: $image_tag"
 echo "installer_variant: $installer_variant"
 echo "fedora_major_version: $fedora_major_version"
-echo "file_name: $file_name"
 echo "date: $date"
+echo "file_name: $file_name"
 
 if ! [ -d ./build ]; then
   mkdir ./build
