@@ -1,6 +1,0 @@
-ublue_variants:
-  - label: noahdotpy/myublue
-    ks: /kickstart/ublue-os.ks
-    flavors:
-      - label: myublue
-        info: My uBlue Image
