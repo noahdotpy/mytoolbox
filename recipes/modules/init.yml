@@ -1,5 +1,5 @@
 modules:
-  - from-file: modules/packages.yml
   - from-file: modules/files.yml
+  - from-file: modules/packages.yml
   - from-file: modules/systemd.yml
   - type: signing
