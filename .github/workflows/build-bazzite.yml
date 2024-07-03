@@ -1,7 +1,7 @@
 name: build bazzite
 on:
   schedule:
-    - cron: '00 5 * * 2,5' # 5:00 UTC every Tuesday and Thursday
+    - cron: "00 5 * * 2,5" # 5:00 UTC every Tuesday and Thursday
   push:
     paths-ignore:
       - '/toolboxes/**'
@@ -21,8 +21,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - bluefin-gnome.yml
-          - bluefin-plasma.yml
+          - bazzite-gnome.yml
+          - bazzite-plasma.yml
 
     steps:
       - name: Build Custom Image
