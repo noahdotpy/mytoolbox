@@ -1,4 +1,4 @@
-name: build latest aurora and bluefin
+name: latest aurorafin
 on:
   schedule:
     - cron: "00 05 * * *" # 05:00 UTC daily

@@ -1,4 +1,4 @@
-name: build bazzite
+name: bazzite
 on:
   schedule:
     - cron: "00 5 * * 2,5" # 5:00 UTC every Tuesday and Thursday

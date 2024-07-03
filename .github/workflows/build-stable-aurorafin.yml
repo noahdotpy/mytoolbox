@@ -1,4 +1,4 @@
-name: build stable aurora and bluefin
+name: stable aurorafin
 on:
   schedule:
     - cron: "00 06 * * 2" # 06:00 UTC every Tuesday

@@ -1,12 +1,10 @@
 # My custom uBlue images
 
-[![build-bazzite](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml)
-
 [![build-gts-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml)
-
 [![build-latest-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml)
-
 [![build-stable-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml)
+
+[![build-bazzite](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml)
 
 This repository is solely intended for only my purpose and may not work completely for your machine/workflow/something else.
 
@@ -15,7 +13,7 @@ GitHub will build this image, and then host it on [ghcr.io](https://github.com/f
 The users can then tell the computer to boot off of that image.
 GitHub keeps 90 days worth of image backups for us, thanks Microsoft!
 
-For info on how to create your own, check out the [BlueBuild website](https://blue-build.org)
+For info on how to create your own, check out the [BlueBuild website](https://blue-build.org).
 
 ## Images
 
@@ -43,7 +41,12 @@ The built images are tagged in the following way:
 - `{timestamp}-{version}`- 20240627-40
 - `{version}` - 40
 
-You can 'rollback' to an earlier version (a bad update may have occured) by switching to a different tag, likely timestamp.
+You can rollback to an earlier build of any image by switching to a different tag.
+
+Example:
+```
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx-gts:20240627
+```
 
 ## Installation
 
