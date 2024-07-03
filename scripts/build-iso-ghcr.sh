@@ -20,7 +20,13 @@ fedora_major_version=$(skopeo inspect docker://ghcr.io/noahdotpy/${image_name}:$
 # 20240703
 date=$(date +%Y%m%d)
 
-file_name=$(echo "noahdotpy-${image_name}-${image_tag}-f${fedora_major_version}-built${date}")
+if [[ ${image_tag} == "latest" ]]; then
+    tag_addon_in_file_name=""
+else
+    tag_addon_in_file_name="--${image_tag}"
+fi
+
+file_name=$(echo "${image_name}${tag_addon_in_file_name}.${date}.iso")
 
 echo "image_name: $image_name"
 echo "image_tag: $image_tag"
@@ -30,7 +36,7 @@ echo "date: $date"
 echo "file_name: $file_name"
 
 if ! [ -d ./build ]; then
-  mkdir ./build
+    mkdir ./build
 fi
 
 sudo podman run --rm --privileged --volume ./build:/build-container-installer/build --security-opt label=disable --pull=newer \
@@ -43,7 +49,7 @@ ENROLLMENT_PASSWORD="fedora" \
 IMAGE_NAME="${image_name}" \
 IMAGE_REPO="ghcr.io/noahdotpy" \
 IMAGE_TAG="${image_tag}" \
-ISO_NAME="build/${file_name}.iso" \
+ISO_NAME="build/${file_name}" \
 SECURE_BOOT_KEY_URL='https://github.com/ublue-os/akmods/raw/main/certs/public_key.der' \
 VARIANT="${installer_variant}" \
 VERSION="${fedora_major_version}"
