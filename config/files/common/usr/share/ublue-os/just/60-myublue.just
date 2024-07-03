@@ -1,4 +1,4 @@
 # vim: set ft=make :
 
 status:
-  rpm-ostree status
+    rpm-ostree status
