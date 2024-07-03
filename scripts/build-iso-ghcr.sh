@@ -21,12 +21,12 @@ fedora_major_version=$(skopeo inspect docker://ghcr.io/noahdotpy/${image_name}:$
 date=$(date +%Y%m%d)
 
 if [[ ${image_tag} == "latest" ]]; then
-    tag_addon_in_file_name=""
+    formatted_tag=""
 else
-    tag_addon_in_file_name="--${image_tag}"
+    formatted_tag="--${image_tag}"
 fi
 
-file_name=$(echo "${image_name}${tag_addon_in_file_name}.${date}.iso")
+file_name=$(echo "${image_name}${formatted_tag}.${date}.iso")
 
 echo "image_name: $image_name"
 echo "image_tag: $image_tag"
