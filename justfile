@@ -23,7 +23,6 @@ just-fix:
     echo "Checking syntax: ${project_root}/justfile"
     just --unstable --fmt -f ${project_root}/justfile || { exit 1; }
 
-# Create ISO from currenct ghcr image
-# build-iso-ghcr image="" target="" version="":
-#     @{{ project_root }}/scripts/build-iso-ghcr.sh {{ image }} {{ target }} {{ version }}
-# TODO: implement building iso from ghcr 
+# Create ISO from ghcr image
+build-iso-ghcr image="" tag="latest":
+    @{{ project_root }}/scripts/build-iso-ghcr.sh {{ image }} {{ tag }}
