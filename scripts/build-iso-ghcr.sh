@@ -14,7 +14,7 @@ else
     exit 1
 fi
 
-fedora_version=$(skopeo inspect docker://ghcr.io/noahdotpy/bluefin-dx-stable:latest | jq -r '.Labels["org.opencontainers.image.version"]' | awk -F '.' '{print $1}')
+fedora_version=$(skopeo inspect docker://ghcr.io/noahdotpy/${image_name}:${image_tag} | jq -r '.Labels["org.opencontainers.image.version"]' | awk -F '.' '{print $1}')
 
 echo "image_name: $image_name"
 echo "image_tag: $image_tag"
