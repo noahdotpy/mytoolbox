@@ -1,7 +1,7 @@
 name: build gts aurora and bluefin
 on:
   schedule:
-    - cron: "00 06 * * 7" # 06:00 UTC every Sunday
+    - cron: "00 06 * * 0" # 06:00 UTC every Sunday
   push:
     paths-ignore:
       - '/toolboxes/**'
