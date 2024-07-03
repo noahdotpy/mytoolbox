@@ -1,11 +1,5 @@
 # My custom uBlue images
 
-[![build-gts-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml)
-[![build-latest-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml)
-[![build-stable-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml)
-
-[![build-bazzite](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml)
-
 This repository is solely intended for only my purpose and may not work completely for your machine/workflow/something else.
 
 This is a constantly updating repository which hosts my custom [ostree images](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable).
@@ -19,7 +13,11 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 > **Tip** You can check out all images built from this repository by clicking the packages heading on the sidebar
 
-### Aurora/Bluefin variants
+### [Bluefin](https://projectbluefin.io) and [Aurora](https://getaurora.dev)
+
+[![build-gts-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml)
+[![build-latest-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml)
+[![build-stable-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml)
 
 - dx is an image mainly meant for developers
 
@@ -28,6 +26,12 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 | Fedora version        | 39     | 40     | 40       |
 | Kernel version        | Gated  | Gated  | Upstream |
 | Image build frequency | Weekly | Weekly | Daily    |
+
+### [Bazzite](https://bazzite.gg)
+
+[![build-bazzite](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml)
+
+There are two desktop environments you can choose from: GNOME or KDE Plasma.
 
 ## Tags
 
@@ -50,7 +54,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx-gts:20
 
 ## Installation
 
-> **Warning** > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) and should not be used in production, try it in a VM for a while!
+> **Warning** [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) and should not be used in production, try it in a VM for a while!
 
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
