@@ -1,12 +1,12 @@
-name: build ublue
+name: build bazzite
 on:
   schedule:
-    - cron: "00 17 * * *" # 17:00 UTC every day
+    - cron: '00 5 * * 2,5' # 5:00 UTC every Tuesday and Thursday
   push:
     paths-ignore:
       - '/toolboxes/**'
       - "**.md"
-      
+
   pull_request:
   workflow_dispatch:
 jobs:
@@ -21,12 +21,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - aurora-dx-latest.yml
-          - aurora-latest.yml
-          - bazzite-gnome.yml
-          - bazzite-plasma.yml
-          - bluefin-dx-latest.yml
-          - bluefin-latest.yml
+          - bluefin-gnome.yml
+          - bluefin-plasma.yml
 
     steps:
       - name: Build Custom Image
