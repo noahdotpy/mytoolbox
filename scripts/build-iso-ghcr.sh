@@ -20,7 +20,7 @@ fedora_major_version=$(skopeo inspect docker://ghcr.io/noahdotpy/${image_name}:$
 # 20240703
 date=$(date +%Y%m%d)
 
-file_name=$(echo "noahdotpy-${image_name}-${image_tag}-${fedora_major_version}-built${date}")
+file_name=$(echo "noahdotpy-${image_name}-${image_tag}-f${fedora_major_version}-built${date}")
 
 echo "image_name: $image_name"
 echo "image_tag: $image_tag"
