@@ -21,7 +21,7 @@ if [ "$CONFIRM_RESPONSE" = "Yes" ]; then
 		sudo /usr/bin/idwtn-unadmin
 	fi
 
-	notify-send "I Don't Want To Network" "Locked down with these choices: $CHOICES" -u critical
+	notify-send --app-name "I Don't Want To Network" "Locked down completed with these choices: $CHOICES" -u critical
 
 	SHUTDOWN_RESPONSE=$(ugum choose Yes No --header "Do you want to shutdown your computer?")
 	if [ "$SHUTDOWN_RESPONSE" = "Yes" ]; then
@@ -34,5 +34,5 @@ if [ "$CONFIRM_RESPONSE" = "Yes" ]; then
 	fi
 
 else
-	notify-send "I Don't Want To Network" "Aborted lockdown"
+	notify-send --app-name "I Don't Want To Network" "Aborted Lockdown"
 fi
