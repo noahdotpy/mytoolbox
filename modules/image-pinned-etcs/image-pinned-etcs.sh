@@ -35,5 +35,9 @@ for dir in "${DIRS_TO_CREATE[@]}"; do
 done
 
 for file in "${FILES_TO_LINK[@]}"; do
+	if [ -L "$file" ]; then
+		continue
+	fi
 	ln -s /usr/share/ublue-os/image-pinned-etcs/$file /usr/etc/$file
+
 done
