@@ -27,10 +27,8 @@ if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 	done
 fi
 
-DIRS_TO_CREATE=($(fd --type directory --base-directory $CONFIG_DIRECTORY/image-pinned-etcs | xargs))
-FILES_TO_LINK=($(fd --type file --base-directory $CONFIG_DIRECTORY/image-pinned-etcs | xargs))
-
-cp -rf $CONFIG_DIRECTORY/image-pinned-etcs /usr/share/ublue-os/image-pinned-etcs/
+DIRS_TO_CREATE=($(fd --type directory --base-directory /usr/share/ublue-os/image-pinned-etcs | xargs))
+FILES_TO_LINK=($(fd --type file --base-directory /usr/share/ublue-os/image-pinned-etcs | xargs))
 
 for dir in "${DIRS_TO_CREATE[@]}"; do
 	mkdir -p /usr/etc/$dir
