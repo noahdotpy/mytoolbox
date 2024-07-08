@@ -21,7 +21,7 @@ if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 		fi
 
 		echo "Copying $entry to /usr/share/ublue-os/image-pinned-etcs"
-		cp -rf "$CONFIG_DIRECTORY/image-pinned-etcs/$entry/*" "/usr/share/ublue-os/image-pinned-etcs/"
+		cp -rf $CONFIG_DIRECTORY/image-pinned-etcs/$entry/* /usr/share/ublue-os/image-pinned-etcs/
 	done
 fi
 
