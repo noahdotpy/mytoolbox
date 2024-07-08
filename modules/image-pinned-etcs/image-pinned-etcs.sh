@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# TODO: make user of module do something like
-# - type: image-pinned-etcs
-#   add:
-#     - common
-
 # Tell build process to exit if there are any errors.
 set -oue pipefail
 
@@ -24,20 +19,19 @@ if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 
 		echo "Copying $entry to /usr/share/ublue-os/image-pinned-etcs"
 		cp -rf $CONFIG_DIRECTORY/image-pinned-etcs/$entry/* /usr/share/ublue-os/image-pinned-etcs/
+		DIRS_TO_CREATE=($(fd --type directory --base-directory $CONFIG_DIRECTORY/image-pinned-etcs/$entry | xargs))
+		FILES_TO_LINK=($(fd --type file --base-directory $CONFIG_DIRECTORY/image-pinned-etcs/$entry | xargs))
+
+		for dir in "${DIRS_TO_CREATE[@]}"; do
+			mkdir -p /usr/etc/$dir
+		done
+
+		for file in "${FILES_TO_LINK[@]}"; do
+			if [ -L "$file" ]; then
+				continue
+			fi
+			ln -s /usr/share/ublue-os/image-pinned-etcs/$file /usr/etc/$file
+
+		done
 	done
 fi
-
-DIRS_TO_CREATE=($(fd --type directory --base-directory /usr/share/ublue-os/image-pinned-etcs | xargs))
-FILES_TO_LINK=($(fd --type file --base-directory /usr/share/ublue-os/image-pinned-etcs | xargs))
-
-for dir in "${DIRS_TO_CREATE[@]}"; do
-	mkdir -p /usr/etc/$dir
-done
-
-for file in "${FILES_TO_LINK[@]}"; do
-	if [ -L "$file" ]; then
-		continue
-	fi
-	ln -s /usr/share/ublue-os/image-pinned-etcs/$file /usr/etc/$file
-
-done
