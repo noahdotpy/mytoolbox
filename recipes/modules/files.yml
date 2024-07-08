@@ -3,11 +3,11 @@ type: files
 add:
   - common/usr: /usr
 remove:
-  - /usr/etc/profile.d/ublue-os-just.sh
+  - /etc/profile.d/ublue-os-just.sh
   - /usr/share/sounds/Yaru/stereo/desktop-login.oga
   - /usr/share/sounds/Yaru/stereo/desktop-logoff.oga
 symlink:
-  - /usr/etc/chromium/policies/managed/force_site_blockers.json: /usr/share/ublue-os/etc/chromium/policies/managed/force_site_blockers.json
-  - /usr/etc/profile.d/run-idwtn-script.sh: /usr/share/ublue-os/etc/profile.d/run-idwtn-script.sh
-  - /usr/etc/sudoers.d/allow-idwtn.sh: /usr/share/ublue-os/etc/sudoers.d/allow-idwtn.sh
-  - /usr/etc/idwtn-config: /usr/share/ublue-os/etc/idwtn-config
+  - /etc/chromium/policies/managed/force_site_blockers.json: /usr/share/ublue-os/etc/chromium/policies/managed/force_site_blockers.json
+  - /etc/profile.d/run-idwtn-script.sh: /usr/share/ublue-os/etc/profile.d/run-idwtn-script.sh
+  - /etc/sudoers.d/allow-idwtn.sh: /usr/share/ublue-os/etc/sudoers.d/allow-idwtn.sh
+  - /etc/idwtn-config: /usr/share/ublue-os/etc/idwtn-config
