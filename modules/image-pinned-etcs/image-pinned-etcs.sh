@@ -15,12 +15,13 @@ if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 
 	echo "Adding files to image-pinned-etcs"
 	for entry in "${ADD_FILES[@]}"; do
-		echo "Copying $entry to /usr/share/ublue-os/image-pinned-etcs"
-		cp -rf "$CONFIG_DIRECTORY/image-pinned-etcs/$entry/*" "/usr/share/ublue-os/image-pinned-etcs/"
 		if [ ! -e "$CONFIG_DIRECTORY/image-pinned-etcs/$entry" ]; then
 			echo "Entry $entry Does Not Exist in $CONFIG_DIRECTORY/image-pinned-etcs"
 			exit 1
 		fi
+
+		echo "Copying $entry to /usr/share/ublue-os/image-pinned-etcs"
+		cp -rf "$CONFIG_DIRECTORY/image-pinned-etcs/$entry/*" "/usr/share/ublue-os/image-pinned-etcs/"
 	done
 fi
 
