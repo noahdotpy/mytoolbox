@@ -5,7 +5,6 @@ set -oue pipefail
 
 get_yaml_array ADD_FILES '.add[]' "$1"
 get_yaml_array RMV_FILES '.remove[]' "$1"
-get_yaml_array LINK_FILES '.symlink[]' "$1"
 
 shopt -s dotglob
 
@@ -35,20 +34,6 @@ if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 			echo "File or Directory $FILE Does Not Exist in $CONFIG_DIRECTORY/files"
 			exit 1
 		fi
-	done
-fi
-
-if [[ ${#LINK_FILES[@]} -gt 0 ]]; then
-	echo "Adding symlinks to image"
-	for pair in "${LINK_FILES[@]}"; do
-		LINK_DEST="$PWD/$(echo $pair | yq 'to_entries | .[0].key')"
-		TARGET=$(echo $pair | yq 'to_entries | .[0].value')
-		DEST_DIR=$(dirname "$LINK_DEST")
-		if [ ! -d "$DEST_DIR" ]; then
-			mkdir -p "$DEST_DIR"
-		fi
-		echo "Creating link at $LINK_DEST to point to $TARGET"
-		ln -s $TARGET $LINK_DEST
 	done
 fi
 

@@ -2,4 +2,5 @@ modules:
   - from-file: modules/files.yml
   - from-file: modules/packages.yml
   - from-file: modules/systemd.yml
+  - type: image-pinned-etcs
   - type: signing
