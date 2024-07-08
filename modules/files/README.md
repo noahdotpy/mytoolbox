@@ -14,6 +14,9 @@ add:
 remove:
   # remove script that automatically creates ~/.justfile
   - /etc/profile.d/ublue-os-just.sh
+symlink:
+  # creates a symlink that keeps contents of /etc/exampleconfig on end user machine to always be up-to-date with file supplied by the image
+  - /usr/etc/exampleconfig: /usr/share/ublue-os/etc/exampleconfig
 ```
 
 In the example above, `usr` represents the directory located inside the `config/files` in the repository, while `/usr` designates the corresponding destination within the image.
