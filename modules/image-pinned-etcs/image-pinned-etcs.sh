@@ -10,6 +10,8 @@ set -oue pipefail
 
 get_yaml_array ADD_FILES '.add[]' "$1"
 
+mkdir -p /usr/share/ublue-os/image-pinned-etcs/
+
 if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 	cd "$CONFIG_DIRECTORY/files"
 
