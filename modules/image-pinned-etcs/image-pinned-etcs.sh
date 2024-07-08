@@ -1,7 +1,28 @@
 #!/usr/bin/env bash
 
+# TODO: make user of module do something like
+# - type: image-pinned-etcs
+#   add:
+#     - common
+
 # Tell build process to exit if there are any errors.
 set -oue pipefail
+
+get_yaml_array ADD_FILES '.add[]' "$1"
+
+if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
+	cd "$CONFIG_DIRECTORY/files"
+
+	echo "Adding files to image-pinned-etcs"
+	for entry in "${ADD_FILES[@]}"; do
+		echo "Copying $entry to /usr/share/ublue-os/image-pinned-etcs"
+		cp -rf "$CONFIG_DIRECTORY/image-pinned-etcs/$entry/*" "/usr/share/ublue-os/image-pinned-etcs/"
+		if [ ! -e "$CONFIG_DIRECTORY/image-pinned-etcs/$entry" ]; then
+			echo "Entry $entry Does Not Exist in $CONFIG_DIRECTORY/image-pinned-etcs"
+			exit 1
+		fi
+	done
+fi
 
 DIRS_TO_CREATE=($(fd --type directory --base-directory $CONFIG_DIRECTORY/image-pinned-etcs | xargs))
 FILES_TO_LINK=($(fd --type file --base-directory $CONFIG_DIRECTORY/image-pinned-etcs | xargs))

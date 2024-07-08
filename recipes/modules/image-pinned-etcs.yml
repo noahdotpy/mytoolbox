@@ -3,3 +3,5 @@ modules:
     install:
       - fd-find
   - type: image-pinned-etcs
+    add:
+      - common
