@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Tell build process to exit if there are any errors.
-set -oue pipefail
+set -euo pipefail
 
 get_yaml_array ADD_FILES '.add[]' "$1"
 get_yaml_array RMV_FILES '.remove[]' "$1"
