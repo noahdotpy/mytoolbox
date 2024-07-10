@@ -1,4 +1,4 @@
 # https://blue-build.org/reference/modules/script/
 type: script
 scripts:
-  - use-default-fedora-wallpaper.sh
+  - gnome/use-default-fedora-wallpaper.sh
