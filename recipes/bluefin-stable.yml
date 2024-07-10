@@ -6,4 +6,4 @@ image-version: stable
 
 modules:
   - from-file: modules/init.yml
-  - from-file: modules/bluefin/init.yml
+  - from-file: modules/gnome/init.yml
