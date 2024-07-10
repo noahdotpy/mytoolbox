@@ -40,5 +40,7 @@ build-iso-ghcr image="" tag="":
       else
         chosen_tag="latest"
       fi
+    else
+      chosen_tag={{ tag }}
     fi
     {{ project_root }}/scripts/build-iso-ghcr.sh $chosen_image $chosen_tag
