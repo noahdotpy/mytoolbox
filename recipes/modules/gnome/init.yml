@@ -1,3 +1,4 @@
 modules:
   - from-file: modules/gnome/packages.yml
   - from-file: modules/gnome/files.yml
+  - from-file: modules/gnome/scripts.yml
