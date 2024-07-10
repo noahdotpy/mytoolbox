@@ -1,5 +1,6 @@
 # https://blue-build.org/reference/modules/default-flatpaks/
 type: default-flatpaks
+notify: true
 system:
   install:
     - one.ablaze.floorp//lightning
