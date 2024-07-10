@@ -24,5 +24,21 @@ just-fix:
     just --unstable --fmt -f ${project_root}/justfile || { exit 1; }
 
 # Create ISO from ghcr image
-build-iso-ghcr image tag="latest":
-    @{{ project_root }}/scripts/build-iso-ghcr.sh {{ image }} {{ tag }}
+build-iso-ghcr image="" tag="":
+    #!/usr/bin/bash
+    if [ "{{ image }}" = "" ]; then
+      images=$(fd --base-directory recipes/ -d 1 | grep .yml | sed 's/\.yml$//' | xargs)
+      chosen_image=$(ugum choose $(echo $images) --header "Choose image name")
+    else
+      chosen_image={{ image }}
+    fi
+
+    if [ "{{ tag }}" = "" ]; then
+      want_to_custom_tag=$(ugum choose "latest" "other" --header "Choose image tag:")
+      if [ "$want_to_custom_tag" = "other" ]; then
+        chosen_tag=$(ugum input)
+      else
+        chosen_tag="latest"
+      fi
+    fi
+    {{ project_root }}/scripts/build-iso-ghcr.sh $chosen_image $chosen_tag
