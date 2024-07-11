@@ -5,14 +5,14 @@
 function enable-networking {
 	iptables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
 	ip6tables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
-	echo "1" >$STATUS_FILE
+	echo "on" >$STATUS_FILE
 	echo "Networking enabled for user $USERNAME."
 }
 
 function disable-networking {
 	iptables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
 	ip6tables -A OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
-	echo "0" >$STATUS_FILE
+	echo "off" >$STATUS_FILE
 	echo "Networking disabled for user $USERNAME."
 }
 
