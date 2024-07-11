@@ -1,5 +1,4 @@
 # https://blue-build.org/reference/modules/rpm-ostree/
 type: rpm-ostree
 install:
-  - gnome-shell-extension-caffeine
-  - gnome-shell-extension-just-perfection
+  - papirus-icon-theme

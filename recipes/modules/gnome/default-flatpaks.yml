@@ -4,3 +4,5 @@ notify: true
 system:
   install:
     - one.ablaze.floorp//lightning
+    - it.mijorus.smile
+    - io.missioncenter.MissionCenter
