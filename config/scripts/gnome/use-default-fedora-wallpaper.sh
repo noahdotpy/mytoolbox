@@ -4,8 +4,8 @@ set -euo pipefail
 
 fedora_version=$(cat /usr/share/ublue-os/image-info.json | jq -r '.["fedora-version"]')
 wall_dir="/usr/share/backgrounds/f${fedora_version}/default"
-wall_light="$wallpaper_dir/f${fedora_version}-01-day.png"
-wall_dark="$wallpaper_dir/f${fedora_version}-01-night.png"
+wall_light="$wall_dir/f${fedora_version}-01-day.png"
+wall_dark="$wall_dir/f${fedora_version}-01-night.png"
 
 config_file="/usr/etc/dconf/db/local.d/50-myublue"
 
