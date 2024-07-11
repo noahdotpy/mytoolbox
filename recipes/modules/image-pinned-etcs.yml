@@ -1,3 +1,4 @@
+# https://github.com/noahdotpy/myublue/blob/main/modules/image-pinned-etcs/README.md
 modules:
   - type: rpm-ostree
     install:

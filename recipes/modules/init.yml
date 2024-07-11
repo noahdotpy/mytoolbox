@@ -3,4 +3,5 @@ modules:
   - from-file: modules/packages.yml
   - from-file: modules/systemd.yml
   - from-file: modules/image-pinned-etcs.yml
+  - from-file: modules/chezmoi.yml
   - type: signing

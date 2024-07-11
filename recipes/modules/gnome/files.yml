@@ -1,4 +1,4 @@
-# https://github.com/noahdotpy/myublue/blob/live/modules/files/README.md
+# https://github.com/noahdotpy/myublue/blob/main/modules/files/README.md
 type: files
 add:
   - gnome/usr: /usr
