@@ -32,65 +32,21 @@
       "format": "{1} {2}"
     },
     {
-      "type": "uptime",
-      "key": "󰅐"
-    },
-    "break",
-    {
-      "type": "cpu",
-      "key": "󰻠"
-    },
-    {
-      "type": "gpu",
-      "key": "󰍛"
-    },
-    {
-      "type": "memory",
-      "key": "󰧑"
-    },
-    {
-      "type": "disk",
-      "key": ""
-    },
-    {
-      "type": "display",
-      "key": "󰍹"
-    },
-    {
-      "type": "battery",
-      "key": ""
-    },
-    {
-      "type": "gamepad",
-      "key": "󰖺"
-    },
-    "break",
-    {
       "type": "de",
       "key": "󰕮"
-    },
-    {
-      "type": "wm",
-      "key": ""
-    },
-    {
-      "type": "shell",
-      "key": ""
-    },
-    {
-      "type": "terminal",
-      "key": ""
-    },
-    {
-      "type": "packages",
-      "key": "󰏖"
     },
     "break",
     {
       "type": "command",
       "key": "󰖩",
-      "text": "echo IDWTN: $(/usr/bin/idwtn-status)",
+      "text": "echo IDWTN Status: $(cat /etc/idwtn-status)",
       "shell": "/bin/bash"
     },
+    {
+      "type": "command",
+      "key": "󰖩",
+      "text": "echo IDWTN Config: $(cat /etc/idwtn-config)",
+      "shell": "/bin/bash"
+    }
   ]
 }

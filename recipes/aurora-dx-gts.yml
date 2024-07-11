@@ -6,4 +6,3 @@ image-version: gts
 
 modules:
   - from-file: modules/init.yml
-  - from-file: modules/aurora/init.yml

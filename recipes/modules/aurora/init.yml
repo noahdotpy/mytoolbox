@@ -1,3 +1,0 @@
-modules:
-  - from-file: modules/aurora/files.yml
-  - from-file: modules/aurora/image-pinned-etcs.yml
