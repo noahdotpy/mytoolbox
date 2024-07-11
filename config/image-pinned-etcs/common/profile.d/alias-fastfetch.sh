@@ -1,2 +1,2 @@
 #!/usr/bin/sh
-alias fastfetch="/usr/bin/fastfetch -c /usr/share/ublue-os/ublue-os.jsonc --file /usr/share/ublue-os/fastfetch-logo"
+alias fastfetch="/usr/bin/fastfetch -c /usr/share/ublue-os/ublue-os.jsonc --logo none"
