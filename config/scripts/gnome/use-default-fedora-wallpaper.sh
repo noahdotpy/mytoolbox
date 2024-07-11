@@ -3,13 +3,15 @@
 set -euo pipefail
 
 fedora_version=$(cat /usr/share/ublue-os/image-info.json | jq -r '.["fedora-version"]')
-wallpaper_file="/usr/share/backgrounds/f${fedora_version}/default/f${fedora_version}.xml"
+wall_dir="/usr/share/backgrounds/f${fedora_version}/default"
+wall_light="$wallpaper_dir/f${fedora_version}-01-day.png"
+wall_dark="$wallpaper_dir/f${fedora_version}-01-night.png"
 
 config_file="/usr/etc/dconf/db/local.d/50-myublue"
 
 echo "[org/gnome/desktop/background]" >>$config_file
-echo "picture-uri='file://$wallpaper_file'" >>$config_file
-echo "picture-uri-dark='file://$wallpaper_file'" >>$config_file
+echo "picture-uri='file://$wall_light'" >>$config_file
+echo "picture-uri-dark='file://$wall_dark'" >>$config_file
 echo "picture-options='zoom'" >>$config_file
 echo "primary-color='000000'" >>$config_file
 echo "secondary-color='FFFFFF'" >>$config_file
