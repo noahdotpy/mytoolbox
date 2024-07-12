@@ -3,6 +3,6 @@ type: default-flatpaks
 notify: true
 system:
   install:
-    - one.ablaze.floorp//lightning
+    - one.ablaze.floorp
     - it.mijorus.smile
     - io.missioncenter.MissionCenter
