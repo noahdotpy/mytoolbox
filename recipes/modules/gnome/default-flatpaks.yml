@@ -3,6 +3,29 @@ type: default-flatpaks
 notify: true
 system:
   install:
-    - one.ablaze.floorp
-    - it.mijorus.smile
+    - com.github.rafostar.Clapper
+    - com.github.tchx84.Flatseal
+    - com.mattjakeman.ExtensionManager
+    - io.github.dvlv.boxbuddyrs
+    - io.github.flattool.Warehouse
     - io.missioncenter.MissionCenter
+    - it.mijorus.smile
+    - org.fedoraproject.MediaWriter
+    - org.gnome.Calculator
+    - org.gnome.Calendar
+    - org.gnome.Characters
+    - org.gnome.Connections
+    - org.gnome.Contacts
+    - org.gnome.DejaDup
+    - org.gnome.Geary
+    - org.gnome.Logs
+    - org.gnome.Loupe
+    - org.gnome.Maps
+    - org.gnome.NautilusPreviewer
+    - org.gnome.Papers
+    - org.gnome.TextEditor
+    - org.gnome.Weather
+    - org.gnome.World.PikaBackup
+    - org.gnome.baobab
+    - org.gnome.clocks
+    - org.gnome.font-viewer
