@@ -6,11 +6,18 @@ system:
     - com.github.rafostar.Clapper
     - com.github.tchx84.Flatseal
     - com.mattjakeman.ExtensionManager
+    - io.github.celluloid_player.Celluloid
     - io.github.dvlv.boxbuddyrs
     - io.github.flattool.Warehouse
+    - io.github.realmazharhussain.GdmSettings
+    - io.gitlab.news_flash.NewsFlash
     - io.missioncenter.MissionCenter
+    - it.mijorus.gearlever
     - it.mijorus.smile
+    - md.obsidian.Obsidian
     - org.fedoraproject.MediaWriter
+    - org.gimp.GIMP
+    - org.gnome.Boxes
     - org.gnome.Calculator
     - org.gnome.Calendar
     - org.gnome.Characters
@@ -23,9 +30,14 @@ system:
     - org.gnome.Maps
     - org.gnome.NautilusPreviewer
     - org.gnome.Papers
+    - org.gnome.Podcasts
     - org.gnome.TextEditor
     - org.gnome.Weather
     - org.gnome.World.PikaBackup
     - org.gnome.baobab
     - org.gnome.clocks
     - org.gnome.font-viewer
+    - org.inkscape.Inkscape
+    - org.nickvision.tubeconverter
+    - org.pipewire.Helvum
+    - xyz.tytanium.DoorKnocker
