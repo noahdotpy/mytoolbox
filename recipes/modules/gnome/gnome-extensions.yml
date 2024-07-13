@@ -7,7 +7,7 @@ install:
   - "Battery Health Charging"
   - "Bedtime Mode"
   - "Bluetooth Battery Meter"
-  - "3193" # Blur my Shell
+  - 3193 # Blur my Shell
   - "Caffeine"
   - "Clipboard Indicator"
   - "Compiz windows effect"
