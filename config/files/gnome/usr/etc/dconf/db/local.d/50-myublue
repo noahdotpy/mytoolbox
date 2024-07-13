@@ -10,18 +10,26 @@ profile-uuids=['2871e8027773ae74d6c87a5f659bbc74']
 restore-session=false
 restore-window-size=false
 use-system-font=false
-window-size=(uint32 80, uint32 24)
 
 [org/gnome/Ptyxis/Profiles/2871e8027773ae74d6c87a5f659bbc74]
 label='Default'
 palette='catppuccin-dynamic'
 
+[org/gnome/desktop/a11y/magnifier]
+mag-factor=4.0
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/fedora-workstation/montclair_light.webp'
+picture-uri-dark='file:///usr/share/backgrounds/fedora-workstation/montclair_dark.webp'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
 [org/gnome/desktop/calendar]
 show-weekdate=true
 
 [org/gnome/desktop/input-sources]
-current=uint32 0
-sources=[('xkb', 'au')]
 xkb-options=['caps:none', 'shift:both_capslock']
 
 [org/gnome/desktop/interface]
@@ -43,6 +51,9 @@ show-battery-percentage=true
 text-scaling-factor=0.90000000000000013
 toolkit-accessibility=false
 
+[org/gnome/desktop/session]
+idle-delay=uint32 300
+
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
 theme-name='Yaru'
@@ -63,6 +74,8 @@ move-to-workspace-right=['<Shift><Super>d', '<Shift><Super>Right']
 show-desktop=@as []
 switch-applications=['<Super>Tab']
 switch-applications-backward=['<Shift><Super>Tab']
+switch-input-source=['<Shift><Super>space']
+switch-input-source-backward=['']
 switch-to-workspace-1=['<Super>1']
 switch-to-workspace-2=['<Super>2']
 switch-to-workspace-3=['<Super>3']
@@ -85,11 +98,11 @@ button-layout=':minimize,maximize,close'
 resize-with-right-button=true
 titlebar-font='Ubuntu Bold 12'
 
+[org/gnome/mutter]
+overlay-key='Super_L'
+
 [org/gnome/nautilus/preferences]
 click-policy='single'
-default-folder-viewer='list-view'
-migrated-gtk-settings=true
-search-filter-time-type='last_modified'
 show-delete-permanently=true
 
 [org/gnome/settings-daemon/plugins/color]
@@ -121,9 +134,6 @@ binding='<Control><Shift>Escape'
 command='flatpak run io.missioncenter.MissionCenter'
 name='mission-center'
 
-[org/gnome/shell]
-last-selected-power-profile='performance'
-
 [org/gnome/shell/extensions/Logo-menu]
 hide-forcequit=true
 hide-icon-shadow=false
@@ -149,6 +159,9 @@ folder-order-position='start'
 [org/gnome/shell/extensions/bedtime-mode]
 automatic-schedule=true
 bedtime-mode-active=false
+color-tone-factor=75
+color-tone-preset='grayscale'
+ondemand-button-location='menu'
 schedule-end-hours=3
 schedule-start-hours=21
 
@@ -172,6 +185,10 @@ static-blur=true
 style-panel=0
 unblur-in-overview=true
 
+[org/gnome/shell/extensions/caffeine]
+indicator-position-max=4
+toggle-state=false
+
 [org/gnome/shell/extensions/clipboard-indicator]
 display-mode=0
 history-size=50
@@ -182,6 +199,12 @@ topbar-preview-size=10
 [org/gnome/shell/extensions/com/github/hermes83/compiz-windows-effect]
 friction=8.0
 speedup-factor-divider=2.0
+
+[org/gnome/shell/extensions/custom-accent-colors]
+accent-color='purple'
+theme-flatpak=true
+theme-gtk3=true
+theme-shell=true
 
 [org/gnome/shell/extensions/dash-to-dock]
 animation-time=0.14999999999999999
@@ -198,6 +221,7 @@ dock-fixed=false
 dock-position='BOTTOM'
 force-straight-corner=false
 height-fraction=0.90000000000000002
+hot-keys=false
 intellihide=true
 intellihide-mode='ALL_WINDOWS'
 max-alpha=0.80000000000000004
@@ -210,10 +234,40 @@ show-mounts=false
 show-trash=false
 transparency-mode='DYNAMIC'
 
+[org/gnome/shell/extensions/dash-to-panel]
+animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+appicon-margin=8
+appicon-padding=4
+available-monitors=[0]
+dot-position='BOTTOM'
+hotkeys-overlay-combo='TEMPORARILY'
+leftbox-padding=-1
+panel-anchors='{"0":"MIDDLE"}'
+panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"dateMenu","visible":true,"position":"centerMonitor"},{"element":"centerBox","visible":true,"position":"centered"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
+panel-lengths='{"0":100}'
+panel-positions='{"0":"TOP"}'
+panel-sizes='{"0":32}'
+primary-monitor=0
+scroll-icon-action='NOTHING'
+scroll-panel-action='NOTHING'
+show-apps-icon-file=''
+show-favorites=false
+show-running-apps=false
+status-icon-padding=-1
+stockgs-force-hotcorner=true
+stockgs-keep-dash=true
+stockgs-keep-top-panel=false
+taskbar-locked=false
+trans-use-custom-opacity=false
+trans-use-dynamic-opacity=false
+tray-padding=-1
+window-preview-title-position='TOP'
+
 [org/gnome/shell/extensions/ding]
 check-x11wayland=true
 icon-size='small'
 show-home=false
+show-link-emblem=true
 show-trash=false
 show-volumes=false
 
@@ -233,6 +287,17 @@ workspace-wrap-around=true
 
 [org/gnome/shell/extensions/lockkeys]
 style='show-hide-capslock'
+
+[org/gnome/shell/extensions/search-light]
+background-color=(0.0, 0.0, 0.0, 0.80000000000000004)
+border-color=(0.23000000000000001, 0.23000000000000001, 0.23000000000000001, 1.0)
+border-radius=1.6499999999999999
+border-thickness=1
+entry-font-size=1
+monitor-count=1
+scale-height=0.14999999999999999
+scale-width=0.10000000000000001
+shortcut-search=['<Super>space']
 
 [org/gnome/shell/extensions/show-desktop-button]
 panel-position='RIGHT_END'
@@ -278,6 +343,9 @@ tile-topright-quarter-ignore-ta=@as []
 toggle-always-on-top=@as []
 toggle-tiling-popup=@as []
 
+[org/gnome/shell/extensions/user-theme]
+name='Custom-Accent-Colors'
+
 [org/gnome/shell/extensions/workspaces-indicator-by-open-apps]
 hide-activities-button=true
 icons-group='OFF'
@@ -291,37 +359,19 @@ spacing-app-left=2
 spacing-app-right=2
 spacing-label-left=2
 
-[org/gnome/shell/keybindings]
-focus-active-notification=@as []
-switch-to-application-1=@as []
-switch-to-application-2=@as []
-switch-to-application-3=@as []
-switch-to-application-4=@as []
-switch-to-application-5=@as []
-switch-to-application-6=@as []
-switch-to-application-7=@as []
-switch-to-application-8=@as []
-switch-to-application-9=@as []
-toggle-application-view=@as []
-toggle-message-tray=['<Super>n']
-toggle-overview=['<Super>o']
-
-[org/gnome/tweaks]
-show-extensions-notice=false
-
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
 show-hidden=true
 sidebar-width=140
-sort-column='modified'
+sort-column='name'
 sort-directories-first=true
-sort-order='descending'
+sort-order='ascending'
 type-format='category'
 view-type='list'
 window-size=(1036, 684)
 
 [org/gtk/settings/file-chooser]
 clock-format='24h'
-show-hidden=false
+show-hidden=true
 sort-directories-first=true
