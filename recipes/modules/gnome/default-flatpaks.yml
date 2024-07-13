@@ -3,6 +3,7 @@ type: default-flatpaks
 notify: true
 system:
   install:
+    - com.github.GradienceTeam.Gradience
     - com.github.rafostar.Clapper
     - com.github.tchx84.Flatseal
     - com.mattjakeman.ExtensionManager
