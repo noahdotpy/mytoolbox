@@ -1,33 +1,33 @@
 # https://blue-build.org/reference/modules/gnome-extensions/
 type: gnome-extensions
 install:
-  - AATWS (Advanced Alt-Tab Window Switcher)
-  - Alphabetical App Grid
-  - AppIndicator and KStatusNotifierItem Suppor
-  - Battery Health Charging
-  - Bedtime Mode
-  - Bluetooth Battery Meter
-  - Blur my Shell
-  - Caffeine
-  - Clipboard Indicator
-  - Compiz windows effect
-  - Custom Accent Colors
-  - Dash to Dock
-  - Desktop Icons NG (DING)
-  - GNOME Fuzzy App Search
-  - GSConnect
-  - Hot Edge
-  - Just Perfection
-  - Live Captions Assistant
-  - Lock Keys
-  - Logo Menu
-  - OSD Volume Number
-  - Removable Drive Menu
-  - Search Light
-  - Show Desktop Button
-  - Smile - complementary extension
-  - Tiling Assistant
-  - User Themes
-  - Wiggle
-  - Workspaces indicator by open apps
-  - [QSTweak] Quick Setting Tweaker
+  - "AATWS (Advanced Alt-Tab Window Switcher)"
+  - "Alphabetical App Grid"
+  - "AppIndicator and KStatusNotifierItem Support"
+  - "Battery Health Charging"
+  - "Bedtime Mode"
+  - "Bluetooth Battery Meter"
+  - "Blur my Shell"
+  - "Caffeine"
+  - "Clipboard Indicator"
+  - "Compiz windows effect"
+  - "Custom Accent Colors"
+  - "Dash to Dock"
+  - "Desktop Icons NG (DING)"
+  - "GNOME Fuzzy App Search"
+  - "GSConnect"
+  - "Hot Edge"
+  - "Just Perfection"
+  - "Live Captions Assistant"
+  - "Lock Keys"
+  - "Logo Menu"
+  - "OSD Volume Number"
+  - "Removable Drive Menu"
+  - "Search Light"
+  - "Show Desktop Button"
+  - "Smile - complementary extension"
+  - "Tiling Assistant"
+  - "User Themes"
+  - "Wiggle"
+  - "Workspaces indicator by open apps"
+  - "[QSTweak] Quick Setting Tweaker"
