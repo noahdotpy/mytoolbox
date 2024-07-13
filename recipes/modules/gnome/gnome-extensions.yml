@@ -19,7 +19,7 @@ install:
   - "Hot Edge"
   - "Just Perfection"
   - "Live Captions Assistant"
-  - "Lock Keys"
+  - 36 # Lock Keys
   - "Logo Menu"
   - "OSD Volume Number"
   - "Removable Drive Menu"
