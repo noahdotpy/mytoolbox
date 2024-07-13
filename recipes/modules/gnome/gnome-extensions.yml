@@ -9,7 +9,7 @@ install:
   - "Bluetooth Battery Meter"
   - 3193 # Blur my Shell
   - "Caffeine"
-  - "Clipboard Indicator"
+  - 779 # Clipboard Indicator
   - "Compiz windows effect"
   - "Custom Accent Colors"
   - "Dash to Dock"
