@@ -3,7 +3,7 @@
 
 image_name=$1
 image_tag=$2
-file_name=$3
+file_output=$3
 
 project_root=$(git rev-parse --show-toplevel)
 
@@ -25,15 +25,15 @@ else
 	formatted_tag="--${image_tag}"
 fi
 
-if [ $file_name = "__auto" ]; then
-	file_name="build/${image_name}${formatted_tag}.${date}.iso"
+if [ $file_output = "__auto" ]; then
+	file_output="build/${image_name}${formatted_tag}.${date}.iso"
 else
-	if [[ ! "$file_name" = *".iso" ]]; then
-		file_name="${file_name}.iso"
+	if [[ ! "$file_output" = *".iso" ]]; then
+		file_output="${file_output}.iso"
 	fi
 fi
 
-dirnames=$(dirname $file_name)
+dirnames=$(dirname $file_output)
 
 if ! [ -d $dirnames ]; then
 	mkdir -p $dirnames
@@ -44,7 +44,7 @@ echo "image_tag: $image_tag"
 echo "installer_variant: $installer_variant"
 echo "fedora_major_version: $fedora_major_version"
 echo "date: $date"
-echo "file_name: $file_name"
+echo "file_output: $file_output"
 
 sudo podman run --rm --privileged --volume ./$dirnames:/build-container-installer/build --security-opt label=disable --pull=newer \
 	ghcr.io/jasonn3/build-container-installer:latest \
@@ -56,7 +56,7 @@ sudo podman run --rm --privileged --volume ./$dirnames:/build-container-installe
 	IMAGE_NAME="${image_name}" \
 	IMAGE_REPO="ghcr.io/noahdotpy" \
 	IMAGE_TAG="${image_tag}" \
-	ISO_NAME="${file_name}" \
+	ISO_NAME="${file_output}" \
 	SECURE_BOOT_KEY_URL='https://github.com/ublue-os/akmods/raw/main/certs/public_key.der' \
 	VARIANT="${installer_variant}" \
 	VERSION="${fedora_major_version}"

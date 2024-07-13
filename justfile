@@ -24,7 +24,7 @@ just-fix:
     just --unstable --fmt -f ${project_root}/justfile || { exit 1; }
 
 # Create ISO from ghcr image
-build-iso-ghcr image="" tag="" file_name="":
+build-iso-ghcr image="" tag="" file_output="":
     #!/usr/bin/bash
     if [ "{{ image }}" = "" ]; then
       images=$(fd --base-directory recipes/ -d 1 | grep .yml | sed 's/\.yml$//' | xargs)
@@ -44,18 +44,19 @@ build-iso-ghcr image="" tag="" file_name="":
       chosen_tag={{ tag }}
     fi
 
-    if [ "{{ file_name }}" = "" ]; then
-      want_to_custom_file_name=$(ugum choose "auto-generated" "custom" --header "Choose file name:")
-      if [ "$want_to_custom_file_name" = "custom" ]; then
-        chosen_file_name=$(ugum input)
+    if [ "{{ file_output }}" = "" ]; then
+      want_to_custom_file_output=$(ugum choose "auto-generated" "custom" --header "Choose file output:")
+      if [ "$want_to_custom_file_output" = "custom" ]; then
+        echo " ## WARNING: custom file outputs are untested and may not work correctly ## "
+        chosen_file_output=$(ugum input)
       else
-        chosen_file_name="__auto"
+        chosen_file_output="__auto"
       fi
     else
-      chosen_file_name={{ file_name }}
+      chosen_file_output={{ file_output }}
     fi
 
-    {{ project_root }}/scripts/build-iso-ghcr.sh $chosen_image $chosen_tag $chosen_file_name
+    {{ project_root }}/scripts/build-iso-ghcr.sh $chosen_image $chosen_tag $chosen_file_output
 
 # TODO: Make a script that builds image from latest commit tag
 # To get short commit hash: git log -n 1 --pretty=format:"%h" origin/BRANCH
