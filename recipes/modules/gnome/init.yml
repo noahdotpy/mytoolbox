@@ -3,3 +3,4 @@ modules:
   - from-file: modules/gnome/default-flatpaks.yml
   - from-file: modules/gnome/files.yml
   - from-file: modules/gnome/scripts.yml
+  - from-file: modules/gnome/gnome-extensions.yml

@@ -1,6 +1,5 @@
 [org/gnome/shell]
 favorite-apps = ['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'chromium-browser.desktop', 'org.gnome.Software.desktop', 'code.desktop', 'ubuntu.desktop', 'yelp.desktop']
-enabled-extensions = ['AlphabeticalAppGrid@stuarthayhurst','appindicatorsupport@rgcjonas.gmail.com','blur-my-shell@aunetx', 'caffeine@patapon.info','clipboard-indicator@tudmotu.com','dash-to-dock@micxgx.gmail.com', 'gsconnect@andyholmes.github.io', 'hotedge@jonathan.jdoda.ca','just-perfection-desktop@just-perfection','logomenu@aryan_k', 'search-light@icedman.github.com', 'tailscale@joaophi.github.com', 'tiling-assistant@leleat-on-github']
 
 [org/gnome/Ptyxis]
 audible-bell=false
