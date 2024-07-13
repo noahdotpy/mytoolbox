@@ -2,7 +2,7 @@
 type: chezmoi
 
 # Git repository to initialize
-repository: "git@github.com:noahdotpy/mydotfiles.git" # Required - Default: n/a  - Expects type: string
+repository: "github.com/noahdotpy/mydotfiles.git" # Required - Default: n/a  - Expects type: string
 
 # Whether to enable the modules services globally for all users, if false users need to enable services manually
 all-users: true # Optional - Default: true - Expects type: boolean
