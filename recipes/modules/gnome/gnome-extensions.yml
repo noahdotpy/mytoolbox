@@ -24,7 +24,7 @@ install:
   - "OSD Volume Number"
   - "Removable Drive Menu"
   - "Search Light"
-  - "Show Desktop Button"
+  - 1194 # Show Desktop Button
   - "Smile - complementary extension"
   - "Tiling Assistant"
   - "User Themes"
