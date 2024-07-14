@@ -52,7 +52,7 @@ sudo podman run --rm --privileged --volume ./$dirnames:/build-container-installe
 	ENABLE_CACHE_DNF="false" \
 	ENABLE_CACHE_SKOPEO="false" \
 	ENABLE_FLATPAK_DEPENDENCIES="false" \
-	ENROLLMENT_PASSWORD="fedora" \
+	ENROLLMENT_PASSWORD="ublue-os" \
 	IMAGE_NAME="${image_name}" \
 	IMAGE_REPO="ghcr.io/noahdotpy" \
 	IMAGE_TAG="${image_tag}" \

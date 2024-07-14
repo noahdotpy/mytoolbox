@@ -89,4 +89,4 @@ just build-iso-ghcr bluefin-dx-gts
 
 ### After the installation
 
-You will need to use the password 'fedora' to enroll the secure boot key if you are using secure boot.
+You will need to use the password 'ublue-os' to enroll the secure boot key if you are using secure boot.
