@@ -2,6 +2,9 @@
 type: default-flatpaks
 notify: true
 system:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub-system
+  repo-title: "Flathub (System)"
   install:
     - com.github.GradienceTeam.Gradience
     - com.github.rafostar.Clapper
@@ -35,3 +38,7 @@ system:
     - org.inkscape.Inkscape
     - org.nickvision.tubeconverter
     - org.pipewire.Helvum
+user:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub-user
+  repo-title: "Flathub"
