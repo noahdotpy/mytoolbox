@@ -24,21 +24,27 @@ just-fix:
     just --unstable --fmt -f ${project_root}/justfile || { exit 1; }
 
 # Create ISO from ghcr image
-build-iso-ghcr image="" tag="" file_output="":
+build-iso-ghcr image="" tag="" file_output="__auto":
     #!/usr/bin/bash
     if [ "{{ image }}" = "" ]; then
-      images=$(fd --base-directory recipes/ -d 1 | grep .yml | sed 's/\.yml$//' | xargs)
+      images=$(fd --base-directory ${project_root}/recipes/images/ -d 2 | grep .yml | sed 's/\.yml$//' | awk -F '/' '{print $2}' | awk -F '--' '{print $1}' | uniq | xargs)
       chosen_image=$(ugum choose $(echo $images) --header "Choose image name")
     else
       chosen_image={{ image }}
     fi
 
-    if [ "{{ tag }}" = "" ]; then
-      want_to_custom_tag=$(ugum choose "latest" "other" --header "Choose image tag:")
-      if [ "$want_to_custom_tag" = "other" ]; then
+    if [[ "{{ tag }}" = "" ]]; then
+
+      if [[ "$chosen_image" =~ "bluefin" ]] || [[ "$chosen_image" =~ "aurora" ]]; then
+        want_to_custom_tag=$(ugum choose "gts" "stable" "latest" "other" --header "Choose image tag:")
+      elif [[ "$chosen_image" =~ "bazzite" ]]; then
+        want_to_custom_tag=$(ugum choose "stable" "other" --header "Choose image tag:")
+      fi
+
+      if [[ "$want_to_custom_tag" = "other" ]] || [[ "$want_to_custom_tag" = "" ]]; then
         chosen_tag=$(ugum input)
       else
-        chosen_tag="latest"
+        chosen_tag=$want_to_custom_tag
       fi
     else
       chosen_tag={{ tag }}
