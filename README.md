@@ -19,7 +19,9 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 [![build-latest-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml)
 [![build-stable-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml)
 
-- dx is an image mainly meant for developers
+- any image with `-dx` (such as `bluefin-dx` or `aurora-dx`) is an image with additional tools for developers
+
+#### Update Channels
 
 |                       | GTS    | Stable | Latest   |
 | --------------------- | ------ | ------ | -------- |
@@ -37,7 +39,7 @@ There are two desktop environments you can choose from: GNOME or KDE Plasma.
 
 The built images are tagged in the following way:
 
-> **Tip** You can also check the tags by clicking on the package you want (eg: bluefin-dx-gts) in the `Packages` area of the sidebar on the right
+> **Tip** You can also check the tags by clicking on the package you want (eg: bluefin-dx) in the `Packages` area of the sidebar on the right
 
 - `latest` - latest build
 - `{commit}-{version}` - c376c87-40
@@ -49,7 +51,7 @@ You can rollback to an earlier build of any image by switching to a different ta
 
 Example:
 ```
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx-gts:20240627
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx:20240627
 ```
 
 ## Installation
@@ -63,7 +65,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 - 1. First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx-gts:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx:gts
   ```
 - 2. Reboot to complete the rebase:
   ```
@@ -71,7 +73,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 - 3. Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/bluefin-dx-gts:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/bluefin-dx:gts
   ```
 - 4. Reboot again to complete the installation
   ```
@@ -84,7 +86,7 @@ This repository includes a justfile recipe to build ISOs locally from the GHCR r
 
 You can do this by running:
 ```
-just build-iso-ghcr bluefin-dx-gts
+just build-iso-ghcr bluefin-dx gts
 ```
 
 ### After the installation
