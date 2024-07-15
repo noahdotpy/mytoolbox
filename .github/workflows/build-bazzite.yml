@@ -21,8 +21,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - bazzite-gnome.yml
-          - bazzite-plasma.yml
+          - images/bazzite/bazzite-gnome.yml
+          - images/bazzite/bazzite-plasma.yml
 
     steps:
       - name: Build Custom Image
