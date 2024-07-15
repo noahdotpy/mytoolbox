@@ -8,23 +8,14 @@ show-hidden=true
 sort-directories-first=true
 show-hidden=true
 
-[org.gnome.desktop.input-sources]
-sources=[('xkb', 'rs+latinyz')]
-mru-sources=[('xkb', 'rs+latinyz')]
-xkb-options=['caps:ctrl_modifier']
-
 [org.gnome.desktop.interface]
 show-battery-percentage=true
 clock-show-weekday=true
-document-font-name='Nokia Pure Text 11'
-font-hinting='none'
-font-name='Nokia Pure Text 11'
 gtk-theme='adw-gtk3'
 icon-theme='MoreWaita'
 gtk-enable-primary-paste=false
 
 [org.gnome.desktop.peripherals.keyboard]
-delay=uint32 226
 numlock-state=true
 
 [org.gnome.desktop.peripherals.mouse]
@@ -33,23 +24,11 @@ accel-profile='flat'
 [org.gnome.desktop.privacy]
 remove-old-trash-files=true
 
-[org.gnome.desktop.wm.preferences]
-titlebar-font='Nokia Pure Text Bold 11'
-
 [org.gnome.settings-daemon.plugins.power]
 power-button-action='interactive'
 
 [org.gnome.shell]
-enabled-extensions=['openweather-extension@penguin-teal.github.io', 'caffeine@patapon.info', 'blur-my-shell@aunetx', 'middleclickclose@paolo.tranquilli.gmail.com', 'notifications-alert-on-user-menu@hackedbellini.gmail.com', 'Bluetooth-Battery-Meter@maniacx.github.com', 'nightthemeswitcher@romainvigier.fr', 'reboottouefi@ubaygd.com']
 favorite-apps = ['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'chromium-browser.desktop', 'org.gnome.Software.desktop', 'code.desktop', 'ubuntu.desktop', 'yelp.desktop']
-
-[org.gnome.shell.extensions.openweatherrefined]
-custom-keys=['d590dd084a24e33ee2198033e927543e', '', '']
-use-system-icons=false
-pressure-unit='mbar'
-show-comment-in-panel=true
-show-sunsetrise-in-panel=true
-wind-direction=true
 
 [org.gnome.shell.extensions.notifications-alert]
 color='rgb(138,156,184)'
@@ -67,13 +46,6 @@ download-updates=false
 download-updates-notify=false
 enable-repos-dialog=false
 packaging-format-preference=['flatpak:flathub-user', 'flatpak:flathub-system']
-
-[org.gnome.system.locale]
-region='sr_RS.UTF-8@latin'
-
-[org.gnome.mutter]
-check-alive-timeout=uint32 20000
-experimental-features=['variable-refresh-rate']
 
 [org.gnome.login-screen]
 logo='/usr/share/pixmaps/myublue-gdm-logo.png'
