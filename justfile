@@ -24,7 +24,7 @@ just-fix:
     just --unstable --fmt -f ${project_root}/justfile || { exit 1; }
 
 # Create ISO from ghcr image
-build-iso-ghcr image="" tag="" file_output="__auto":
+build-iso-ghcr image="" tag="" file_output="__prompt":
     #!/usr/bin/bash
     if [ "{{ image }}" = "" ]; then
       images=$(fd --base-directory ${project_root}/recipes/images/ -d 2 | grep .yml | sed 's/\.yml$//' | awk -F '/' '{print $2}' | awk -F '--' '{print $1}' | uniq | xargs)
@@ -50,7 +50,7 @@ build-iso-ghcr image="" tag="" file_output="__auto":
       chosen_tag={{ tag }}
     fi
 
-    if [ "{{ file_output }}" = "" ]; then
+    if [ "{{ file_output }}" = "__prompt" ]; then
       want_to_custom_file_output=$(ugum choose "auto-generated" "custom" --header "Choose file output:")
       if [ "$want_to_custom_file_output" = "custom" ]; then
         echo " ## WARNING: custom file outputs are untested and may not work correctly ## "

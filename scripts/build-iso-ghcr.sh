@@ -19,10 +19,8 @@ fedora_major_version=$(skopeo inspect docker://ghcr.io/noahdotpy/${image_name}:$
 
 date=$(date +%Y%m%d)
 
-formatted_tag="--${image_tag}"
-
 if [ $file_output = "__auto" ]; then
-	file_output="build/${image_name}${formatted_tag}.${date}.iso"
+	file_output="build/${image_name}--${image_tag}.${date}.iso"
 else
 	if [[ ! "$file_output" = *".iso" ]]; then
 		file_output="${file_output}.iso"
