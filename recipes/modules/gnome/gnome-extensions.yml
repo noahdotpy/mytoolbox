@@ -10,6 +10,9 @@ install:
   - 3193 # Blur my Shell
   - "Caffeine"
   - 779 # Clipboard Indicator
+  - "Quick Close in Overview"
+  - "Notifications Alert"
+  - "Sleep Through Notifications"
   - "Compiz windows effect"
   - "Custom Accent Colors"
   - "Dash to Dock"
