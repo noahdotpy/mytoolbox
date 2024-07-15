@@ -21,10 +21,10 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/aurora/aurora-dx-latest.yml
-          - images/aurora/aurora-latest.yml
-          - images/bluefin/bluefin-dx-latest.yml
-          - images/bluefin/bluefin-latest.yml
+          - images/aurora/aurora-dx--latest.yml
+          - images/aurora/aurora--latest.yml
+          - images/bluefin/bluefin-dx--latest.yml
+          - images/bluefin/bluefin--latest.yml
 
     steps:
       - name: Build Custom Image
