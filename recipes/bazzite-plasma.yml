@@ -5,4 +5,5 @@ base-image: ghcr.io/ublue-os/bazzite
 image-version: latest
 
 modules:
-  - from-file: modules/init.yml
+  - from-file: modules/common/init.yml
+  - from-file: modules/plasma/init.yml
