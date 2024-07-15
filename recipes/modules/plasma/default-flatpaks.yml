@@ -2,6 +2,9 @@
 type: default-flatpaks
 notify: true
 system:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub-system
+  repo-title: "Flathub (System)"
   install:
     - com.github.rafostar.Clapper
     - com.github.tchx84.Flatseal
@@ -31,3 +34,8 @@ system:
     - org.kde.okular
     - org.nickvision.tubeconverter
     - org.pipewire.Helvum
+    - page.codeberg.libre_menu_editor.LibreMenuEditor
+user:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub-user
+  repo-title: "Flathub"
