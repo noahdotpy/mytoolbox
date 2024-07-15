@@ -1,12 +1,9 @@
 name: bazzite-gnome
 description: This is my personal OS image based on ublue-os/bazzite-gnome (AMD/Intel).
+alt-tags: [stable, latest]
 
 base-image: ghcr.io/ublue-os/bazzite-gnome
 image-version: stable
-
-alt-tags:
-  - stable
-  - latest
 
 modules:
   - from-file: modules/common/init.yml

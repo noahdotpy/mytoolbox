@@ -1,11 +1,9 @@
 name: bluefin
 description: This is my personal OS image based on ublue-os/bluefin (AMD/Intel).
+alt-tags: [latest]
 
 base-image: ghcr.io/ublue-os/bluefin
 image-version: latest
-
-alt-tags:
-  - latest
 
 modules:
   - from-file: modules/common/init.yml

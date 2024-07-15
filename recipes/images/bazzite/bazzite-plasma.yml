@@ -1,12 +1,9 @@
 name: bazzite-plasma
 description: This is my personal OS image based on ublue-os/bazzite (AMD/Intel).
+alt-tags: [stable, latest]
 
 base-image: ghcr.io/ublue-os/bazzite
 image-version: stable
-
-alt-tags:
-  - stable
-  - latest
 
 modules:
   - from-file: modules/common/init.yml
