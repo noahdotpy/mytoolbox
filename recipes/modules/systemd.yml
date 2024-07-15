@@ -3,3 +3,4 @@ type: systemd
 system:
   enabled:
     - idwtn.timer
+    - systemd-hosts.d.service
