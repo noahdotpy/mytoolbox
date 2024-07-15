@@ -1,8 +1,11 @@
-name: bluefin-gts
+name: bluefin
 description: This is my personal OS image based on ublue-os/bluefin (AMD/Intel).
 
 base-image: ghcr.io/ublue-os/bluefin
 image-version: gts
+
+alt-tags:
+  - gts
 
 modules:
   - from-file: modules/common/init.yml

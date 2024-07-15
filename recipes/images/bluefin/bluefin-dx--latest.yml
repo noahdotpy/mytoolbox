@@ -1,8 +1,11 @@
-name: bluefin-dx-latest
+name: bluefin-dx
 description: This is my personal OS image based on ublue-os/bluefin-dx (AMD/Intel).
 
 base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: latest
+
+alt-tags:
+  - latest
 
 modules:
   - from-file: modules/common/init.yml

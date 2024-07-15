@@ -1,8 +1,11 @@
-name: aurora-latest
+name: aurora
 description: This is my personal OS image based on ublue-os/aurora (AMD/Intel).
 
 base-image: ghcr.io/ublue-os/aurora
-image-version: latest
+image-version: stable
+
+alt-tags:
+  - stable
 
 modules:
   - from-file: modules/common/init.yml

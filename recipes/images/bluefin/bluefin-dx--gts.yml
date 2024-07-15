@@ -1,8 +1,11 @@
-name: bluefin-dx-stable
+name: bluefin-dx
 description: This is my personal OS image based on ublue-os/bluefin-dx (AMD/Intel).
 
 base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: stable
+image-version: gts
+
+alt-tags:
+  - gts
 
 modules:
   - from-file: modules/common/init.yml
