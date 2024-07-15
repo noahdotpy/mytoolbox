@@ -1,0 +1,4 @@
+# https://blue-build.org/reference/modules/script/
+type: script
+scripts:
+  - common/block-hosts.sh

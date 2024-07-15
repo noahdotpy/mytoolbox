@@ -5,7 +5,7 @@ set -euo pipefail
 
 get_yaml_array ADD_FILES '.add[]' "$1"
 
-mkdir -p /usr/share/ublue-os/image-pinned-etcs/
+mkdir -p /usr/share/bluebuild/image-pinned-etcs/
 
 if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 	cd "$CONFIG_DIRECTORY/image-pinned-etcs"
@@ -17,8 +17,8 @@ if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 			exit 1
 		fi
 
-		echo "Copying $entry to /usr/share/ublue-os/image-pinned-etcs"
-		cp -rf $CONFIG_DIRECTORY/image-pinned-etcs/$entry/* /usr/share/ublue-os/image-pinned-etcs/
+		echo "Copying $entry to /usr/share/bluebuild/image-pinned-etcs"
+		cp -rf $CONFIG_DIRECTORY/image-pinned-etcs/$entry/* /usr/share/bluebuild/image-pinned-etcs/
 		DIRS_TO_CREATE=($(fd --type directory --base-directory $CONFIG_DIRECTORY/image-pinned-etcs/$entry | xargs))
 		FILES_TO_LINK=($(fd --type file --base-directory $CONFIG_DIRECTORY/image-pinned-etcs/$entry | xargs))
 
@@ -30,8 +30,8 @@ if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 			if [ -e /usr/etc/$file ]; then
 				rm /usr/etc/$file
 			fi
-			echo "Creating symlink at /usr/etc/$file that points to /usr/share/ublue-os/image-pinned-etcs/$file"
-			ln -s /usr/share/ublue-os/image-pinned-etcs/$file /usr/etc/$file
+			echo "Creating symlink at /usr/etc/$file that points to /usr/share/bluebuild/image-pinned-etcs/$file"
+			ln -s /usr/share/bluebuild/image-pinned-etcs/$file /usr/etc/$file
 		done
 	done
 fi
