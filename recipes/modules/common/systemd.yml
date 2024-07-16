@@ -3,4 +3,5 @@ type: systemd
 system:
   enabled:
     - idwtn.timer
-    - systemd-hosts.d.service
+    - nushell-profile.d.path
+    - systemd-hosts.d.path
