@@ -4,7 +4,7 @@ modules:
   - from-file: modules/common/systemd.yml
   - from-file: modules/common/image-pinned-etcs.yml
   - from-file: modules/common/chezmoi.yml
-  - from-file: modules/common/scripts.yml
   - from-file: modules/common/gschema-overrides.yml
   - from-file: modules/common/bling.yml
+  - from-file: modules/common/scripts.yml
   - type: signing

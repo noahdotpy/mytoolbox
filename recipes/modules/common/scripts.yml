@@ -4,3 +4,4 @@ scripts:
   - common/block-hosts.sh
   - common/copy-plymouth-watermark.sh
   - common/rename-ptyxis-to-terminal.sh
+  - common/initramfs.sh
