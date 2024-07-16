@@ -20,7 +20,7 @@ fedora_major_version=$(skopeo inspect docker://ghcr.io/noahdotpy/${image_name}:$
 date=$(date +%Y%m%d)
 
 if [ $file_output = "__auto" ]; then
-	file_output="build/${image_name}--${image_tag}.${date}.iso"
+	file_output="./build/${image_name}--${image_tag}.${date}.iso"
 else
 	if [[ ! "$file_output" = *".iso" ]]; then
 		file_output="${file_output}.iso"
@@ -40,7 +40,7 @@ echo "fedora_major_version: $fedora_major_version"
 echo "date: $date"
 echo "file_output: $file_output"
 
-sudo podman run --rm --privileged --volume ./$dirnames:/build-container-installer/build --security-opt label=disable --pull=newer \
+sudo podman run --rm --privileged --volume $dirnames:/build-container-installer/build --security-opt label=disable --pull=newer \
 	ghcr.io/jasonn3/build-container-installer:latest \
 	ARCH="x86_64" \
 	ENABLE_CACHE_DNF="false" \
