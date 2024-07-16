@@ -1,4 +1,3 @@
-#!/usr/bin/sh
 let image_name = $"(cat /usr/share/ublue-os/image-info.json | from json | get image-name)"
 
 let fetch_logo = "/usr/share/ublue-os/fastfetch/logos/ublue-fastfetch-logo"
