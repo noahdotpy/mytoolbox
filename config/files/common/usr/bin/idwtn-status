@@ -8,10 +8,4 @@ STATUS_FILE="/etc/idwtn-status"
 CONFIG=$(cat $CONFIG_FILE)
 STATUS=$(cat $STATUS_FILE)
 
-if [[ "$STATUS" = "1" ]]; then
-	STATUS="on"
-else
-	STATUS="off"
-fi
-
 echo "config: $CONFIG, status: $STATUS"
