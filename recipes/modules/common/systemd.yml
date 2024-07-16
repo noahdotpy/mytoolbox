@@ -5,3 +5,6 @@ system:
     - idwtn.timer
     - nushell-profile.d.path
     - systemd-hosts.d.path
+user:
+  enabled:
+    - chezmoi-auto-apply.path
