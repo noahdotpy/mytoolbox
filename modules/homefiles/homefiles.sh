@@ -30,6 +30,7 @@ get_yaml_array ADD_HOMEFILES '.add[]' "$1"
 
 if [[ ${#ADD_HOMEFILES[@]} -gt 0 ]]; then
 	echo "Adding home files to image"
+	mkdir -p /usr/share/bluebuild/homefiles/
 	for entry in "${ADD_HOMEFILES[@]}"; do
 		cp -r $CONFIG_DIRECTORY/homefiles/$entry /usr/share/bluebuild/homefiles/$entry
 		chezmoi apply --destination /usr/etc/skel/ --source /usr/share/bluebuild/homefiles/$entry --force
