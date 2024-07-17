@@ -42,6 +42,8 @@ if [[ ${#ADD_HOMEFILES[@]} -gt 0 ]]; then
 	mkdir -p /usr/share/bluebuild/homefiles/
 	for entry in "${ADD_HOMEFILES[@]}"; do
 		cp -r $CONFIG_DIRECTORY/homefiles/$entry /usr/share/bluebuild/homefiles/$entry
+		mkdir -p /usr/etc/bluebuild/homefiles/$entry
+		cp -r $CONFIG_DIRECTORY/homefiles/$entry/chezmoi.toml /usr/etc/bluebuild/homefiles/$entry/chezmoi.toml
 		chezmoi apply --destination /usr/etc/skel/ --source /usr/share/bluebuild/homefiles/$entry --force
 	done
 else

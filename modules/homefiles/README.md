@@ -9,16 +9,7 @@ add:
 disable-service: false # default: false, the systemd service is disabled by default
 ```
 
-
-
-
-
-
-
-
-
-
-
+You can place any chezmoi config file in your chezmoi source (as per teh example above it would be `config/homefiles/common/chezmoi.toml). idk if this would ever be useful but its there
 
 
 

@@ -64,6 +64,15 @@ build-iso-ghcr image="" tag="" file_output="__prompt":
 
 # TODO: re-applies user's chezmoi to workaround a bug in chezmoi, where source a overwrites source b
 test-homefiles entry args="":
-  chezmoi apply --source {{ project_root}}/config/homefiles/{{ entry }} {{ args }}
-  # re-applying my user's chezmoi
-  chezmoi apply
+  #!/usr/bin/env nu
+  let entry_dir = "{{ project_root }}/config/homefiles/{{ entry }}"
+  let entry_config = $"($entry_dir)/.chezmoi.toml"
+  mut remove_entry_config = false
+  if (echo $entry_config | path exists) == "false" {
+    touch $entry_config
+    let remove_entry_config = "true"
+  }
+  chezmoi apply --source $entry_dir --config $entry_config  --no-tty --keep-going
+  if (echo $remove_entry_config) == "true" {
+    rm $entry_config
+  }

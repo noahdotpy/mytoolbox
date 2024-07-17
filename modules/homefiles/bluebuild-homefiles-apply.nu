@@ -3,8 +3,11 @@
 let files = (ls -a /usr/share/bluebuild/homefiles/ | get name)
 
 for file in $files {
-  chezmoi apply --source $file --no-tty --keep-going
-  # TODO: remove the below command chezmoi is fixed
-  # this is a workaround because the above command overwrites any file written by chezmoi (no matter the source)
-  chezmoi apply
+  let entry_name = echo $file | path basename
+  let source_config = $"/etc/bluebuild/homefiles/($entry_name)/chezmoi.toml"
+  ^mkdir -p (echo $source_config | path dirname)
+  if ((echo $source_config) | path exists) != "true" {
+    touch $source_config
+  }
+  chezmoi apply --source $file --config $source_config  --no-tty --keep-going
 }
