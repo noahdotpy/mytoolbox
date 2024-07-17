@@ -29,12 +29,6 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 | Kernel version        | Gated  | Gated  | Upstream |
 | Image build frequency | Weekly | Weekly | Daily    |
 
-### [Bazzite](https://bazzite.gg)
-
-[![build-bazzite](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-bazzite.yml)
-
-There are two desktop environments you can choose from: GNOME or KDE Plasma.
-
 ## Tags
 
 The built images are tagged in the following way:

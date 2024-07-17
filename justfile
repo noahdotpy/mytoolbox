@@ -37,8 +37,6 @@ build-iso-ghcr image="" tag="" file_output="__prompt":
 
       if [[ "$chosen_image" =~ "bluefin" ]] || [[ "$chosen_image" =~ "aurora" ]]; then
         want_to_custom_tag=$(ugum choose "gts" "stable" "latest" "other" --header "Choose image tag:")
-      elif [[ "$chosen_image" =~ "bazzite" ]]; then
-        want_to_custom_tag=$(ugum choose "stable" "other" --header "Choose image tag:")
       fi
 
       if [[ "$want_to_custom_tag" = "other" ]] || [[ "$want_to_custom_tag" = "" ]]; then
