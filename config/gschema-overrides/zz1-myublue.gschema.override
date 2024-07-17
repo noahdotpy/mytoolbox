@@ -129,6 +129,8 @@ use-system-font=false
 [org.gnome.Ptyxis.Profiles.2871e8027773ae74d6c87a5f659bbc74]
 label='Default'
 palette='catppuccin-dynamic'
+custom-command='/usr/bin/nu'
+use-custom-command=true
 
 [org.gnome.desktop.a11y.magnifier]
 mag-factor=4.0
