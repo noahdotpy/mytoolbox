@@ -62,5 +62,8 @@ build-iso-ghcr image="" tag="" file_output="__prompt":
 
     {{ project_root }}/scripts/build-iso-ghcr.sh $chosen_image $chosen_tag $chosen_file_output
 
-# TODO: Make a script that builds image from latest commit tag
-# To get short commit hash: git log -n 1 --pretty=format:"%h" origin/BRANCH
+# TODO: Don't allow replacement when applying chezmoi
+test-homefiles entry args="":
+  chezmoi apply --source {{ project_root}}/config/homefiles/{{ entry }} {{ args }}
+  # re-applying my user's chezmoi
+  chezmoi apply
