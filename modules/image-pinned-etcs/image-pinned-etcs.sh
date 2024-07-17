@@ -3,6 +3,13 @@
 # Tell build process to exit if there are any errors.
 set -euo pipefail
 
+echo "Checking if /usr/bin/fd exists"
+if [ -e /usr/bin/fd ]; then
+	echo "fd binary already exists, no need to redownload it"
+else
+	rpm-ostree install fd-find
+fi
+
 get_yaml_array ADD_FILES '.add[]' "$1"
 
 mkdir -p /usr/share/bluebuild/image-pinned-etcs/
