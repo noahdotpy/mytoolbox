@@ -33,7 +33,7 @@ fi
 
 if [[ $DISABLE_SERVICE == "false" ]]; then
 	systemctl --global enable bluebuild-homefiles-apply.path
-else [[ $DISABLE_SERVICE == "true" ]]; then
+elif [[ $DISABLE_SERVICE == "true" ]]; then
 	systemctl --global disable bluebuild-homefiles-apply.path	
 fi
 
