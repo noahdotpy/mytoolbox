@@ -1,0 +1,4 @@
+# https://github.com/noahdotpy/myublue/blob/main/modules/homefiles/README.md
+type: homefiles
+add:
+  - common
