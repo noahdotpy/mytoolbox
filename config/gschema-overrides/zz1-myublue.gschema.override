@@ -135,14 +135,6 @@ use-custom-command=true
 [org.gnome.desktop.a11y.magnifier]
 mag-factor=4.0
 
-[org.gnome.desktop.background]
-color-shading-type='solid'
-picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/fedora-workstation/montclair_light.webp'
-picture-uri-dark='file:///usr/share/backgrounds/fedora-workstation/montclair_dark.webp'
-primary-color='#000000000000'
-secondary-color='#000000000000'
-
 [org.gnome.desktop.calendar]
 show-weekdate=true
 
