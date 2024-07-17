@@ -2,3 +2,4 @@
 type: script
 scripts:
   - gnome/use-default-fedora-wallpaper.sh
+  - gnome/remove-gnome-classic.sh
