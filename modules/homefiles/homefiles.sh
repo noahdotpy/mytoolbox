@@ -24,9 +24,18 @@ cp -r {"$MODULE_DIRECTORY"/homefiles,/usr/lib/systemd/user}/bluebuild-homefiles-
 cp -r {"$MODULE_DIRECTORY"/homefiles,/usr/lib/systemd/user}/bluebuild-homefiles-apply.path
 cp -r {"$MODULE_DIRECTORY"/homefiles,/usr/bin}/bluebuild-homefiles-apply.nu
 
-systemctl --global enable bluebuild-homefiles-apply.path
-
 get_yaml_array ADD_HOMEFILES '.add[]' "$1"
+
+DISABLE_SERVICE=$(echo "$1" | yq -I=0 ".disable-service") # (boolean)
+if [[ -z $DISABLE_SERVICE || $DISABLE_SERVICE == "null" ]]; then
+	DISABLE_SERVICE=false
+fi
+
+if [[ $DISABLE_SERVICE == "false" ]]; then
+	systemctl --global enable bluebuild-homefiles-apply.path
+else [[ $DISABLE_SERVICE == "true" ]]; then
+	systemctl --global disable bluebuild-homefiles-apply.path	
+fi
 
 if [[ ${#ADD_HOMEFILES[@]} -gt 0 ]]; then
 	echo "Adding home files to image"

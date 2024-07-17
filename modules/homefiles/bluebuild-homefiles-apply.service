@@ -4,3 +4,6 @@ Description=Homefiles Apply
 [Service]
 ExecStart=/usr/bin/bluebuild-homefiles-apply.nu
 Type=oneshot
+
+[Install]
+WantedBy=default.target

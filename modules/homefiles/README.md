@@ -6,7 +6,7 @@
 type: homefiles
 add:
   - common
-disable-update: false # only new users get the homefiles
+disable-service: false # default: false, the systemd service is disabled by default
 ```
 
 
