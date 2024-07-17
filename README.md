@@ -50,6 +50,17 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx:202406
 
 ## Installation
 
+### ISO (recommended)
+
+This repository includes a justfile recipe to build ISOs locally from the GHCR registry.
+
+You can do this by running:
+```
+just build-iso-ghcr bluefin-dx gts
+```
+
+### Rebase from another Fedora Atomic image
+
 > **Warning** [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) and should not be used in production, try it in a VM for a while!
 
 To rebase an existing Silverblue/Kinoite installation to the latest build:
@@ -74,15 +85,6 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   systemctl reboot
   ```
 
-## ISO (recommended)
-
-This repository includes a justfile recipe to build ISOs locally from the GHCR registry.
-
-You can do this by running:
-```
-just build-iso-ghcr bluefin-dx gts
-```
-
-### After the installation
+## After the installation
 
 You will need to use the password 'ublue-os' to enroll the secure boot key if you are using secure boot.
