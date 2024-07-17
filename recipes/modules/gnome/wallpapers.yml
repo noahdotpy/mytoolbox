@@ -2,4 +2,4 @@
 type: wallpapers
 default:
   wallpaper-light-dark:
-    - fedora-default/f40-bb-light.png + fedora-default/f40-bb-dark.png
+    - f40-bb-light.png + f40-bb-dark.png
