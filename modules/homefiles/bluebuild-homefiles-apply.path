@@ -1,0 +1,8 @@
+[Unit]
+Description=Automatically apply homefiles when they change
+
+[Path]
+PathModified=/usr/share/bluebuild/homefiles/
+
+[Install]
+WantedBy=default.target
