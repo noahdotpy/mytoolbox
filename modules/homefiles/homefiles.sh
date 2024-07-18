@@ -50,7 +50,7 @@ if [[ ${#ADD_HOMEFILES[@]} -gt 0 ]]; then
 		cp -r $ENTRY_DIRECTORY /usr/share/bluebuild/homefiles/$entry
 
 		mkdir -p /usr/etc/bluebuild/homefiles/$entry/
-		ln -s /usr/etc/bluebuild/homefiles/$entry/chezmoi.toml /usr/share/bluebuild/homefiles/$entry/chezmoi.toml
+		ln -s /usr/share/bluebuild/homefiles/$entry/chezmoi.toml /usr/etc/bluebuild/homefiles/$entry/chezmoi.toml
 		
 		chezmoi apply --destination /usr/etc/skel/ --source /usr/share/bluebuild/homefiles/$entry --force
 	done
