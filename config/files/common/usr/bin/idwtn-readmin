@@ -1,7 +1,0 @@
-#!/usr/bin/bash
-
-# I Don't Want To Network (IDWTN)
-
-USERNAME="noah"
-
-usermod -aG wheel $USERNAME

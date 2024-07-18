@@ -1,6 +1,0 @@
-noah   ALL=(ALL) NOPASSWD: /usr/bin/idwtn-block-host
-noah   ALL=(ALL) NOPASSWD: /usr/bin/idwtn-set disallow
-noah   ALL=(ALL) NOPASSWD: /usr/bin/idwtn-unadmin
-noah   ALL=(ALL) NOPASSWD: /usr/bin/set-file-to /etc/idwtn-config disallow
-noah   ALL=(ALL) NOPASSWD: /usr/libexec/idwtn-block-flatpak.sh
-noah   ALL=(ALL) NOPASSWD: /usr/libexec/idwtn-script

@@ -1,0 +1,4 @@
+%idwtn-tighten ALL=(ALL) NOPASSWD: /usr/libexec/idwtn-script
+%idwtn-tighten ALL=(ALL) NOPASSWD: /usr/bin/idwtn unadmin __current
+%idwtn-tighten ALL=(ALL) NOPASSWD: /usr/bin/idwtn networking set disallow
+# Somehow add allowing `/usr/bin/idwtn block flatpak *` and `/usr/bin/idwtn block host *`

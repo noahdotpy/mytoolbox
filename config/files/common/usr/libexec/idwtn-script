@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# I Don't Want To Network (IDWTN)
+# I Don't Want To (IDWT)
 
 function enable-networking {
 	iptables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
@@ -24,10 +24,10 @@ TIME_END="15:00"
 CURRENT_TIME=$(date +"%H:%M")
 DAY_OF_WEEK=$(date +%u)
 
-CONFIG_FILE="/etc/idwtn-config"
+CONFIG_FILE="/etc/idwt/config"
 CONFIG=$(cat $CONFIG_FILE)
 
-STATUS_FILE="/etc/idwtn-status"
+STATUS_FILE="/etc/idwt/networking-status"
 
 echo "Networking config is set to: '$CONFIG'"
 

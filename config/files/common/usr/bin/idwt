@@ -1,0 +1,101 @@
+#!/usr/bin/env nu
+
+# I Don't Want To (IDWT)
+
+let config_file = "/etc/idwt/config"
+let networking_status_file = "/etc/idwt/networking-status"
+
+def "main block flatpak" [
+    flatpak_app_id: string # flatpak app id (example: org.mozilla.firefox)
+] {
+    let override_file = $"($env.HOME)/.local/share/flatpak/overrides/($flatpak_app_id)"
+    echo "[Context]" | save -a $override_file
+    echo "shared=!network;" | save -a $override_file
+    chattr +i $override_file
+}
+
+def "main block host" [
+  host: string # the host you want to delete (example: facebook.com)
+] {
+    echo $"0.0.0.0 ($host)" | save --append /etc/hosts.d/idwt-blocked.conf
+    # TODO: Let idwt-script manage this file, this subcommand would just edit $config_file
+}
+
+def "main readmin" [
+  username: string # username to give admin (example: john)
+] {
+    usermod -aG wheel $username
+}
+
+def "main unadmin" [
+    username: string # username to remove from admin group (example: john). You could unadmin yourself with '__current'.
+] {
+    if $username == "__current" {
+        let username = $env.USER
+        gpasswd -d $username wheel
+    } else {
+        gpasswd -d $username wheel
+    }
+}
+
+def "main networking set" [
+    mode: string # mode to set idwt networking to (options: disallow, allow, schedule)
+    username: string # username to follow the current idwt networking config
+] {
+    let acceptable_modes = ["schedule", "allow", "disallow"]
+    if $mode in $acceptable_modes == false {
+        echo "You must input mode as schedule, allow or disallow"
+        echo "see --help for more info"
+        exit 1
+    }
+    $mode | save -f $config_file
+}
+
+def "main networking status" [] {
+    let config = cat $config_file
+    let status = cat $networking_status_file
+
+    echo $"config: ($config), status: ($status)"
+}
+
+def "main lockdown" [
+    choices = "__prompt": string # disallow-network, unadmin
+    --shutdown # shutdown immediately after lockdown is complete
+] {
+    let choices = ugum choose --no-limit disallow-network unadmin --header "Choose which options you want for lockdown (empty to exit): " | xargs
+
+    if $choices == "" {
+        exit
+    }
+
+    let confirm_response = ugum choose Yes No --header $"Lockdown with these options: '($choices)'?)"
+
+    if $confirm_response == "No" {
+        notify-send --app-name "I Don't Want To" "Aborted Lockdown"
+    }
+
+    if $choices =~ "disallow-network" {
+        sudo /usr/bin/idwt networking set disallow
+    }
+    if $choices =~ "unadmin" {
+        sudo /usr/bin/idwt unadmin __current
+    }
+
+    notify-send --app-name "I Don't Want To" $"Lockdown completed with these choices: ($choices)" -u critical
+
+    if $shutdown {
+        systemctl poweroff
+    }
+
+    let shutdown_response = ugum choose Yes No --header "Do you want to shutdown your computer?"
+    if $shutdown_response == "Yes" {
+        let confirm_shutdown = ugum choose Yes No --header "Are you sure you want to shutdown your computer?"
+        if $confirm_shutdown == "Yes" {
+            systemctl poweroff
+        } else {
+            exit
+        }
+    }
+}
+
+def main [] {}
