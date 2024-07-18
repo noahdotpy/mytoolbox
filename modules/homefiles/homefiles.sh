@@ -41,11 +41,17 @@ if [[ ${#ADD_HOMEFILES[@]} -gt 0 ]]; then
 	echo "Adding home files to image"
 	mkdir -p /usr/share/bluebuild/homefiles/
 	for entry in "${ADD_HOMEFILES[@]}"; do
-		cp -r $CONFIG_DIRECTORY/homefiles/$entry /usr/share/bluebuild/homefiles/$entry
-		mkdir -p /usr/etc/bluebuild/homefiles/$entry
-		if [ -e $CONFIG_DIRECTORY/homefiles/$entry/chezmoi.toml ]; then
-			cp -r $CONFIG_DIRECTORY/homefiles/$entry/chezmoi.toml /usr/etc/bluebuild/homefiles/$entry/chezmoi.toml
+		ENTRY_DIRECTORY="$CONFIG_DIRECTORY/homefiles/$entry"
+
+		if ! [ -e $ENTRY_DIRECTORY/chezmoi.toml ]; then
+			touch $ENTRY_DIRECTORY/chezmoi.toml
 		fi
+
+		cp -r $ENTRY_DIRECTORY /usr/share/bluebuild/homefiles/$entry
+
+		mkdir -p /usr/etc/bluebuild/homefiles/$entry/
+		ln -s /usr/etc/bluebuild/homefiles/$entry/chezmoi.toml /usr/share/bluebuild/homefiles/$entry/chezmoi.toml
+		
 		chezmoi apply --destination /usr/etc/skel/ --source /usr/share/bluebuild/homefiles/$entry --force
 	done
 else
