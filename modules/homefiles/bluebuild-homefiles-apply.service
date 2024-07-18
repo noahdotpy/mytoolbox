@@ -2,7 +2,7 @@
 Description=Homefiles Apply
 
 [Service]
-ExecStart=/usr/bin/bluebuild-homefiles-apply.nu --mode skip
+ExecStart=/usr/bin/bluebuild-homefiles-apply --mode skip
 Type=oneshot
 
 [Install]

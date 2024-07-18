@@ -22,7 +22,7 @@ fi
 
 cp -r {"$MODULE_DIRECTORY"/homefiles,/usr/lib/systemd/user}/bluebuild-homefiles-apply.service
 cp -r {"$MODULE_DIRECTORY"/homefiles,/usr/lib/systemd/user}/bluebuild-homefiles-apply.path
-cp -r {"$MODULE_DIRECTORY"/homefiles,/usr/bin}/bluebuild-homefiles-apply.nu
+cp -r {"$MODULE_DIRECTORY"/homefiles,/usr/bin}/bluebuild-homefiles-apply
 
 get_yaml_array ADD_HOMEFILES '.add[]' "$1"
 
