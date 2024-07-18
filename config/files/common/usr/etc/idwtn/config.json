@@ -1,0 +1,15 @@
+{
+    "block": {
+        "flatpak": {
+            "system": [
+                "org.mozilla.firefox"
+            ],
+            "user": [
+                "com.google.Chrome"
+            ]
+        },
+        "host": [
+            "facebook.com"
+        ]
+    }
+}

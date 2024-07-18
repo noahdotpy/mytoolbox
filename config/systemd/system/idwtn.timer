@@ -1,9 +1,0 @@
-[Unit]
-Description=Run IDWTN service every minute
-
-[Timer]
-OnUnitActiveSec=1min
-AccuracySec=1s
-
-[Install]
-WantedBy=timers.target
