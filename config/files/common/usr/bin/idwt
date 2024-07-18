@@ -2,8 +2,7 @@
 
 # I Don't Want To (IDWT)
 
-let config_file = "/etc/idwt/config"
-let networking_status_file = "/etc/idwt/networking-status"
+source /usr/lib/idwt/constants.nu
 
 def "main block flatpak" [
     flatpak_app_id: string # flatpak app id (example: org.mozilla.firefox)
