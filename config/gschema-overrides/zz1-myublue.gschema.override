@@ -45,7 +45,7 @@ allow-updates=false
 download-updates=false
 download-updates-notify=false
 enable-repos-dialog=false
-packaging-format-preference=['flatpak:flathub-user', 'flatpak:flathub-system']
+packaging-format-preference=['flatpak:flathub-system', 'flatpak:flathub-user']
 
 [org.gnome.login-screen]
 logo='/usr/share/pixmaps/myublue-gdm-logo.png'
