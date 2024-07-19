@@ -2,7 +2,7 @@
 Description=Automatically apply chezmoi when directory changes
 
 [Path]
-PathModified=$HOME/.local/share/chezmoi/chezmoi
+PathModified=$HOME/.local/share/chezmoi/
 
 [Install]
 WantedBy=default.target
