@@ -13,5 +13,7 @@ def "group remove" [
     user: string,
     group: string,
 ] {
-    gpasswd -d $user $group
+    if (groups $user =~ $group) {
+        gpasswd -d $user $group
+    }
 }

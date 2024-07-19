@@ -8,4 +8,6 @@ source /home/noah/.myublue/config/files/common/usr/lib/idwt/cmd_apply.nu
 source /home/noah/.myublue/config/files/common/usr/lib/idwt/cmd_group.nu
 source /home/noah/.myublue/config/files/common/usr/lib/idwt/cmd_status.nu
 
+# TODO: allow any user in `idwtn-tightener` group to add to config
+# TODO: investigate schema validation for config.yml
 def main [] {}

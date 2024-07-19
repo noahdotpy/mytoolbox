@@ -3,5 +3,15 @@ block:
     - com.discordapp.Discord
   hosts:
     - facebook.com
-  user-networking:
-    - noah
+user-networking:
+  users:
+    noah:
+      mode: schedule # (allow, block, schedule)
+      schedule: schedule1
+    john:
+      mode: allow # (allow, block, schedule)
+  schedules:
+    schedule1: # from 8:30 to 15:00 on wednesdays, networking is allowed
+      days_allowed: wednesday
+      time_start: 8:30
+      time_end: 15:00
