@@ -7,8 +7,12 @@ source /usr/lib/idwt/group.nu
 
 def "main apply block flatpak-networking" [
     --config = $config_file: path,
-    --overrides_dir = "~/.local/share/flatpak/overrides": path,
+    --as_user: string,
 ] {
+    mut overrides_dir = "~/.local/share/flatpak/overrides"
+    if $as_user != null {
+      overrides_dir = $overrides_dir | str replace ~ $"/home/($as_user)"
+    }
     let flatpaks_list = open $config | get block.flatpak-networking
 
     for file in (ls $"($overrides_dir)") {
@@ -54,17 +58,17 @@ def "main apply block user-networking" [
     let nowifi_users = open $config | get user-networking.users
     let schedules = open $config | get user-networking.schedules
 
-    # iptables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP
-    # ip6tables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP
-    # groupadd $blocked_group --force
+    iptables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP
+    ip6tables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP
+    groupadd $blocked_group --force
 
     for username in ($nowifi_users | columns) {
         let user = $nowifi_users | get $username
         let mode = $user | get mode
         if $mode == "allow" {
-            # group remove $user $blocked_group
+            group remove $user $blocked_group
         } else if $mode == "block" {
-            # group add $user $blocked_group
+            group add $user $blocked_group
         } else if $mode == "schedule" {
             let schedule_name = $user | get schedule
             let schedule = $schedules | get $schedule_name
@@ -88,8 +92,13 @@ def "main apply block user-networking" [
 def "main apply" [
     --config = $config_file: path,
     --force(-f)
+    --as_user: string,
 ] {
+    mut real_as_user = "$env.USER"
+    if $as_user != null {
+        real_as_user = $as_user
+    }
     main apply block hosts
-    main apply block flatpak-networking
+    main apply block flatpak-networking --as_user $real_as_user
     main apply block user-networking
 }
