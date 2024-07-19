@@ -2,13 +2,14 @@
 
 # I Don't Want To (IDWT)
 
-source /usr/lib/idwt/constants.nu
+source /home/noah/.myublue/config/files/common/usr/lib/idwt/constants.nu
+source /home/noah/.myublue/config/files/common/usr/lib/idwt/group.nu
 
 def "main apply block flatpak-networking" [
     --config = $config_file: path,
     --overrides_dir = "~/.local/share/flatpak/overrides": path,
 ] {
-    let flatpaks_list = open $config | get block.flatpak
+    let flatpaks_list = open $config | get block.flatpak-networking
 
     for file in (ls $"($overrides_dir)") {
         let file_name = echo $file | get name | path basename
@@ -22,41 +23,50 @@ def "main apply block flatpak-networking" [
     for flatpak in $flatpaks_list {
         let file_contents = "# IDWTN_REPLACEABLE: Remove line if you want file to not be replaced by idwtn\n[Context]\nshared=!network;"
         let override_file = $"($overrides_dir)/($flatpak)"
-        if (open $"($overrides_dir)/($flatpak)") =~ "# IDWTN_REPLACEABLE" {
+        if (open $override_file) =~ "# IDWTN_REPLACEABLE" {
             echo $file_contents | save --force $override_file
             chattr +i $override_file
         } else {
-            echo $"Skipping overwriting ($overrides_dir)/($flatpak)"
+            echo $"Skipping overwriting ($override_file)"
         }
     }
 }
 
-def "main apply block host" [
+def "main apply block hosts" [
     --config = $config_file: path,
-    --hosts_file = "/etc/hosts.d/idwt-blocked.conf": path,
+    --hosts_file: path,
 ] {
+    let hosts_file = "/etc/hosts.d/idwt-blocked.conf"
+    
     echo "## THIS FILE MAY BE REPLACED AT ANY TIME AUTOMATICALLY ##" | save --force $hosts_file
 
-    let hosts = open $config | get block.host
+    let hosts = open $config | get block.hosts
     for host in $hosts {
         echo $host
         echo $"\n0.0.0.0 ($host)" | save --append $hosts_file
     }
 }
 
-def "main apply block internet" [
+def "main apply block user-networking" [
     --config = $config_file: path,
 ] {
-    echo "WIP"
-    exit 1
+    let nowifi_users = open $config | get block.user-networking
+    let group_name = "idwt-networking-blocked"
+    for user in $nowifi_users {
+        group add $user $group_name
+    }
+    iptables -A OUTPUT -m owner --gid-owner $group_name -j DROP
+    ip6tables -A OUTPUT -m owner --gid-owner $group_name -j DROP
+    groupadd $group_name --force
+	echo $"Networking disabled for users in group `($group_name)`"
 }
 
 def "main apply" [
     --config = $config_file: path,
     --force(-f)
 ] {
-    main apply block host
-    main apply block internet
+    main apply block hosts
+    main apply block user-networking
     main apply block flatpak-networking
 }
 

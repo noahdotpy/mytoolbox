@@ -2,71 +2,10 @@
 
 # I Don't Want To (IDWT)
 
-source /usr/lib/idwt/constants.nu
-source /usr/lib/idwt/cmd_apply.nu
+source /home/noah/.myublue/config/files/common/usr/lib/idwt/constants.nu
 
-def "main networking flatpak block" [
-    flatpak_app_id: string # flatpak app id (example: org.mozilla.firefox)
-] {
-    # TODO: add --system flag, which would put the override in /var/lib/flatpak/overrides
-    let override_file = $"($env.HOME)/.local/share/flatpak/overrides/($flatpak_app_id)"
-    echo "[Context]" | save -a $override_file
-    echo "shared=!network;" | save -a $override_file
-    chattr +i $override_file
-}
-
-def "main networking host block" [
-  host: string # the host you want to delete (example: facebook.com)
-] {
-    echo $"0.0.0.0 ($host)" | save --append /etc/hosts.d/idwt-blocked.conf
-    # TODO: Let idwt-script manage this file, this subcommand would just edit $config_file
-}
-
-def "main readmin" [
-  username: string # username to give admin (example: john)
-] {
-    usermod -aG wheel $username
-}
-
-def "main unadmin" [
-    username: string # username to remove from admin group (example: john). You could unadmin yourself with '__current'.
-] {
-    if $username == "__current" {
-        let username = $env.USER
-        gpasswd -d $username wheel
-    } else {
-        gpasswd -d $username wheel
-    }
-}
-
-def "main networking set" [
-    mode: string # mode to set idwt networking to (options: disallow, allow, schedule)
-    username: string # username to follow the current idwt networking config
-] {
-    let acceptable_modes = ["schedule", "allow", "disallow"]
-    if $mode in $acceptable_modes == false {
-        echo "You must input mode as schedule, allow or disallow"
-        echo "see --help for more info"
-        exit 1
-    }
-    $mode | save -f $config_file
-}
-
-def "main networking status" [] {
-    let config = cat $config_file
-    let status = cat $networking_status_file
-
-    echo $"config: ($config), status: ($status)"
-}
-
-# idwt config networking flatpak block org.mozilla.firefox
-#   - adding --system flag would put override file in /var/lib/flatpak/overrides 
-# idwt networking flatpak unblock org.mozilla.firefox
-# idwt networking host block org.mozilla.firefox
-# idwt networking host unblock org.mozilla.firefox
-# idwt networking internet block john
-# idwt networking internet status john
-# idwt set-admin remove john
-# idwt set-admin add john
+source /home/noah/.myublue/config/files/common/usr/lib/idwt/cmd_apply.nu
+source /home/noah/.myublue/config/files/common/usr/lib/idwt/cmd_group.nu
+source /home/noah/.myublue/config/files/common/usr/lib/idwt/cmd_status.nu
 
 def main [] {}
