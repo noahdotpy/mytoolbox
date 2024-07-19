@@ -2,7 +2,7 @@
 type: systemd
 system:
   enabled:
-    - idwtn.timer
+    - idwt.path
     - nushell-profile.d.path
     - systemd-hosts.d.path
 user:

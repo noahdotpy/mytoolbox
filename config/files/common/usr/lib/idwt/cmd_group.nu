@@ -2,7 +2,7 @@
 
 # I Don't Want To (IDWT)
 
-source /home/noah/.myublue/config/files/common/usr/lib/idwt/group.nu
+source /usr/lib/idwt/group.nu
 
 def "main group add" [
     user: string,

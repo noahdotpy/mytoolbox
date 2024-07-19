@@ -39,14 +39,14 @@
     {
       "type": "command",
       "key": "󰖩",
-      "text": "echo IDWTN Status: $(cat /etc/idwtn-status)",
-      "shell": "/bin/bash"
+      "text": "echo $\"IDWT-Networking Status: (/usr/bin/idwt status user-networking $env.USER)\"",
+      "shell": "/bin/nu"
     },
     {
       "type": "command",
       "key": "󰖩",
-      "text": "echo IDWTN Config: $(cat /etc/idwtn-config)",
-      "shell": "/bin/bash"
+      "text": "echo $\"IDWT-Networking Config: (open config.yml | get user-networking.users | get $env.USER | get mode)\"",
+      "shell": "/bin/nu"
     }
   ]
 }

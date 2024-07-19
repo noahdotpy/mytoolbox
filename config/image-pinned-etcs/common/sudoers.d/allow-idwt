@@ -1,4 +1,2 @@
-%idwtn-tighten ALL=(ALL) NOPASSWD: /usr/libexec/idwtn-script
-%idwtn-tighten ALL=(ALL) NOPASSWD: /usr/bin/idwtn unadmin __current
-%idwtn-tighten ALL=(ALL) NOPASSWD: /usr/bin/idwtn networking set disallow
-# Somehow add allowing `/usr/bin/idwtn block flatpak *` and `/usr/bin/idwtn block host *`
+# TODO: allow any user in `idwt-tightener` group to add to config without password
+# %idwt-tighten ALL=(ALL) NOPASSWD: /usr/bin/idwt

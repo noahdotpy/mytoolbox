@@ -2,12 +2,17 @@
 
 # I Don't Want To (IDWT)
 
-source /home/noah/.myublue/config/files/common/usr/lib/idwt/constants.nu
+source /usr/lib/idwt/constants.nu
 
-source /home/noah/.myublue/config/files/common/usr/lib/idwt/cmd_apply.nu
-source /home/noah/.myublue/config/files/common/usr/lib/idwt/cmd_group.nu
-source /home/noah/.myublue/config/files/common/usr/lib/idwt/cmd_status.nu
+source /usr/lib/idwt/cmd_apply.nu
+source /usr/lib/idwt/cmd_group.nu
+source /usr/lib/idwt/cmd_status.nu
 
-# TODO: allow any user in `idwtn-tightener` group to add to config
+# TODO: allow any user in `idwt-tightener` group to add to config without password
+#         - This would probably be in the form of `config ...` commands, 
+#           although I might need to make a small wrapper like the old block-flatpak.sh
+#           which wrote the `flatpak to block` to a file named ~/.cache/block-this-flatpak.
+#           The apply command would then use this. The sudoers.d/allow-idwt file would then
+#           allow this wrapper script to be used by anyone in the `idwt-tightener` group/
 # TODO: investigate schema validation for config.yml
 def main [] {}

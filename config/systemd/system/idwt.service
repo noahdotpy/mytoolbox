@@ -1,9 +1,9 @@
 [Unit]
-Description=IDWTN service
+Description=IDWT service
 
 [Service]
 Type=oneshot
-ExecStart=sudo /usr/libexec/idwt-script.nu
+ExecStart=/usr/bin/idwt apply
 
 [Install]
 WantedBy=default.target
