@@ -3,6 +3,7 @@
 # I Don't Want To (IDWT)
 
 source /usr/lib/idwt/constants.nu
+source /usr/lib/idwt/cmd_apply.nu
 
 def "main networking flatpak block" [
     flatpak_app_id: string # flatpak app id (example: org.mozilla.firefox)
@@ -58,7 +59,7 @@ def "main networking status" [] {
     echo $"config: ($config), status: ($status)"
 }
 
-# idwt networking flatpak block org.mozilla.firefox
+# idwt config networking flatpak block org.mozilla.firefox
 #   - adding --system flag would put override file in /var/lib/flatpak/overrides 
 # idwt networking flatpak unblock org.mozilla.firefox
 # idwt networking host block org.mozilla.firefox

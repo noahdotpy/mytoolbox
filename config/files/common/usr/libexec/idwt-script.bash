@@ -2,6 +2,9 @@
 
 # I Don't Want To (IDWT)
 
+## JUST A REFERENCE TO ADD TO /usr/lib/idwt/cmd_apply.nu
+# TODO: Remove this file when done translating to nushell
+
 function enable-networking {
 	iptables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null
 	ip6tables -D OUTPUT -m owner --uid-owner $USERNAME -j DROP >/dev/null

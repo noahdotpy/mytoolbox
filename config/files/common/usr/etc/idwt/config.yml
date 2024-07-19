@@ -1,0 +1,5 @@
+block:
+  flatpak:
+    - com.discordapp.Discord
+  host:
+    - facebook.com
