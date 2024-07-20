@@ -2,4 +2,4 @@
 
 # I Don't Want To (IDWT)
 
-const config_file = "/etc/idwt/config.yml"
+export const config_file = "/etc/idwt/config.yml"

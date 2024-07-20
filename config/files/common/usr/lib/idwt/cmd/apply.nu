@@ -2,10 +2,11 @@
 
 # I Don't Want To (IDWT)
 
-source /usr/lib/idwt/constants.nu
-source /usr/lib/idwt/group.nu
+use ../constants.nu *
+use ../group.nu *
+use ../config.nu *
 
-def "main apply block-flatpak-networking" [
+def "apply block-flatpak-networking" [
     --config = $config_file: path,
     --as_user: string,
 ] {
@@ -39,7 +40,7 @@ def "main apply block-flatpak-networking" [
     }
 }
 
-def "main apply block-hosts" [
+def "apply block-hosts" [
     --config = $config_file: path,
     --hosts_file: path,
 ] {
@@ -53,7 +54,7 @@ def "main apply block-hosts" [
     }
 }
 
-def "main apply user-networking" [
+def "apply user-networking" [
     --config = $config_file: path,
 ] {
     let blocked_group = "idwt-networking-blocked"
@@ -68,9 +69,9 @@ def "main apply user-networking" [
         let user = $nowifi_users | get $username
         let mode = $user | get mode
         if $mode == "allow" {
-            group remove $username $blocked_group
+            group_remove $username $blocked_group
         } else if $mode == "block" {
-            group add $username $blocked_group
+            group_add $username $blocked_group
         } else if $mode == "schedule" {
             let schedule_name = $user | get schedule
             let schedule = $schedules | get $schedule_name
@@ -82,9 +83,9 @@ def "main apply user-networking" [
             let current_day = ^date +%A | str downcase
             let current_time = ^date +%H:%M
             if ($current_day in $days_allowed) and (current_time >= $time_start) and (current_time < $time_end) {
-                group remove $username $blocked_group
+                group_remove $username $blocked_group
             } else {
-                group add $username $blocked_group
+                group_add $username $blocked_group
             }
         }
     }
@@ -99,7 +100,13 @@ def "main apply" [
     if $as_user != null {
         $real_as_user = $as_user
     }
-    main apply block-hosts
-    main apply block-flatpak-networking --as_user $real_as_user
-    main apply user-networking
+    if (does_column_exist_or_empty $config block-hosts) {
+        apply block-hosts
+    }
+    if (does_column_exist_or_empty $config block-flatpak-networking) {
+        apply block-flatpak-networking --as_user $real_as_user
+    }
+    if (does_column_exist $config user-networking) {
+        apply user-networking
+    }
 }

@@ -2,10 +2,10 @@
 
 # I Don't Want To (IDWT)
 
-source /usr/lib/idwt/cmd_apply.nu
-source /usr/lib/idwt/cmd_edit.nu
-source /usr/lib/idwt/cmd_group.nu
-source /usr/lib/idwt/cmd_status.nu
+source ../lib/idwt/cmd/apply.nu
+source ../lib/idwt/cmd/edit.nu
+source ../lib/idwt/cmd/group.nu
+source ../lib/idwt/cmd/status.nu
 
 # TODO: allow any user in `idwt-tightener` group to add to config without password
 #         - This would probably be in the form of `config ...` commands, 

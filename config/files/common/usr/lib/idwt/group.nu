@@ -2,14 +2,14 @@
 
 # I Don't Want To (IDWT)
 
-def "group add" [
+export def group_add [
     user: string,
     group: string,
 ] {
     usermod -aG $group $user
 }
 
-def "group remove" [
+export def group_remove [
     user: string,
     group: string,
 ] {

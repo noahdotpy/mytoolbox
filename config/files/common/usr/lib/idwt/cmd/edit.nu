@@ -2,7 +2,7 @@
 
 # I Don't Want To (IDWT)
 
-source /usr/lib/idwt/constants.nu
+use ../constants.nu *
 
 def "main edit user-networking block" [
     --config = $config_file: path,

@@ -2,18 +2,18 @@
 
 # I Don't Want To (IDWT)
 
-source /usr/lib/idwt/group.nu
+use ../group.nu *
 
 def "main group add" [
     user: string,
     group: string,
 ] {
-    group add $user $group
+    group_add $user $group
 }
 
 def "main group remove" [
     user: string,
     group: string,
 ] {
-    group remove $user $group
+    group_remove $user $group
 }
