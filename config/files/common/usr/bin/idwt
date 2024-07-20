@@ -2,9 +2,8 @@
 
 # I Don't Want To (IDWT)
 
-source /usr/lib/idwt/constants.nu
-
 source /usr/lib/idwt/cmd_apply.nu
+source /usr/lib/idwt/cmd_edit.nu
 source /usr/lib/idwt/cmd_group.nu
 source /usr/lib/idwt/cmd_status.nu
 

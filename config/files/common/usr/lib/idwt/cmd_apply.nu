@@ -9,7 +9,7 @@ def "main apply block flatpak-networking" [
     --config = $config_file: path,
     --as_user: string,
 ] {
-    mut user = $env.USER
+    mut user = ($env.USER)
     if $as_user != null {
         $user = $as_user
     }
@@ -29,7 +29,8 @@ def "main apply block flatpak-networking" [
     for flatpak in $flatpaks_list {
         let file_contents = "# IDWT_REPLACEABLE: Remove line if you want this file to not be automatically overwritten\n[Context]\nshared=!network;"
         let override_file = $"($overrides_dir)/($flatpak)"
-        if ($override_file | path exists) == false or (open $override_file =~ "# IDWT_REPLACEABLE") {
+        if ($override_file | path exists) == false or ((open $override_file) =~ "# IDWT_REPLACEABLE") {
+            chattr -i $override_file
             echo $file_contents | save --force $override_file
             chattr +i $override_file
         } else {
@@ -48,7 +49,6 @@ def "main apply block hosts" [
 
     let hosts = open $config | get block.hosts
     for host in $hosts {
-        echo $host
         echo $"\n0.0.0.0 ($host)" | save --append $hosts_file
     }
 }
@@ -60,32 +60,31 @@ def "main apply block user-networking" [
     let nowifi_users = open $config | get user-networking.users
     let schedules = open $config | get user-networking.schedules
 
+    groupadd $blocked_group --force
     iptables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP
     ip6tables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP
-    groupadd $blocked_group --force
 
     for username in ($nowifi_users | columns) {
         let user = $nowifi_users | get $username
         let mode = $user | get mode
         if $mode == "allow" {
-            group remove $user $blocked_group
+            group remove $username $blocked_group
         } else if $mode == "block" {
-            group add $user $blocked_group
+            group add $username $blocked_group
         } else if $mode == "schedule" {
             let schedule_name = $user | get schedule
             let schedule = $schedules | get $schedule_name
 
             let days_allowed = $schedule | get days_allowed | each { |day| $day | str downcase }
-            echo $days_allowed
             let time_start = $schedule | get time_start
             let time_end = $schedule | get time_end
 
             let current_day = ^date +%A | str downcase
             let current_time = ^date +%H:%M
             if ($current_day in $days_allowed) and (current_time >= $time_start) and (current_time < $time_end) {
-                group remove $user $blocked_group
+                group remove $username $blocked_group
             } else {
-                group add $user $blocked_group
+                group add $username $blocked_group
             }
         }
     }
