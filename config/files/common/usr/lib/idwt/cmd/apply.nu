@@ -7,6 +7,8 @@ use ../group.nu *
 use ../config.nu *
 
 def "apply block-flatpak-networking" [] {
+    echo "## Applying: block-flatpak-networking ##"
+
     let users_affected = open $config_file | get block-flatpak-networking.users_affected
     for user in $users_affected {
         let overrides_dir = $"/home/($user)/.local/share/flatpak/overrides"
@@ -19,6 +21,11 @@ def "apply block-flatpak-networking" [] {
                 rm $override_file
                 echo $"INFO: Removed redundant flatpak override at '($override_file)'"
             }
+        }
+
+        if not (is_column_populated $config_file block-flatpak-networking) {
+            echo "INFO: No flatpaks listed, skipping"
+            return
         }
     
         for flatpak in $flatpaks_list {
@@ -37,10 +44,19 @@ def "apply block-flatpak-networking" [] {
 }
 
 def "apply block-hosts" [] {
+    echo "## Applying: block-hosts ##"
+    
     let hosts_file = "/etc/hosts.d/idwt-blocked.conf"
+
+    rm $hosts_file
     echo "## THIS FILE MAY BE REPLACED AT ANY TIME AUTOMATICALLY ##" | save --force $hosts_file
     echo $"INFO: Saving hosts file at '($hosts_file)'"
 
+    if not (is_column_populated $config_file block-hosts) {
+        echo "INFO: No hosts listed, skipping"
+        return
+    }
+    
     let hosts = open $config_file | get block-hosts
     for host in $hosts {
         echo $"INFO: Added '($host)' to hosts file"
@@ -49,6 +65,8 @@ def "apply block-hosts" [] {
 }
 
 def "apply user-networking" [] {
+    echo "## Applying: user-networking ##"
+
     let blocked_group = "idwt-networking-blocked"
     let nowifi_users = open $config_file | get user-networking.users
     let schedules = open $config_file | get user-networking.schedules
@@ -90,18 +108,8 @@ def "apply user-networking" [] {
 }
 
 def "main apply" [] {
-    if (is_column_populated $config_file block-hosts) {
-        echo "## Applying: block-hosts ##"
-        apply block-hosts
-        echo
-    }
-    if (is_column_populated $config_file block-flatpak-networking) {
-        echo "## Applying: block-flatpak-networking ##"
-        apply block-flatpak-networking
-        echo
-    }
-    if (is_column_populated $config_file user-networking) {
-        echo "## Applying: user-networking ##"
-        apply user-networking
-    }
+    apply block-hosts
+    apply block-flatpak-networking
+    apply user-networking
+    
 }
