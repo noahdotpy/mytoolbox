@@ -100,13 +100,13 @@ def "main apply" [
     if $as_user != null {
         $real_as_user = $as_user
     }
-    if (does_column_exist_or_empty $config block-hosts) {
+    if (is_column_populated $config block-hosts) {
         apply block-hosts
     }
-    if (does_column_exist_or_empty $config block-flatpak-networking) {
+    if (is_column_populated $config block-flatpak-networking) {
         apply block-flatpak-networking --as_user $real_as_user
     }
-    if (does_column_exist $config user-networking) {
+    if (is_column_populated $config user-networking) {
         apply user-networking
     }
 }

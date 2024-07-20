@@ -2,11 +2,14 @@
 
 # I Don't Want To (IDWT)
 
-export def "does_column_exist_or_empty" [
+export def "is_column_populated" [
     config: path,
     column: string,
 ] {
-    return ((does_column_exist $config $column) or (is_column_empty $config $column))
+    if not (does_column_exist $config $column) {
+        return false
+    }
+    return (not (is_column_empty $config $column))
 }
 
 export def "does_column_exist" [
