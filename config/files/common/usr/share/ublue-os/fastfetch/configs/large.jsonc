@@ -95,7 +95,7 @@
     {
       "type": "command",
       "key": "󰖩",
-      "text": "echo $\"IDWT-Networking Config: (open config.yml | get user-networking.users | get $env.USER | get mode)\"",
+      "text": "echo $\"IDWT-Networking Config: (open /etc/idwt/config.yml | get user-networking.users | get $env.USER | get mode)\"",
       "shell": "/bin/nu"
     }
   ]
