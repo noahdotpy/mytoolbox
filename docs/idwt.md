@@ -5,11 +5,10 @@ Use this tool for when you want to block a flatpak from accessing internet, add 
 ## Example
 
 ```yml
-block:
-  flatpak-networking:
-    - com.discordapp.Discord
-  hosts:
-    - facebook.com
+block-flatpak-networking:
+  - com.discordapp.Discord
+block-hosts:
+  - facebook.com
 user-networking:
   users:
     noah:
