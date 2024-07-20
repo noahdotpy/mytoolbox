@@ -9,16 +9,18 @@ def "main apply block flatpak-networking" [
     --config = $config_file: path,
     --as_user: string,
 ] {
-    mut overrides_dir = "~/.local/share/flatpak/overrides"
+    mut user = $env.USER
     if $as_user != null {
-      overrides_dir = $overrides_dir | str replace ~ $"/home/($as_user)"
+        $user = $as_user
     }
+
+    let overrides_dir = $"/home/($user)/.local/share/flatpak/overrides"
     let flatpaks_list = open $config | get block.flatpak-networking
 
     for file in (ls $"($overrides_dir)") {
         let file_name = echo $file | get name | path basename
         let override_file = $"($overrides_dir)/($file_name)"
-        if (open $override_file) =~ "# IDWT_REPLACEABLE" and ($file_name in $flatpaks_list) == false {
+        if ((open $override_file) =~ "# IDWT_REPLACEABLE" and ($file_name in $flatpaks_list) == false) {
             chattr -i $override_file
             rm $override_file
         }
@@ -27,7 +29,7 @@ def "main apply block flatpak-networking" [
     for flatpak in $flatpaks_list {
         let file_contents = "# IDWT_REPLACEABLE: Remove line if you want this file to not be automatically overwritten\n[Context]\nshared=!network;"
         let override_file = $"($overrides_dir)/($flatpak)"
-        if (open $override_file) =~ "# IDWT_REPLACEABLE" {
+        if ($override_file | path exists) == false or (open $override_file =~ "# IDWT_REPLACEABLE") {
             echo $file_contents | save --force $override_file
             chattr +i $override_file
         } else {
@@ -96,7 +98,7 @@ def "main apply" [
 ] {
     mut real_as_user = "$env.USER"
     if $as_user != null {
-        real_as_user = $as_user
+        $real_as_user = $as_user
     }
     main apply block hosts
     main apply block flatpak-networking --as_user $real_as_user
