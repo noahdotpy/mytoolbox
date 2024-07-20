@@ -5,7 +5,7 @@
 source /usr/lib/idwt/constants.nu
 source /usr/lib/idwt/group.nu
 
-def "main apply block flatpak-networking" [
+def "main apply block-flatpak-networking" [
     --config = $config_file: path,
     --as_user: string,
 ] {
@@ -15,7 +15,7 @@ def "main apply block flatpak-networking" [
     }
 
     let overrides_dir = $"/home/($user)/.local/share/flatpak/overrides"
-    let flatpaks_list = open $config | get block.flatpak-networking
+    let flatpaks_list = open $config | get block-flatpak-networking
 
     for file in (ls $"($overrides_dir)") {
         let file_name = echo $file | get name | path basename
@@ -39,7 +39,7 @@ def "main apply block flatpak-networking" [
     }
 }
 
-def "main apply block hosts" [
+def "main apply block-hosts" [
     --config = $config_file: path,
     --hosts_file: path,
 ] {
@@ -47,13 +47,13 @@ def "main apply block hosts" [
     
     echo "## THIS FILE MAY BE REPLACED AT ANY TIME AUTOMATICALLY ##" | save --force $hosts_file
 
-    let hosts = open $config | get block.hosts
+    let hosts = open $config | get block-hosts
     for host in $hosts {
         echo $"\n0.0.0.0 ($host)" | save --append $hosts_file
     }
 }
 
-def "main apply block user-networking" [
+def "main apply user-networking" [
     --config = $config_file: path,
 ] {
     let blocked_group = "idwt-networking-blocked"
@@ -99,7 +99,7 @@ def "main apply" [
     if $as_user != null {
         $real_as_user = $as_user
     }
-    main apply block hosts
-    main apply block flatpak-networking --as_user $real_as_user
-    main apply block user-networking
+    main apply block-hosts
+    main apply block-flatpak-networking --as_user $real_as_user
+    main apply user-networking
 }

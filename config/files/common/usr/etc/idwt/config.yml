@@ -1,8 +1,7 @@
-block:
-  flatpak-networking:
-    - com.discordapp.Discord
-  hosts:
-    - facebook.com
+block-flatpak-networking:
+  - com.discordapp.Discord
+block-hosts:
+  - facebook.com
 user-networking:
   users:
     noah:

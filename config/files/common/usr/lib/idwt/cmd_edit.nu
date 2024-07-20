@@ -12,21 +12,21 @@ def "main edit user-networking block" [
     echo $new_config | to yaml | save --force $config
 }
 
-def "main edit block hosts append" [
+def "main edit block-hosts append" [
     --config = $config_file: path,
     ...hosts,
 ] {
-    let new_hosts = open $config | get block.hosts | append $hosts
-    let new_config = open $config | update block.hosts $new_hosts
+    let new_hosts = open $config | get block-hosts | append $hosts
+    let new_config = open $config | update block-hosts $new_hosts
     echo $new_config | to yaml | save --force $config
 }
 
-def "main edit block flatpak-networking append" [
+def "main edit block-flatpak-networking append" [
     --config = $config_file: path,
     ...flatpaks,
 ] {
-    let new_flatpaks = open $config | get block.flatpak-networking | append $flatpaks
-    let new_config = open $config | update block.flatpak-networking $new_flatpaks
+    let new_flatpaks = open $config | get block-flatpak-networking | append $flatpaks
+    let new_config = open $config | update block-flatpak-networking $new_flatpaks
     echo $new_config | to yaml | save --force $config
 }
 
