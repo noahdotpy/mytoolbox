@@ -4,7 +4,15 @@
 
 source /usr/lib/idwt/constants.nu
 
-def "main edit append block hosts" [
+def "main edit user-networking block" [
+    --config = $config_file: path,
+    user: string,
+] {
+    let new_config = open $config | update user-networking.users.noah {mode: block}
+    echo $new_config | to yaml | save --force $config
+}
+
+def "main edit block hosts append" [
     --config = $config_file: path,
     ...hosts,
 ] {
@@ -13,7 +21,7 @@ def "main edit append block hosts" [
     echo $new_config | to yaml | save --force $config
 }
 
-def "main edit append block flatpak-networking" [
+def "main edit block flatpak-networking append" [
     --config = $config_file: path,
     ...flatpaks,
 ] {
