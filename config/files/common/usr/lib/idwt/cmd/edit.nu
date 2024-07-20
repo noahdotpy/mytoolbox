@@ -7,7 +7,7 @@ use ../constants.nu *
 # TODO: If mode == schedule, then use `--schedule` to get schedule and add it new config.
 def "main edit user-networking" [
     mode: string,
-    user: string,
+    user?: string,
     --from-tighten, # do not use this argument external to the program's code
 ] {
     mut real_user = $user
