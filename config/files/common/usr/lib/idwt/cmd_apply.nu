@@ -61,8 +61,8 @@ def "main apply user-networking" [
     let schedules = open $config | get user-networking.schedules
 
     groupadd $blocked_group --force
-    iptables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP
-    ip6tables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP
+    iptables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP --suppl-groups
+    ip6tables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP --suppl-groups
 
     for username in ($nowifi_users | columns) {
         let user = $nowifi_users | get $username
