@@ -3,7 +3,7 @@ Description=IDWT service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/libexec/idwt-apply-as-user
+ExecStart=sudo /usr/bin/idwt apply
 
 [Install]
 WantedBy=default.target
