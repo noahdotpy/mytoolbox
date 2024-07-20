@@ -1,3 +1,4 @@
-# TODO: allow any user in `idwt-tightener` group to add to config without password
-# %idwt-tighten ALL=(ALL) NOPASSWD: /usr/bin/idwt
 ALL ALL=(ALL) NOPASSWD: /usr/libexec/idwt-apply-as-user
+%idwt-tightener ALL=(ALL) NOPASSWD: /usr/bin/idwt edit user-networking block --from-tighten
+%idwt-tightener ALL=(ALL) NOPASSWD: /usr/bin/idwt edit user-networking block --from-tighten
+%idwt-tightener ALL=(ALL) NOPASSWD: /usr/bin/idwt edit user-networking block --from-tighten
