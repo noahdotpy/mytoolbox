@@ -21,7 +21,7 @@ def "main edit" [
         $editor
     }
 
-    let field = $field | into cell-path
+    let field = $field | split row '.' | into cell-path
 
     if $open {
         ^$editor $config_file

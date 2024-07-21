@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "idwt/cmd"
 
 func main() {
-	fmt.Println("stop")
+	cmd.Execute()
 }
