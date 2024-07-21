@@ -9,10 +9,12 @@ use ../config.nu *
 def "apply block-flatpak-networking" [] {
     echo "## Applying: block-flatpak-networking ##"
 
-    let users_affected = open $config_file | get block-flatpak-networking.users_affected
+    let config = open $config_file
+
+    let users_affected = $config | get block-flatpak-networking.users-affected
     for user in $users_affected {
         let overrides_dir = $"/home/($user)/.local/share/flatpak/overrides"
-        let flatpaks_list = open $config_file | get block-flatpak-networking.apps
+        let flatpaks_list = $config | get block-flatpak-networking.apps
         for file in (ls $"($overrides_dir)") {
             let file_name = echo $file | get name | path basename
             let override_file = $"($overrides_dir)/($file_name)"
@@ -23,7 +25,7 @@ def "apply block-flatpak-networking" [] {
             }
         }
 
-        if not (is_column_populated $config_file block-flatpak-networking) {
+        if not (is_property_populated $config block-flatpak-networking) {
             echo "INFO: No flatpaks listed, skipping"
             return
         }
@@ -52,12 +54,14 @@ def "apply block-hosts" [] {
     echo "## THIS FILE MAY BE REPLACED AT ANY TIME AUTOMATICALLY ##" | save --force $hosts_file
     echo $"INFO: Saving hosts file at '($hosts_file)'"
 
-    if not (is_column_populated $config_file block-hosts) {
+    let config = open $config_file
+
+    if not (is_property_populated $config block-hosts) {
         echo "INFO: No hosts listed, skipping"
         return
     }
     
-    let hosts = open $config_file | get block-hosts
+    let hosts = $config | get block-hosts
     for host in $hosts {
         echo $"INFO: Added '($host)' to hosts file"
         echo $"\n0.0.0.0 ($host)" | save --append $hosts_file

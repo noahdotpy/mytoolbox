@@ -2,26 +2,19 @@
 
 # I Don't Want To (IDWT)
 
-export def "is_column_populated" [
-    config: path,
-    column: string,
+export def "is_property_defined" [
+    config: record,
+    property: string,
 ] {
-    if not (does_column_exist $config $column) {
+    return (not ($config | columns | where $it == $property | is-empty))
+}
+
+export def "is_property_populated" [
+    config: record
+    property: string,
+] {
+    if not (is_property_defined $config $property) {
         return false
     }
-    return (not (is_column_empty $config $column))
-}
-
-export def "does_column_exist" [
-    config: path,
-    column: string,
-] {
-    return (not (open $config | columns | where $it == $column | is-empty))
-}
-
-export def "is_column_empty" [
-    config: path,
-    column: string,
-] {
-    return (open $config | get $column | is-empty)
+    return (not ($config | get $property | is-empty))
 }

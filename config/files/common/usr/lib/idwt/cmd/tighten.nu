@@ -4,6 +4,9 @@
 
 use ../constants.nu *
 
+# idwt tighten append <field> <value>
+# idwt tighten edit <field> <value>
+
 def "main tighten user-networking block" [
     user: string,
 ] {
