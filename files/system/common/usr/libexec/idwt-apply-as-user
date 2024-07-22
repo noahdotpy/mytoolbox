@@ -1,7 +1,0 @@
-#!/usr/bin/env nu
-
-# I Don't Want To (IDWT)
-
-# Run this as regular user (not sudo)
-
-sudo /usr/bin/idwt apply --as_user $env.USER

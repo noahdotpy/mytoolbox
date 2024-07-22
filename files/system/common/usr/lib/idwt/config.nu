@@ -4,14 +4,14 @@
 
 export def "is_property_defined" [
     config: record,
-    property: string,
+    property: cell-path,
 ] {
     return (not ($config | columns | where $it == $property | is-empty))
 }
 
 export def "is_property_populated" [
     config: record
-    property: string,
+    property: cell-path,
 ] {
     if not (is_property_defined $config $property) {
         return false

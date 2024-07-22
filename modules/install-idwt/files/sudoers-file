@@ -1,4 +1,0 @@
-ALL ALL=(ALL) NOPASSWD: /usr/bin/idwt apply
-%idwt-tightener ALL=(ALL) NOPASSWD: /usr/bin/idwt edit user-networking block --from-tighten
-%idwt-tightener ALL=(ALL) NOPASSWD: /usr/bin/idwt edit block-hosts append --from-tighten
-%idwt-tightener ALL=(ALL) NOPASSWD: /usr/bin/idwt edit block-flatpak-networking append --from-tighten

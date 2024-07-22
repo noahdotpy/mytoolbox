@@ -1,3 +1,0 @@
-# `install-idwt`
-
-This modules installs `IDWT (I Don't Want To)`, to help you not do stuff you don't want to do...

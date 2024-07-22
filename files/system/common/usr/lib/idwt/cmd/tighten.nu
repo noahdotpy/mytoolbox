@@ -3,27 +3,16 @@
 # I Don't Want To (IDWT)
 
 use ../constants.nu *
+use ./edit.nu *
 
-# idwt tighten append <field> <value>
-# idwt tighten edit <field> <value>
-
-def "main tighten user-networking block" [
-    user: string,
+def "main tighten" [
+    action: string,
+    field: string,
+    value: any,
 ] {
-    {user: $user} | to nuon | save -f $tighten_temp_file
-    sudo /usr/bin/idwt edit user-networking block --from-tighten
-}
+    echo $action | save -f $tighten_action_file
+    echo $field | save -f $tighten_field_file
+    echo $value | save -f $tighten_value_file
 
-def "main tighten block-hosts append" [
-    ...hosts,
-] {
-    {hosts: $hosts} | to nuon | save -f $tighten_temp_file
-    sudo /usr/bin/idwt edit block-hosts append --from-tighten
-}
-
-def "main tighten block-flatpak-networking append" [
-    ...flatpaks,
-] {
-    {flatpaks: $flatpaks} | to nuon | save -f $tighten_temp_file
-    sudo /usr/bin/idwt edit block-flatpak-networking append --from-tighten
+    ^$"sudo" /usr/libexec/idwt/tighten-apply.nu
 }
