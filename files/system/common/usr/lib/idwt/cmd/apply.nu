@@ -25,15 +25,19 @@ def "apply block-flatpak-networking" [] {
             }
         }
 
-        if not (is_property_populated $config block-flatpak-networking) {
-            echo "INFO: No flatpaks listed, skipping"
-            return
-        }
+        # if not (is_property_populated $config block-flatpak-networking) {
+        #     echo "INFO: No flatpaks listed, skipping"
+        #     return
+        # }
     
         for flatpak in $flatpaks_list {
             let file_contents = "# IDWT_REPLACEABLE: Remove line if you want this file to not be automatically overwritten\n[Context]\nshared=!network;"
             let override_file = $"($overrides_dir)/($flatpak)"
-            if ($override_file | path exists) == false or ((open $override_file) =~ "# IDWT_REPLACEABLE") {
+
+            if not ($override_file | path exists) {
+                echo $file_contents | save --force $override_file
+            }
+            if (open $override_file) =~ "# IDWT_REPLACEABLE" {
                 chattr -i $override_file
                 echo $file_contents | save --force $override_file
                 chattr +i $override_file
