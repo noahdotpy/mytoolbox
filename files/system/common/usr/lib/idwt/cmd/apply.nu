@@ -81,9 +81,6 @@ def "apply user-networking" [] {
     
     echo $"INFO: Creating group '($blocked_group)'"
     groupadd $blocked_group --force
-    echo $"INFO: Adding iptables rule to block internet for users with group '($blocked_group)'"
-    iptables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP --suppl-groups
-    ip6tables -A OUTPUT -m owner --gid-owner $blocked_group -j DROP --suppl-groups
 
     for username in ($nowifi_users | columns) {
         let user = $nowifi_users | get $username
@@ -119,5 +116,4 @@ def "main apply" [] {
     apply block-hosts
     apply block-flatpak-networking
     apply user-networking
-    
 }
