@@ -1,8 +1,9 @@
 # https://github.com/noahdotpy/myublue/blob/main/modules/files/README.md
 modules:
 - type: files
-  add:
-    - system/common/: /
+  files:
+    - source: system/common/
+        destination: /
 - type: remove-files
   remove:
     - /etc/profile.d/ublue-os-just.sh
