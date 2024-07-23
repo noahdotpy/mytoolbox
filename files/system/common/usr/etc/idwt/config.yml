@@ -1,16 +1,23 @@
 block-flatpak-networking:
-  - com.discordapp.Discord
-block-hosts:
-  - facebook.com
+  users_affected:
+  - noah
+  apps:
+  - com.google.Chrome
 user-networking:
   users:
     noah:
-      mode: schedule # (allow, block, schedule)
-      schedule: schedule1
-    john:
-      mode: allow # (allow, block, schedule)
+      mode: allow
   schedules:
-    schedule1: # from 8:30 to 15:00 on wednesdays, networking is allowed
+    schedule1:
       days_allowed: wednesday
       time_start: 8:30
       time_end: 15:00
+tightener-config:
+  approved-updates:
+    # field - regex: value - regex
+    # allow updating field `user-networking.users.<ANY USER>.mode` with value `disallow`
+    ^user-networking\.users\.[^.]+\.mode$: ^disallow$
+  approved-appends:
+    # field - regex
+    # allow appending to block-flatpak-networking.apps
+    - ^block-flatpak-networking\.apps$

@@ -4,7 +4,7 @@
 
 use ../constants.nu *
 use ../group.nu *
-use ../config.nu *
+use ../lib.nu *
 
 def "apply block-flatpak-networking" [] {
     echo "## Applying: block-flatpak-networking ##"

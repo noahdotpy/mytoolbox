@@ -3,31 +3,29 @@
 # I Don't Want To (IDWT)
 
 use ../../lib/idwt/constants.nu *
+use ../../lib/idwt/lib.nu *
 
 let action = cat $tighten_action_file
 let field = cat $tighten_field_file
 let value = cat $tighten_value_file
 
-let approved_append_fields = [
-    "block-flatpak-networking.apps"
-]
-
-let approved_update_fields = [
-    "user-networking.users.*.mode" # TODO: Allow this somehow
-]
+let tightener_config = open $config_file | get tightener-config
+let approved_updates = $tightener_config | get approved-updates
+let approved_appends = $tightener_config | get approved-appends
 
 if $action == "append" {
-    if not ($field in $approved_append_fields) {
-        echo "field is not in approved tightener paths"
-        exit 1
+    if not (regex_matches_with_any $approved_appends $field) {
+        echo $"ERROR: ($field) is not in approved tightener append fields"
     }
 } else if $action == "update" {
-    if not ($field in $approved_update_fields) {
-        echo "field is not in approved tightener paths"
-        exit 1
+    if not (regex_matches_with_any ($approved_updates | columns) $field) {
+        echo $"ERROR: ($field) is not in approved tightener update fields"
+    }
+    if not (regex_matches_with_any ($approved_updates | values) $value) {
+        echo $"ERROR: ($value) is not in approved tightener update values"
     }
 } else {
-    echo "unsupported action"
+    echo "ERROR: unsupported tightener action"
     exit 1
 }
 
