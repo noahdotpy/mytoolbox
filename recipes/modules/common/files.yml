@@ -3,7 +3,7 @@ modules:
 - type: files
   files:
     - source: system/common/
-        destination: /
+      destination: /
 - type: remove-files
   remove:
     - /etc/profile.d/ublue-os-just.sh
