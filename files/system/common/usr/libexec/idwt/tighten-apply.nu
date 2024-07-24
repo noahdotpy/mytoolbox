@@ -30,3 +30,7 @@ if $action == "append" {
 }
 
 sudo /usr/bin/idwt edit (cat $tighten_action_file) (cat $tighten_field_file) (cat $tighten_value_file)
+
+rm $tighten_action_file
+rm $tighten_field_file
+rm $tighten_value_file
