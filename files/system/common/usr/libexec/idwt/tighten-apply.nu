@@ -16,13 +16,16 @@ let approved_appends = $tightener_config | get approved-appends
 if $action == "append" {
     if not (regex_matches_with_any $approved_appends $field) {
         echo $"ERROR: ($field) is not in approved tightener append fields"
+        exit 1
     }
 } else if $action == "update" {
     if not (regex_matches_with_any ($approved_updates | columns) $field) {
         echo $"ERROR: ($field) is not in approved tightener update fields"
+        exit 1
     }
     if not (regex_matches_with_any ($approved_updates | values) $value) {
         echo $"ERROR: ($value) is not in approved tightener update values"
+        exit 1
     }
 } else {
     echo "ERROR: unsupported tightener action"
