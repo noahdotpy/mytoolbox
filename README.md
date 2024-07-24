@@ -31,6 +31,9 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ## Tags
 
+> **Warning**
+> This may not be an accurate list of tags for each image
+
 The built images are tagged in the following way:
 
 > **Tip** You can also check the tags by clicking on the package you want (eg: bluefin-dx) in the `Packages` area of the sidebar on the right
@@ -68,6 +71,10 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 > **Tip**
 > If you are already on a signed uBlue image you may skip directly to step 3
 
+> **Tip**
+> Replace `bluefin-dx` with your preferred variant (eg: `aurora-dx`).
+> Replace `:gts` with your preferred update channel (eg: `:stable`).
+
 - 1. First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx:gts
@@ -87,4 +94,4 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 ## After the installation
 
-You will need to use the password 'ublue-os' to enroll the secure boot key if you are using secure boot.
+You will need to use the password `ublue-os` to enroll the secure boot key if you are using secure boot.
