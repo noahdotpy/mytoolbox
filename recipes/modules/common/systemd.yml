@@ -6,8 +6,5 @@ system:
     - nushell-profile.d.service
     - systemd-hosts.d.path
     - systemd-hosts.d.service
-    - idwt.path
-    - idwt.service
-user:
-  enabled:
-    - chezmoi-auto-apply.path
+    - idwt-apply.path
+    - idwt-apply.service
