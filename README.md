@@ -31,10 +31,10 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ## Tags
 
+The built images are tagged in the following way:
+
 > **Warning**
 > This may not be an accurate list of tags for each image
-
-The built images are tagged in the following way:
 
 > **Tip** You can also check the tags by clicking on the package you want (eg: bluefin-dx) in the `Packages` area of the sidebar on the right
 
