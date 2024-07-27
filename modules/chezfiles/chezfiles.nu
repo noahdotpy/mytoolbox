@@ -26,12 +26,12 @@ def main [
 
     let system_files = (ls -a $"($module_directory)/chezfiles/files/system/" | get name)
     for file in $system_files {
-        cp -r $"($module_directory)/chezfiles/files/system/($file)" /usr/lib/systemd/system
+        cp $file /usr/lib/systemd/system/
     }
 
     let user_files = (ls -a $"($module_directory)/chezfiles/files/user/" | get name)
     for file in $user_files {
-        cp -r $"($module_directory)/chezfiles/files/user/($file)" /usr/lib/systemd/user
+        cp $file /usr/lib/systemd/user/
     }
 
     cp $"($module_directory)/chezfiles/files/chezfiles-apply" /usr/bin/chezfiles-apply
