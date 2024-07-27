@@ -11,7 +11,6 @@ install:
   - chromium
   - cryfs
   - lzip
-  - nu
   - python3-aw-client
   - python3-aw-core
   - python3-aw-qt

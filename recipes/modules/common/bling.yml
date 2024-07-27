@@ -1,4 +1,0 @@
-# https://blue-build.org/reference/modules/rpm-ostree/
-type: bling
-install:
-  - dconf-update-service
