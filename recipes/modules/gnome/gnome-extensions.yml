@@ -1,8 +1,7 @@
 # https://blue-build.org/reference/modules/gnome-extensions/
 modules:
   - type: rpm-ostree
-    install:
-      - gnome-shell-extension-gsconnect
+    install: [gnome-shell-extension-gsconnect]
   - type: gnome-extensions
     install:
       - "AATWS (Advanced Alt-Tab Window Switcher)"

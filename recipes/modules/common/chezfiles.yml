@@ -1,4 +1,3 @@
 # https://github.com/noahdotpy/myublue/blob/main/modules/chezfiles/README.md
 type: chezfiles
-user:
-  - common
+user: [common/user]
