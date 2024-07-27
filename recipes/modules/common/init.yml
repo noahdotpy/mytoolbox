@@ -1,6 +1,6 @@
 modules:
   - from-file: modules/common/files.yml
-  - from-file: modules/common/homefiles.yml
+  - from-file: modules/common/chezfiles.yml
   - from-file: modules/common/packages.yml
   - from-file: modules/common/systemd.yml
   - from-file: modules/common/image-pinned-etcs.yml

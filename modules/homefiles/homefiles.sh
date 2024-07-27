@@ -3,6 +3,18 @@
 # Tell build process to exit if there are any errors.
 set -euo pipefail
 
+echo "DONT USE THIS MODULE ANYMORE"
+exit 1
+
+
+
+
+
+
+
+
+
+
 echo "Checking if /usr/bin/chezmoi exists"
 if [ -e /usr/bin/chezmoi ]; then
 	echo "chezmoi binary already exists, no need to redownload it"

@@ -9,7 +9,6 @@ export def regex_matches_with_any [
     return (not ($regex_list | each {|regex| echo $value | find --regex $regex} | is-empty))
 }
 
-
 export def "is_property_defined" [
     record: record,
     property: cell-path,
