@@ -48,7 +48,7 @@ def main [
         systemctl enable --system chezfiles-apply.service
     }
 
-    mkdir /usr/share/bluebuild/homefiles/
+    mkdir /usr/share/bluebuild/chezfiles/
 
     if (is_property_populated $recipe build) {
         echo "Adding build files to image"

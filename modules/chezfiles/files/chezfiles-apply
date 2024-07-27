@@ -4,7 +4,7 @@ def main [
   type: string # system, user
   --mode(-m) = "prompt": string # prompt: interactively chezmoi apply, skip: never overwrite existing files, overwrite: always overwrite existing files
 ] {
-  let entries = (ls -a /usr/share/bluebuild/homefiles/($type) | get name)
+  let entries = (ls -a /usr/share/bluebuild/chezfiles/($type) | get name)
 
   if not (type in ["system", "user"]) {
     echo "type must be either `system` or `user`"
@@ -14,11 +14,11 @@ def main [
   
   for entry in $entries {
     let entry_name = echo $entry | path basename
-    
+
     let state_file = if type == "system" {
-      $"/etc/bluebuild/homefiles/($entry_name)/chezmoi-state"
+      $"/etc/bluebuild/chezfiles/($entry_name)/chezmoi-state"
     } else if type == "user" {
-      $"~/.local/state/bluebuild/homefiles/($entry_name)/chezmoi-state"
+      $"~/.local/state/bluebuild/chezfiles/($entry_name)/chezmoi-state"
     }
 
     let destination = if type == "system" {

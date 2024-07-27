@@ -3,11 +3,11 @@
 def main [
   --mode = "prompt": string # prompt: interactively chezmoi apply, skip: never overwrite existing files, overwrite: always overwrite existing files
 ] {
-  let entries = (ls -a /usr/share/bluebuild/homefiles/ | get name)
+  let entries = (ls -a /usr/share/bluebuild/chezfiles/ | get name)
   
   for entry in $entries {
     let entry_name = echo $entry | path basename
-    let state_file = $"~/.local/state/bluebuild/homefiles/($entry_name)/chezmoi-state"
+    let state_file = $"~/.local/state/bluebuild/chezfiles/($entry_name)/chezmoi-state"
     
     if $mode == "skip" {
       yes "skip" | chezmoi apply --source $entry --persistent-state $state_file --no-tty --keep-going
