@@ -24,9 +24,17 @@ def main [
     
     let recipe = $recipe | default false disable-service
 
+    let system_files = (ls -a $"(module_directory)/chezfiles/files/system/" | get name)
+    for file in $system_files {
+        cp -r $"($module_directory)/chezfiles/files/system/($file)" /usr/lib/systemd/system
+    }
+
+    let user_files = (ls -a $"(module_directory)/chezfiles/files/user/" | get name)
+    for file in $user_files {
+        cp -r $"($module_directory)/chezfiles/files/user/($file)" /usr/lib/systemd/user
+    }
+
     cp $"($module_directory)/chezfiles/files/chezfiles-apply" /usr/bin/chezfiles-apply
-    cp -r $"($module_directory)/chezfiles/files/system/"* /usr/lib/systemd/system/
-    cp -r $"($module_directory)/chezfiles/files/user/"* /usr/lib/systemd/user/
 
     if ($recipe | get disable-service) {
         systemctl disable --user chezfiles-apply.path
