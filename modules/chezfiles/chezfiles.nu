@@ -37,14 +37,14 @@ def main [
     cp $"($module_directory)/chezfiles/files/chezfiles-apply" /usr/bin/chezfiles-apply
 
     if ($recipe | get disable-service) {
-        systemctl disable --user chezfiles-apply.path
+        systemctl disable --global chezfiles-apply.path
         systemctl disable --system chezfiles-apply.path
-        systemctl disable --user chezfiles-apply.service
+        systemctl disable --global chezfiles-apply.service
         systemctl disable --system chezfiles-apply.service
     } else {
-        systemctl enable --user chezfiles-apply.path
+        systemctl enable --global chezfiles-apply.path
         systemctl enable --system chezfiles-apply.path
-        systemctl enable --user chezfiles-apply.service
+        systemctl enable --global chezfiles-apply.service
         systemctl enable --system chezfiles-apply.service
     }
 
