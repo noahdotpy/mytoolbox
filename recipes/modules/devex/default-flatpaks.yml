@@ -5,3 +5,4 @@ system:
   install:
     - io.github.dvlv.boxbuddyrs
     - org.gnome.Boxes
+    - com.github.marhkb.Pods
