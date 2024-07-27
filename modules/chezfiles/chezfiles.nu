@@ -24,12 +24,12 @@ def main [
     
     let recipe = $recipe | default false disable-service
 
-    let system_files = (ls -a $"(module_directory)/chezfiles/files/system/" | get name)
+    let system_files = (ls -a $"($module_directory)/chezfiles/files/system/" | get name)
     for file in $system_files {
         cp -r $"($module_directory)/chezfiles/files/system/($file)" /usr/lib/systemd/system
     }
 
-    let user_files = (ls -a $"(module_directory)/chezfiles/files/user/" | get name)
+    let user_files = (ls -a $"($module_directory)/chezfiles/files/user/" | get name)
     for file in $user_files {
         cp -r $"($module_directory)/chezfiles/files/user/($file)" /usr/lib/systemd/user
     }
