@@ -75,22 +75,21 @@ def "apply block-hosts" [] {
 def "apply user-networking" [] {
     echo "## Applying: user-networking ##"
 
-    let blocked_group = "idwt-networking-blocked"
     let nowifi_users = open $config_file | get user-networking.users
     let schedules = open $config_file | get user-networking.schedules
-    
-    echo $"INFO: Creating group '($blocked_group)'"
-    groupadd $blocked_group --force
 
     for username in ($nowifi_users | columns) {
         let user = $nowifi_users | get $username
         let mode = $user | get mode
         if $mode == "allow" {
             echo $"INFO: Allowing internet connection for user '($username)'"
-            group_remove $username $blocked_group
+            iptables -D OUTPUT -m owner --uid-owner $username -j REJECT
+            ip6tables -D OUTPUT -m owner --uid-owner $username -j REJECT
+            notify-send --app-name "IDWT" "Reboot May Be Required" "You may have to reboot to use internet again"
         } else if $mode == "block" {
             echo $"INFO: Blocking internet connection for user '($username)'"
-            group_add $username $blocked_group
+            iptables -A OUTPUT -m owner --uid-owner $username -j REJECT
+            ip6tables -A OUTPUT -m owner --uid-owner $username -j REJECT
         } else if $mode == "schedule" {
             let schedule_name = $user | get schedule
             let schedule = $schedules | get $schedule_name
@@ -103,10 +102,13 @@ def "apply user-networking" [] {
             let current_time = ^date +%H:%M
             if ($current_day in $days_allowed) and (current_time >= $time_start) and (current_time < $time_end) {
                 echo $"INFO: Blocking internet connection for user '($username)'"
-                group_remove $username $blocked_group
+                iptables -A OUTPUT -m owner --uid-owner $username -j REJECT
+                ip6tables -A OUTPUT -m owner --uid-owner $username -j REJECT
             } else {
                 echo $"INFO: Allowing internet connection for user '($username)'"
-                group_add $username $blocked_group
+                iptables -D OUTPUT -m owner --uid-owner $username -j REJECT
+                ip6tables -D OUTPUT -m owner --uid-owner $username -j REJECT
+                notify-send --app-name "IDWT" "Reboot May Be Required" "You may have to reboot to use internet again"
             }
         }
     }
