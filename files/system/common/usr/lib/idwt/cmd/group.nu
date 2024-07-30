@@ -4,6 +4,8 @@
 
 use ../group.nu *
 
+# TODO: Add documentation for commands
+
 def "main group add" [
     user: string,
     group: string,

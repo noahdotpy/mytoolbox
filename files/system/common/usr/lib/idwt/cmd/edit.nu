@@ -4,6 +4,8 @@
 
 use ../constants.nu *
 
+# TODO: Add documentation for commands
+
 def "main edit update" [
     field: cell-path,
     value: any

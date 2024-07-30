@@ -2,12 +2,11 @@
 
 # I Don't Want To (IDWT)
 
+use ../constants.nu config_file
+
+# Show current configured mode of <user>
 def "main status user-networking" [
-    user: string,
+    user: string, # User to show current mode for (example: john)
 ] {
-    if (groups $user) =~ "idwt-networking-blocked" {
-        echo "blocked"
-    } else {
-        echo "allowed"
-    }
+    echo (open $config_file | get user-networking.users.noah.mode)
 }

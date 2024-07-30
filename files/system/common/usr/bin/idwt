@@ -9,4 +9,6 @@ source ../lib/idwt/cmd/group.nu
 source ../lib/idwt/cmd/status.nu
 
 # TODO: investigate schema validation for config.yml
+
+# For when I Don't Want To
 def main [] {}

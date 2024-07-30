@@ -6,6 +6,8 @@ use ../constants.nu *
 use ../group.nu *
 use ../lib.nu *
 
+# TODO: Add documentation for commands
+
 def "main apply block-flatpak-networking" [] {
     echo "## Applying: block-flatpak-networking ##"
 
