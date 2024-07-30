@@ -6,6 +6,9 @@ use ../constants.nu *
 use ./edit.nu *
 
 # Allow specific approved configuration by users with idwt-tightener group
+# Examples:
+#   idwt tighten append block-hosts facebook.com
+#   idwt tighten update user-networking.users.noah.mode block
 def "main tighten" [
     action: string, # The action to use (append, update)
     field: string,  # The field to take action on (example: block-hosts)
