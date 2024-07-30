@@ -6,7 +6,7 @@ use ../constants.nu *
 use ../group.nu *
 use ../lib.nu *
 
-def "apply block-flatpak-networking" [] {
+def "main apply block-flatpak-networking" [] {
     echo "## Applying: block-flatpak-networking ##"
 
     let config = open $config_file
@@ -49,7 +49,7 @@ def "apply block-flatpak-networking" [] {
     }
 }
 
-def "apply block-hosts" [] {
+def "main apply block-hosts" [--force] {
     echo "## Applying: block-hosts ##"
     
     let hosts_file = "/etc/hosts.d/idwt-blocked.conf"
@@ -60,7 +60,9 @@ def "apply block-hosts" [] {
 
     let config = open $config_file
 
-    if not (is_property_populated $config block-hosts) {
+    # TODO: This does not properly detect that the property is populated, thus always skipping
+    # TODO: Remove --force flag when this is fixed.
+    if not (is_property_populated $config block-hosts) and not $force {
         echo "INFO: No hosts listed, skipping"
         return
     }
@@ -68,11 +70,11 @@ def "apply block-hosts" [] {
     let hosts = $config | get block-hosts
     for host in $hosts {
         echo $"INFO: Added '($host)' to hosts file"
-        echo $"\n0.0.0.0 ($host)" | save --append $hosts_file
+        echo $"\n0.0.0.0 ($host)\n" | save --append $hosts_file
     }
 }
 
-def "apply user-networking" [] {
+def "main apply user-networking" [] {
     echo "## Applying: user-networking ##"
 
     let nowifi_users = open $config_file | get user-networking.users
@@ -115,7 +117,7 @@ def "apply user-networking" [] {
 }
 
 def "main apply" [] {
-    apply block-hosts
-    apply block-flatpak-networking
-    apply user-networking
+    main apply block-hosts
+    main apply block-flatpak-networking
+    main apply user-networking
 }
