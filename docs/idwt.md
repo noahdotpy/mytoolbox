@@ -22,3 +22,27 @@ user-networking:
       time_start: 8:30
       time_end: 15:00
 ```
+
+```yaml
+block-hosts:
+- example.com
+block-flatpak-networking:
+  users-affected:
+  - john
+  apps:
+  - com.brave.Browser
+user-networking:
+  users:
+    john:
+      mode: allow
+  schedules:
+    schedule1:
+      days_allowed: wednesday
+      time_start: 8:30
+      time_end: 15:00
+tightener-config:
+  approved-commands:
+  - ^config update user-networking\.users\.[^.]+\.mode block$
+  - ^config append block-flatpak-networking\.apps [^\s]*$ # config append block-flaptak-networking.apps *
+  - ^config append block-hosts [^\s]*$ # config append block-hosts *
+```

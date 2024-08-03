@@ -5,35 +5,18 @@
 use ../../lib/idwt/constants.nu *
 use ../../lib/idwt/lib.nu *
 
-let action = cat $tighten_action_file
-let field = cat $tighten_field_file
-let value = cat $tighten_value_file
+let temp_file = open $tighten_temp_file | from nuon
+let command = $temp_file | get command
 
 let tightener_config = open $config_file | get tightener-config
-let approved_updates = $tightener_config | get approved-updates
-let approved_appends = $tightener_config | get approved-appends
+let approved_commands = $tightener_config | get approved-commands
 
-if $action == "append" {
-    if not (regex_matches_with_any $approved_appends $field) {
-        echo $"ERROR: ($field) is not in approved tightener append fields"
-        exit 1
-    }
-} else if $action == "update" {
-    if not (regex_matches_with_any ($approved_updates | columns) $field) {
-        echo $"ERROR: ($field) is not in approved tightener update fields"
-        exit 1
-    }
-    if not (regex_matches_with_any ($approved_updates | values) $value) {
-        echo $"ERROR: ($value) is not in approved tightener update values"
-        exit 1
-    }
-} else {
-    echo "ERROR: unsupported tightener action"
+if not (regex_matches_with_any $approved_edits $command) {
+    echo $"ERROR: ($command) is not in approved tightener commands"
+    rm $tighten_temp_file
     exit 1
 }
 
-sudo /usr/bin/idwt edit (cat $tighten_action_file) (cat $tighten_field_file) (cat $tighten_value_file)
+sudo $idwt_bin edit $command
 
-rm $tighten_action_file
-rm $tighten_field_file
-rm $tighten_value_file
+rm $tighten_temp_file

@@ -3,20 +3,19 @@
 # I Don't Want To (IDWT)
 
 use ../constants.nu *
-use ./edit.nu *
 
 # Allow specific approved configuration by users with idwt-tightener group
+# This subcommand uses `idwt edit` under the hood via /usr/libexec/idwt/tighten-apply.nu, which should then be allowed to be executed by a group of users.
 # Examples:
-#   idwt tighten append block-hosts facebook.com
-#   idwt tighten update user-networking.users.noah.mode block
+#   idwt tighten config append block-hosts facebook.com
+#   idwt tighten config update user-networking.users.noah.mode block
+#   idwt tighten group remove noah wheel
 def "main tighten" [
-    action: string, # The action to use (append, update)
-    field: string,  # The field to take action on (example: block-hosts)
-    value: any,     # The value to update/append to the field (example: youtube.com)
+    action: string,    # The edit action to take (example: `config update` uses `idwt edit config update ...` under the hood)
+    path: string,     # The field to take action on (example: block-hosts)
+    value: any,        # The value to update/append to the field (example: youtube.com)
 ] {
-    echo $action | save -f $tighten_action_file
-    echo $field | save -f $tighten_field_file
-    echo $value | save -f $tighten_value_file
+    {command: $"($action) ($path) ($value)"} | to nuon | save -f $tighten_temp_file
 
     ^$"sudo" /usr/libexec/idwt/tighten-apply.nu
 }

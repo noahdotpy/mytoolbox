@@ -2,6 +2,13 @@
 
 # I Don't Want To (IDWT)
 
+export def does_regex_match [
+    value: string
+    regex: string
+] {
+    not (echo $value | find --regex $regex | is-empty)
+}
+
 export def regex_matches_with_any [
     regex_list: list,
     value: string,

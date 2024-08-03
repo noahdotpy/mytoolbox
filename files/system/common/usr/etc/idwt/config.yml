@@ -1,11 +1,13 @@
+block-hosts:
+- example.com
 block-flatpak-networking:
-  users_affected:
-  - noah
+  users-affected:
+  - john
   apps:
-  - com.google.Chrome
+  - com.brave.Browser
 user-networking:
   users:
-    noah:
+    john:
       mode: allow
   schedules:
     schedule1:
@@ -13,11 +15,7 @@ user-networking:
       time_start: 8:30
       time_end: 15:00
 tightener-config:
-  approved-updates:
-    # field - regex: value - regex
-    # allow updating field `user-networking.users.<ANY USER>.mode` with value `disallow`
-    ^user-networking\.users\.[^.]+\.mode$: ^disallow$
-  approved-appends:
-    # field - regex
-    # allow appending to block-flatpak-networking.apps
-    - ^block-flatpak-networking\.apps$
+  approved-commands:
+  - ^config update user-networking\.users\.[^.]+\.mode block$
+  - ^config append block-flatpak-networking\.apps [^\s]*$ # config append block-flaptak-networking.apps *
+  - ^config append block-hosts [^\s]*$ # config append block-hosts *

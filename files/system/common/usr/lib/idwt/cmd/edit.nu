@@ -3,10 +3,25 @@
 # I Don't Want To (IDWT)
 
 use ../constants.nu *
+use ../group.nu *
 
 # TODO: Add documentation for commands
 
-def "main edit update" [
+def "main edit group add" [
+    user: string,
+    group: string,
+] {
+    group_add $user $group
+}
+
+def "main edit group remove" [
+    user: string,
+    group: string,
+] {
+    group_remove $user $group
+}
+
+def "main edit config update" [
     field: cell-path,
     value: any
 ] {
@@ -18,7 +33,7 @@ def "main edit update" [
     echo $new_config | to yaml
 }
 
-def "main edit append" [
+def "main edit config append" [
     field: cell-path
     value: any,
 ] {
@@ -31,7 +46,7 @@ def "main edit append" [
     echo $new_config | to yaml
 }
 
-def "main edit" [
+def "main edit config" [
     --editor(-e): string, # editor to open config file in when `--open` is used
 ] {
     let editor = if $editor == null {
