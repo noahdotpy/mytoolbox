@@ -47,7 +47,8 @@ The built images are tagged in the following way:
 You can rollback to an earlier build of any image by switching to a different tag.
 
 Example:
-```
+
+```bash
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx:20240627
 ```
 
@@ -58,7 +59,8 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx:202406
 This repository includes a justfile recipe to build ISOs locally from the GHCR registry.
 
 You can do this by running:
-```
+
+```bash
 just build-iso-ghcr bluefin-dx gts
 ```
 
@@ -76,19 +78,26 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 > Replace `:gts` with your preferred update channel (eg: `:stable`).
 
 - 1. First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
+
+  ```bash
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx:gts
   ```
+
 - 2. Reboot to complete the rebase:
-  ```
+
+  ```bash
   systemctl reboot
   ```
+
 - 3. Then rebase to the signed image, like so:
-  ```
+
+  ```bash
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/bluefin-dx:gts
   ```
+
 - 4. Reboot again to complete the installation
-  ```
+
+  ```bash
   systemctl reboot
   ```
 
