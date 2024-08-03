@@ -16,5 +16,10 @@ modules:
 
   - from-file: modules/common/scripts.yml
 
+  - type: copy
+    from: ghcr.io/noahdotpy/idwt:main
+    src: /out
+    dest: /
+
   - type: update-image-info
   - type: signing
