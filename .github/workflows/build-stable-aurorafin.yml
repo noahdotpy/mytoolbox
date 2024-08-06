@@ -2,12 +2,6 @@ name: stable aurorafin
 on:
   schedule:
     - cron: "00 06 * * *" # 06:00 UTC daily
-  push:
-    paths-ignore:
-      - '/toolboxes/**'
-      - "**.md"
-
-  pull_request:
   workflow_dispatch:
 jobs:
   bluebuild:
