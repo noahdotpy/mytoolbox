@@ -15,9 +15,9 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ### [Bluefin](https://projectbluefin.io) and [Aurora](https://getaurora.dev)
 
-[![build-gts-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml)
+[![build-gts-git-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-git-aurorafin.yml)
+[![build-stable-git-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-git-aurorafin.yml)
 [![build-latest-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml)
-[![build-stable-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml)
 
 - any image with `-dx` (such as `bluefin-dx` or `aurora-dx`) is an image with additional tools for developers
 
