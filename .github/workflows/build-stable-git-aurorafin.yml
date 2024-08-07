@@ -1,7 +1,7 @@
 name: stable aurorafin (git)
 on:
   schedule:
-    - cron: "00 06 * * *" # 06:00 UTC daily
+    - cron: "00 07 * * 2" # 07:00 UTC every Tuesday
   push:
     paths-ignore:
       - '/toolboxes/**'

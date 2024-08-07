@@ -1,7 +1,7 @@
 name: latest aurorafin
 on:
   schedule:
-    - cron: "00 05 * * *" # 05:00 UTC daily
+    - cron: "00 06 * * *" # 06:00 UTC daily
   push:
     paths-ignore:
       - '/toolboxes/**'

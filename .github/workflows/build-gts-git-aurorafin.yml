@@ -1,7 +1,7 @@
 name: gts aurorafin (git)
 on:
   schedule:
-    - cron: "00 06 * * *" # 06:00 UTC daily
+    - cron: "00 07 * * 0" # 07:00 UTC every Sunday
   push:
     paths-ignore:
       - '/toolboxes/**'
