@@ -106,4 +106,4 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 ## After the installation
 
-You will need to use the password `ublue-os` to enroll the secure boot key if you are using secure boot.
+You will need to use the password `universalblue` to enroll the secure boot key if you are using secure boot.
