@@ -30,15 +30,15 @@ if [[ ${#ADD_FILES[@]} -gt 0 ]]; then
 		FILES_TO_LINK=($(fd --type file --base-directory $CONFIG_DIRECTORY/image-pinned-etcs/$entry | xargs))
 
 		for dir in "${DIRS_TO_CREATE[@]}"; do
-			mkdir -p /usr/etc/$dir
+			mkdir -p /etc/$dir
 		done
 
 		for file in "${FILES_TO_LINK[@]}"; do
-			if [ -e /usr/etc/$file ]; then
-				rm /usr/etc/$file
+			if [ -e /etc/$file ]; then
+				rm /etc/$file
 			fi
-			echo "Creating symlink at /usr/etc/$file that points to /usr/share/bluebuild/image-pinned-etcs/$file"
-			ln -s /usr/share/bluebuild/image-pinned-etcs/$file /usr/etc/$file
+			echo "Creating symlink at /etc/$file that points to /usr/share/bluebuild/image-pinned-etcs/$file"
+			ln -s /usr/share/bluebuild/image-pinned-etcs/$file /etc/$file
 		done
 	done
 fi

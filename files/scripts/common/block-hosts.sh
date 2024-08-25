@@ -4,7 +4,7 @@ set -euo pipefail
 
 FILE_DOWNLOAD="https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-porn/hosts"
 OUTPUT_FILE="/usr/share/bluebuild/image-pinned-etcs/hosts"
-SYMLINK_FILE="/usr/etc/hosts.d/stevenblack-hosts.conf"
+SYMLINK_FILE="/etc/hosts.d/stevenblack-hosts.conf"
 
 mkdir -p $(dirname $SYMLINK_FILE)
 

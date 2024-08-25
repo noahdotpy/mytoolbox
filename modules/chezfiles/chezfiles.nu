@@ -73,7 +73,7 @@ def main [
         echo "Adding user files to image"
         for entry in ($recipe | get user) {
             cp -r $"($config_directory)/chezfiles/($entry)" $"/usr/share/bluebuild/chezfiles/user/($entry)"
-            chezmoi apply --destination /usr/etc/skel/ --source $"/usr/share/bluebuild/chezfiles/user/($entry)" --force
+            chezmoi apply --destination /etc/skel/ --source $"/usr/share/bluebuild/chezfiles/user/($entry)" --force
         }
     } else {
         echo "There are no directories added in user"

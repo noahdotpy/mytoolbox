@@ -6,15 +6,6 @@ set -euo pipefail
 echo "DONT USE THIS MODULE ANYMORE"
 exit 1
 
-
-
-
-
-
-
-
-
-
 echo "Checking if /usr/bin/chezmoi exists"
 if [ -e /usr/bin/chezmoi ]; then
 	echo "chezmoi binary already exists, no need to redownload it"
@@ -46,7 +37,7 @@ fi
 if [[ $DISABLE_SERVICE == "false" ]]; then
 	systemctl --global enable bluebuild-homefiles-apply.path
 elif [[ $DISABLE_SERVICE == "true" ]]; then
-	systemctl --global disable bluebuild-homefiles-apply.path	
+	systemctl --global disable bluebuild-homefiles-apply.path
 fi
 
 if [[ ${#ADD_HOMEFILES[@]} -gt 0 ]]; then
@@ -55,7 +46,7 @@ if [[ ${#ADD_HOMEFILES[@]} -gt 0 ]]; then
 	for entry in "${ADD_HOMEFILES[@]}"; do
 		cp -r $CONFIG_DIRECTORY/homefiles/$entry /usr/share/bluebuild/homefiles/$entry
 
-		chezmoi apply --destination /usr/etc/skel/ --source /usr/share/bluebuild/homefiles/$entry --force
+		chezmoi apply --destination /etc/skel/ --source /usr/share/bluebuild/homefiles/$entry --force
 	done
 else
 	echo "There are no homefiles directories added."

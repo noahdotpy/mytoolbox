@@ -1,6 +1,6 @@
 # `image-pinned-etcs` Module
 
-The `image-pinned-etcs` module simplifies the process of adding /etc files that are always up-to-date with the image maintainer supplied file. The added files are sourced from the `config/image-pinned-etcs` directory. It works by creating symlinks that point to `/usr/share/bluebuild/image-pinned-etcs/`, which is immutable. This means that the admin of the end user machine cannot change the file unless deleted and copied over from `/usr/etc/`.
+The `image-pinned-etcs` module simplifies the process of adding /etc files that are always up-to-date with the image maintainer supplied file. The added files are sourced from the `config/image-pinned-etcs` directory. It works by creating symlinks that point to `/usr/share/bluebuild/image-pinned-etcs/`, which is immutable. This means that the admin of the end user machine cannot change the file unless deleted and copied over from `/etc/`.
 
 ## Example Configuration
 
