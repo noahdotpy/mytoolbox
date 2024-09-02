@@ -17,3 +17,7 @@ install:
   - timekpr-next
   - waydroid
   - zsh
+remove:
+  - docker-ce
+  - docker-ce-cli
+  - podman
