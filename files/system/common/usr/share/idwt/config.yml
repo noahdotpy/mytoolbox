@@ -1,0 +1,61 @@
+kwin-block-windows:
+  - class:
+      value: "chromium-browser Chromium-browser"
+      whole_window_class: true
+      match_type: exact
+    title:
+      value: "Picture in picture"
+      match_type: exact
+    role:
+      value: "browser"
+      match_type: exact
+chromium:
+  block-urls:
+    - u.pluckeye.net/create-account
+    - u.pluckeye.net/devices
+    - tails.net
+    - torproject.org
+block-hosts:
+  - clickview.net
+  - pinterest.com
+  - torproject.org
+  - startpage.com
+  - bereal.com
+  - snapchat.com
+  - nexusmods.com
+  - tails.net
+block-flatpak-networking:
+  noah:
+    - com.brave.Browser
+    - com.google.Chrome
+    - com.google.ChromeDev
+    - com.microsoft.Edge
+    - com.microsoft.EdgeDev
+    - com.opera.Opera
+    - com.vivaldi.Vivaldi
+    - eu.betterbird.Betterbird
+    - io.frama.tractor.carburetor
+    - io.github.ungoogled_software.ungoogled_chromium
+    - io.gitlab.librewolf-community
+    - io.webtorrent.WebTorrent
+    - net.blockbench.Blockbench
+    - net.mullvad.MullvadBrowser
+    - net.waterfox.waterfox
+    - one.ablaze.floorp
+    - org.gnome.Epiphany
+    - org.kde.falkon
+    - org.midori_browser.Midori
+    - org.telegram.desktop
+    - ru.yandex.Browser
+    - io.freetubeapp.FreeTube
+    - net.brinkervii.grapejuice
+    - io.github.zen_browser.zen
+    - dev.geopjr.Tuba
+    - com.ghostery.browser
+    - org.mozilla.firefox
+    - com.valvesoftware.Steam
+    - com.github.rafostar.Clapper
+    - org.videolan.VLC
+    - io.github.celluloid_player.Celluloid
+    - org.torproject.torbrowser-launcher
+    - org.gnome.Boxes

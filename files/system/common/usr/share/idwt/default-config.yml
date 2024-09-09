@@ -1,0 +1,5 @@
+tightener-config:
+  approved-commands:
+    - ^config \.block-hosts \+= "[a-zA-Z0-9.]*"$ # config '.block-hosts += "youtube.com"'
+    - ^config \.block-flatpak-networking\.apps \+= "[^"']*\.[^"']*\.[^"']*"$ # config '.block-flatpak-networking.apps += "com.google.Chrome"'
+    - ^config \.chromium.block-urls \+= "[^"']*"$ # config '.chromium.block-urls += "youtube.com"'
