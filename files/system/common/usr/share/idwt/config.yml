@@ -9,21 +9,17 @@ kwin-block-windows:
     role:
       value: "browser"
       match_type: exact
-chromium:
-  block-urls:
-    - u.pluckeye.net/create-account
-    - u.pluckeye.net/devices
-    - tails.net
-    - torproject.org
-block-hosts:
-  - clickview.net
-  - pinterest.com
-  - torproject.org
-  - startpage.com
+block-sites:
   - bereal.com
-  - snapchat.com
+  - clickview.net
   - nexusmods.com
+  - pinterest.com
+  - snapchat.com
+  - startpage.com
   - tails.net
+  - torproject.org
+  - u.pluckeye.net/create-account
+  - u.pluckeye.net/devices
 block-flatpak-networking:
   noah:
     - com.brave.Browser
