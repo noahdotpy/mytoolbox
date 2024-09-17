@@ -1,0 +1,8 @@
+[Unit]
+Description=Scheduled IDWT Apply (every minute)
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+
+[Install]
+WantedBy=multi-user.target
