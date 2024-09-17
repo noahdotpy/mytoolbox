@@ -1,5 +1,6 @@
 kwin-block-windows:
-  - title:
+  block-pip:
+    title:
       value: "Picture-in-picture"
       match_type: exact
 block-sites:
