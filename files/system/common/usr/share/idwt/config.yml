@@ -1,13 +1,6 @@
 kwin-block-windows:
-  - class:
-      value: "chromium-browser Chromium-browser"
-      whole_window_class: true
-      match_type: exact
-    title:
-      value: "Picture in picture"
-      match_type: exact
-    role:
-      value: "browser"
+  - title:
+      value: "Picture-in-picture"
       match_type: exact
 block-sites:
   - bereal.com
