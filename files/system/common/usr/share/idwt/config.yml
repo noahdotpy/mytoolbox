@@ -49,3 +49,5 @@ block-flatpak-networking:
     - io.github.celluloid_player.Celluloid
     - org.torproject.torbrowser-launcher
     - org.gnome.Boxes
+    - io.itch.itch
+    - com.discordapp.Discord
