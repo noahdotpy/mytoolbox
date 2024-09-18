@@ -2,9 +2,10 @@
 type: systemd
 system:
   enabled:
+    - idwt-apply.path
+    - idwt-apply.service
+    - idwt-apply.timer
     - nushell-profile.d.path
     - nushell-profile.d.service
     - systemd-hosts.d.path
     - systemd-hosts.d.service
-    - idwt-apply.path
-    - idwt-apply.service
