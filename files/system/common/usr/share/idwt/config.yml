@@ -4,6 +4,7 @@ block-kwin-windows:
       value: "Picture-in-picture"
       match_type: exact
 block-sites:
+  - api.kde-look.org
   - bereal.com
   - clickview.net
   - nexusmods.com
