@@ -17,37 +17,39 @@ block-sites:
   - u.pluckeye.net/devices
 disconnect-flatpak-apps:
   - com.brave.Browser
+  - com.discordapp.Discord
+  - com.ghostery.browser
+  - com.github.rafostar.Clapper
   - com.google.Chrome
   - com.google.ChromeDev
   - com.microsoft.Edge
   - com.microsoft.EdgeDev
   - com.opera.Opera
+  - com.valvesoftware.Steam
   - com.vivaldi.Vivaldi
+  - dev.geopjr.Tuba
   - eu.betterbird.Betterbird
   - io.frama.tractor.carburetor
+  - io.freetubeapp.FreeTube
+  - io.github.celluloid_player.Celluloid
   - io.github.ungoogled_software.ungoogled_chromium
+  - io.github.zen_browser.zen
   - io.gitlab.librewolf-community
+  - io.itch.itch
   - io.webtorrent.WebTorrent
   - net.blockbench.Blockbench
+  - net.brinkervii.grapejuice
   - net.mullvad.MullvadBrowser
   - net.waterfox.waterfox
   - one.ablaze.floorp
+  - org.gnome.Boxes
   - org.gnome.Epiphany
   - org.kde.falkon
+  - org.kde.tokodon
   - org.midori_browser.Midori
-  - org.telegram.desktop
-  - ru.yandex.Browser
-  - io.freetubeapp.FreeTube
-  - net.brinkervii.grapejuice
-  - io.github.zen_browser.zen
-  - dev.geopjr.Tuba
-  - com.ghostery.browser
   - org.mozilla.firefox
-  - com.valvesoftware.Steam
-  - com.github.rafostar.Clapper
-  - org.videolan.VLC
-  - io.github.celluloid_player.Celluloid
+  - org.telegram.desktop
   - org.torproject.torbrowser-launcher
-  - org.gnome.Boxes
-  - io.itch.itch
-  - com.discordapp.Discord
+  - org.videolan.VLC
+  - re.sonny.Tangram
+  - ru.yandex.Browser
