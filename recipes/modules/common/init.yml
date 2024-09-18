@@ -16,10 +16,11 @@ modules:
 
   - from-file: modules/common/scripts.yml
 
-  - type: copy
-    from: ghcr.io/noahdotpy/idwt:main
-    src: /
-    dest: /
+  # TODO: turn this back on when it is in stable blue-build
+  # - type: copy
+  #   from: ghcr.io/noahdotpy/idwt:main
+  #   src: /
+  #   dest: /
 
   - type: update-image-info
   - type: signing

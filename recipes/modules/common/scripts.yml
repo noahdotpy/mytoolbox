@@ -5,3 +5,4 @@ scripts:
   - common/copy-plymouth-watermark.sh
   - common/rename-ptyxis-to-terminal.sh
   - common/initramfs.sh
+  - common/install-idwt.sh # TODO: remove this once the `copy` module is in stable bluebuild
