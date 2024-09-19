@@ -36,7 +36,6 @@ flatpak-app-networking:
     - org.gnome.Weather
     - org.gnome.clocks
     - org.libreoffice.LibreOffice
-    - org.nickvision.tubeconverter
     - org.signal.Signal
     - page.kramo.Cartridges
     - us.zoom.Zoom
