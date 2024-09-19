@@ -1,4 +1,4 @@
 tightener-config:
   approved-commands:
-    - ^config \.disconnect-flatpak-apps \+= "[^"']*\.[^"']*\.[^"']*"$ # config '.block-flatpak-networking.apps += "com.google.Chrome"'
-    - ^config \.block-sites \+= "[^"']*"$ # config '.block-sites += "youtube.com"'
+    - ^config \.flatpak-app-networking.block \+= \["[^"']*\.[^"']*\.[^"']*"\]$ # config '.block-flatpak-networking.apps += "com.google.Chrome"'
+    - ^config \.block-sites \+= \["[^"']*"\]$ # config '.block-sites += "youtube.com"'
