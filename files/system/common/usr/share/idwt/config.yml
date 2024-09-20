@@ -17,6 +17,7 @@ block-sites:
   - u.pluckeye.net/devices
 flatpak-app-networking:
   allow-only:
+    # TODO: Make this only have the essential, always safe apps that should be allowed to connect to internet
     - com.github.GradienceTeam.Gradience
     - com.github.GradienceTeam.Gradience.Devel
     - com.github.marhkb.Pods
