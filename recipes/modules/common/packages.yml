@@ -10,6 +10,7 @@ install:
   - aw-sync
   - chromium
   - cryfs
+  - firejail
   - lzip
   - python3-aw-client
   - python3-aw-core
