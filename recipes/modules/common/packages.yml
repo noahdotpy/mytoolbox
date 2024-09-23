@@ -18,3 +18,6 @@ install:
   - timekpr-next
   - waydroid
   - zsh
+remove:
+  - toolbox
+  - distrobox
