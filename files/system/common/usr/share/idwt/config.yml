@@ -17,69 +17,76 @@ block-sites:
   - u.pluckeye.net/devices
 flatpak-app-networking:
   allow-only:
-    # TODO: Make this only have the essential, always safe apps that should be allowed to connect to internet
+    # Tools
+    - com.bitwarden.desktop
     - com.github.GradienceTeam.Gradience
     - com.github.GradienceTeam.Gradience.Devel
-    - com.github.marhkb.Pods
     - com.mattjakeman.ExtensionManager
-    - com.vscodium.codium
     - com.warlordsoftwares.formatlab
     - dev.Cogitri.Health
-    - dev.bragefuglseth.Keypunch
-    - io.github.dvlv.boxbuddyrs
     - io.github.flattool.Warehouse
-    - io.gitlab.news_flash.NewsFlash
     - io.missioncenter.MissionCenter
     - md.obsidian.Obsidian
+    - org.libreoffice.LibreOffice
+    - org.onlyoffice.desktopeditors
+    - xyz.ketok.Speedtest
+    
+    # Dev
+    - com.github.marhkb.Pods
+    - com.vscodium.codium
+    - io.github.dvlv.boxbuddyrs
+
+    # Gnome Apps
+    - dev.bragefuglseth.Keypunch
     - org.gnome.Calendar
     - org.gnome.Podcasts
     - org.gnome.Weather
     - org.gnome.clocks
-    - org.libreoffice.LibreOffice
-    - org.signal.Signal
     - page.kramo.Cartridges
-    - us.zoom.Zoom
-    - xyz.ketok.Speedtest
-    - org.onlyoffice.desktopeditors
+
+    # Internet
     - com.transmissionbt.Transmission
-    - de.haeckerfelix.Shortwave
     - de.haeckerfelix.Fragments
-    - com.bitwarden.desktop
+    - de.haeckerfelix.Shortwave
+    - io.gitlab.news_flash.NewsFlash
+    - us.zoom.Zoom
   block:
+    # Browsers
     - com.brave.Browser
-    - com.discordapp.Discord
     - com.ghostery.browser
-    - com.github.rafostar.Clapper
     - com.google.Chrome
     - com.google.ChromeDev
     - com.microsoft.Edge
     - com.microsoft.EdgeDev
     - com.opera.Opera
-    - com.valvesoftware.Steam
     - com.vivaldi.Vivaldi
-    - dev.geopjr.Tuba
     - eu.betterbird.Betterbird
-    - io.frama.tractor.carburetor
-    - io.freetubeapp.FreeTube
-    - io.github.celluloid_player.Celluloid
     - io.github.ungoogled_software.ungoogled_chromium
     - io.github.zen_browser.zen
     - io.gitlab.librewolf-community
-    - io.itch.itch
-    - io.webtorrent.WebTorrent
-    - net.blockbench.Blockbench
-    - net.brinkervii.grapejuice
     - net.mullvad.MullvadBrowser
     - net.waterfox.waterfox
     - one.ablaze.floorp
     - org.chromium.Chromium
     - org.gnome.Epiphany
     - org.kde.falkon
-    - org.kde.tokodon
     - org.midori_browser.Midori
     - org.mozilla.firefox
-    - org.telegram.desktop
     - org.torproject.torbrowser-launcher
-    - org.videolan.VLC
     - re.sonny.Tangram
     - ru.yandex.Browser
+
+    # Media players
+    - com.github.rafostar.Clapper
+    - io.github.celluloid_player.Celluloid
+    - org.videolan.VLC
+
+    # Social
+    - dev.geopjr.Tuba
+    - io.freetubeapp.FreeTube
+    - org.kde.tokodon
+    - org.telegram.desktop
+
+    # Other
+    - io.frama.tractor.carburetor
+    - io.webtorrent.WebTorrent
