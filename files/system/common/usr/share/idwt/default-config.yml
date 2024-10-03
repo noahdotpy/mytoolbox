@@ -6,11 +6,13 @@ tightener-config:
     - ^config \.networking\.mode = "block"$
     - ^group remove [^\s]* wheel$
     - ^make_file_immutable .*$
+    - ^config \.delay \+= [0-9]*$
 
     # examples:
     # config .block-sites += ["youtube.com"]
-    # config .flatpak-app-networking.block += ["org.signal.Signal"]
     # config .flatpak-app-networking.allow-only -= ["org.signal.Signal"]
+    # config .flatpak-app-networking.block += ["org.signal.Signal"]
     # config .networking.mode = "block"
     # group remove john wheel
     # make_file_immutable file.txt
+    # config .delay += 10
