@@ -1,4 +1,4 @@
-tightener-config:
+tightener:
   approved-commands:
     - ^config \.block-sites \+= \["[^"']*"\]$
     - ^config \.flatpak-app-networking\.allow-only -= \["[^"']*\.[^"']*\.[^"']*"\]$
