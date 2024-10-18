@@ -82,6 +82,9 @@ flatpak-app-networking:
     - org.kde.tokodon
     - org.telegram.desktop
 
+    # Games
+    - org.prismlauncher.PrismLauncher
+
     # Other
     - io.frama.tractor.carburetor
     - io.webtorrent.WebTorrent
