@@ -3,5 +3,6 @@ type: script
 scripts:
   - common/block-hosts.sh
   - common/copy-plymouth-watermark.sh
-  - common/rename-ptyxis-to-terminal.sh
   - common/initramfs.sh
+  - common/install-plucky.sh
+  - common/rename-ptyxis-to-terminal.sh
