@@ -4,6 +4,7 @@ repos:
   - https://copr.fedorainfracloud.org/coprs/johanh/timekpr-next/repo/fedora-%OS_VERSION%/johanh-timekpr-next-fedora-%OS_VERSION%.repo
   - https://copr.fedorainfracloud.org/coprs/wojnilowicz/activitywatch/repo/fedora-%OS_VERSION%/wojnilowicz-activitywatch-fedora-%OS_VERSION%.repo
 install:
+  - https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
   - ImageMagick
   - aw-awatcher
   - aw-server-rust
