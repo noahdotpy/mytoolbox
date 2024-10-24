@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-/tmp/plucky-install
+/usr/libexec/plucky-install
 
 echo "Creating symlinks to fix pluck - which installs to /opt"
 
