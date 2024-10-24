@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# FIXME: For some reason this installer does not work
+# https://github.com/noahdotpy/myublue/actions/runs/11496370260/job/31997850515#step:2:1817
 /usr/libexec/plucky-install
 
 echo "Creating symlinks to fix pluck - which installs to /opt"
