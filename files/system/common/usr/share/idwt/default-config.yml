@@ -1,6 +1,7 @@
 tightener:
   approved-commands:
     - ^config \.block-sites \+= \["[^"']*"\]$
+    - ^config \.block-binaries \+= \["[^"']*"\]$
     - ^config \.flatpak-app-networking\.allow-only -= \["[^"']*\.[^"']*\.[^"']*"\]$
     - ^config \.flatpak-app-networking\.block \+= \["[^"']*\.[^"']*\.[^"']*"\]$
     - ^config \.networking\.mode = "block"$
