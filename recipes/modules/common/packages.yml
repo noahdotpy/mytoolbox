@@ -13,6 +13,7 @@ install:
   - cryfs
   - firejail
   - lzip
+  - malcontent
   - python3-aw-client
   - python3-aw-core
   - python3-aw-qt
