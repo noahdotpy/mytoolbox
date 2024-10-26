@@ -1,3 +1,8 @@
+block-kwin-windows:
+  block-torbrowser:
+    title:
+      value: "Tor Browser"
+      match_type: substring
 block-sites:
   - api.kde-look.org
   - bereal.com
