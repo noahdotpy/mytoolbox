@@ -1,10 +1,12 @@
 [Unit]
-Description=Scheduled IDWT Apply (every minute)
+Description=Scheduled IDWT Apply (every second)
 
 [Timer]
-OnCalendar=*:0/5
 AccuracySec=1s
+OnBootSec=1s
+OnUnitInactiveSec=1s
 Persistent=false
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
