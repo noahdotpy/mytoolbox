@@ -1,25 +1,23 @@
 tightener:
   approved-commands:
     - ^config \.block-sites \+= \["[^"']*"\]$
-    - ^config \.process-killing\.block \+= \["[^"']*"\]$
-    # TODO: Test if the below actually works properly
-    # - ^config \.process-killing\.allow-always\."[^"']*" = "TODO: Clean this up (it was removed by tightener)"$
     - ^config \.flatpak-app-networking\.allow-only -= \["[^"']*\.[^"']*\.[^"']*"\]$
     - ^config \.flatpak-app-networking\.block \+= \["[^"']*\.[^"']*\.[^"']*"\]$
     - ^config \.networking\.mode = "block"$
+    # TODO: Test if the below actually works properly
+    # - ^config \.process-killing\.allow-always\."[^"']*" = "TODO: Clean this up (it was removed by tightener)"$
+    - ^config \.process-killing\.block \+= \["[^"']*"\]$
+    - ^config \.tightener\.delay \+= [0-9]*$
     - ^group remove [^\s]* wheel$
     - ^make_file_immutable .*$
-    - ^config \.tightener\.delay \+= [0-9]*$
 
     # examples: (in form of a list of args - how tightener would get it)
     # [ 'config', '.block-sites += ["youtube.com"]' ]
-    # [ 'config', '.process-killing.block += ["/home/noah/"]' ]
     # [ 'config', '.flatpak-app-networking.allow-only -= ["org.signal.Signal"]' ]
     # [ 'config', '.flatpak-app-networking.block += ["org.signal.Signal"]' ]
     # [ 'config', '.networking.mode = "block"' ]
+    # [ 'config', '.process-killing.allow-always."/home/noah/.local/share/activitywatch/aw-qt" = "TODO: Clean this up (it was removed by tightener)"' ]
+    # [ 'config', '.process-killing.block += ["/home/noah/"]' ]
     # [ 'config', '.tightener.delay += 10' ]
     # [ 'group', 'remove', 'john', 'wheel' ]
     # [ 'make_file_immutable', 'file.txt' ]
-    #
-    # STILL TO ADD:
-    # [ 'config', '.process-killing.allow-always."/home/noah/.local/share/activitywatch/aw-qt" = "TODO: Clean this up (it was removed by tightener)"' ]
