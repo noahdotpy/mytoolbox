@@ -7,5 +7,5 @@ system:
     - idwt-apply.timer
     - nushell-profile.d.path
     - nushell-profile.d.service
-    - systemd-hosts.d.path
-    - systemd-hosts.d.service
+    - hosts.d.path
+    - hosts.d.service
