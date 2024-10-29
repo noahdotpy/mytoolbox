@@ -14,6 +14,9 @@ install:
   - firejail
   - lzip
   - malcontent
+  - malcontent-control
+  - malcontent-pam
+  - malcontent-tools
   - python3-aw-client
   - python3-aw-core
   - python3-aw-qt
