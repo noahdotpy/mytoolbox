@@ -1,0 +1,8 @@
+[Unit]
+Description=Send notification when uptime is larger than 2 days
+
+[Timer]
+OnBootSec=2d
+
+[Install]
+WantedBy=timers.target

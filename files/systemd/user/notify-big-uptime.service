@@ -1,0 +1,10 @@
+[Unit]
+Description=Send notification when uptime is larger than 2 days
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=notify-send --urgency critical --app-name notify-big-uptime.service "Uptime is larger than 2 days" "Restart recommended"
+
+[Install]
+WantedBy=default.target
