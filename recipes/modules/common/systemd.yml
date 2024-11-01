@@ -9,3 +9,6 @@ system:
     - nushell-profile.d.service
     - hosts.d.path
     - hosts.d.service
+user:
+  enabled:
+    - notify-big-uptime.timer
