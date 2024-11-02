@@ -3,27 +3,53 @@ type: rpm-ostree
 repos:
   - https://copr.fedorainfracloud.org/coprs/johanh/timekpr-next/repo/fedora-%OS_VERSION%/johanh-timekpr-next-fedora-%OS_VERSION%.repo
   - https://copr.fedorainfracloud.org/coprs/wojnilowicz/activitywatch/repo/fedora-%OS_VERSION%/wojnilowicz-activitywatch-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/atim/lazygit/repo/fedora-%OS_VERSION%/atim-lazygit-fedora-%OS_VERSION%.repo
 install:
   - https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
+  - https://github.com/twpayne/chezmoi/releases/download/v2.53.1/chezmoi-2.53.1-x86_64.rpm
   - ImageMagick
   - aw-awatcher
   - aw-server-rust
   - aw-sync
+  - bat
+  - btop
+  - calc
+  - chezmoi
   - chromium
+  - cowsay
   - cryfs
+  - delta
+  - direnv
+  - duf
+  - entr
+  - fd-find
   - firejail
+  - fzf
+  - gh
+  - htop
+  - lazygit
+  - lazygit
+  - lolcat
+  - lsd
   - lzip
   - malcontent
   - malcontent-control
   - malcontent-pam
   - malcontent-tools
+  - ncdu
+  - neovim
   - python3-aw-client
   - python3-aw-core
   - python3-aw-qt
+  - ranger
+  - ripgrep
   - timekpr-next
   - waydroid
+  - zoxide
   - zsh
 remove:
   - distrobox
+  - libvirt
   - toolbox
   - virt-manager
+  - virt-viewer
