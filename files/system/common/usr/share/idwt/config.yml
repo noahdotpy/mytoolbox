@@ -1,3 +1,7 @@
+# TODO: GET RID OF THIS LINE LATER
+tightener:
+  delay-enabled: true
+
 block-kwin-windows:
   block-torbrowser:
     title:
