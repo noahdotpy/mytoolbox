@@ -3,6 +3,7 @@ Description=Send notification when uptime is larger than 2 days
 
 [Timer]
 OnBootSec=2d
+OnUnitActiveSec=1d
 
 [Install]
 WantedBy=timers.target
