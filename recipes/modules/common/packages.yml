@@ -14,11 +14,9 @@ install:
   - bat
   - btop
   - calc
-  - chezmoi
   - chromium
   - cowsay
   - cryfs
-  - delta
   - direnv
   - duf
   - entr
@@ -26,6 +24,7 @@ install:
   - firejail
   - fzf
   - gh
+  - git-delta
   - htop
   - lazygit
   - lazygit
