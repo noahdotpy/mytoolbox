@@ -20,7 +20,7 @@ block-sites:
   - u.pluckeye.net/create-account
   - u.pluckeye.net/devices
 flatpak-app-networking:
-  allow-only:
+  allow:
     # Tools
     - com.bitwarden.desktop
     - com.github.GradienceTeam.Gradience
