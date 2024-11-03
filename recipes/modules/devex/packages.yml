@@ -1,0 +1,6 @@
+# https://blue-build.org/reference/modules/rpm-ostree/
+type: rpm-ostree
+remove:
+  - libvirt
+  - virt-manager
+  - virt-viewer

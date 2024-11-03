@@ -48,7 +48,4 @@ install:
   - zsh
 remove:
   - distrobox
-  - libvirt
   - toolbox
-  - virt-manager
-  - virt-viewer
