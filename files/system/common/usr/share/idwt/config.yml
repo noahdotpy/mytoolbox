@@ -1,24 +1,11 @@
-# TODO: GET RID OF THIS LINE LATER
-tightener:
-  delay-enabled: true
-
 block-kwin-windows:
   block-torbrowser:
     title:
       value: "Tor Browser"
       match_type: substring
 block-sites:
-  - api.kde-look.org
-  - bereal.com
-  - clickview.net
-  - nexusmods.com
-  - pinterest.com
-  - snapchat.com
-  - startpage.com
   - tails.net
   - torproject.org
-  - u.pluckeye.net/create-account
-  - u.pluckeye.net/devices
 flatpak-app-networking:
   allow:
     # Tools
@@ -79,21 +66,3 @@ flatpak-app-networking:
     - org.torproject.torbrowser-launcher
     - re.sonny.Tangram
     - ru.yandex.Browser
-
-    # Media players
-    - com.github.rafostar.Clapper
-    - io.github.celluloid_player.Celluloid
-    - org.videolan.VLC
-
-    # Social
-    - dev.geopjr.Tuba
-    - io.freetubeapp.FreeTube
-    - org.kde.tokodon
-    - org.telegram.desktop
-
-    # Games
-    - org.prismlauncher.PrismLauncher
-
-    # Other
-    - io.frama.tractor.carburetor
-    - io.webtorrent.WebTorrent
