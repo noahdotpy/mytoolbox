@@ -1,10 +1,10 @@
 tightener:
   approved-commands:
+    - ^config \.block-networking = false$
     - ^config \.block-sites \+= \["[^"']*"\]$
     - ^config \.flatpak-app-networking\.allow-only -= \["[^"']*\.[^"']*\.[^"']*"\]$
     - ^config \.flatpak-app-networking\.block \+= \["[^"']*\.[^"']*\.[^"']*"\]$
     - ^config \.flatpak-app-networking\.block-otherwise = true$
-    - ^config \.networking\.mode = "block"$
     # TODO: Test if the below actually works properly
     # - ^config \.process-killing\.allow-always\."[^"']*" = "TODO: Clean this up (it was removed by tightener)"$
     - ^config \.process-killing\.block \+= \["[^"']*"\]$
