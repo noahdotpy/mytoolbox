@@ -26,6 +26,7 @@ install:
   - gh
   - git-delta
   - htop
+  - jc
   - lazygit
   - lazygit
   - lolcat
