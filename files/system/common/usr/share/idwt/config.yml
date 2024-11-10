@@ -1,6 +1,3 @@
-tightener:
-  delay: 0
-  delay-enabled: true
 block-kwin-windows:
   block-torbrowser:
     title:
