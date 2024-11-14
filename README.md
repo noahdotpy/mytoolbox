@@ -23,14 +23,13 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 #### Update Channels
 
-|                       | GTS      | Stable  | Latest   |
-| --------------------- | -------- | ------- | -------- |
-| Fedora version        | Previous | Current | Current  |
-| Kernel version        | Gated    | Gated   | Upstream |
-| Image build frequency | Weekly   | Weekly  | Daily    |
+|                       | :gts     | :stable | :stable-daily  | :latest  |
+| --------------------- | -------- | ------- | -------------- | -------- |
+| Fedora version        | Previous | Current | Current        | Current  |
+| Kernel version        | Gated    | Gated   | Gated          | Upstream |
+| Image build frequency | Weekly   | Weekly  | Daily          | Daily    |
 
-`*-git` (e.g `stable-git`) and `latest` tags are built on every commit, while the others are only built on a schedule or a manual workflow dispatch.
-`latest` and `latest-git` are the exact same image, just use `latest` because it's shorter.
+`*-git` (e.g `stable-git`) image tags are additionally built on every commit pushed.
 
 ## Tags
 

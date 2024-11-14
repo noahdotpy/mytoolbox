@@ -1,6 +1,6 @@
 name: aurora
 description: This is my personal OS image based on ublue-os/aurora (AMD/Intel).
-alt-tags: [latest, latest-git]
+alt-tags: [latest]
 
 base-image: ghcr.io/ublue-os/aurora
 image-version: latest

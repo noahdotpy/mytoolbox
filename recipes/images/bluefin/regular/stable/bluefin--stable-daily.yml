@@ -1,6 +1,6 @@
 name: bluefin
 description: This is my personal OS image based on ublue-os/bluefin (AMD/Intel).
-alt-tags: [stable-daily, stable-daily-git]
+alt-tags: [stable-daily]
 
 base-image: ghcr.io/ublue-os/bluefin
 image-version: stable-daily
