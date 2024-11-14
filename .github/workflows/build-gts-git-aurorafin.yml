@@ -1,4 +1,4 @@
-name: gts aurorafin (git)
+name: build gts aurora and bluefin (weekly, git)
 on:
   schedule:
     - cron: "00 07 * * 0" # 07:00 UTC every Sunday
@@ -21,10 +21,10 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/aurora/aurora-dx--gts-git.yml
-          - images/aurora/aurora--gts-git.yml
-          - images/bluefin/bluefin-dx--gts-git.yml
-          - images/bluefin/bluefin--gts-git.yml
+          - images/aurora/dx/gts/aurora-dx--gts-git.yml
+          - images/aurora/regular/gts/aurora--gts-git.yml
+          - images/bluefin/dx/gts/bluefin-dx--gts-git.yml
+          - images/bluefin/regular/gts/bluefin--gts-git.yml
 
     steps:
       - name: Build Custom Image

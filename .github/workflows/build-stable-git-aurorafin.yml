@@ -1,4 +1,4 @@
-name: stable aurorafin (git)
+name: build stable aurora and bluefin (weekly, git)
 on:
   schedule:
     - cron: "00 07 * * 2" # 07:00 UTC every Tuesday
@@ -21,10 +21,10 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/aurora/aurora-dx--stable-git.yml
-          - images/aurora/aurora--stable-git.yml
-          - images/bluefin/bluefin-dx--stable-git.yml
-          - images/bluefin/bluefin--stable-git.yml
+          - images/aurora/dx/stable/aurora-dx--stable-git.yml
+          - images/aurora/regular/stable/aurora--stable-git.yml
+          - images/bluefin/dx/stable/bluefin-dx--stable-git.yml
+          - images/bluefin/regular/stable/bluefin--stable-git.yml
 
     steps:
       - name: Build Custom Image
