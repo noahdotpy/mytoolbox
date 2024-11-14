@@ -25,7 +25,7 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 [![build-stable-daily-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-git-aurorafin.yml/badge.svg)
 
 [![build-latest-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)
-[![build-latest-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)
+[![build-latest-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-git-aurorafin.yml/badge.svg)
 
 - any image with `-dx` (such as `bluefin-dx` or `aurora-dx`) is an image with additional tools for developers
 
