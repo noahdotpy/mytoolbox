@@ -1,4 +1,4 @@
-# My custom uBlue images
+# My custom bluefin and aurora images
 
 > **Warning** This repository is solely intended for only my purpose and may not completely work for you.
 
@@ -15,9 +15,17 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ### [Bluefin](https://projectbluefin.io) and [Aurora](https://getaurora.dev)
 
-[![build-gts-git-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-git-aurorafin.yml)
-[![build-stable-git-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-git-aurorafin.yml)
-[![build-latest-aurorafin](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml)
+[![build-gts-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)
+[![build-gts-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-git-aurorafin.yml/badge.svg)
+
+[![build-stable-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)
+[![build-stable-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-git-aurorafin.yml/badge.svg)
+
+[![build-stable-daily-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-aurorafin.yml/badge.svg)
+[![build-stable-daily-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-git-aurorafin.yml/badge.svg)
+
+[![build-latest-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)
+[![build-latest-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)
 
 - any image with `-dx` (such as `bluefin-dx` or `aurora-dx`) is an image with additional tools for developers
 
@@ -50,7 +58,7 @@ just build-iso-ghcr bluefin-dx gts
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 > **Tip**
-> If you are already on a signed uBlue image you may skip directly to step 3
+> If you are already on a signed universal blue image you may skip directly to step 3
 
 > **Tip**
 > Replace `bluefin-dx` with your preferred variant (eg: `aurora-dx`).
