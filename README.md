@@ -21,7 +21,7 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 - any image with `-dx` (such as `bluefin-dx` or `aurora-dx`) is an image with additional tools for developers
 
-#### Update Channels
+#### Streams
 
 |                       | :gts     | :stable | :stable-daily  | :latest  |
 | --------------------- | -------- | ------- | -------------- | -------- |
@@ -29,30 +29,7 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 | Kernel version        | Gated    | Gated   | Gated          | Upstream |
 | Image build frequency | Weekly   | Weekly  | Daily          | Daily    |
 
-`*-git` (e.g `stable-git`) image tags are additionally built on every commit pushed.
-
-## Tags
-
-The built images are tagged in the following way:
-
-> **Warning**
-> This may not be an accurate list of tags for each image
-
-> **Tip** You can also check the tags by clicking on the package you want (eg: bluefin-dx) in the `Packages` area of the sidebar on the right
-
-- `latest` - latest build
-- `{commit}-{version}` - c376c87-40
-- `{timestamp}` - 20240627
-- `{timestamp}-{version}`- 20240627-40
-- `{version}` - 40
-
-You can rollback to an earlier build of any image by switching to a different tag.
-
-Example:
-
-```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx:20240627
-```
+Add `-git` (e.g `stable-git`) to your stream's tag to get image builds that are additionaly built on every commit pushed to the repository.
 
 ## Installation
 
@@ -77,7 +54,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 > **Tip**
 > Replace `bluefin-dx` with your preferred variant (eg: `aurora-dx`).
-> Replace `:gts` with your preferred update channel (eg: `:stable`).
+> Replace `:gts` with your preferred stream (eg: `:stable`).
 
 - 1. First rebase to the unsigned image, to get the proper signing keys and policies installed:
 
