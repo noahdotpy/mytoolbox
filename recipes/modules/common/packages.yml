@@ -44,6 +44,7 @@ install:
   - ranger
   - ripgrep
   - timekpr-next
+  - tldr
   - waydroid
   - zoxide
   - zsh
