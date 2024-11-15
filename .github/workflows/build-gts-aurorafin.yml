@@ -15,8 +15,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/aurora/dx/gts/aurora-dx--gts.yml
-          - images/aurora/regular/gts/aurora--gts.yml
+          # - images/aurora/dx/gts/aurora-dx--gts.yml
+          # - images/aurora/regular/gts/aurora--gts.yml
           - images/bluefin/dx/gts/bluefin-dx--gts.yml
           - images/bluefin/regular/gts/bluefin--gts.yml
 
