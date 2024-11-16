@@ -48,11 +48,6 @@ install:
   - waydroid
   - zoxide
   - zsh
-  # TODO: Remove soon
-  - variety
-  - https://github.com/sgiurgiu/reddit_desktop/releases/download/1.0.172/reddit_desktop-1.0.172-fedora.rpm
-  - tor
-  - torbrowser-launcher
 remove:
   - distrobox
   - toolbox
