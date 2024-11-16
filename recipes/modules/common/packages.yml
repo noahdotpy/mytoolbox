@@ -45,6 +45,7 @@ install:
   - ripgrep
   - timekpr-next
   - tldr
+  - variety
   - waydroid
   - zoxide
   - zsh
