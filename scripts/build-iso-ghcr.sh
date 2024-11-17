@@ -9,10 +9,8 @@ project_root=$(git rev-parse --show-toplevel)
 
 if [[ ${image_name} =~ "bluefin" ]] || [[ ${image_name} =~ "gnome" ]]; then
 	installer_variant=Silverblue
-elif [[ ${image_name} =~ "aurora" ]] || [[ ${image_name} =~ "plasma" ]]; then
-	installer_variant=Kinoite
 else
-	exit 1
+	installer_variant=Kinoite
 fi
 
 fedora_major_version=$(skopeo inspect docker://ghcr.io/noahdotpy/${image_name}:${image_tag} | jq -r '.Labels["org.opencontainers.image.version"]' | awk -F '.' '{print $1}')
