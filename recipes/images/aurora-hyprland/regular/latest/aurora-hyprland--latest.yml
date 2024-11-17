@@ -1,0 +1,11 @@
+name: aurora-hyprland
+description: This is my personal OS image based on ublue-os/aurora (AMD/Intel).
+alt-tags: [latest]
+
+base-image: ghcr.io/ublue-os/aurora
+image-version: latest
+
+modules:
+  - from-file: modules/common/init.yml
+  - from-file: modules/plasma/init.yml
+  - from-file: modules/hyprland/init.yml

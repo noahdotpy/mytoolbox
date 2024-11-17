@@ -1,0 +1,2 @@
+GTK_THEME=Adwaita:light
+QT_STYLE_OVERRIDE=adwaita-dark

@@ -1,0 +1,55 @@
+# https://blue-build.org/reference/modules/rpm-ostree/
+type: rpm-ostree
+remove:
+  - plasma-desktop
+install:
+  # launcher
+  - rofi-wayland
+
+  # networking
+  - network-manager-applet
+  - NetworkManager-openvpn
+  - NetworkManager-openvpn-gnome
+  - NetworkManager-openconnect
+  - NetworkManager-openconnect-gnome
+  - bluez
+  - bluez-tools
+  - blueman
+  - firewall-config
+
+  # file manager
+  - thunar
+  - thunar-archive-plugin 
+  - thunar-volman
+  - xarchiver
+  - imv
+  - p7zip
+  - gvfs-mtp
+  - gvfs-gphoto2
+  - gvfs-smb
+  - gvfs-nfs
+  - gvfs-fuse
+  - gvfs-archive
+  - android-tools
+
+  # screenshot
+  - slurp
+  - grim
+
+  # display
+  - wlr-randr
+  - wlsunset
+  - brightnessctl
+  - kanshi
+
+  # notifications
+  - dunst
+
+  # theme and GUI
+  - adwaita-qt5
+  - fontawesome-fonts-all
+  - gnome-themes-extra
+  - gnome-icon-theme
+  - paper-icon-theme
+  - breeze-icon-theme 
+  - papirus-icon-theme

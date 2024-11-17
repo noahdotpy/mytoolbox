@@ -1,0 +1,4 @@
+modules:
+  - from-file: modules/sddm-modules.yml
+  - from-file: modules/hyprland/packages.yml
+  - from-file: modules/hyprland/files.yml
