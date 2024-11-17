@@ -1,5 +1,5 @@
 name: bluefin
-description: This is my personal OS image based on ublue-os/bluefin (AMD/Intel).
+description: A personalised image built by noahdotpy on top of Bluefin/Aurora from the Universal Blue team
 alt-tags: [gts-git]
 
 base-image: ghcr.io/ublue-os/bluefin

@@ -1,5 +1,5 @@
 name: hyra-dx
-description: This is my personal OS image based on ublue-os/aurora-dx (AMD/Intel).
+description: A personalised image built by noahdotpy on top of Bluefin/Aurora from the Universal Blue team
 alt-tags: [gts]
 
 base-image: ghcr.io/ublue-os/aurora-dx
