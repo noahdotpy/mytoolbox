@@ -1,0 +1,2 @@
+modules:
+  - from-file: modules/aurora/default-flatpaks.yml

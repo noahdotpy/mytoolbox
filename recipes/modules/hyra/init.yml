@@ -1,0 +1,4 @@
+modules:
+  - from-file: modules/hyra/sddm-modules.yml
+  - from-file: modules/hyra/packages.yml
+  - from-file: modules/hyra/files.yml

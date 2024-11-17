@@ -1,0 +1,11 @@
+name: hyra
+description: This is my personal OS image based on ublue-os/aurora (AMD/Intel).
+alt-tags: [stable-daily-git]
+
+base-image: ghcr.io/ublue-os/aurora
+image-version: stable-daily
+
+modules:
+  - from-file: modules/common/init.yml
+  - from-file: modules/plasma/init.yml
+  - from-file: modules/hyprland/init.yml

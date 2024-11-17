@@ -1,0 +1,9 @@
+modules:
+  - type: script
+    scripts: [bluefin/remove-gnome-classic.sh]
+
+  - from-file: modules/bluefin/packages.yml
+  - from-file: modules/bluefin/default-flatpaks.yml
+  - from-file: modules/bluefin/files.yml
+  - from-file: modules/bluefin/gnome-extensions.yml
+  - from-file: modules/bluefin/wallpapers.yml
