@@ -1,4 +1,4 @@
-name: Stable Channel (daily)
+name: Stable Stream (daily)
 on:
   schedule:
     - cron: "00 06 * * *" # 06:00 UTC daily

@@ -13,23 +13,11 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 > **Tip** You can check out all images built from this repository by clicking the packages heading on the sidebar
 
-### [Bluefin](https://projectbluefin.io) and [Aurora](https://getaurora.dev)
+- Any image with `-dx` at the end (`aurora-dx`, `bluefin-dx`, or `hyra-dx`) is an image with additional tools for developers, such as Visual Studio Code pre-installed and developer-related applications such as Pods (for podman management).
 
-[![build-gts-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-aurorafin.yml/badge.svg)
-[![build-gts-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-gts-git-aurorafin.yml/badge.svg)
+The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and Hyra (Hyprland) images. Hyra is a custom spin which is based on Aurora, but with a Hyprland desktop instead.
 
-[![build-stable-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-aurorafin.yml/badge.svg)
-[![build-stable-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-git-aurorafin.yml/badge.svg)
-
-[![build-stable-daily-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-aurorafin.yml/badge.svg)
-[![build-stable-daily-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-stable-daily-git-aurorafin.yml/badge.svg)
-
-[![build-latest-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-aurorafin.yml/badge.svg)
-[![build-latest-git-aurorafin.yml](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-git-aurorafin.yml/badge.svg)](https://github.com/noahdotpy/myublue/actions/workflows/build-latest-git-aurorafin.yml/badge.svg)
-
-- any image with `-dx` (such as `bluefin-dx` or `aurora-dx`) is an image with additional tools for developers
-
-#### Streams
+### Streams
 
 |                       | :gts     | :stable | :stable-daily  | :latest  |
 | --------------------- | -------- | ------- | -------------- | -------- |

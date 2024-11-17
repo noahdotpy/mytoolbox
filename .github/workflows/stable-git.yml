@@ -1,4 +1,4 @@
-name: Stable Channel (weekly, git)
+name: Stable Stream (weekly, git)
 on:
   schedule:
     - cron: "00 07 * * 2" # 07:00 UTC every Tuesday

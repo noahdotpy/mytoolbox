@@ -1,4 +1,4 @@
-name: Latest Channel (daily)
+name: Latest Stream (daily)
 on:
   schedule:
     - cron: "00 06 * * *" # 06:00 UTC daily
