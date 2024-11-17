@@ -1,4 +1,4 @@
-# My custom bluefin and aurora images
+# My custom Bluefin and Aurora images
 
 > **Warning** This repository is solely intended for only my purpose and may not completely work for you.
 
