@@ -7,5 +7,5 @@ image-version: stable-daily
 
 modules:
   - from-file: modules/common/init.yml
-  - from-file: modules/gnome/init.yml
+  - from-file: modules/bluefin/init.yml
   - from-file: modules/devex/init.yml

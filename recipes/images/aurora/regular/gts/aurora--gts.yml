@@ -7,4 +7,4 @@ image-version: gts
 
 modules:
   - from-file: modules/common/init.yml
-  - from-file: modules/plasma/init.yml
+  - from-file: modules/aurora/init.yml
