@@ -1,7 +1,7 @@
-name: build stable aurora and bluefin (daily, git)
+name: Stable Channel (weekly, git)
 on:
   schedule:
-    - cron: "00 06 * * *" # 06:00 UTC daily
+    - cron: "00 07 * * 2" # 07:00 UTC every Tuesday
   push:
     paths-ignore:
       - '/toolboxes/**'
@@ -21,10 +21,12 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/aurora/dx/stable/aurora-dx--stable-daily-git.yml
-          - images/aurora/regular/stable/aurora--stable-daily-git.yml
-          - images/bluefin/dx/stable/bluefin-dx--stable-daily-git.yml
-          - images/bluefin/regular/stable/bluefin--stable-daily-git.yml
+          - images/aurora/dx/stable/aurora-dx--stable-git.yml
+          - images/aurora/regular/stable/aurora--stable-git.yml
+          - images/bluefin/dx/stable/bluefin-dx--stable-git.yml
+          - images/bluefin/regular/stable/bluefin--stable-git.yml
+          - images/hyra/dx/stable/hyra-dx--stable-git.yml
+          - images/hyra/regular/stable/hyra--stable-git.yml
 
     steps:
       - name: Build Custom Image

@@ -1,7 +1,7 @@
-name: build gts aurora and bluefin (weekly)
+name: Stable Channel (weekly)
 on:
   schedule:
-    - cron: "00 07 * * 0" # 07:00 UTC every Sunday
+    - cron: "00 07 * * 2" # 07:00 UTC every Tuesday
   workflow_dispatch:
 jobs:
   bluebuild:
@@ -15,10 +15,12 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          # - images/aurora/dx/gts/aurora-dx--gts.yml
-          # - images/aurora/regular/gts/aurora--gts.yml
-          - images/bluefin/dx/gts/bluefin-dx--gts.yml
-          - images/bluefin/regular/gts/bluefin--gts.yml
+          - images/aurora/dx/stable/aurora-dx--stable.yml
+          - images/aurora/regular/stable/aurora--stable.yml
+          - images/bluefin/dx/stable/bluefin-dx--stable.yml
+          - images/bluefin/regular/stable/bluefin--stable.yml
+          - images/hyra/dx/stable/hyra-dx--stable.yml
+          - images/hyra/regular/stable/hyra--stable.yml
 
     steps:
       - name: Build Custom Image

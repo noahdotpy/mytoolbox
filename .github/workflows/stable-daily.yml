@@ -1,4 +1,4 @@
-name: build stable aurora and bluefin (daily)
+name: Stable Channel (daily)
 on:
   schedule:
     - cron: "00 06 * * *" # 06:00 UTC daily
@@ -19,6 +19,8 @@ jobs:
           - images/aurora/regular/stable/aurora--stable-daily.yml
           - images/bluefin/dx/stable/bluefin-dx--stable-daily.yml
           - images/bluefin/regular/stable/bluefin--stable-daily.yml
+          - images/hyra/dx/stable/hyra-dx--stable-daily.yml
+          - images/hyra/regular/stable/hyra--stable-daily.yml
 
     steps:
       - name: Build Custom Image
