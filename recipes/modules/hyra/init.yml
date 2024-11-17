@@ -1,4 +1,6 @@
 modules:
+  # TODO: Remove plasma from hyra
+  # - from-file: modules/hyra/remove-plasma.yml
   - from-file: modules/hyra/packages.yml
   - from-file: modules/hyra/sddm-modules.yml
   - from-file: modules/hyra/hyprland-modules.yml

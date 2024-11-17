@@ -1,7 +1,5 @@
 # https://blue-build.org/reference/modules/rpm-ostree/
 type: rpm-ostree
-remove:
-  - plasma-desktop
 install:
   # launcher
   - rofi-wayland

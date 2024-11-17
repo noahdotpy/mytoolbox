@@ -1,6 +1,7 @@
 modules:
-  - type: script
-    scripts: [bluefin/remove-gnome-classic.sh]
+  # TODO: Remove gnome classic from bluefin
+  # - type: script
+  #   scripts: [bluefin/remove-gnome-classic.sh]
 
   - from-file: modules/bluefin/packages.yml
   - from-file: modules/bluefin/default-flatpaks.yml
