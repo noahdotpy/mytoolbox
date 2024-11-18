@@ -11,7 +11,7 @@ modules:
 
     - type: script
       scripts:
-        - hyra/setsddmtheming.sh
+        - horizon/setsddmtheming.sh
 
     - type: systemd
       system:

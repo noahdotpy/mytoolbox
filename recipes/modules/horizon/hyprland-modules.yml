@@ -45,10 +45,10 @@ modules:
 
   - type: files
     files:
-      - source: system/hyra
+      - source: system/horizon
         destination: /
 
   - type: script
     scripts:
-      - hyra/removeunprofessionalwallpapers.sh
-      - hyra/sethyprlandwaybarmodules.sh
+      - horizon/removeunprofessionalwallpapers.sh
+      - horizon/sethyprlandwaybarmodules.sh

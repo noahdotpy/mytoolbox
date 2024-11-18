@@ -1,11 +1,12 @@
-name: hyra
+name: horizon-dx
 description: A personalised image built by noahdotpy on top of Bluefin/Aurora from the Universal Blue team
-alt-tags: [latest-git]
+alt-tags: [stable]
 
-base-image: ghcr.io/ublue-os/aurora
-image-version: latest
+base-image: ghcr.io/ublue-os/aurora-dx
+image-version: stable
 
 modules:
   - from-file: modules/common/init.yml
   - from-file: modules/aurora/init.yml
-  - from-file: modules/hyra/init.yml
+  - from-file: modules/devex/init.yml
+  - from-file: modules/horizon/init.yml
