@@ -1,9 +1,6 @@
 # https://blue-build.org/reference/modules/rpm-ostree/
 type: rpm-ostree
 install:
-  # launcher
-  - rofi-wayland
-
   # networking
   - network-manager-applet
   - NetworkManager-openvpn

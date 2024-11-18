@@ -29,6 +29,7 @@ modules:
         - waybar
         - wlogout
         - xdg-desktop-portal-hyprland
+        - wofi
 
     - type: files
       files:
