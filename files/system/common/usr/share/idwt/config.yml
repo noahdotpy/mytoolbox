@@ -1,6 +1,3 @@
-# TODO: Remove tightener.delay-enabled = true once i am done with what i need
-tightener:
-  delay-enabled: true
 block-kwin-windows:
   block-torbrowser:
     title:
