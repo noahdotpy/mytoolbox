@@ -39,9 +39,6 @@ install:
   - brightnessctl
   - kanshi
 
-  # notifications
-  - dunst
-
   # theme and GUI
   - adwaita-qt5
   - fontawesome-fonts-all
