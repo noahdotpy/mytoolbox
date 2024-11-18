@@ -1,12 +1,22 @@
 modules:
+  # APPS:
   # TODO: Add hyprpanel
+  # TODO: Add zoom feature to hyprland
+  # TODO: Add wofi-emoji
+  #
+  # PLUGINS:
+  # TODO: Add overview plugin (probably hyprexpo)
+  # TODO: Add hy3 (i3-like manual tiling)
+  # TODO: Add dynamic cursors (https://github.com/VirtCode/hypr-dynamic-cursors)
     - type: rpm-ostree
     # replace fedora version with text %OS_VERSION% to automatically get correct repo
     # use this: s/41/%OS_VERSION%/g
       repos:
         - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
         - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
+        - https://copr.fedorainfracloud.org/coprs/sneexy/swayland/repo/fedora-%OS_VERSION%/sneexy-swayland-fedora-%OS_VERSION%.repo
       install:
+        - SwayNotificationCenter
         - cliphist
         - hypridle
         - hyprland
@@ -21,15 +31,17 @@ modules:
         - kde-connect-nautilus
         - nautilus
         - nwg-clipman
+        - nwg-drawer
+        - playerctl
         - qt5-qtwayland
         - qt6-qtwayland
         - sushi
-        - SwayNotificationCenter
+        - swayosd
         - udiskie
         - waybar
         - wlogout
-        - xdg-desktop-portal-hyprland
         - wofi
+        - xdg-desktop-portal-hyprland
 
     - type: files
       files:
