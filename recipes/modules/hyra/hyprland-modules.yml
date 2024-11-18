@@ -14,7 +14,8 @@ modules:
     repos:
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/sneexy/swayland/repo/fedora-%OS_VERSION%/sneexy-swayland-fedora-%OS_VERSION%.repo
+      # CRITICAL: The below repository is not able to be trusted, provides swayosd
+      # - https://copr.fedorainfracloud.org/coprs/sneexy/swayland/repo/fedora-%OS_VERSION%/sneexy-swayland-fedora-%OS_VERSION%.repo
     install:
       - SwayNotificationCenter
       - cliphist
@@ -37,7 +38,6 @@ modules:
       - qt5-qtwayland
       - qt6-qtwayland
       - sushi
-      - swayosd
       - udiskie
       - waybar
       - wlogout
