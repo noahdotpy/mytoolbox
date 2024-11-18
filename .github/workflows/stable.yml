@@ -19,8 +19,8 @@ jobs:
           - images/aurora/regular/stable/aurora--stable.yml
           - images/bluefin/dx/stable/bluefin-dx--stable.yml
           - images/bluefin/regular/stable/bluefin--stable.yml
-          - images/hyra/dx/stable/hyra-dx--stable.yml
-          - images/hyra/regular/stable/hyra--stable.yml
+          - images/horizon/dx/stable/horizon-dx--stable.yml
+          - images/horizon/regular/stable/horizon--stable.yml
 
     steps:
       - name: Build Custom Image

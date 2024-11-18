@@ -19,8 +19,8 @@ jobs:
           # - images/aurora/regular/gts/aurora--gts.yml
           - images/bluefin/dx/gts/bluefin-dx--gts.yml
           - images/bluefin/regular/gts/bluefin--gts.yml
-          # - images/hyra/dx/gts/hyra-dx--gts.yml
-          # - images/hyra/regular/gts/hyra--gts.yml
+          # - images/horizon/dx/gts/horizon-dx--gts.yml
+          # - images/horizon/regular/gts/horizon--gts.yml
 
     steps:
       - name: Build Custom Image
