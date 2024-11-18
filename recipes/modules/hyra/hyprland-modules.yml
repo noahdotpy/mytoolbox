@@ -34,7 +34,6 @@ modules:
       - nautilus
       - nwg-clipman
       - nwg-drawer
-      - playerctl
       - qt5-qtwayland
       - qt6-qtwayland
       - sushi

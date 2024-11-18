@@ -38,6 +38,7 @@ install:
   - malcontent-tools
   - ncdu
   - neovim
+  - playerctl
   - python3-aw-client
   - python3-aw-core
   - python3-aw-qt
