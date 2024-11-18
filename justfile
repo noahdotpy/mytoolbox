@@ -23,6 +23,34 @@ just-fix:
     echo "Checking syntax: ${project_root}/justfile"
     just --unstable --fmt -f ${project_root}/justfile || { exit 1; }
 
+get-recipe image tag:
+    #!/usr/bin/env nu
+    let image = '{{ image }}'
+    let tag = '{{ tag }}'
+
+    let image_brand = $image | split row '-dx' | get 0
+    let variant = if ($image =~ "-dx") { "dx" } else { "regular" }
+    let stream = $tag | split row '-' | get 0
+
+    let recipe = $"{{ project_root }}/recipes/images/($image_brand)/($variant)/($stream)/($image)--($tag).yml"
+
+    print $recipe
+
+
+# Build local image from recipe
+build image tag:
+    #!/usr/bin/env nu
+    let image = '{{ image }}'
+    let tag = '{{ tag }}'
+
+    let image_brand = $image | split row '-dx' | get 0
+    let variant = if ($image =~ "-dx") { "dx" } else { "regular" }
+    let stream = $tag | split row '-' | get 0
+
+    let recipe = $"{{ project_root }}/recipes/images/($image_brand)/($variant)/($stream)/($image)--($tag).yml"
+
+    bluebuild build $recipe
+
 # Create ISO from ghcr image
 build-iso-ghcr image="" tag="" file_output="__prompt":
     #!/usr/bin/bash
