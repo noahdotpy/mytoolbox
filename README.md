@@ -15,7 +15,7 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 - Any image with `-dx` at the end (`aurora-dx`, `bluefin-dx`, or `hyra-dx`) is an image with additional tools for developers, such as Visual Studio Code pre-installed and developer-related applications such as Pods (for podman management).
 
-The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and Hyra (Hyprland) images. Hyra is a custom spin which is based on Aurora, but with a Hyprland desktop instead.
+The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and Hyra (Hyprland). Hyra is a custom spin which is based on Aurora, but with a Hyprland desktop instead.
 
 ### Streams
 
