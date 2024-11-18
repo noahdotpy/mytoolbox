@@ -36,7 +36,6 @@ install:
 
   # display
   - wlr-randr
-  - wlsunset
   - brightnessctl
   - kanshi
 
