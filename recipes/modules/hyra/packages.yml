@@ -30,7 +30,6 @@ install:
   # screenshot
   - slurp
   - grim
-  - hyprshot
 
   # display
   - wlr-randr
