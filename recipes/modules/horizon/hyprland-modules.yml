@@ -18,6 +18,7 @@ modules:
       - hypridle
       - hyprland
       - hyprlock
+      - hyprnome
       - hyprpaper
       - hyprpicker
       - hyprshot
