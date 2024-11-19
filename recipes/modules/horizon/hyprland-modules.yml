@@ -20,7 +20,7 @@ modules:
       - SwayNotificationCenter
       - cliphist
       - hypridle
-      - hyprland
+      # - hyprland
       - hyprland-contrib
       - hyprland-devel
       - hyprland-plugins
