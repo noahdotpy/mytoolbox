@@ -26,6 +26,7 @@ modules:
       - kde-connect-nautilus
       - nautilus
       - nwg-look
+      - pavucontrol
       - polkit-kde
       - pyprland
       - qt5-qtwayland
