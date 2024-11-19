@@ -17,10 +17,12 @@ modules:
       - cliphist
       - hypridle
       - hyprland
+      - hyprland-contrib
       - hyprlock
       - hyprnome
       - hyprpaper
       - hyprpicker
+      - hyprpolkitagent
       - hyprshot
       - hyprsunset
       - kde-connect-nautilus
