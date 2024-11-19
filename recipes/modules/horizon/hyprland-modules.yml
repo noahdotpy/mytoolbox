@@ -10,7 +10,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%OS_VERSION%/tofik-nwg-shell-fedora-%OS_VERSION%.repo
     install:
-      # FIXME: hyprland-devel (for plugin) is not working due to dependency resolution issues
+      # FIXME: hyprland-devel (for the plugin manager - hyprpm) is not working due to dependency resolution issues
       # - hyprland-devel
 
       - SwayNotificationCenter
@@ -49,4 +49,3 @@ modules:
   - type: script
     scripts:
       - horizon/removeunprofessionalwallpapers.sh
-      - horizon/sethyprlandwaybarmodules.sh
