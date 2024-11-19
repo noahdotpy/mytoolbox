@@ -22,6 +22,7 @@ modules:
       - hypridle
       - hyprland
       - hyprland-contrib
+      - hyprland-devel
       - hyprland-plugins
       - hyprlock
       - hyprnome
