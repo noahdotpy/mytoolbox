@@ -12,6 +12,7 @@ modules:
     install:
       # FIXME: hyprland-devel (for plugin) is not working due to dependency resolution issues
       # - hyprland-devel
+
       - SwayNotificationCenter
       - cliphist
       - hypridle
@@ -19,12 +20,13 @@ modules:
       - hyprlock
       - hyprpaper
       - hyprpicker
-      - hyprsunset
       - hyprshot
+      - hyprsunset
       - kde-connect-nautilus
       - nautilus
       - nwg-look
       - polkit-kde
+      - pyprland
       - qt5-qtwayland
       - qt6-qtwayland
       - sushi
