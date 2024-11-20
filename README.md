@@ -1,6 +1,6 @@
 # My custom Bluefin and Aurora images
 
-> **Warning** This repository is solely intended for only my purpose and may not completely work for you.
+> **Warning** This repository is solely intended for only my purpose and will update with breaking changes without warning.
 
 This is a constantly updating repository which hosts my custom [ostree images](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable).
 GitHub will build this image, and then host it on [ghcr.io](https://github.com/features/packages).
@@ -32,11 +32,13 @@ Developer edition is an image with additional tools for developers, such as Visu
 | Kernel version        | Gated    | Gated   | Gated         | Upstream |
 | Image build frequency | Weekly   | Weekly  | Daily         | Daily    |
 
-Add `-git` (e.g `stable-git`) to your stream's tag to get image builds that are additionaly built on every commit pushed to the repository.
+Add `-git` (e.g `stable-git`) to your stream to get image builds that are additionaly built on every commit pushed to the repository.
 
 ## Installation
 
-The total URL for the image is `ghcr.io/noahdotpy/{image}:{stream}`. For example, if you want bluefin-dx on the stable stream and built daily or when a git commit is pushed then you would want the following: `ghcr.io/noahdotpy/bluefin-dx:stable`
+The URL format for any image is `ghcr.io/noahdotpy/{image}:{stream}`.
+
+For example, if you want aurora-dx on the stable stream and built daily or when a git commit is pushed then you would want the following: `ghcr.io/noahdotpy/aurora-dx:stable-daily-git`
 
 ### ISO (recommended)
 
@@ -48,43 +50,12 @@ You can do this by running:
 just build-iso-ghcr bluefin-dx gts
 ```
 
-### Rebase from another Fedora Atomic image
+#### Secure boot
 
-> **Warning** [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) and should not be used in production, try it in a VM for a while!
+After you have installed from the ISO succesfully you will need to use the password `universalblue` to enroll the secure boot key.
 
-To rebase an existing Silverblue/Kinoite installation to the latest build:
+### Example of Switching to Stable Aurora (Developer Edition)
 
-> **Tip**
-> If you are already on a signed universal blue image you may skip directly to step 3
+1. `bootc switch ghcr.io/noahdotpy/aurora-dx:stable`
 
-> **Tip**
-> Replace `bluefin-dx` with your preferred variant (eg: `aurora-dx`).
-> Replace `:gts` with your preferred stream (eg: `:stable`).
-
-- 1. First rebase to the unsigned image, to get the proper signing keys and policies installed:
-
-  ```bash
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/noahdotpy/bluefin-dx:gts
-  ```
-
-- 2. Reboot to complete the rebase:
-
-  ```bash
-  systemctl reboot
-  ```
-
-- 3. Then rebase to the signed image, like so:
-
-  ```bash
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/noahdotpy/bluefin-dx:gts
-  ```
-
-- 4. Reboot again to complete the installation
-
-  ```bash
-  systemctl reboot
-  ```
-
-## After the installation
-
-You will need to use the password `universalblue` to enroll the secure boot key if you are using secure boot.
+2. Reboot computer
