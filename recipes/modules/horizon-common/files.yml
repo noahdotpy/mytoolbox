@@ -1,0 +1,6 @@
+# https://github.com/noahdotpy/myublue/blob/main/modules/files/README.md
+modules:
+- type: files
+  files:
+    - source: system/horizon-common/
+      destination: /
