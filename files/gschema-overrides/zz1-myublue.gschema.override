@@ -47,9 +47,6 @@ download-updates-notify=false
 enable-repos-dialog=false
 packaging-format-preference=['flatpak:flathub-system', 'flatpak:flathub-user']
 
-[org.gnome.login-screen]
-logo='/usr/share/pixmaps/myublue-gdm-logo.png'
-
 [org.gnome.shell.extensions.workspaces-indicator-by-open-apps]
 hide-activities-button=true
 icons-group='OFF'
