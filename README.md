@@ -1,3 +1,5 @@
+# noahdotpy/myublue
+
 > **Warning** This repository is solely intended for only my purpose and will update with breaking changes without warning.
 
 This is a constantly updating repository which hosts my custom [ostree images](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) based on Aurora and Bluefin from the Universal Blue team.
@@ -7,12 +9,16 @@ GitHub keeps 90 days worth of image backups for us, thanks Microsoft!
 
 For info on how to create your own, check out the [BlueBuild website](https://blue-build.org).
 
-- [Images](#images)
-  - [Streams](#streams)
-- [Installation](#installation)
-  - [ISO (recommended)](#iso-recommended)
-    - [Secure boot](#secure-boot)
-  - [Example of Switching to Stable Aurora (Developer Edition)](#example-of-switching-to-stable-aurora-developer-edition)
+## Table of contents
+
+- [noahdotpy/myublue](#noahdotpymyublue)
+  - [Table of contents](#table-of-contents)
+  - [Images](#images)
+    - [Streams](#streams)
+  - [Installation](#installation)
+    - [ISO (recommended)](#iso-recommended)
+      - [Secure boot](#secure-boot)
+    - [Switching from another Fedora Atomic image](#switching-from-another-fedora-atomic-image)
 
 ## Images
 
@@ -49,7 +55,7 @@ For example, if you want aurora-dx on the stable stream and built daily or when 
 
 This repository includes a justfile recipe to build ISOs locally from the GHCR registry.
 
-You can do this by running:
+Below is an example of building an ISO for bluefin-dx:gts
 
 ```bash
 just build-iso-ghcr bluefin-dx gts
@@ -59,7 +65,9 @@ just build-iso-ghcr bluefin-dx gts
 
 After you have installed from the ISO succesfully you will need to use the password `universalblue` to enroll the secure boot key.
 
-### Example of Switching to Stable Aurora (Developer Edition)
+### Switching from another Fedora Atomic image
+
+Below is an example of switching to aurora-dx:stable
 
 1. `bootc switch ghcr.io/noahdotpy/aurora-dx:stable`
 
