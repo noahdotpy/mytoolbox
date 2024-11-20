@@ -19,6 +19,8 @@ jobs:
           - images/aurora/regular/latest/aurora--latest.yml
           - images/bluefin/dx/latest/bluefin-dx--latest.yml
           - images/bluefin/regular/latest/bluefin--latest.yml
+          - images/horizon-gnome/dx/latest/horizon-gnome-dx--latest.yml
+          - images/horizon-gnome/regular/latest/horizon-gnome--latest.yml
           - images/horizon-plasma/dx/latest/horizon-plasma-dx--latest.yml
           - images/horizon-plasma/regular/latest/horizon-plasma--latest.yml
 

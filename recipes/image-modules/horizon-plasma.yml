@@ -1,5 +1,5 @@
 modules:
   - from-file: modules/common/init.yml
   - from-file: modules/aurora/init.yml
-  - from-file: modules/horizon/init.yml
+  - from-file: modules/horizon-common/init.yml
   - from-file: modules/horizon-plasma/init.yml

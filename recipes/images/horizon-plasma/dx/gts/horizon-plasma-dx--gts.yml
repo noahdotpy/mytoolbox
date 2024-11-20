@@ -6,4 +6,4 @@ base-image: ghcr.io/ublue-os/aurora-dx
 image-version: gts
 
 modules:
-  - from-file: images/horizon-plasma-dx.yml
+  - from-file: image-modules/horizon-plasma-dx.yml

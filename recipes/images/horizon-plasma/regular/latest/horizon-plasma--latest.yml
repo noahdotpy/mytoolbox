@@ -6,4 +6,4 @@ base-image: ghcr.io/ublue-os/aurora
 image-version: latest
 
 modules:
-  - from-file: images/horizon-plasma.yml
+  - from-file: image-modules/horizon-plasma.yml

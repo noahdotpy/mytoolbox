@@ -6,4 +6,4 @@ base-image: ghcr.io/ublue-os/aurora-dx
 image-version: stable-daily
 
 modules:
-  - from-file: images/aurora-dx.yml
+  - from-file: image-modules/aurora-dx.yml

@@ -25,6 +25,8 @@ jobs:
           - images/aurora/regular/stable/aurora--stable-daily-git.yml
           - images/bluefin/dx/stable/bluefin-dx--stable-daily-git.yml
           - images/bluefin/regular/stable/bluefin--stable-daily-git.yml
+          - images/horizon-gnome/dx/stable/horizon-gnome-dx--stable-daily-git.yml
+          - images/horizon-gnome/regular/stable/horizon-gnome--stable-daily-git.yml
           - images/horizon-plasma/dx/stable/horizon-plasma-dx--stable-daily-git.yml
           - images/horizon-plasma/regular/stable/horizon-plasma--stable-daily-git.yml
 

@@ -25,8 +25,10 @@ jobs:
           # - images/aurora/regular/gts/aurora--gts-git.yml
           - images/bluefin/dx/gts/bluefin-dx--gts-git.yml
           - images/bluefin/regular/gts/bluefin--gts-git.yml
-          # - images/horizon-plasma-plasma/dx/gts/horizon-plasma-plasma-dx--gts-git.yml
-          # - images/horizon-plasma-plasma/regular/gts/horizon-plasma-plasma--gts-git.yml
+          # - images/horizon-gnome/dx/gts/horizon-gnome-dx--gts-git.yml
+          # - images/horizon-gnome/regular/gts/horizon-gnome--gts-git.yml
+          # - images/horizon-plasma/dx/gts/horizon-plasma-dx--gts-git.yml
+          # - images/horizon-plasma/regular/gts/horizon-plasma--gts-git.yml
 
     steps:
       - name: Build Custom Image
