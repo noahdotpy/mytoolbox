@@ -1,13 +1,18 @@
-# My custom Bluefin and Aurora images
-
 > **Warning** This repository is solely intended for only my purpose and will update with breaking changes without warning.
 
-This is a constantly updating repository which hosts my custom [ostree images](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable).
+This is a constantly updating repository which hosts my custom [ostree images](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) based on Aurora and Bluefin from the Universal Blue team.
 GitHub will build this image, and then host it on [ghcr.io](https://github.com/features/packages).
 The users can then tell the computer to boot off of that image.
 GitHub keeps 90 days worth of image backups for us, thanks Microsoft!
 
 For info on how to create your own, check out the [BlueBuild website](https://blue-build.org).
+
+- [Images](#images)
+  - [Streams](#streams)
+- [Installation](#installation)
+  - [ISO (recommended)](#iso-recommended)
+    - [Secure boot](#secure-boot)
+  - [Example of Switching to Stable Aurora (Developer Edition)](#example-of-switching-to-stable-aurora-developer-edition)
 
 ## Images
 
