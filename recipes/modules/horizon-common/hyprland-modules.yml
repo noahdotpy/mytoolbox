@@ -41,11 +41,6 @@ modules:
       - xdg-desktop-portal-hyprland
       - zenity
 
-  - type: files
-    files:
-      - source: system/horizon
-        destination: /
-
   - type: script
     scripts:
       - horizon/removeunprofessionalwallpapers.sh
