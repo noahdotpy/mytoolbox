@@ -1,3 +1,3 @@
 modules:
-  - from-file: images/horizon-plasma.yml
+  - from-file: image-modules/horizon-plasma.yml
   - from-file: modules/devex/init.yml
