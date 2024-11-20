@@ -1,6 +1,6 @@
 # noahdotpy/myublue
 
-> **Warning** This repository is solely intended for only my purpose and will update with breaking changes without warning.
+> **Warning** This repository is solely intended for only my purpose and may bring breaking changes without warning.
 
 This is a constantly updating repository which hosts my custom [ostree images](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) based on Aurora and Bluefin from the Universal Blue team.
 GitHub will build this image, and then host it on [ghcr.io](https://github.com/features/packages).
