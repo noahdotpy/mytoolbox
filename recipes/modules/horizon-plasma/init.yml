@@ -1,2 +1,2 @@
 modules:
-  - from-file: modules/horizon/sddm-modules.yml
+  - from-file: modules/horizon-plasma/sddm-modules.yml
