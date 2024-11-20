@@ -36,7 +36,7 @@ Add `-git` (e.g `stable-git`) to your stream's tag to get image builds that are 
 
 ## Installation
 
-The total URL for the image is `ghcr.io/noahdotpy/{image}:{stream}`. For example, if you want bluefin-dx on stable stream then you would have `ghcr.io/noahdotpy/
+The total URL for the image is `ghcr.io/noahdotpy/{image}:{stream}`. For example, if you want bluefin-dx on the stable stream and built daily or when a git commit is pushed then you would want the following: `ghcr.io/noahdotpy/bluefin-dx:stable`
 
 ### ISO (recommended)
 
