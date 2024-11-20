@@ -18,7 +18,7 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
   - [Installation](#installation)
     - [ISO (recommended)](#iso-recommended)
       - [Secure boot](#secure-boot)
-    - [Switching from another Fedora Atomic image](#switching-from-another-fedora-atomic-image)
+    - [Switching from a Fedora Atomic image](#switching-from-a-fedora-atomic-image)
 
 ## Images
 
@@ -65,7 +65,7 @@ just build-iso-ghcr bluefin-dx gts
 
 After you have installed from the ISO succesfully you will need to use the password `universalblue` to enroll the secure boot key.
 
-### Switching from another Fedora Atomic image
+### Switching from a Fedora Atomic image
 
 Below is an example of switching to aurora-dx:stable
 
