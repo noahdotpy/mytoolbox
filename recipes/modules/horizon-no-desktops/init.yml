@@ -1,2 +1,2 @@
 modules:
-  - from-file: modules/horizon/remove-plasma.yml
+  - from-file: modules/horizon-no-desktops/remove-plasma.yml
