@@ -15,9 +15,9 @@ modules:
       - 779 # Clipboard Indicator
       - "Quick Close in Overview"
       - "Notifications Alert"
-      - "Sleep Through Notifications"
+      # FIXME: extension not updated to gnome v47
+      # - "Sleep Through Notifications"
       - "Compiz windows effect"
-      - "Custom Accent Colors"
       - "Dash to Dock"
       - "Desktop Icons NG (DING)"
       - "GNOME Fuzzy App Search"
@@ -35,4 +35,5 @@ modules:
       - "User Themes"
       - "Wiggle"
       - "Workspaces indicator by open apps"
-      - 5446 # [QSTweak] Quick Setting Tweaker
+      # FIXME: extension not updated to gnome v47
+      # - 5446 # [QSTweak] Quick Setting Tweaker
