@@ -3,7 +3,7 @@ Description=IDWT service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/idwt apply
+ExecStart=/usr/bin/idwt apply-all
 
 [Install]
 WantedBy=default.target
