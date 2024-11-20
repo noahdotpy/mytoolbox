@@ -22,8 +22,6 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ## Images
 
-> **Tip** You can check out all images built from this repository by clicking the packages heading on the sidebar
-
 The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and Horizon (Hyprland). Horizon is a custom spin which is based on Aurora (for regular and plasma variant) or Bluefin (for gnome variant), but with a Hyprland desktop instead.
 
 Below is a table to figure out which image you want to use.
