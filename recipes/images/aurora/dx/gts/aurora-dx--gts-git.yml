@@ -6,6 +6,4 @@ base-image: ghcr.io/ublue-os/aurora-dx
 image-version: gts
 
 modules:
-  - from-file: modules/common/init.yml
-  - from-file: modules/aurora/init.yml
-  - from-file: modules/devex/init.yml
+  - from-file: images/aurora-dx.yml

@@ -1,4 +1,4 @@
-name: horizon-dx
+name: horizon-plasma-dx
 description: A personalised image built by noahdotpy on top of Bluefin/Aurora from the Universal Blue team
 alt-tags: [latest]
 
@@ -6,7 +6,4 @@ base-image: ghcr.io/ublue-os/aurora-dx
 image-version: latest
 
 modules:
-  - from-file: modules/common/init.yml
-  - from-file: modules/aurora/init.yml
-  - from-file: modules/devex/init.yml
-  - from-file: modules/horizon/init.yml
+  - from-file: images/horizon-plasma-dx.yml

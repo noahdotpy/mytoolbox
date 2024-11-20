@@ -1,0 +1,3 @@
+modules:
+  - from-file: images/aurora.yml
+  - from-file: modules/devex/init.yml

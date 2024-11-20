@@ -6,5 +6,4 @@ base-image: ghcr.io/ublue-os/bluefin
 image-version: latest
 
 modules:
-  - from-file: modules/common/init.yml
-  - from-file: modules/bluefin/init.yml
+  - from-file: images/bluefin.yml

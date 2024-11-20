@@ -1,0 +1,3 @@
+modules:
+  - from-file: images/bluefin.yml
+  - from-file: modules/devex/init.yml
