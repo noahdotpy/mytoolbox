@@ -1,0 +1,5 @@
+modules:
+  - from-file: modules/common/init.yml
+  - from-file: modules/bluefin/init.yml
+  - from-file: modules/horizon-common/init.yml
+  - from-file: modules/horizon-no-desktops/init.yml

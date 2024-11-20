@@ -23,6 +23,8 @@ jobs:
           - images/horizon-gnome/regular/latest/horizon-gnome--latest.yml
           - images/horizon-plasma/dx/latest/horizon-plasma-dx--latest.yml
           - images/horizon-plasma/regular/latest/horizon-plasma--latest.yml
+          - images/horizon/dx/latest/horizon-dx--latest.yml
+          - images/horizon/regular/latest/horizon--latest.yml
 
     steps:
       - name: Build Custom Image

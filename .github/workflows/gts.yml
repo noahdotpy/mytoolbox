@@ -23,6 +23,8 @@ jobs:
           # - images/horizon-gnome/regular/gts/horizon-gnome--gts.yml
           # - images/horizon-plasma/dx/gts/horizon-plasma-dx--gts.yml
           # - images/horizon-plasma/regular/gts/horizon-plasma--gts.yml
+          # - images/horizon/dx/gts/horizon-dx--gts.yml
+          # - images/horizon/regular/gts/horizon--gts.yml
 
     steps:
       - name: Build Custom Image
