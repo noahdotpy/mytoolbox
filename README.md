@@ -2,7 +2,7 @@
 
 > **Warning** This repository is solely intended for only my purpose and may bring breaking changes without warning.
 
-This is a constantly updating repository which hosts my custom [ostree images](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) based on Aurora and Bluefin from the Universal Blue team.
+This is a constantly updating repository which hosts my custom [bootable desktop images](https://containers.github.io/bootable/) based on Aurora/Bluefin from the Universal Blue team and built with container tooling.
 GitHub will build this image, and then host it on [ghcr.io](https://github.com/features/packages).
 The users can then tell the computer to boot off of that image.
 GitHub keeps 90 days worth of image backups for us, thanks Microsoft!
@@ -41,7 +41,7 @@ Developer edition is an image with additional tools for developers, such as Visu
 | Kernel version        | Gated    | Gated   | Gated         | Upstream |
 | Image build frequency | Weekly   | Weekly  | Daily         | Daily    |
 
-Add `-git` (e.g `stable-git`) to your stream to get image builds that are additionaly built on every commit pushed to the repository.
+Add `-git` (e.g `stable-git`) to your stream to get image builds that are additionally built on every commit pushed to the repository.
 
 ## Installation
 
@@ -61,7 +61,7 @@ just build-iso-ghcr bluefin-dx gts
 
 #### Secure boot
 
-After you have installed from the ISO succesfully you will need to use the password `universalblue` to enroll the secure boot key.
+After you have installed from the ISO successfully you will need to use the password `universalblue` to enroll the secure boot key.
 
 ### Switching from a Fedora Atomic image
 
