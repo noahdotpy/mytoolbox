@@ -1,0 +1,12 @@
+[Unit]
+Description=Run IDWT Apply (System) every second
+
+[Timer]
+AccuracySec=1s
+OnBootSec=1s
+OnUnitInactiveSec=1s
+Persistent=false
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

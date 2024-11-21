@@ -2,13 +2,16 @@
 type: systemd
 system:
   enabled:
+    - hosts.d.path
+    - hosts.d.service
     - idwt-apply.path
     - idwt-apply.service
     - idwt-apply.timer
     - nushell-profile.d.path
     - nushell-profile.d.service
-    - hosts.d.path
-    - hosts.d.service
 user:
   enabled:
+    - idwt-apply-user.path
+    - idwt-apply-user.service
+    - idwt-apply-user.timer
     - notify-big-uptime.timer

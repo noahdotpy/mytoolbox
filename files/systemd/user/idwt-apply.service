@@ -1,9 +1,9 @@
 [Unit]
-Description=IDWT service
+Description=IDWT Apply (User)
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/idwt apply-all
+ExecStart=/usr/bin/idwt apply-user
 
 [Install]
 WantedBy=default.target

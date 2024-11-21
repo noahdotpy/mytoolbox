@@ -1,5 +1,5 @@
 [Unit]
-Description=Scheduled IDWT Apply (every second)
+Description=Run IDWT Apply (User) every second
 
 [Timer]
 AccuracySec=1s
