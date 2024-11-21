@@ -13,27 +13,16 @@ modules:
       - 3193 # Blur my Shell
       - "Caffeine"
       - 779 # Clipboard Indicator
-      - "Quick Close in Overview"
-      - "Notifications Alert"
-      # FIXME: extension not updated to gnome v47
-      # - "Sleep Through Notifications"
-      - "Compiz windows effect"
-      - "Dash to Dock"
-      - "Desktop Icons NG (DING)"
-      - "GNOME Fuzzy App Search"
-      - "Hot Edge"
+      - "Forge"
       - "Just Perfection"
-      - "Live Captions Assistant"
       - 36 # Lock Keys
       - "Logo Menu"
+      - "Notifications Alert"
       - "OSD Volume Number"
+      - "Quick Close in Overview"
       - "Removable Drive Menu"
       - "Search Light"
-      - 1194 # Show Desktop Button
-      - "Smile - complementary extension"
+      - "Sleep Through Notifications"
       - "Tiling Assistant"
       - "User Themes"
-      - "Wiggle"
       - "Workspaces indicator by open apps"
-      # FIXME: extension not updated to gnome v47
-      # - 5446 # [QSTweak] Quick Setting Tweaker
