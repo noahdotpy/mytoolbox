@@ -1,7 +1,7 @@
 # `wallpapers`
 
 The `wallpapers` module can be used for including & setting wallpapers into desktop environments.  
-It also supports advanced wallpaper functionality for Gnome desktop environment.
+It also supports advanced wallpaper functionality for GNOME desktop environment.
 
 What does this module do?
 
@@ -9,10 +9,10 @@ Universal:
 - It replaces whiteline spaces with _ character for wallpaper files & folders (it's a good practice for parsing system files).  
 - It copies your provided wallpapers from `config/wallpapers` into `/usr/share/backgrounds/bluebuild`.
 
-Gnome:  
+GNOME:  
 - When light+dark wallpapers are included, it automatically separates them for further manipulation process.  
 - It automatically assigns all your wallpapers into background XML files located in `/usr/share/gnome-background-properties`,  
-   which makes them available for selection in Gnome Appearance settings.  
+   which makes them available for selection in GNOME Appearance settings.  
 - If specified, advanced scaling options are written into XML files too  
    Global scaling is always written 1st, while per-wallpaper scaling is always written last.  
 - XML files are automatically renamed to "bluebuild-`name-of-wallpaper.jpg`.xml".  
@@ -25,7 +25,7 @@ Gnome:
 - If test passes successfully, gschema override is then copied into `/usr/share/glib-2.0/schemas` location.  
 - To finally apply wallpaper defaults, gschema override is then compiled with `glib-compile-schemas` normally.
 
-For more details about Gnome wallpaper functions, please see "Usage (Gnome)" documentation section.
+For more details about GNOME wallpaper functions, please see "Usage (GNOME)" documentation section.
 
 ## Usage
 
@@ -40,7 +40,7 @@ You can also make additional folders with wallpapers inside `config/wallpapers` 
 
 Then you just need to set `type: wallpapers` into the recipe file & you're good to go.
 
-## Usage (Gnome)
+## Usage (GNOME)
 
 ### Default wallpaper
 
@@ -53,7 +53,7 @@ Same format is used for `scaling`, `scaling-option` recipe entry.
 
 ### Light+dark wallpapers
 
-To add light+dark wallpapers for Gnome, copy your wallpapers into this location (make folder if it doesn't exist):
+To add light+dark wallpapers for GNOME, copy your wallpapers into this location (make folder if it doesn't exist):
 
 `config/wallpapers/gnome-light-dark`
 
@@ -88,7 +88,7 @@ Wallpaper scaling can be useful for certain type of wallpapers, if default scali
 
 Default wallpaper scaling is `zoom`, which is sufficient for most wallpapers & most screen configurations.
 
-Those wallpaper scaling options are supported for Gnome:
+Those wallpaper scaling options are supported for GNOME:
 
 1. none - does not perform any scaling (black bars will be present on screens with different aspect ratios & wallpapers with higher resolution than the screen won't display at all)  
 2. scaled - it scales the wallpaper according to the screen resolution (black bars will be present on screens with different aspect ratios)  

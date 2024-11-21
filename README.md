@@ -22,7 +22,7 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ## Images
 
-The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and variants of each of these that includes Hyprland as well.
+The images this repository offers are [Bluefin](https://projectbluefin.io) (GNOME), [Aurora](https://getaurora.dev) (Plasma), and variants of each of these that includes Hyprland as well.
 
 Below is a table to get the name of the image you want to use:
 

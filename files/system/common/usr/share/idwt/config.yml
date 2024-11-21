@@ -27,7 +27,7 @@ flatpak-app-networking:
     - com.vscodium.codium
     - io.github.dvlv.boxbuddyrs
 
-    # Gnome Apps
+    # GNOME Apps
     - dev.bragefuglseth.Keypunch
     - org.gnome.Calendar
     - org.gnome.Podcasts

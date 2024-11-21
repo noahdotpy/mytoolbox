@@ -4,7 +4,7 @@ readme: https://raw.githubusercontent.com/blue-build/modules/main/modules/wallpa
 example: |
   type: wallpapers
   #
-  # Gnome-compatible options only
+  # GNOME-compatible options only
   default:
     wallpaper:
       - my-default-wallpaper.jpg
