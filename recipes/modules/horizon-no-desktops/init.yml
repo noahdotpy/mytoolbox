@@ -1,2 +1,6 @@
 modules:
   - from-file: modules/horizon-no-desktops/remove-plasma.yml
+  - type: files
+    files:
+      - source: system/horizon-no-desktops/
+        destination: /

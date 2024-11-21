@@ -3,5 +3,6 @@ type: rpm-ostree
 remove:
   - plasma-desktop
   - plasma-workspace
+  - plasma-workspace-wayland
   - plasmashell
   - sddm-breeze

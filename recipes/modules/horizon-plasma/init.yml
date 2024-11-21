@@ -1,2 +1,6 @@
 modules:
   - from-file: modules/horizon-plasma/sddm-modules.yml
+  - type: files
+    files:
+      - source: system/horizon-plasma/
+        destination: /
