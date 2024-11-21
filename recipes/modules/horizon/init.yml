@@ -3,3 +3,6 @@ modules:
     files:
       - source: system/horizon/
         destination: /
+  - type: rpm-ostree
+    remove:
+      - sway
