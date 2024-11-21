@@ -2,6 +2,7 @@
 type: rpm-ostree
 remove:
   - plasma-desktop
+  - plasma-print-manager
   - plasma-workspace
   - plasma-workspace-wayland
   - plasmashell
