@@ -7,7 +7,7 @@ def main [
     let file_path = "/usr/share/ublue-os/image-info.json"
     let image_vendor = "noahdotpy"
     
-    let config = open $file_path
+    let config = try { open $file_path } | default {}
 
     let new_configs = {
         image-name: $image_name

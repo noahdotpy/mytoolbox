@@ -23,7 +23,6 @@ jobs:
           - images/horizon-bluefin/regular/stable/horizon-bluefin--stable.yml
           - images/horizon-aurora/dx/stable/horizon-aurora-dx--stable.yml
           - images/horizon-aurora/regular/stable/horizon-aurora--stable.yml
-          - images/horizon/regular/stable/horizon--stable.yml
 
     steps:
       - name: Build Custom Image
