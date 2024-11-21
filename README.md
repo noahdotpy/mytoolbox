@@ -22,16 +22,14 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ## Images
 
-The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and hypr (Hyprland).
-
-hypr is based on [Aurora](https://getaurora.dev) (for Plasma variant) or [Bluefin](https://projectbluefin.io) (for Gnome variant).
+The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and variants of each of these that includes Hyprland as well.
 
 Below is a table to get the name of the image you want to use:
 
-|                   | [Aurora](https://getaurora.dev) | [Bluefin](https://projectbluefin.io) | hypr ([Aurora](https://getaurora.dev)) | hypr ([Bluefin](https://projectbluefin.io)) |
-| ----------------- | ------------------------------- | ------------------------------------ | ----------------------------------------- | ---------------------------------------------- |
-| Regular           | aurora                          | bluefin                              | aurora-hypr                            | bluefin-hypr                                |
-| Developer edition | aurora-dx                       | bluefin-dx                           | aurora-hypr-dx                         | bluefin-hypr-dx                             |
+|                   | [Aurora](https://getaurora.dev) | [Bluefin](https://projectbluefin.io) | [Aurora](https://getaurora.dev) (Hyprland) | [Bluefin](https://projectbluefin.io) (Hyprland)) |
+| ----------------- | ------------------------------- | ------------------------------------ | ------------------------------------------ | ------------------------------------------------ |
+| Regular           | aurora                          | bluefin                              | aurora-hypr                                | bluefin-hypr                                     |
+| Developer edition | aurora-dx                       | bluefin-dx                           | aurora-hypr-dx                             | bluefin-hypr-dx                                  |
 
 Developer edition is an image with additional tools for developers, such as Visual Studio Code pre-installed and developer-related applications such as Pods (for podman management).
 
