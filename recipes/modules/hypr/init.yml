@@ -1,0 +1,4 @@
+modules:
+  - from-file: modules/hypr/packages.yml
+  - from-file: modules/hypr/hyprland-modules.yml
+  - from-file: modules/hypr/files.yml

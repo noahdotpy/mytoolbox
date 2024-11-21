@@ -1,9 +1,0 @@
-name: horizon-bluefin-dx
-description: A personalised image built by noahdotpy on top of images from the Universal Blue team
-alt-tags: [latest]
-
-base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: latest
-
-modules:
-  - from-file: image-modules/horizon-bluefin-dx.yml

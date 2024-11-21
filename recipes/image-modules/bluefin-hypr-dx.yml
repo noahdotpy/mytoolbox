@@ -1,0 +1,3 @@
+modules:
+  - from-file: image-modules/bluefin-hypr.yml
+  - from-file: modules/devex/init.yml

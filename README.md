@@ -22,16 +22,16 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ## Images
 
-The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and Horizon (Hyprland).
+The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and hypr (Hyprland).
 
-Horizon is based on [Aurora](https://getaurora.dev) (for Plasma variant) or [Bluefin](https://projectbluefin.io) (for Gnome variant).
+hypr is based on [Aurora](https://getaurora.dev) (for Plasma variant) or [Bluefin](https://projectbluefin.io) (for Gnome variant).
 
 Below is a table to get the name of the image you want to use:
 
-|                   | [Aurora](https://getaurora.dev) | [Bluefin](https://projectbluefin.io) | Horizon ([Aurora](https://getaurora.dev)) | Horizon ([Bluefin](https://projectbluefin.io)) |
+|                   | [Aurora](https://getaurora.dev) | [Bluefin](https://projectbluefin.io) | hypr ([Aurora](https://getaurora.dev)) | hypr ([Bluefin](https://projectbluefin.io)) |
 | ----------------- | ------------------------------- | ------------------------------------ | ----------------------------------------- | ---------------------------------------------- |
-| Regular           | aurora                          | bluefin                              | horizon-aurora                            | horizon-bluefin                                |
-| Developer edition | aurora-dx                       | bluefin-dx                           | horizon-aurora-dx                         | horizon-bluefin-dx                             |
+| Regular           | aurora                          | bluefin                              | aurora-hypr                            | bluefin-hypr                                |
+| Developer edition | aurora-dx                       | bluefin-dx                           | aurora-hypr-dx                         | bluefin-hypr-dx                             |
 
 Developer edition is an image with additional tools for developers, such as Visual Studio Code pre-installed and developer-related applications such as Pods (for podman management).
 
