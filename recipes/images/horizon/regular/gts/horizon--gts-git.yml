@@ -2,7 +2,7 @@ name: horizon
 description: A personalised image built by noahdotpy on top of images from the Universal Blue team
 alt-tags: [gts-git]
 
-base-image: ghcr.io/ublue-os/base-main
+base-image: ghcr.io/ublue-os/sericea-main
 image-version: gts
 
 modules:
