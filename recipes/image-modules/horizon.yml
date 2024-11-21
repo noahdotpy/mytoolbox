@@ -1,4 +1,0 @@
-modules:
-  - from-file: modules/common/init.yml
-  - from-file: modules/horizon-common/init.yml
-  - from-file: modules/horizon/init.yml

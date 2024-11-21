@@ -2,5 +2,5 @@
 modules:
 - type: files
   files:
-    - source: system/horizon-common/
+    - source: system/horizon/
       destination: /

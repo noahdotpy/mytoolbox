@@ -24,22 +24,18 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and Horizon (Hyprland).
 
-Horizon is a custom spin with a Hyprland desktop.
+Horizon is based on [Aurora](https://getaurora.dev) (for Plasma variant) or [Bluefin](https://projectbluefin.io) (for Gnome variant).
 
-Horizon is based on [ublue-os/base-main](https://github.com/ublue-os/main) for the main variant, [Aurora](https://getaurora.dev) (for Plasma variant) or [Bluefin](https://projectbluefin.io) (for Gnome variant).
+Below is a table to get the name of the image you want to use:
 
-Below is a table to get the id of the image you want to use:
-
-|                   | [Aurora](https://getaurora.dev) | [Bluefin](https://projectbluefin.io) | Horizon | Horizon ([Aurora](https://getaurora.dev)) | Horizon ([Bluefin](https://projectbluefin.io)) |
-| ----------------- | --------------- | --------------- | ------------------ | ----------------------------- | ---------------------------- |
-| Regular           | aurora          | bluefin         | horizon            | horizon-aurora                | horizon-bluefin                |
-| Developer edition | aurora-dx       | bluefin-dx      | n/a         | horizon-aurora-dx             | horizon-bluefin-dx             |
+|                   | [Aurora](https://getaurora.dev) | [Bluefin](https://projectbluefin.io) | Horizon ([Aurora](https://getaurora.dev)) | Horizon ([Bluefin](https://projectbluefin.io)) |
+| ----------------- | ------------------------------- | ------------------------------------ | ----------------------------------------- | ---------------------------------------------- |
+| Regular           | aurora                          | bluefin                              | horizon-aurora                            | horizon-bluefin                                |
+| Developer edition | aurora-dx                       | bluefin-dx                           | horizon-aurora-dx                         | horizon-bluefin-dx                             |
 
 Developer edition is an image with additional tools for developers, such as Visual Studio Code pre-installed and developer-related applications such as Pods (for podman management).
 
 ### Streams
-
-> **Warning** Stable is not available for `horizon` due to being based on [ublue-os/base-main](https://https://github.com/ublue-os/main) instead of being based on [Bluefin](https://projectbluefin.io) or [Aurora](https://getaurora.dev) like the others.
 
 |                       | :gts     | :stable | :stable-daily | :latest  |
 | --------------------- | -------- | ------- | ------------- | -------- |

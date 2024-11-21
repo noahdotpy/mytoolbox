@@ -1,9 +1,4 @@
 modules:
-  - type: files
-    files:
-      - source: system/horizon/
-        destination: /
-  - type: rpm-ostree
-    remove:
-      - sway
-      - sway-systemd
+  - from-file: modules/horizon/packages.yml
+  - from-file: modules/horizon/hyprland-modules.yml
+  - from-file: modules/horizon/files.yml
