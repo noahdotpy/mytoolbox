@@ -26,7 +26,7 @@ The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnom
 
 Below is a table to get the name of the image you want to use:
 
-|                   | [Aurora](https://getaurora.dev) | [Bluefin](https://projectbluefin.io) | [Aurora](https://getaurora.dev) (Hyprland) | [Bluefin](https://projectbluefin.io) (Hyprland) |
+| Edition           | [Aurora](https://getaurora.dev) | [Bluefin](https://projectbluefin.io) | [Aurora](https://getaurora.dev) (Hyprland) | [Bluefin](https://projectbluefin.io) (Hyprland) |
 | ----------------- | ------------------------------- | ------------------------------------ | ------------------------------------------ | ----------------------------------------------- |
 | Regular           | aurora                          | bluefin                              | aurora-hypr                                | bluefin-hypr                                    |
 | Developer edition | aurora-dx                       | bluefin-dx                           | aurora-hypr-dx                             | bluefin-hypr-dx                                 |
