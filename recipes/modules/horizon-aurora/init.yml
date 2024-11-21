@@ -1,0 +1,6 @@
+modules:
+  - from-file: modules/horizon-aurora/sddm-modules.yml
+  - type: files
+    files:
+      - source: system/horizon-aurora/
+        destination: /

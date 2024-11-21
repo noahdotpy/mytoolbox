@@ -22,18 +22,24 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ## Images
 
-The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and Horizon (Hyprland). Horizon is a custom spin which is based on Aurora (for regular and plasma variant) or Bluefin (for gnome variant), but with a Hyprland desktop instead.
+The images this repository offers are [Bluefin](https://projectbluefin.io) (Gnome), [Aurora](https://getaurora.dev) (Plasma), and Horizon (Hyprland).
 
-Below is a table to figure out which image you want to use.
+Horizon is a custom spin with a Hyprland desktop.
 
-|                   | Aurora - Plasma | Bluefin - Gnome | Horizon - Hyprland | Horizon - Plasma and Hyprland | Horizon - Gnome and Hyprland |
+Horizon is based on [ublue-os/base-main](https://github.com/ublue-os/main) for the main variant, [Aurora](https://getaurora.dev) (for Plasma variant) or [Bluefin](https://projectbluefin.io) (for Gnome variant).
+
+Below is a table to get the id of the image you want to use:
+
+|                   | [Aurora](https://getaurora.dev) | [Bluefin](https://projectbluefin.io) | Horizon | Horizon ([Aurora](https://getaurora.dev)) | Horizon ([Bluefin](https://projectbluefin.io)) |
 | ----------------- | --------------- | --------------- | ------------------ | ----------------------------- | ---------------------------- |
-| Regular           | aurora          | bluefin         | horizon            | horizon-plasma                | horizon-gnome                |
-| Developer edition | aurora-dx       | bluefin-dx      | horizon-dx         | horizon-plasma-dx             | horizon-gnome-dx             |
+| Regular           | aurora          | bluefin         | horizon            | horizon-aurora                | horizon-bluefin                |
+| Developer edition | aurora-dx       | bluefin-dx      | n/a         | horizon-aurora-dx             | horizon-bluefin-dx             |
 
 Developer edition is an image with additional tools for developers, such as Visual Studio Code pre-installed and developer-related applications such as Pods (for podman management).
 
 ### Streams
+
+> **Warning** Stable is not available for `horizon` due to being based on [ublue-os/base-main](https://https://github.com/ublue-os/main) instead of being based on [Bluefin](https://projectbluefin.io) or [Aurora](https://getaurora.dev) like the others.
 
 |                       | :gts     | :stable | :stable-daily | :latest  |
 | --------------------- | -------- | ------- | ------------- | -------- |

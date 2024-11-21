@@ -1,9 +1,0 @@
-name: horizon-gnome-dx
-description: A personalised image built by noahdotpy on top of Bluefin/Aurora from the Universal Blue team
-alt-tags: [stable-git]
-
-base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: stable
-
-modules:
-  - from-file: image-modules/horizon-gnome-dx.yml

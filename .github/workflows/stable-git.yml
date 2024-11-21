@@ -25,10 +25,10 @@ jobs:
           - images/aurora/regular/stable/aurora--stable-git.yml
           - images/bluefin/dx/stable/bluefin-dx--stable-git.yml
           - images/bluefin/regular/stable/bluefin--stable-git.yml
-          - images/horizon-gnome/dx/stable/horizon-gnome-dx--stable-git.yml
-          - images/horizon-gnome/regular/stable/horizon-gnome--stable-git.yml
-          - images/horizon-plasma/dx/stable/horizon-plasma-dx--stable-git.yml
-          - images/horizon-plasma/regular/stable/horizon-plasma--stable-git.yml
+          - images/horizon-bluefin/dx/stable/horizon-bluefin-dx--stable-git.yml
+          - images/horizon-bluefin/regular/stable/horizon-bluefin--stable-git.yml
+          - images/horizon-aurora/dx/stable/horizon-aurora-dx--stable-git.yml
+          - images/horizon-aurora/regular/stable/horizon-aurora--stable-git.yml
           - images/horizon/dx/stable/horizon-dx--stable-git.yml
           - images/horizon/regular/stable/horizon--stable-git.yml
 

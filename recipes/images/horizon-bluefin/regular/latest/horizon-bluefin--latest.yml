@@ -1,0 +1,9 @@
+name: horizon-bluefin
+description: A personalised image built by noahdotpy on top of images from the Universal Blue team
+alt-tags: [latest]
+
+base-image: ghcr.io/ublue-os/bluefin
+image-version: latest
+
+modules:
+  - from-file: image-modules/horizon-bluefin.yml

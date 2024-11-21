@@ -1,9 +1,0 @@
-name: horizon-gnome
-description: A personalised image built by noahdotpy on top of Bluefin/Aurora from the Universal Blue team
-alt-tags: [stable-daily-git]
-
-base-image: ghcr.io/ublue-os/bluefin
-image-version: stable-daily
-
-modules:
-  - from-file: image-modules/horizon-gnome.yml
