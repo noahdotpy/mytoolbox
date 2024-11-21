@@ -2,7 +2,9 @@
 type: rpm-ostree
 remove:
   - plasma-desktop
+  - plasma-lookandfeel-fedora
   - plasma-print-manager
+  - plasma-print-manager-libs
   - plasma-workspace
   - plasma-workspace-wayland
   - plasmashell
