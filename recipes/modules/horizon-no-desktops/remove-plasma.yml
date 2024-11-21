@@ -4,3 +4,4 @@ remove:
   - plasma-desktop
   - plasma-workspace
   - plasmashell
+  - sddm-breeze
