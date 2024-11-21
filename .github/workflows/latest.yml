@@ -23,7 +23,6 @@ jobs:
           - images/horizon-bluefin/regular/latest/horizon-bluefin--latest.yml
           - images/horizon-aurora/dx/latest/horizon-aurora-dx--latest.yml
           - images/horizon-aurora/regular/latest/horizon-aurora--latest.yml
-          - images/horizon/dx/latest/horizon-dx--latest.yml
           - images/horizon/regular/latest/horizon--latest.yml
 
     steps:

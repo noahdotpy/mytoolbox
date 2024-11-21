@@ -29,7 +29,6 @@ jobs:
           # - images/horizon-bluefin/regular/gts/horizon-bluefin--gts-git.yml
           # - images/horizon-aurora/dx/gts/horizon-aurora-dx--gts-git.yml
           # - images/horizon-aurora/regular/gts/horizon-aurora--gts-git.yml
-          - images/horizon/dx/gts/horizon-dx--gts-git.yml
           - images/horizon/regular/gts/horizon--gts-git.yml
 
     steps:
