@@ -1,5 +1,4 @@
 modules:
-  - from-file: modules/common/init.yml
-  - from-file: modules/aurora/init.yml
+  - from-file: image-modules/aurora.yml
   - from-file: modules/hypr/init.yml
   - from-file: modules/aurora-hypr/init.yml

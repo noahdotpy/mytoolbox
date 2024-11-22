@@ -1,4 +1,3 @@
 modules:
-  - from-file: modules/common/init.yml
-  - from-file: modules/bluefin/init.yml
+  - from-file: image-modules/bluefin.yml
   - from-file: modules/hypr/init.yml
