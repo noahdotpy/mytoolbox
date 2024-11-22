@@ -22,7 +22,8 @@ modules:
       - "Quick Close in Overview"
       - "Removable Drive Menu"
       - "Search Light"
-      - "Sleep Through Notifications"
+      # FIXME: The below extension is not up-to-date with GNOME 47
+      # - "Sleep Through Notifications"
       - "Tiling Assistant"
       - "User Themes"
       - "Workspaces indicator by open apps"
