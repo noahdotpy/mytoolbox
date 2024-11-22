@@ -3,4 +3,3 @@ type: script
 scripts:
   - common/block-hosts.sh
   - common/initramfs.sh
-  - common/rename-ptyxis-to-terminal.sh
