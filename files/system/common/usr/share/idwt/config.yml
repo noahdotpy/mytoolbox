@@ -1,8 +1,6 @@
-block-kwin-windows:
-  block-torbrowser:
-    title:
-      value: "Tor Browser"
-      match_type: substring
+kill-plasma-windows:
+  - description: "Block Tor Browser"
+    title: "Tor Browser"
 block-sites:
   - tails.net
   - torproject.org

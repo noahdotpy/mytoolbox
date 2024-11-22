@@ -2,12 +2,12 @@ tightener:
   approved-commands:
     - ^config \.block-networking = false$
     - ^config \.block-sites \+= \["[^"']*"\]$
-    - ^config \.flatpak-app-networking\.allow-only -= \["[^"']*\.[^"']*\.[^"']*"\]$
-    - ^config \.flatpak-app-networking\.block \+= \["[^"']*\.[^"']*\.[^"']*"\]$
-    - ^config \.flatpak-app-networking\.block-otherwise = true$
+    - ^config \.toggle-flatpak-networking\.allow-only -= \["[^"']*\.[^"']*\.[^"']*"\]$
+    - ^config \.toggle-flatpak-networking\.block \+= \["[^"']*\.[^"']*\.[^"']*"\]$
+    - ^config \.toggle-flatpak-networking\.block-otherwise = true$
     # TODO: Test if the below actually works properly
     # - ^config \.process-killing\.allow-always\."[^"']*" = "TODO: Clean this up (it was removed by tightener)"$
-    - ^config \.process-killing\.block \+= \["[^"']*"\]$
+    - ^config \.kill-processes\.block \+= \["[^"']*"\]$
     - ^config \.tightener\.delay \+= [0-9]*$
     - ^config \.tightener\.delay-enabled = false$
     - ^group remove [^\s]* wheel$
