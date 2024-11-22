@@ -4,14 +4,14 @@ system:
   enabled:
     - hosts.d.path
     - hosts.d.service
-    - idwt-apply.path
-    - idwt-apply.service
-    - idwt-apply.timer
+    - idwt-system.path
+    - idwt-system.service
+    - idwt-system.timer
     - nushell-profile.d.path
     - nushell-profile.d.service
 user:
   enabled:
-    - idwt-apply-user.path
-    - idwt-apply-user.service
-    - idwt-apply-user.timer
+    - idwt-user.path
+    - idwt-user.service
+    - idwt-user.timer
     - notify-big-uptime.timer
