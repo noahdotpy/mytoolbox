@@ -1,3 +1,0 @@
-modules:
-  - from-file: modules/common/init.yml
-  - from-file: modules/aurora/init.yml

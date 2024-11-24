@@ -1,0 +1,54 @@
+name: Build `daily` frequency daily and on git push
+on:
+  schedule:
+    - cron: "00 06 * * *" # 06:00 UTC daily
+  push:
+    paths-ignore:
+      - '/toolboxes/**'
+      - "**.md"
+    branches-ignore:
+      - 'dependabot**'
+      - 'compiler'
+
+  pull_request:
+  workflow_dispatch:
+jobs:
+  bluebuild:
+    name: Build Custom Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    strategy:
+      fail-fast: false
+      matrix:
+        recipe:
+          - images/kavon-hypr/dx/current/kavon-hypr-dx--current-daily.yml
+          - images/kavon-hypr/dx/previous/kavon-hypr-dx--previous-daily.yml
+          - images/kavon-hypr/regular/current/kavon-hypr--current-daily.yml
+          - images/kavon-hypr/regular/previous/kavon-hypr--previous-daily.yml
+
+          - images/kavon/dx/current/kavon-dx--current-daily.yml
+          - images/kavon/dx/previous/kavon-dx--previous-daily.yml
+          - images/kavon/regular/current/kavon--current-daily.yml
+          - images/kavon/regular/previous/kavon--previous-daily.yml
+
+          - images/silvara-hypr/dx/current/silvara-hypr-dx--current-daily.yml
+          - images/silvara-hypr/dx/previous/silvara-hypr-dx--previous-daily.yml
+          - images/silvara-hypr/regular/current/silvara-hypr--current-daily.yml
+          - images/silvara-hypr/regular/previous/silvara-hypr--previous-daily.yml
+          
+          - images/silvara/dx/current/silvara-dx--current-daily.yml
+          - images/silvara/dx/previous/silvara-dx--previous-daily.yml
+          - images/silvara/regular/current/silvara--current-daily.yml
+          - images/silvara/regular/previous/silvara--previous-daily.yml
+
+    steps:
+      - name: Build Custom Image
+        uses: blue-build/github-action@v1.7
+        with:
+          recipe: ${{ matrix.recipe }}
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
+          registry_token: ${{ github.token }}
+          pr_event_number: ${{ github.event.number }}

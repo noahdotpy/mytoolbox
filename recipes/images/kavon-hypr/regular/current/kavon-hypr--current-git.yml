@@ -1,0 +1,9 @@
+name: kavon-hypr
+description: A personalised image built by noahdotpy on top of images from the Universal Blue team
+alt-tags: [current-git, 41-git]
+
+base-image: quay.io/fedora-ostree-desktops/kinoite
+image-version: 41
+
+modules:
+  - from-file: image-modules/kavon-hypr.yml

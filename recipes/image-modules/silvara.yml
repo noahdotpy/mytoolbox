@@ -1,0 +1,3 @@
+modules:
+  - from-file: modules/common/init.yml
+  - from-file: modules/silvara/init.yml

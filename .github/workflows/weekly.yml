@@ -1,0 +1,43 @@
+name: Build default frequency weekly
+on:
+  schedule:
+    - cron: "00 07 * * 0" # 07:00 UTC every Sunday
+  workflow_dispatch:
+jobs:
+  bluebuild:
+    name: Build Custom Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    strategy:
+      fail-fast: false
+      matrix:
+        recipe:
+            - images/kavon-hypr/regular/current/kavon-hypr--current.yml
+            - images/kavon-hypr/regular/previous/kavon-hypr--previous.yml
+  
+            - images/kavon/dx/current/kavon-dx--current.yml
+            - images/kavon/dx/previous/kavon-dx--previous.yml
+            - images/kavon/regular/current/kavon--current.yml
+            - images/kavon/regular/previous/kavon--previous.yml
+  
+            - images/silvara-hypr/dx/current/silvara-hypr-dx--current.yml
+            - images/silvara-hypr/dx/previous/silvara-hypr-dx--previous.yml
+            - images/silvara-hypr/regular/current/silvara-hypr--current.yml
+            - images/silvara-hypr/regular/previous/silvara-hypr--previous.yml
+            
+            - images/silvara/dx/current/silvara-dx--current.yml
+            - images/silvara/dx/previous/silvara-dx--previous.yml
+            - images/silvara/regular/current/silvara--current.yml
+            - images/silvara/regular/previous/silvara--previous.yml
+
+    steps:
+      - name: Build Custom Image
+        uses: blue-build/github-action@v1.7
+        with:
+          recipe: ${{ matrix.recipe }}
+          cosign_private_key: ${{ secrets.SIGNING_SECRET }}
+          registry_token: ${{ github.token }}
+          pr_event_number: ${{ github.event.number }}

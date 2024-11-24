@@ -7,7 +7,7 @@ file_output=$3
 
 project_root=$(git rev-parse --show-toplevel)
 
-if [[ ${image_name} =~ "bluefin" ]] || [[ ${image_name} =~ "gnome" ]]; then
+if [[ ${image_name} =~ "silvara" ]]; then
 	installer_variant=Silverblue
 else
 	installer_variant=Kinoite

@@ -1,5 +1,0 @@
-# https://github.com/noahdotpy/myublue/blob/main/modules/files/README.md
-type: files
-files:
-  - source: system/bluefin/
-    destination: /

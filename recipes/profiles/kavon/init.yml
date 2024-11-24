@@ -1,0 +1,2 @@
+modules:
+  - from-file: modules/kavon/default-flatpaks.yml

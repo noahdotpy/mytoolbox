@@ -1,9 +1,0 @@
-name: bluefin-hypr
-description: A personalised image built by noahdotpy on top of images from the Universal Blue team
-alt-tags: [stable-git]
-
-base-image: ghcr.io/ublue-os/bluefin
-image-version: stable
-
-modules:
-  - from-file: image-modules/bluefin-hypr.yml

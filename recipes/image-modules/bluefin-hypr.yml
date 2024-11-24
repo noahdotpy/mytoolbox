@@ -1,3 +1,0 @@
-modules:
-  - from-file: image-modules/bluefin.yml
-  - from-file: modules/hypr/init.yml

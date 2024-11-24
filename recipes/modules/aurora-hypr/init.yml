@@ -1,6 +1,0 @@
-modules:
-  - from-file: modules/aurora-hypr/sddm-modules.yml
-  - type: files
-    files:
-      - source: system/aurora-hypr/
-        destination: /
