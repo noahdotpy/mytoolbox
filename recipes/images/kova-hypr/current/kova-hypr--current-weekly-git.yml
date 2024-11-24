@@ -1,9 +1,9 @@
 name: kova-hypr
 description: A personalised image built by noahdotpy on top of images from the Universal Blue team
-alt-tags: [previous-git, 40-git]
+alt-tags: [current-weekly-git, 41-weekly-git]
 
 base-image: quay.io/fedora-ostree-desktops/kinoite
-image-version: 40
+image-version: 41
 
 modules:
   - from-file: image-modules/kova-hypr.yml

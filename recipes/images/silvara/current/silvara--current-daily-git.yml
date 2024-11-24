@@ -1,6 +1,6 @@
 name: silvara
 description: A personalised image built by noahdotpy on top of images from the Universal Blue team
-alt-tags: [current-nightly, 41-nightly]
+alt-tags: [current-daily-git, 41-daily-git]
 
 base-image: quay.io/fedora-ostree-desktops/silverblue
 image-version: 41

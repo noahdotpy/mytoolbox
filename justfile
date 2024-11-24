@@ -62,7 +62,7 @@ build-iso-ghcr image="" tag="" file_output="__prompt":
 
     if [[ "{{ tag }}" = "" ]]; then
 
-      want_to_custom_tag=$(ugum choose "previous" "previous-git" "nightly" "current" "current-git" "current-nightly" "other" --header "Choose image tag:")
+      want_to_custom_tag=$(ugum choose "previous" "previous-weekly-git" "daily-git" "current" "current-weekly-git" "current-daily-git" "other" --header "Choose image tag:")
 
       if [[ "$want_to_custom_tag" = "other" ]] || [[ "$want_to_custom_tag" = "" ]]; then
         chosen_tag=$(ugum input)

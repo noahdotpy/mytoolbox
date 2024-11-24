@@ -1,4 +1,4 @@
-name: 'Build frequency: git'
+name: 'Build frequency: weekly-git'
 
 on:
   schedule:
@@ -27,17 +27,17 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/kova-hypr/current/kova-hypr--current-git.yml
-          - images/kova-hypr/previous/kova-hypr--previous-git.yml
+          - images/kova-hypr/current/kova-hypr--current-weekly-git.yml
+          - images/kova-hypr/previous/kova-hypr--previous-weekly-git.yml
 
-          - images/kova/current/kova--current-git.yml
-          - images/kova/previous/kova--previous-git.yml
+          - images/kova/current/kova--current-weekly-git.yml
+          - images/kova/previous/kova--previous-weekly-git.yml
 
-          - images/silvara-hypr/current/silvara-hypr--current-git.yml
-          - images/silvara-hypr/previous/silvara-hypr--previous-git.yml
+          - images/silvara-hypr/current/silvara-hypr--current-weekly-git.yml
+          - images/silvara-hypr/previous/silvara-hypr--previous-weekly-git.yml
           
-          - images/silvara/current/silvara--current-git.yml
-          - images/silvara/previous/silvara--previous-git.yml
+          - images/silvara/current/silvara--current-weekly-git.yml
+          - images/silvara/previous/silvara--previous-weekly-git.yml
 
     steps:
       - name: Build Custom Image
