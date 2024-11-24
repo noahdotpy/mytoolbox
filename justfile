@@ -36,7 +36,6 @@ get-recipe image tag:
 
     print $recipe
 
-
 # Build local image from recipe
 build image tag:
     #!/usr/bin/env nu
