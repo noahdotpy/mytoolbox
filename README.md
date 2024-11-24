@@ -38,6 +38,8 @@ Channels determine the fedora version you want to use. Channels will be used in 
 
 Use `current` for the current Fedora version, or use `previous` for the previous Fedora version.
 
+You can also use the specific Fedora version you want to use as the channel. An example of the full tag aiming to use Fedora 40 with the `git` frequency is as follows: `:40-daily`.
+
 ### Frequencies
 
 Frequency determine the frequency of builds you will get throughout the week.
