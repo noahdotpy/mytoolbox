@@ -6,6 +6,9 @@ on:
     paths-ignore:
       - '/toolboxes/**'
       - "**.md"
+    branches-ignore:
+      - 'dependabot**'
+      - 'compiler'
 
   pull_request:
   workflow_dispatch:
