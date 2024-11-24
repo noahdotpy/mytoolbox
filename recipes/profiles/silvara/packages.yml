@@ -1,6 +1,6 @@
 # https://blue-build.org/reference/modules/rpm-ostree/
 type: rpm-ostree
-install: [papirus-icon-theme]
+install:
 - gnome-tweaks
 - nautilus-gsconnect
 - nautilus-open-any-terminal
