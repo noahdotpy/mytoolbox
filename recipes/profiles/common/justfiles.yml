@@ -1,8 +1,0 @@
-# https://blue-build.org/reference/modules/justfiles/
-modules:
-- type: script
-  snippets:
-    - touch /usr/share/ublue-os/just/60-custom.just
-- type: justfiles
-  validate: false
-  include: [common]
