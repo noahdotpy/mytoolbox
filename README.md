@@ -42,7 +42,7 @@ Use `current` for the current Fedora version, or use `previous` for the previous
 
 Frequency determine the frequency of builds you will get throughout the week.
 
-The three frequencies are `weekly`, `git`, and `daily`. If you don't add a frequency in your tag it will default to `weekly`.
+The three frequencies are `weekly`, `git`, and `daily`. If you don't add a frequency in your tag it will default to `weekly`. This means that if your tag is only `previous` or `current`, then you will be using the `weekly` frequecy.
 
 To use different build frequencies just add it to your tag. An example of this is using the `daily` build frequency on silvara previous to get `silvara:previous-daily`.
 
