@@ -2,4 +2,5 @@
 type: script
 scripts:
   - common/block-hosts.sh
+  - common/link-etc-os-release.sh
   - common/initramfs.sh
