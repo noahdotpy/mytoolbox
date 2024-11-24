@@ -16,7 +16,7 @@ def main [
         bluebuild-base-image: $base_image
     }
 
-    mkdir -p ($file_path | path dirname)
+    mkdir ($file_path | path dirname)
 
     let new_config = $config | merge $new_configs
     $new_config | to json | save -f $file_path
