@@ -7,4 +7,3 @@ modules:
   - from-file: profiles/silvara/default-flatpaks.yml
   - from-file: profiles/silvara/files.yml
   - from-file: profiles/silvara/gnome-extensions.yml
-  - from-file: profiles/silvara/wallpapers.yml
