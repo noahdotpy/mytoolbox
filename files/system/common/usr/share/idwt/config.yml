@@ -4,6 +4,7 @@ kill-plasma-windows:
 block-sites:
   - tails.net
   - torproject.org
+  - proxyium.com
 flatpak-app-networking:
   allow:
     # Tools
