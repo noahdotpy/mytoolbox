@@ -1,32 +1,48 @@
 # https://blue-build.org/reference/modules/rpm-ostree/
 type: rpm-ostree
 repos:
-  - https://copr.fedorainfracloud.org/coprs/johanh/timekpr-next/repo/fedora-%OS_VERSION%/johanh-timekpr-next-fedora-%OS_VERSION%.repo
-  - https://copr.fedorainfracloud.org/coprs/wojnilowicz/activitywatch/repo/fedora-%OS_VERSION%/wojnilowicz-activitywatch-fedora-%OS_VERSION%.repo
   - https://copr.fedorainfracloud.org/coprs/atim/lazygit/repo/fedora-%OS_VERSION%/atim-lazygit-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/johanh/timekpr-next/repo/fedora-%OS_VERSION%/johanh-timekpr-next-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/qoijjj/vscodium/repo/fedora-%OS_VERSION%/qoijjj-vscodium-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/wojnilowicz/activitywatch/repo/fedora-%OS_VERSION%/wojnilowicz-activitywatch-fedora-%OS_VERSION%.repo
 install:
   - https://github.com/evilsocket/opensnitch/releases/download/v1.6.6/opensnitch-1.6.6-1.x86_64.rpm
   - https://github.com/twpayne/chezmoi/releases/download/v2.53.1/chezmoi-2.53.1-x86_64.rpm
   - ImageMagick
+  - adobe-source-code-pro-fonts
+  - adw-gtk3-theme
   - aw-awatcher
   - aw-server-rust
   - aw-sync
   - bat
   - btop
   - calc
+  - cascadia-code-fonts
   - chromium
+  - codium
   - cowsay
   - cryfs
+  - cryfs
   - direnv
+  - distrobox
   - duf
   - entr
+  - fastfetch
   - fd-find
   - firejail
+  - flatpak-spawn
+  - fzf
   - fzf
   - gh
   - git-delta
+  - glow
+  - google-droid-sans-mono-fonts
+  - gum
+  - htop
   - htop
   - jc
+  - jetbrains-mono-fonts-all
+  - just
   - lazygit
   - lazygit
   - lolcat
@@ -38,15 +54,23 @@ install:
   - malcontent-tools
   - ncdu
   - neovim
+  - nerd-fonts
   - piper
   - playerctl
+  - printer-driver-brlaser
   - python3-aw-client
   - python3-aw-core
   - python3-aw-qt
   - ranger
   - ripgrep
+  - starship
   - timekpr-next
   - tldr
+  - ubuntu-family-fonts
+  - vim
   - waydroid
+  - wl-clipboard
+  - ydotool
   - zoxide
+  - zsh
   - zsh
