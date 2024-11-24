@@ -26,17 +26,17 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/kova-hypr/current/kova-hypr--current-daily.yml
-          - images/kova-hypr/previous/kova-hypr--previous-daily.yml
+          - images/kova-hypr/current/kova-hypr--current-nightly.yml
+          - images/kova-hypr/previous/kova-hypr--previous-nightly.yml
 
-          - images/kova/current/kova--current-daily.yml
-          - images/kova/previous/kova--previous-daily.yml
+          - images/kova/current/kova--current-nightly.yml
+          - images/kova/previous/kova--previous-nightly.yml
 
-          - images/silvara-hypr/current/silvara-hypr--current-daily.yml
-          - images/silvara-hypr/previous/silvara-hypr--previous-daily.yml
+          - images/silvara-hypr/current/silvara-hypr--current-nightly.yml
+          - images/silvara-hypr/previous/silvara-hypr--previous-nightly.yml
           
-          - images/silvara/current/silvara--current-daily.yml
-          - images/silvara/previous/silvara--previous-daily.yml
+          - images/silvara/current/silvara--current-nightly.yml
+          - images/silvara/previous/silvara--previous-nightly.yml
 
     steps:
       - name: Build Custom Image
