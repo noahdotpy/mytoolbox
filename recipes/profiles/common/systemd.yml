@@ -9,6 +9,7 @@ system:
     - idwt-system.timer
     - nushell-profile.d.path
     - nushell-profile.d.service
+    - rpm-ostreed-automatic.timer
 user:
   enabled:
     - idwt-user.path
