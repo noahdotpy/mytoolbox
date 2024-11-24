@@ -36,16 +36,13 @@ install:
   - firejail
   - flatpak-spawn
   - fzf
-  - fzf
   - gh
   - git-delta
   - google-droid-sans-mono-fonts
   - htop
-  - htop
   - jc
   - jetbrains-mono-fonts-all
   - just
-  - lazygit
   - lazygit
   - lolcat
   - lsd
@@ -74,6 +71,5 @@ install:
   - wl-clipboard
   - ydotool
   - zoxide
-  - zsh
   - zsh
 
