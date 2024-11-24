@@ -44,13 +44,13 @@ You can also use the specific Fedora version you want to use as the channel. An 
 
 Frequency determine the frequency of builds you will get throughout the week.
 
-The three frequencies are `weekly`, `git`, and `daily`. If you don't add a frequency in your tag it will default to `weekly`. This means that if your tag is only `previous` or `current`, then you will be using the `weekly` frequecy.
+The three frequencies are `weekly`, `git`, and `nightly`. If you don't add a frequency in your tag it will default to `weekly`. This means that if your tag is only `previous` or `current`, then you will be using the `weekly` frequecy.
 
-To use different build frequencies just add it to your tag. An example of this is using the `daily` build frequency on silvara previous to get `silvara:previous-daily`.
+To use different build frequencies just add it to your tag. An example of this is using the `nightly` build frequency on silvara previous to get `silvara:previous-nightly`.
 
 Below is a table to explain the differences between the frequencies:
 
-|                          | weekly | git    | daily |
+|                          | weekly | git    | nightly |
 | ------------------------ | ------ | ------ | ----- |
 | Builds weekly/daily      | weekly | weekly | daily |
 | Builds on every git push | no     | yes    | yes   |
