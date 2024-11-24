@@ -2,6 +2,10 @@ name: Build `weekly` frequency
 on:
   schedule:
     - cron: "00 07 * * 0" # 07:00 UTC every Sunday
+  push:
+    tags:
+      - "v*"
+
   workflow_dispatch:
 jobs:
   bluebuild:

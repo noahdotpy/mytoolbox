@@ -9,6 +9,8 @@ on:
     branches-ignore:
       - 'dependabot**'
       - 'compiler'
+    tags:
+      - "v*"
 
   pull_request:
   workflow_dispatch:
