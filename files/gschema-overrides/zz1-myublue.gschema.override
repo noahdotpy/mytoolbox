@@ -41,9 +41,8 @@ offset=0
 manual-schedule=true
 
 [org.gnome.software]
-allow-updates=false
-download-updates=false
-download-updates-notify=false
+download-updates=true
+download-updates-notify=true
 enable-repos-dialog=false
 packaging-format-preference=['flatpak:flathub-system', 'flatpak:flathub-user']
 
