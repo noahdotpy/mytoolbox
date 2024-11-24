@@ -1,15 +1,8 @@
-let image_name = $"(cat /usr/share/ublue-os/image-info.json | from json | get image-name)"
+let small_logo = "/usr/share/bluebuild/fastfetch/logos/fedora-blue-small"
+let large_logo = "/usr/share/bluebuild/fastfetch/logos/fedora-blue-large"
 
-let fetch_logo = if ($image_name =~ "bluefin") {
-    $"(/usr/bin/find /usr/share/ublue-os/bluefin-logos/symbols/* | /usr/bin/shuf -n 1)"
-} else if ($image_name =~ "aurora") {
-    "/usr/share/ublue-os/fastfetch-logos/aurora-fastfetch-logo"
-} else {
-    "/usr/share/ublue-os/fastfetch/logos/ublue-fastfetch-logo"
-}
-
-alias smallfetch = /usr/bin/fastfetch -c /usr/share/ublue-os/fastfetch/configs/small.jsonc --logo ($fetch_logo)
-alias bigfetch = /usr/bin/fastfetch -c /usr/share/ublue-os/fastfetch/configs/large.jsonc --logo ($fetch_logo)
+alias smallfetch = /usr/bin/fastfetch -c /usr/share/bluebuild/fastfetch/configs/small.jsonc --logo ($small_logo)
+alias bigfetch = /usr/bin/fastfetch -c /usr/share/bluebuild/fastfetch/configs/large.jsonc --logo ($large_logo)
 
 alias fastfetch = bigfetch
 alias neofetch = fastfetch
