@@ -1,4 +1,4 @@
-name: Build `git` frequency weekly and on git push
+name: Build `git` frequency
 on:
   schedule:
     - cron: "00 07 * * 0" # 07:00 UTC every Sunday

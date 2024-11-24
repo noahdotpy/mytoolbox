@@ -1,4 +1,4 @@
-name: Build `daily` frequency daily and on git push
+name: Build `daily` frequency
 on:
   schedule:
     - cron: "00 06 * * *" # 06:00 UTC daily
