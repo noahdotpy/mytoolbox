@@ -38,7 +38,7 @@ Channels determine the fedora version you want to use. Channels will be used in 
 
 Use `current` for the current Fedora version, or use `previous` for the previous Fedora version.
 
-You can also use the specific Fedora version you want to use as the channel. An example of the full tag aiming to use Fedora 40 with the `git` frequency is as follows: `:40-daily`.
+You can also use the specific Fedora version you want to use as the channel. An example of the full tag aiming to use Fedora 40 with the `git` frequency is as follows: `:40-git`.
 
 ### Frequencies
 
@@ -73,10 +73,6 @@ Below is an example of building an ISO for silvara:previous-git
 ```bash
 just build-iso-ghcr silvara previous-git
 ```
-
-#### Secure boot
-
-After you have installed from the ISO successfully you will need to use the password `fedora` to enroll the secure boot key.
 
 ### Switching from a Fedora Atomic image
 

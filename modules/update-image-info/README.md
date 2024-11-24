@@ -1,3 +1,3 @@
 # `update-image-info`
 
-This module updates /usr/share/ublue-os/image-info.json
+This module updates/creates /usr/share/bluebuild/image-info.json

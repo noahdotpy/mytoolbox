@@ -44,11 +44,9 @@ pkexec podman run --rm --privileged --volume $dirnames:/build-container-installe
 	ENABLE_CACHE_DNF="false" \
 	ENABLE_CACHE_SKOPEO="false" \
 	ENABLE_FLATPAK_DEPENDENCIES="false" \
-	ENROLLMENT_PASSWORD="silverblue" \
 	IMAGE_NAME="${image_name}" \
 	IMAGE_REPO="ghcr.io/noahdotpy" \
 	IMAGE_TAG="${image_tag}" \
 	ISO_NAME="${file_output}" \
-	SECURE_BOOT_KEY_URL='https://github.com/ublue-os/akmods/raw/main/certs/public_key.der' \
 	VARIANT="${installer_variant}" \
 	VERSION="${fedora_major_version}"

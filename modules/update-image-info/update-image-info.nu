@@ -4,7 +4,7 @@ def main [
     image_name: string
     base_image: string
 ] {
-    let file_path = "/usr/share/ublue-os/image-info.json"
+    let file_path = "/usr/share/bluebuild/image-info.json"
     let image_vendor = "noahdotpy"
     
     let config = try { open $file_path } | default {}
@@ -16,7 +16,8 @@ def main [
         bluebuild-base-image: $base_image
     }
 
+    mkdir -p ($file_path | path dirname)
+
     let new_config = $config | merge $new_configs
-    echo ($new_config | to json)
-    echo $new_config | to json | save -f $file_path
+    $new_config | to json | save -f $file_path
 }
