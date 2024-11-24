@@ -2,5 +2,6 @@
 type: script
 scripts:
   - common/block-hosts.sh
-  - common/link-etc-os-release.sh
   - common/initramfs.sh
+snippets:
+  - ln -s /usr/lib/os-release /etc/os-release
