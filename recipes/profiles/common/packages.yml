@@ -69,6 +69,7 @@ install:
   - vim
   - waydroid
   - wl-clipboard
+  - yaru-theme
   - ydotool
   - zoxide
   - zsh
