@@ -88,4 +88,4 @@ build-iso-ghcr image="" tag="" file_output="__prompt":
       chosen_file_output={{ file_output }}
     fi
 
-    {{ project_root }}/scripts/build-iso-ghcr.sh $chosen_image $chosen_tag $chosen_file_output
+    {{ project_root }}/just_scripts/build-iso-ghcr.sh $chosen_image $chosen_tag $chosen_file_output
