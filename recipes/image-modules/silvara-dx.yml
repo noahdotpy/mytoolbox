@@ -1,3 +1,2 @@
 modules:
   - from-file: image-modules/silvara.yml
-  - from-file: profiles/devex/init.yml

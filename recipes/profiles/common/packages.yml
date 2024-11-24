@@ -50,6 +50,3 @@ install:
   - waydroid
   - zoxide
   - zsh
-remove:
-  - distrobox
-  - toolbox
