@@ -1,9 +1,0 @@
-name: kavon
-description: A personalised image built by noahdotpy on top of images from the Universal Blue team
-alt-tags: [current, current-weekly, 41-weekly]
-
-base-image: quay.io/fedora-ostree-desktops/kinoite
-image-version: 41
-
-modules:
-  - from-file: image-modules/kavon.yml

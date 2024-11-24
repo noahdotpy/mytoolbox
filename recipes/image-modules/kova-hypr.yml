@@ -1,0 +1,4 @@
+modules:
+  - from-file: image-modules/kova.yml
+  - from-file: profiles/hypr/init.yml
+  - from-file: profiles/kova-hypr/init.yml

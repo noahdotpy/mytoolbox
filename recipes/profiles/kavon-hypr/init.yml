@@ -1,6 +1,0 @@
-modules:
-  - from-file: profiles/kavon-hypr/sddm-modules.yml
-  - type: files
-    files:
-      - source: system/kavon-hypr/
-        destination: /

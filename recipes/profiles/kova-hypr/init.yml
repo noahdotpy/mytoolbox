@@ -1,0 +1,6 @@
+modules:
+  - from-file: profiles/kova-hypr/sddm-modules.yml
+  - type: files
+    files:
+      - source: system/kova-hypr/
+        destination: /

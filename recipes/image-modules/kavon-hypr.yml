@@ -1,4 +1,0 @@
-modules:
-  - from-file: image-modules/kavon.yml
-  - from-file: profiles/hypr/init.yml
-  - from-file: profiles/kavon-hypr/init.yml

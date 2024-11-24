@@ -1,0 +1,3 @@
+modules:
+  - from-file: profiles/common/init.yml
+  - from-file: profiles/kova/init.yml

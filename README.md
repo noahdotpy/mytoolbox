@@ -23,14 +23,14 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ## Images
 
-The images this repository offers are Silvara (GNOME), Kavon (Plasma), and variants of each of these that includes Hyprland as well. There are also developer editions of each of these images (including the Hyprland variants).
+The images this repository offers are Kova (Plasma), Silvara (GNOME), and variants of each of these that includes Hyprland as well. There are also developer editions of each of these images (including the Hyprland variants).
 
 Below is a table to get the name of the image you want to use:
 
-| Edition           | Silvara    | Kavon    | Silvara (Hyprland) | Kavon (Hyprland) |
-| ----------------- | ---------- | -------- | ------------------ | ---------------- |
-| Regular           | silvara    | kavon    | silvara-hypr       | kavon-hypr       |
-| Developer edition | silvara-dx | kavon-dx | silvara-hypr-dx    | kavon-hypr-dx    |
+| Edition           | Kova    | Silvara    | Kova (Hyprland) | Silvara (Hyprland) |
+| ----------------- | ------- | ---------- | --------------- | ------------------ |
+| Regular           | kova    | silvara    | kova-hypr       | silvara-hypr       |
+| Developer edition | kova-dx | silvara-dx | kova-hypr-dx    | silvara-hypr-dx    |
 
 ### Channels
 

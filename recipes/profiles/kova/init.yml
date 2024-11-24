@@ -1,0 +1,2 @@
+modules:
+  - from-file: profiles/kova/default-flatpaks.yml

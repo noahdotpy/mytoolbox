@@ -15,21 +15,21 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-            - images/kavon-hypr/regular/current/kavon-hypr--current.yml
-            - images/kavon-hypr/regular/previous/kavon-hypr--previous.yml
+            - images/kova-hypr/regular/current/kova-hypr--current.yml
+            - images/kova-hypr/regular/previous/kova-hypr--previous.yml
   
-            - images/kavon/dx/current/kavon-dx--current.yml
-            - images/kavon/dx/previous/kavon-dx--previous.yml
-            - images/kavon/regular/current/kavon--current.yml
-            - images/kavon/regular/previous/kavon--previous.yml
+            - images/kova/current/kova--current.yml
+            - images/kova/previous/kova--previous.yml
+            - images/kova/regular/current/kova--current.yml
+            - images/kova/regular/previous/kova--previous.yml
   
-            - images/silvara-hypr/dx/current/silvara-hypr-dx--current.yml
-            - images/silvara-hypr/dx/previous/silvara-hypr-dx--previous.yml
+            - images/silvara-hypr/current/silvara-hypr--current.yml
+            - images/silvara-hypr/previous/silvara-hypr--previous.yml
             - images/silvara-hypr/regular/current/silvara-hypr--current.yml
             - images/silvara-hypr/regular/previous/silvara-hypr--previous.yml
             
-            - images/silvara/dx/current/silvara-dx--current.yml
-            - images/silvara/dx/previous/silvara-dx--previous.yml
+            - images/silvara/current/silvara--current.yml
+            - images/silvara/previous/silvara--previous.yml
             - images/silvara/regular/current/silvara--current.yml
             - images/silvara/regular/previous/silvara--previous.yml
 

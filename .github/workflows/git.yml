@@ -24,21 +24,21 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/kavon-hypr/regular/current/kavon-hypr--current-git.yml
-          - images/kavon-hypr/regular/previous/kavon-hypr--previous-git.yml
+          - images/kova-hypr/regular/current/kova-hypr--current-git.yml
+          - images/kova-hypr/regular/previous/kova-hypr--previous-git.yml
 
-          - images/kavon/dx/current/kavon-dx--current-git.yml
-          - images/kavon/dx/previous/kavon-dx--previous-git.yml
-          - images/kavon/regular/current/kavon--current-git.yml
-          - images/kavon/regular/previous/kavon--previous-git.yml
+          - images/kova/current/kova--current-git.yml
+          - images/kova/previous/kova--previous-git.yml
+          - images/kova/regular/current/kova--current-git.yml
+          - images/kova/regular/previous/kova--previous-git.yml
 
-          - images/silvara-hypr/dx/current/silvara-hypr-dx--current-git.yml
-          - images/silvara-hypr/dx/previous/silvara-hypr-dx--previous-git.yml
+          - images/silvara-hypr/current/silvara-hypr--current-git.yml
+          - images/silvara-hypr/previous/silvara-hypr--previous-git.yml
           - images/silvara-hypr/regular/current/silvara-hypr--current-git.yml
           - images/silvara-hypr/regular/previous/silvara-hypr--previous-git.yml
           
-          - images/silvara/dx/current/silvara-dx--current-git.yml
-          - images/silvara/dx/previous/silvara-dx--previous-git.yml
+          - images/silvara/current/silvara--current-git.yml
+          - images/silvara/previous/silvara--previous-git.yml
           - images/silvara/regular/current/silvara--current-git.yml
           - images/silvara/regular/previous/silvara--previous-git.yml
 
