@@ -1,4 +1,5 @@
 name: Build `nightly` frequency
+
 on:
   schedule:
     - cron: "00 06 * * *" # 06:00 UTC daily
@@ -9,11 +10,12 @@ on:
     branches-ignore:
       - 'dependabot**'
       - 'compiler'
+      - 'release-please**'
     tags:
       - "v*"
-
   pull_request:
   workflow_dispatch:
+
 jobs:
   bluebuild:
     name: Build Custom Image
