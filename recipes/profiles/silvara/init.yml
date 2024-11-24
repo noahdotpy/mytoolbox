@@ -3,8 +3,8 @@ modules:
   # - type: script
   #   scripts: [silvara/remove-gnome-classic.sh]
 
-  - from-file: modules/silvara/packages.yml
-  - from-file: modules/silvara/default-flatpaks.yml
-  - from-file: modules/silvara/files.yml
-  - from-file: modules/silvara/gnome-extensions.yml
-  - from-file: modules/silvara/wallpapers.yml
+  - from-file: profiles/silvara/packages.yml
+  - from-file: profiles/silvara/default-flatpaks.yml
+  - from-file: profiles/silvara/files.yml
+  - from-file: profiles/silvara/gnome-extensions.yml
+  - from-file: profiles/silvara/wallpapers.yml

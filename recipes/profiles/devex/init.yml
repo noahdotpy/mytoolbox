@@ -1,3 +1,3 @@
 modules:
-  - from-file: modules/devex/default-flatpaks.yml
-  - from-file: modules/devex/packages.yml
+  - from-file: profiles/devex/default-flatpaks.yml
+  - from-file: profiles/devex/packages.yml
