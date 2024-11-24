@@ -4,4 +4,4 @@ scripts:
   - common/block-hosts.sh
   - common/initramfs.sh
 snippets:
-  - ln -s /usr/lib/os-release /etc/os-release
+  - rm /etc/os-release; ln -s /usr/lib/os-release /etc/os-release
