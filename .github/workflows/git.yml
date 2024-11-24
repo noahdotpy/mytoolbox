@@ -1,4 +1,4 @@
-name: Build `git` frequency
+name: 'Build frequency: git'
 
 on:
   schedule:

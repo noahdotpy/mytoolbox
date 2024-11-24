@@ -1,4 +1,4 @@
-name: Build `weekly` frequency
+name: 'Build frequency: weekly'
 
 on:
   schedule:
