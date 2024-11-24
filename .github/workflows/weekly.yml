@@ -15,23 +15,17 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-            - images/kova-hypr/regular/current/kova-hypr--current.yml
-            - images/kova-hypr/regular/previous/kova-hypr--previous.yml
-  
-            - images/kova/current/kova--current.yml
-            - images/kova/previous/kova--previous.yml
-            - images/kova/regular/current/kova--current.yml
-            - images/kova/regular/previous/kova--previous.yml
-  
-            - images/silvara-hypr/current/silvara-hypr--current.yml
-            - images/silvara-hypr/previous/silvara-hypr--previous.yml
-            - images/silvara-hypr/regular/current/silvara-hypr--current.yml
-            - images/silvara-hypr/regular/previous/silvara-hypr--previous.yml
-            
-            - images/silvara/current/silvara--current.yml
-            - images/silvara/previous/silvara--previous.yml
-            - images/silvara/regular/current/silvara--current.yml
-            - images/silvara/regular/previous/silvara--previous.yml
+          - images/kova-hypr/current/kova-hypr--current.yml
+          - images/kova-hypr/previous/kova-hypr--previous.yml
+
+          - images/kova/current/kova--current.yml
+          - images/kova/previous/kova--previous.yml
+
+          - images/silvara-hypr/current/silvara-hypr--current.yml
+          - images/silvara-hypr/previous/silvara-hypr--previous.yml
+          
+          - images/silvara/current/silvara--current.yml
+          - images/silvara/previous/silvara--previous.yml
 
     steps:
       - name: Build Custom Image

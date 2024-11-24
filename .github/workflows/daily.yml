@@ -26,23 +26,15 @@ jobs:
         recipe:
           - images/kova-hypr/current/kova-hypr--current-daily.yml
           - images/kova-hypr/previous/kova-hypr--previous-daily.yml
-          - images/kova-hypr/regular/current/kova-hypr--current-daily.yml
-          - images/kova-hypr/regular/previous/kova-hypr--previous-daily.yml
 
           - images/kova/current/kova--current-daily.yml
           - images/kova/previous/kova--previous-daily.yml
-          - images/kova/regular/current/kova--current-daily.yml
-          - images/kova/regular/previous/kova--previous-daily.yml
 
           - images/silvara-hypr/current/silvara-hypr--current-daily.yml
           - images/silvara-hypr/previous/silvara-hypr--previous-daily.yml
-          - images/silvara-hypr/regular/current/silvara-hypr--current-daily.yml
-          - images/silvara-hypr/regular/previous/silvara-hypr--previous-daily.yml
           
           - images/silvara/current/silvara--current-daily.yml
           - images/silvara/previous/silvara--previous-daily.yml
-          - images/silvara/regular/current/silvara--current-daily.yml
-          - images/silvara/regular/previous/silvara--previous-daily.yml
 
     steps:
       - name: Build Custom Image
