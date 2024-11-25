@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.2.0](https://github.com/noahdotpy/myfedora/compare/v2.1.0...v2.2.0) (2024-11-25)
+
+
+### Features
+
+* add lynx and patch ([8dc3007](https://github.com/noahdotpy/myfedora/commit/8dc3007221c29c11dd5a24dd233e8bf4832df47a))
+
+
+### Bug Fixes
+
+* don't install vscodium copr repo ([634e56e](https://github.com/noahdotpy/myfedora/commit/634e56ede8f7da62fc4e9cab5f09563147f266d2))
+* have better fastfetch images ([fba0e83](https://github.com/noahdotpy/myfedora/commit/fba0e83170c5495e489268b8157a469d62a270c4))
+* rename bigfetch -&gt; largefetch ([a2572ed](https://github.com/noahdotpy/myfedora/commit/a2572edb4ab1e254f06eb3fc5a651e82b7fa0693))
+
 ## [2.1.0](https://github.com/noahdotpy/myfedora/compare/v2.0.0...v2.1.0) (2024-11-25)
 
 
