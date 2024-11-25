@@ -3,7 +3,7 @@ export project_root := `git rev-parse --show-toplevel`
 _default:
     @just --list --list-heading $'Available commands:\n' --list-prefix $' - '
 
-# Check Just Syntax
+# Check just Syntax
 just-check:
     #!/usr/bin/bash
     find "${project_root}" -type f -name "*.just" | while read -r file; do
@@ -13,7 +13,7 @@ just-check:
     echo "Checking syntax: ${project_root}/justfile"
     just --unstable --fmt --check -f ${project_root}/justfile
 
-# Fix Just Syntax
+# Fix just Syntax
 just-fix:
     #!/usr/bin/bash
     find "${project_root}" -type f -name "*.just" | while read -r file; do
@@ -23,66 +23,32 @@ just-fix:
     echo "Checking syntax: ${project_root}/justfile"
     just --unstable --fmt -f ${project_root}/justfile || { exit 1; }
 
-get-recipe image tag:
+get-recipe ref:
     #!/usr/bin/env nu
-    let image = '{{ image }}'
-    let tag = '{{ tag }}'
+    # ref = image:tag
+    
+    let ref = '{{ ref }}'
+    let image = $ref | split row ':' | get 0
+    let tag = $ref | split row ':' | get 1
+    let channel = $tag | split row '-' | get 0
 
-    let image_brand = $image | split row '-dx' | get 0
-    let variant = if ($image =~ "-dx") { "dx" } else { "regular" }
-    let stream = $tag | split row '-' | get 0
-
-    let recipe = $"{{ project_root }}/recipes/images/($image_brand)/($variant)/($stream)/($image)--($tag).yml"
+    let recipe = $"{{ project_root }}/recipes/images/($image)/($channel)/($image)--($tag).yml"
 
     print $recipe
 
 # Build local image from recipe
-build image tag:
+build ref:
     #!/usr/bin/env nu
-    let image = '{{ image }}'
-    let tag = '{{ tag }}'
-
-    let image_brand = $image | split row '-dx' | get 0
-    let variant = if ($image =~ "-dx") { "dx" } else { "regular" }
-    let stream = $tag | split row '-' | get 0
-
-    let recipe = $"{{ project_root }}/recipes/images/($image_brand)/($variant)/($stream)/($image)--($tag).yml"
-
-    bluebuild build $recipe
+    
+    bluebuild build (just get-recipe {{ ref }})
 
 # Create ISO from ghcr image
-build-iso-ghcr image="" tag="" file_output="__prompt":
-    #!/usr/bin/bash
-    if [ "{{ image }}" = "" ]; then
-      images=$(fd --base-directory ${project_root}/recipes/images/ -d 2 | grep .yml | sed 's/\.yml$//' | awk -F '/' '{print $2}' | awk -F '--' '{print $1}' | uniq | xargs)
-      chosen_image=$(ugum choose $(echo $images) --header "Choose image name")
-    else
-      chosen_image={{ image }}
-    fi
+build-iso-ghcr ref output="__auto":
+    #!/usr/bin/env nu
 
-    if [[ "{{ tag }}" = "" ]]; then
+    let name = '{{ ref }}' | split row ':' | get 0
+    let tag = '{{ ref }}' | split row ':' | get 1
 
-      want_to_custom_tag=$(ugum choose "previous" "previous-weekly-git" "daily-git" "current" "current-weekly-git" "current-daily-git" "other" --header "Choose image tag:")
+    let output = '{{ output }}'
 
-      if [[ "$want_to_custom_tag" = "other" ]] || [[ "$want_to_custom_tag" = "" ]]; then
-        chosen_tag=$(ugum input)
-      else
-        chosen_tag=$want_to_custom_tag
-      fi
-    else
-      chosen_tag={{ tag }}
-    fi
-
-    if [ "{{ file_output }}" = "__prompt" ]; then
-      want_to_custom_file_output=$(ugum choose "auto-generated" "custom" --header "Choose file output:")
-      if [ "$want_to_custom_file_output" = "custom" ]; then
-        echo " ## WARNING: custom file outputs are untested and may not work correctly ## "
-        chosen_file_output=$(ugum input)
-      else
-        chosen_file_output="__auto"
-      fi
-    else
-      chosen_file_output={{ file_output }}
-    fi
-
-    {{ project_root }}/just_scripts/build-iso-ghcr.sh $chosen_image $chosen_tag $chosen_file_output
+    {{ project_root }}/just_scripts/build-iso-ghcr.sh $name $tag $output
