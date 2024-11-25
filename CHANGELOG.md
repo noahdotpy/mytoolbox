@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/noahdotpy/myfedora/compare/v1.0.0...v1.1.0) (2024-11-24)
+
+
+### Features
+
+* **idwt:** block proxyium ([#87](https://github.com/noahdotpy/myfedora/issues/87)) ([87f88bb](https://github.com/noahdotpy/myfedora/commit/87f88bb42307dbefc27dbb4bfa1aa340d52a279a))
+
 ## 1.0.0 (2024-11-24)
 
 
