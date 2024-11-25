@@ -1,0 +1,11 @@
+[Unit]
+Description=Workaround espanso not having the correct caps
+ConditionFileIsExecutable=/usr/bin/espanso-wayland
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/setcap "cap_dac_override+p" /usr/bin/espanso-wayland
+
+[Install]
+WantedBy=multi-user.target
