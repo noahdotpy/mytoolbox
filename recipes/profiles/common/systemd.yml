@@ -2,6 +2,7 @@
 type: systemd
 system:
   enabled:
+    - espanso-workaround.service
     - hosts.d.path
     - hosts.d.service
     - idwt-system.path
