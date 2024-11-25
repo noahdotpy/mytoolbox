@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/noahdotpy/myfedora/compare/v2.0.0...v2.1.0) (2024-11-25)
+
+
+### Features
+
+* enable espanso-wayland ([98e1c62](https://github.com/noahdotpy/myfedora/commit/98e1c626c6cc23eed6765532d00e189a6c4e20bb))
+
 ## [2.0.0](https://github.com/noahdotpy/myfedora/compare/v1.1.0...v2.0.0) (2024-11-25)
 
 
