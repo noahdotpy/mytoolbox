@@ -1,4 +1,4 @@
-name: Move Major Release Tag
+name: Update Major Release Tag
 
 on:
   release:
