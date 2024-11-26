@@ -2,7 +2,7 @@
 
 > **Warning** This repository is solely intended for only my purpose and may bring breaking changes without warning.
 
-This is a constantly updating repository which hosts my personalised Fedora Atomic images [built with container technology](https://containers.github.io/bootable/).
+This is a constantly updating repository which hosts my personalised Fedora Atomic images - [built with container technology](https://containers.github.io/bootable/).
 GitHub will build this image, and then host it on [ghcr.io](https://github.com/features/packages).
 The users can then tell the computer to boot off of that image.
 GitHub keeps 90 days worth of image backups for us, thanks Microsoft!
