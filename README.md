@@ -35,7 +35,7 @@ Below is a table to get the name of the image you want to use:
 
 Channels determine the fedora version you want to use. Channels will be used in your tag.
 
-Use `current` for the current Fedora version, or use `previous` for the previous Fedora version. Note that these channels could lag behind the actual latest Fedora release.
+Use `current` for the current Fedora version, or use `previous` for the previous Fedora version. Note that these channels could lag behind the actual latest Fedora release, because the Fedora versions used for `current` and `previous` are manually set.
 
 > **WARNING** `previous` is considered untested and may be unstable due to changes that are meant for `current` being invalid to use on `previous`'s Fedora version.
 
