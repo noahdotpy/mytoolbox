@@ -48,7 +48,7 @@ Frequency determine the frequency of builds you will get throughout the week.
 
 The three frequencies are `weekly`, `weekly-git`, and `daily-git`. If you don't add a frequency in your tag it will default to `weekly`. This means that if your tag is only `previous` or `current` or a fedora version, then you will be using the `weekly` frequency.
 
-To use different build frequencies just add it to your tag. An example of this is using the `daily-git` build frequency on Silvara previous to get `silvara:previous-daily-git`.
+To use different build frequencies just add it to your tag. An example of this is using the `daily-git` build frequency on Silvara current to get `silvara:current-daily-git`.
 
 Below is a table to explain the differences between the frequencies:
 
@@ -61,7 +61,7 @@ Below is a table to explain the differences between the frequencies:
 
 The URL format for any image is `ghcr.io/noahdotpy/{image}:{tag}`.
 
-For example, if you want silvara on the `previous` channel and the `git` frequency then you would want the following: `ghcr.io/noahdotpy/silvara:previous-git`
+For example, if you want silvara on the `current` channel and the `git` frequency then you would want the following: `ghcr.io/noahdotpy/silvara:current-git`
 
 ### ISO (recommended)
 
@@ -70,16 +70,16 @@ This repository includes a justfile recipe to build ISOs locally from the GHCR r
 - The first argument is the image name
 - The second argument is the tag (channel + stream)
 
-Below is an example of building an ISO for silvara:previous-git
+Below is an example of building an ISO for silvara:current-git
 
 ```bash
-just build-iso-ghcr silvara previous-git
+just build-iso-ghcr silvara current-git
 ```
 
 ### Switching from a Fedora Atomic image
 
-Below is an example of switching to silvara:previous-git
+Below is an example of switching to silvara:current-git
 
-1. `bootc switch ghcr.io/noahdotpy/silvara:previous-git`
+1. `bootc switch ghcr.io/noahdotpy/silvara:current-git`
 
 2. Reboot computer
