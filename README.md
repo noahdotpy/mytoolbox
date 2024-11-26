@@ -61,7 +61,7 @@ Below is a table to explain the differences between the frequencies:
 
 The URL format for any image is `ghcr.io/noahdotpy/{image}:{tag}`.
 
-For example, if you want silvara on the `current` channel and the `git` frequency then you would want the following: `ghcr.io/noahdotpy/silvara:current-git`
+For example, if you want silvara on the `current` channel and the `weekly-git` frequency then you would want the following: `ghcr.io/noahdotpy/silvara:current-weekly-git`
 
 ### ISO (recommended)
 
