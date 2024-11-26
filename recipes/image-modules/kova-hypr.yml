@@ -1,8 +1,8 @@
 modules:
-  - from-file: profiles/common-pre.yml
+  - from-file: profiles/common-pre/profile.yml
 
   - from-file: image-modules/kova.yml
   - from-file: profiles/hypr/profile.yml
   - from-file: profiles/kova-hypr/profile.yml
 
-  - from-file: profiles/common-post.yml
+  - from-file: profiles/common-post/profile.yml
