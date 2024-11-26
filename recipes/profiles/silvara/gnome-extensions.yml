@@ -12,21 +12,21 @@ modules:
       - gnome-shell-extension-just-perfection
       - gnome-shell-extension-logo-menu
       - gnome-shell-extension-search-light
-  - type: gnome-extensions
-    install:
-      - "AATWS (Advanced Alt-Tab Window Switcher)"
-      - "Alphabetical App Grid"
-      - "Battery Health Charging"
-      - "Bedtime Mode"
-      - "Bluetooth Battery Meter"
-      - 779 # Clipboard Indicator
-      - 36 # Lock Keys
-      - "Notifications Alert"
-      - "OSD Volume Number"
-      - "Quick Close in Overview"
-      - "Removable Drive Menu"
-      # FIXME: The below extension is not up-to-date with GNOME 47
-      # - "Sleep Through Notifications"
-      - "Tiling Assistant"
-      - "User Themes"
-      - "Workspaces indicator by open apps"
+  # - type: gnome-extensions
+  #   install:
+  #     - "AATWS (Advanced Alt-Tab Window Switcher)"
+  #     - "Alphabetical App Grid"
+  #     - "Battery Health Charging"
+  #     - "Bedtime Mode"
+  #     - "Bluetooth Battery Meter"
+  #     - 779 # Clipboard Indicator
+  #     - 36 # Lock Keys
+  #     - "Notifications Alert"
+  #     - "OSD Volume Number"
+  #     - "Quick Close in Overview"
+  #     - "Removable Drive Menu"
+  #     # FIXME: The below extension is not up-to-date with GNOME 47
+  #     # - "Sleep Through Notifications"
+  #     - "Tiling Assistant"
+  #     - "User Themes"
+  #     - "Workspaces indicator by open apps"
