@@ -70,10 +70,10 @@ This repository includes a justfile recipe to build ISOs locally from the GHCR r
 - The first argument is the image name
 - The second argument is the tag (channel + stream)
 
-Below is an example of building an ISO for silvara:current-git
+Below is an example of building an ISO for silvara:current-weekly-git
 
 ```bash
-just build-iso-ghcr silvara current-git
+just build-iso-ghcr silvara current-weekly-git
 ```
 
 ### Switching from a Fedora Atomic image
