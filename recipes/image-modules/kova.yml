@@ -1,3 +1,7 @@
 modules:
-  - from-file: profiles/common/init.yml
-  - from-file: profiles/kova/init.yml
+  - from-file: profiles/common-pre.yml
+
+  - from-file: profiles/common/profile.yml
+  - from-file: profiles/kova/profile.yml
+
+  - from-file: profiles/common-post.yml

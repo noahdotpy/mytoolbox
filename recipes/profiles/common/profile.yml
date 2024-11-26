@@ -1,7 +1,4 @@
 modules:
-  - type: rpm-ostree
-    install: [nu]
-
   - type: bling
     install: [dconf-update-service]
 
@@ -13,7 +10,7 @@ modules:
   - from-file: profiles/common/systemd.yml
   - from-file: profiles/common/chezfiles.yml
 
-  - from-file: profiles/common/scripts.yml
+  - from-file: profiles/common/block-hosts.yml
 
   - type: containerfile
     snippets:
@@ -24,6 +21,3 @@ modules:
   #   from: ghcr.io/noahdotpy/idwt:main
   #   src: /
   #   dest: /
-
-  - type: update-image-info
-  - type: signing

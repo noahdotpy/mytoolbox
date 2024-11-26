@@ -1,7 +1,0 @@
-# https://blue-build.org/reference/modules/script/
-type: script
-scripts:
-  - common/block-hosts.sh
-  - common/initramfs.sh
-snippets:
-  - rm /etc/os-release; ln -s /usr/lib/os-release /etc/os-release
