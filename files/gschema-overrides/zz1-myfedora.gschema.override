@@ -12,7 +12,7 @@ show-hidden=true
 show-battery-percentage=true
 clock-show-weekday=true
 gtk-theme='adw-gtk3'
-icon-theme='MoreWaita'
+icon-theme='Papirus'
 gtk-enable-primary-paste=false
 
 [org.gnome.desktop.peripherals.keyboard]
@@ -59,12 +59,6 @@ spacing-app-left=2
 spacing-app-right=2
 spacing-label-left=2
 
-[org.gnome.shell.extensions.user-theme]
-name='Custom-Accent-Colors'
-
-[org.gnome.shell.extensions.show-desktop-button]
-panel-position='RIGHT_END'
-
 [org.gnome.shell.extensions.tiling-assistant]
 center-window=['<Control><Super>s']
 default-move-mode=0
@@ -108,10 +102,6 @@ show-link-emblem=true
 show-trash=false
 show-volumes=false
 
-
-
-
-
 [org.gnome.Ptyxis]
 audible-bell=false
 default-profile-uuid='2871e8027773ae74d6c87a5f659bbc74'
@@ -124,18 +114,15 @@ use-system-font=false
 
 [org.gnome.Ptyxis.Profiles.2871e8027773ae74d6c87a5f659bbc74]
 label='Default'
-palette='catppuccin-dynamic'
+palette='gnome'
 custom-command='/usr/bin/nu'
 use-custom-command=true
 
 [org.gnome.desktop.a11y.magnifier]
-mag-factor=4.0
+mag-factor=3.0
 
 [org.gnome.desktop.calendar]
 show-weekdate=true
-
-[org.gnome.desktop.input-sources]
-xkb-options=['caps:none', 'shift:both_capslock']
 
 [org.gnome.desktop.interface]
 clock-format='24h'
@@ -146,18 +133,14 @@ cursor-size=24
 cursor-theme='Yaru'
 document-font-name='Ubuntu 12'
 enable-animations=true
-enable-hot-corners=false
+enable-hot-corners=true
 font-antialiasing='rgba'
 font-name='Ubuntu 12'
 gtk-theme='adw-gtk3-dark'
 icon-theme='Papirus'
 monospace-font-name='Ubuntu Mono 18'
 show-battery-percentage=true
-text-scaling-factor=0.90000000000000013
-toolkit-accessibility=false
-
-[org.gnome.desktop.session]
-idle-delay=uint32 300
+toolkit-accessibility=true
 
 [org.gnome.desktop.sound]
 allow-volume-above-100-percent=true
@@ -174,13 +157,11 @@ move-to-workspace-6=['<Shift><Super>6']
 move-to-workspace-7=['<Shift><Super>7']
 move-to-workspace-8=['<Shift><Super>8']
 move-to-workspace-9=['<Shift><Super>9']
-move-to-workspace-left=['<Shift><Super>a', '<Shift><Super>Left']
-move-to-workspace-right=['<Shift><Super>d', '<Shift><Super>Right']
+move-to-workspace-left=['<Shift><Super>q', '<Shift><Super>Left']
+move-to-workspace-right=['<Shift><Super>e', '<Shift><Super>Right']
 show-desktop=@as []
 switch-applications=['<Super>Tab']
 switch-applications-backward=['<Shift><Super>Tab']
-switch-input-source=['<Shift><Super>space']
-switch-input-source-backward=['']
 switch-to-workspace-1=['<Super>1']
 switch-to-workspace-2=['<Super>2']
 switch-to-workspace-3=['<Super>3']
@@ -190,8 +171,8 @@ switch-to-workspace-6=['<Super>6']
 switch-to-workspace-7=['<Super>7']
 switch-to-workspace-8=['<Super>8']
 switch-to-workspace-9=['<Super>9']
-switch-to-workspace-left=['<Super>a']
-switch-to-workspace-right=['<Super>d']
+switch-to-workspace-left=['<Super>q']
+switch-to-workspace-right=['<Super>e']
 switch-windows=['<Alt>Tab']
 switch-windows-backward=['<Shift><Alt>Tab']
 toggle-fullscreen=['<Shift><Super>f']
@@ -199,7 +180,7 @@ toggle-maximized=['<Shift><Super>m']
 
 [org.gnome.desktop.wm.preferences]
 action-middle-click-titlebar='toggle-maximize'
-button-layout=':minimize,maximize,close'
+button-layout=':close'
 resize-with-right-button=true
 titlebar-font='Ubuntu Bold 12'
 
@@ -297,8 +278,8 @@ toggle-state=false
 [org.gnome.shell.extensions.clipboard-indicator]
 display-mode=0
 history-size=50
-notify-on-copy=true
-toggle-menu=['<Super>v']
+notify-on-copy=false
+toggle-menu=['<Super>c']
 topbar-preview-size=10
 
 [org.gnome.shell.extensions.com.github.hermes83.compiz-windows-effect]
@@ -310,36 +291,3 @@ accent-color='purple'
 theme-flatpak=true
 theme-gtk3=true
 theme-shell=true
-
-[org.gnome.shell.extensions.dash-to-dock]
-animation-time=0.14999999999999999
-apply-custom-theme=false
-autohide=false
-background-color='rgb(40,40,40)'
-background-opacity=0.80000000000000004
-custom-background-color=true
-custom-theme-shrink=true
-customize-alphas=true
-dash-max-icon-size=48
-disable-overview-on-startup=true
-dock-fixed=false
-dock-position='BOTTOM'
-force-straight-corner=false
-height-fraction=0.90000000000000002
-hot-keys=false
-intellihide=true
-intellihide-mode='ALL_WINDOWS'
-max-alpha=0.80000000000000004
-min-alpha=0.5
-preferred-monitor=-2
-preferred-monitor-by-connector='eDP-1'
-require-pressure-to-show=false
-running-indicator-style='DOTS'
-show-mounts=false
-show-trash=false
-transparency-mode='DYNAMIC'
-
-#-------------- RELOCATABLE SCHEMAS IN THIS SECTION ARE LOCATED IN DCONF --------------#
-
-[org.gnome.desktop.app-folders]
-folder-children=['Utilities', 'YaST', 'Pardus']
