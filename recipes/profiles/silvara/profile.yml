@@ -4,6 +4,5 @@ modules:
   #   scripts: [silvara/remove-gnome-classic.sh]
 
   - from-file: profiles/silvara/packages.yml
-  - from-file: profiles/silvara/default-flatpaks.yml
   - from-file: profiles/silvara/files.yml
   - from-file: profiles/silvara/gnome-extensions.yml
