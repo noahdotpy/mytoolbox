@@ -18,7 +18,6 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
     - [Frequencies](#frequencies)
   - [Installation](#installation)
     - [ISO (recommended)](#iso-recommended)
-      - [Secure boot](#secure-boot)
     - [Switching from a Fedora Atomic image](#switching-from-a-fedora-atomic-image)
 
 ## Images
@@ -36,7 +35,7 @@ Below is a table to get the name of the image you want to use:
 
 Channels determine the fedora version you want to use. Channels will be used in your tag.
 
-Use `current` for the current Fedora version, or use `previous` for the previous Fedora version.
+Use `current` for the current Fedora version, or use `previous` for the previous Fedora version. Note that these channels could lag behind the actual latest Fedora release.
 
 > **WARNING** `previous` is considered untested and may be unstable due to changes that are meant for `current` being invalid to use on `previous`'s Fedora version.
 
