@@ -7,10 +7,10 @@ permissions:
   contents: write
   pull-requests: write
 
-name: release-please
+name: release
 
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
@@ -22,3 +22,4 @@ jobs:
           # this is a built-in strategy in release-please, see "Action Inputs"
           # for more options
           release-type: simple
+
