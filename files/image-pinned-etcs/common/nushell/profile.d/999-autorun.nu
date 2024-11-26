@@ -4,7 +4,6 @@ $env.config = {
 
 smallfetch --logo none
 
-alias l = ls -l
-alias ll = ls -al
+alias l = ls -al
 
 use ~/.cache/starship/init.nu
