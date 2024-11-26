@@ -1,5 +1,11 @@
 # `homefiles`
 
+## THIS IS DEPRECATED FUNCTIONALITY
+
+This module will be removed in a future major release in favour of 
+
+## Introduction
+
 This module, instead of using external repositories, uses something like `config/homefiles/common` in your bluebuild repo.
 
 `config/homefiles/common` would be a chezmoi source (initialised by `chezmoi init`, for example).
