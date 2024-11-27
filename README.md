@@ -47,13 +47,10 @@ pushes then you would want the following tag:
 
 This repository includes a justfile recipe to build ISOs locally from the GHCR registry.
 
-- The first argument is the image name
-- The second argument is the tag
-
 Below is an example of building an ISO for silvara:41-git
 
 ```bash
-just build-iso-ghcr silvara 41-git
+just build-iso-ghcr silvara:41-git
 ```
 
 ### Switching from a Fedora Atomic image
