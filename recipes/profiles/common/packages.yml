@@ -71,7 +71,11 @@ install:
   - vim
   - waydroid
   - wl-clipboard
-  - yaru-theme
+  - yaru-icon-theme
+  - yaru-sound-theme
+  - yaru-gtk2-theme
+  - yaru-gtk3-theme
+  - yaru-gtk4-theme
   - ydotool
   - zoxide
   - zsh
