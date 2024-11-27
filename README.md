@@ -39,7 +39,7 @@ of this repo. An example tag is `41-git`, which is based on Fedora 41.
 
 The image reference format for any image in this repo is `ghcr.io/noahdotpy/{image}:{tag}`.
 
-For example, if you want silvara on Fedora 41 and image builds weekly and on git
+For example, if you want Silvara on Fedora 41 and image builds weekly and on git
 pushes then you would want the following tag:
 `ghcr.io/noahdotpy/silvara:41-git`.
 
