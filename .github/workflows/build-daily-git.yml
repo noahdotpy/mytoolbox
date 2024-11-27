@@ -2,7 +2,7 @@ name: 'Build frequency: daily-git'
 
 on:
   schedule:
-    - cron: "00 06 * * *" # 06:00 UTC daily
+    - cron: "00 05 * * *" # 05:00 UTC daily
   push:
     paths-ignore:
       - '/toolboxes/**'
@@ -10,8 +10,6 @@ on:
     branches-ignore:
       - 'dependabot**'
       - 'compiler'
-    tags:
-      - "v*"
   pull_request:
   workflow_dispatch:
 
