@@ -4,4 +4,6 @@ install:
 - gnome-tweaks
 - nautilus-gsconnect
 - nautilus-open-any-terminal
+- openssh-askpass
 - papirus-icon-theme
+- yaru-theme
