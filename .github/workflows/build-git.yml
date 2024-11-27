@@ -1,8 +1,8 @@
-name: 'Build frequency: weekly-git'
+name: 'Build (git)'
 
 on:
   schedule:
-    - cron: "15 04 * * 0" # 04:15 UTC every Sunday
+    - cron: "30 04 * * 0" # 04:30 UTC every Sunday
   push:
     paths-ignore:
       - '/toolboxes/**'
@@ -25,17 +25,10 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/kova-hypr/current/kova-hypr--current-weekly-git.yml
-          - images/kova-hypr/previous/kova-hypr--previous-weekly-git.yml
-
-          - images/kova/current/kova--current-weekly-git.yml
-          - images/kova/previous/kova--previous-weekly-git.yml
-
-          - images/silvara-hypr/current/silvara-hypr--current-weekly-git.yml
-          - images/silvara-hypr/previous/silvara-hypr--previous-weekly-git.yml
-          
-          - images/silvara/current/silvara--current-weekly-git.yml
-          - images/silvara/previous/silvara--previous-weekly-git.yml
+          - images/kova-hypr/41/kova-hypr--41-git.yml
+          - images/kova/41/kova--41-git.yml
+          - images/silvara-hypr/41/silvara-hypr--41-git.yml
+          - images/silvara/41/silvara--41-git.yml
 
     steps:
       - name: Build Custom Image

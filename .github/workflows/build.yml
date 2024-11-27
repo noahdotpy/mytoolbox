@@ -1,4 +1,4 @@
-name: 'Build frequency: weekly'
+name: 'Build'
 
 on:
   schedule:
@@ -17,17 +17,10 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/kova-hypr/current/kova-hypr--current-weekly.yml
-          - images/kova-hypr/previous/kova-hypr--previous-weekly.yml
-
-          - images/kova/current/kova--current-weekly.yml
-          - images/kova/previous/kova--previous-weekly.yml
-
-          - images/silvara-hypr/current/silvara-hypr--current-weekly.yml
-          - images/silvara-hypr/previous/silvara-hypr--previous-weekly.yml
-          
-          - images/silvara/current/silvara--current-weekly.yml
-          - images/silvara/previous/silvara--previous-weekly.yml
+          - images/kova-hypr/41/kova-hypr--41.yml
+          - images/kova/41/kova--41.yml
+          - images/silvara-hypr/41/silvara-hypr--41.yml
+          - images/silvara/41/silvara--41.yml
 
     steps:
       - name: Build Custom Image
