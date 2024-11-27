@@ -2,7 +2,7 @@ name: 'Build frequency: weekly'
 
 on:
   schedule:
-    - cron: "30 05 * * 0" # 05:30 UTC every Sunday
+    - cron: "30 04 * * 0" # 04:30 UTC every Sunday
   workflow_dispatch:
 
 jobs:

@@ -2,7 +2,7 @@ name: 'Build frequency: weekly-git'
 
 on:
   schedule:
-    - cron: "15 05 * * 0" # 05:15 UTC every Sunday
+    - cron: "15 04 * * 0" # 04:15 UTC every Sunday
   push:
     paths-ignore:
       - '/toolboxes/**'
