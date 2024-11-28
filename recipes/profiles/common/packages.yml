@@ -38,6 +38,7 @@ install:
   - fzf
   - gh
   - git-delta
+  - gnome-disk-utility
   - google-droid-sans-mono-fonts
   - htop
   - jc
