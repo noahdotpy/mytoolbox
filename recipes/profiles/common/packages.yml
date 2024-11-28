@@ -74,3 +74,5 @@ install:
   - ydotool
   - zoxide
   - zsh
+remove:
+  - firefox
