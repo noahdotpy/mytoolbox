@@ -8,6 +8,7 @@ modules:
   - from-file: profiles/common/image-pinned-etcs.yml
   - from-file: profiles/common/systemd.yml
   - from-file: profiles/common/chezfiles.yml
+  - from-file: profiles/common/enable-flathub.yml
 
   - from-file: profiles/common/block-hosts.yml
 
