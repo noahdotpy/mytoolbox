@@ -1,3 +1,0 @@
-# https://blue-build.org/reference/modules/gschema-overrides/
-type: gschema-overrides
-include: [zz1-myfedora.gschema.override]

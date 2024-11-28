@@ -6,7 +6,6 @@ modules:
 
   - from-file: profiles/common/files.yml
   - from-file: profiles/common/image-pinned-etcs.yml
-  - from-file: profiles/common/gschema-overrides.yml
   - from-file: profiles/common/systemd.yml
   - from-file: profiles/common/chezfiles.yml
 
