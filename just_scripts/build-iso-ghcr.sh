@@ -38,7 +38,7 @@ echo "fedora_major_version: $fedora_major_version"
 echo "date: $date"
 echo "file_output: $file_output"
 
-pkexec podman run --rm --privileged --volume $dirnames:/build-container-installer/build --security-opt label=disable --pull=newer \
+sudo podman run --rm --privileged --volume $dirnames:/build-container-installer/build --security-opt label=disable --pull=newer \
 	ghcr.io/jasonn3/build-container-installer:latest \
 	ARCH="x86_64" \
 	ENABLE_CACHE_DNF="false" \
