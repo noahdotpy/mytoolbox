@@ -76,3 +76,4 @@ install:
   - zsh
 remove:
   - firefox
+  - firefox-langpacks
