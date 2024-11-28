@@ -8,7 +8,7 @@ just-check:
     #!/usr/bin/bash
     find "${project_root}" -type f -name "*.just" | while read -r file; do
     	echo "Checking syntax: $file"
-    	just --unstable --fmt --check -f $file 
+    	just --unstable --fmt --check -f $file
     done
     echo "Checking syntax: ${project_root}/justfile"
     just --unstable --fmt --check -f ${project_root}/justfile
@@ -26,7 +26,7 @@ just-fix:
 get-recipe ref:
     #!/usr/bin/env nu
     # ref = image:tag
-    
+
     let ref = '{{ ref }}'
     let image = $ref | split row ':' | get 0
     let tag = $ref | split row ':' | get 1
@@ -39,16 +39,11 @@ get-recipe ref:
 # Build local image from recipe
 build ref:
     #!/usr/bin/env nu
-    
+
     bluebuild build (just get-recipe {{ ref }})
 
-# Create ISO from ghcr image
-build-iso-ghcr ref output="__auto":
+# Create ISO from ghcr image (outputs to ./build/)
+build-iso-ghcr ref:
     #!/usr/bin/env nu
 
-    let name = '{{ ref }}' | split row ':' | get 0
-    let tag = '{{ ref }}' | split row ':' | get 1
-
-    let output = '{{ output }}'
-
-    {{ project_root }}/just_scripts/build-iso-ghcr.sh $name $tag $output
+    {{ project_root }}/just_scripts/build-iso-ghcr.nu {{ ref }}
