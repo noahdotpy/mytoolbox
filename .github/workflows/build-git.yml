@@ -9,6 +9,7 @@ on:
       - 'modules/**'
       - 'recipes/**'
       - 'cosign.pub'
+      - '.github/workflows/build-git.yml'
     branches-ignore:
       - 'dependabot**'
       - 'compiler'
