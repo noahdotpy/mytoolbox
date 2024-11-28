@@ -5,6 +5,7 @@ def main [image_ref: string] {
 
     let image_name = $image_ref | split row ':' | get 0
     let image_tag = $image_ref | split row ':' | get 0
+    let fedora_major_version = $tag | split row '-' | get 0
 
     let installer_variant = if ($image_ref =~ "silvara") {
         "Silverblue"
@@ -12,11 +13,7 @@ def main [image_ref: string] {
         "Kinoite"
     }
 
-    let fedora_major_version = skopeo inspect $"docker://ghcr.io/noahdotpy/($image_ref)" |
-        jq -r '.Labels["org.opencontainers.image.version"]' | awk -F '.' '{print $1}'
-
     let date = ^date +%Y%m%d
-
     let file_output = $"./build/($image_name)--($image_tag).($date).iso"
 
     let dirnames = dirname $file_output
@@ -26,13 +23,10 @@ def main [image_ref: string] {
     mkdir $dirnames
 
     print $"image_ref: ($image_ref)"
-    print $"image_name: ($image_name)"
-    print $"image_tag: ($image_tag)"
     print $"installer_variant: ($installer_variant)"
-    print $"fedora_major_version: ($fedora_major_version)"
     print $"date: ($date)"
     print $"file_output: ($file_output)"
-    print $"CONFIRM THE ABOVE IS CORRECT BEFORE DOING ANYTHING"
+    print $"-- CONFIRM THE ABOVE IS CORRECT BEFORE MOVING ON --"
 
     (sudo podman run --rm --privileged --volume $"($dirnames):/build-container-installer/build" --security-opt label=disable --pull=newer
     	ghcr.io/jasonn3/build-container-installer:latest
