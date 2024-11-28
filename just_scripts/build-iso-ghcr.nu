@@ -26,7 +26,6 @@ def main [image_ref: string] {
     print $"installer_variant: ($installer_variant)"
     print $"date: ($date)"
     print $"file_output: ($file_output)"
-    print $"-- CONFIRM THE ABOVE IS CORRECT BEFORE MOVING ON --"
 
     (sudo podman run --rm --privileged --volume $"($dirnames):/build-container-installer/build" --security-opt label=disable --pull=newer
     	ghcr.io/jasonn3/build-container-installer:latest
