@@ -4,9 +4,11 @@ on:
   schedule:
     - cron: "30 04 * * 0" # 04:30 UTC every Sunday
   push:
-    paths-ignore:
-      - '/toolboxes/**'
-      - "**.md"
+    paths:
+      - 'files/**'
+      - 'modules/**'
+      - 'recipes/**'
+      - 'cosign.pub'
     branches-ignore:
       - 'dependabot**'
       - 'compiler'
