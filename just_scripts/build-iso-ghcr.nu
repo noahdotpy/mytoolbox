@@ -5,7 +5,7 @@ def main [image_ref: string] {
 
     let image_name = $image_ref | split row ':' | get 0
     let image_tag = $image_ref | split row ':' | get 0
-    let fedora_major_version = $tag | split row '-' | get 0
+    let fedora_major_version = $image_tag | split row '-' | get 0
 
     let installer_variant = if ($image_ref =~ "silvara") {
         "Silverblue"
