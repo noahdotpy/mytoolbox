@@ -12,6 +12,8 @@ modules:
 
   - from-file: profiles/common/block-hosts.yml
 
+  - from-file: profiles/common/install-idwt-rs.yml
+
   - type: containerfile
     snippets:
       - COPY --from=ghcr.io/noahdotpy/idwt:main /out /
