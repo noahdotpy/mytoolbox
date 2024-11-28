@@ -11,6 +11,7 @@ system:
     - nushell-profile.d.path
     - nushell-profile.d.service
     - rpm-ostreed-automatic.timer
+    - sshd.service
 user:
   enabled:
     - idwt-user.path
