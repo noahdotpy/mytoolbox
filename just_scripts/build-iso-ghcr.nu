@@ -4,7 +4,7 @@ def main [image_ref: string] {
     let project_root = git rev-parse --show-toplevel
 
     let image_name = $image_ref | split row ':' | get 0
-    let image_tag = $image_ref | split row ':' | get 0
+    let image_tag = $image_ref | split row ':' | get 1
     let fedora_major_version = $image_tag | split row '-' | get 0
 
     let installer_variant = if ($image_ref =~ "silvara") {
