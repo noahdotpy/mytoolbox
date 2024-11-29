@@ -1,4 +1,4 @@
-name: 'Build'
+name: "Build"
 
 on:
   schedule:
@@ -17,9 +17,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/kova-hypr/41/kova-hypr--41.yml
+          - images/horizon/41/horizon--41.yml
           - images/kova/41/kova--41.yml
-          - images/silvara-hypr/41/silvara-hypr--41.yml
           - images/silvara/41/silvara--41.yml
 
     steps:

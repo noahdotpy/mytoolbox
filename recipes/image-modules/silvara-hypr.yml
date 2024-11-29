@@ -1,7 +1,0 @@
-modules:
-  - from-file: profiles/common-pre/profile.yml
-
-  - from-file: image-modules/silvara.yml
-  - from-file: profiles/hypr/profile.yml
-
-  - from-file: profiles/common-post/profile.yml

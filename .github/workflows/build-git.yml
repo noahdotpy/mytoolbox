@@ -1,18 +1,18 @@
-name: 'Build (git)'
+name: "Build (git)"
 
 on:
   schedule:
     - cron: "30 04 * * 0" # 04:30 UTC every Sunday
   push:
     paths:
-      - 'files/**'
-      - 'modules/**'
-      - 'recipes/**'
-      - 'cosign.pub'
-      - '.github/workflows/build-git.yml'
+      - "files/**"
+      - "modules/**"
+      - "recipes/**"
+      - "cosign.pub"
+      - ".github/workflows/build-git.yml"
     branches-ignore:
-      - 'dependabot**'
-      - 'compiler'
+      - "dependabot**"
+      - "compiler"
   pull_request:
   workflow_dispatch:
 
@@ -28,9 +28,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/kova-hypr/41/kova-hypr--41-git.yml
+          - images/horizon/41/horizon--41-git.yml
           - images/kova/41/kova--41-git.yml
-          - images/silvara-hypr/41/silvara-hypr--41-git.yml
           - images/silvara/41/silvara--41-git.yml
 
     steps:
