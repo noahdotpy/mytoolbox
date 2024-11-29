@@ -22,8 +22,7 @@ For info on how to create your own, check out the [BlueBuild website](https://bl
 
 ## Images
 
-The images this repository offers are `kova` (Kinoite), `silvara` (Silverblue),
-`kova-hypr` (Kinoite + Hyprland), and `silvara-hypr` (Silverblue + Hyprland).
+The images this repository offers are `kova` (Kinoite), `silvara` (Silverblue), and `horizon` (Hyprland).
 
 ### Tags
 
@@ -33,7 +32,8 @@ which is based on Fedora 41.
 If you only use the Fedora version as your tag then you will get weekly builds
 started at 4:30AM every Sunday (UTC), but you can add `-git` to your image ref
 tag to get additional builds when a git commit is pushed to the default branch
-of this repo. An example tag is `41-git`, which is based on Fedora 41.
+of this repo. An example tag is `41-git`, which is based on Fedora 41 but gets
+additional updates on every git commit instead of only weekly.
 
 ## Installation
 
