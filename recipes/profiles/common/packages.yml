@@ -76,7 +76,7 @@ install:
   - wl-clipboard
   - ydotool
   - zoxide
-  - zen-browser-avx2
+  # - zen-browser-avx2
   - zsh
 remove:
   - firefox
