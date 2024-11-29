@@ -1,6 +1,6 @@
 # noahdotpy/myfedora
 
-> **Warning** This repository is solely intended for only my purpose and may bring breaking changes without warning.
+> **Warning**: This repository is solely intended for only my purpose and may bring breaking changes without warning.
 
 This is a constantly updating repository which hosts my personalised Fedora Atomic images - [built with container technology](https://containers.github.io/bootable/).
 GitHub will build this image, and then host it on [ghcr.io](https://github.com/features/packages).
