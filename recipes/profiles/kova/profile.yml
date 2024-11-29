@@ -1,2 +1,4 @@
 modules:
-  - from-file: profiles/kova/packages.yml
+  - type: rpm-ostree
+    install:
+      - ksshaskpass

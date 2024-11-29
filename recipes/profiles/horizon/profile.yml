@@ -1,4 +1,4 @@
 modules:
-  - from-file: profiles/hypr/packages.yml
-  - from-file: profiles/hypr/hyprland-modules.yml
-  - from-file: profiles/hypr/files.yml
+  - from-file: profiles/horizon/modules/packages.yml
+  - from-file: profiles/horizon/modules/hyprland-modules.yml
+  - from-file: profiles/horizon/modules/files.yml

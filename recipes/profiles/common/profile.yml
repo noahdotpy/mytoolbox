@@ -4,11 +4,11 @@ modules:
 
   - from-file: profiles/common/packages.yml
 
-  - from-file: profiles/common/files.yml
-  - from-file: profiles/common/image-pinned-etcs.yml
-  - from-file: profiles/common/systemd.yml
-  - from-file: profiles/common/chezfiles.yml
-  - from-file: profiles/common/enable-flathub.yml
+  - from-file: profiles/common/modules/files.yml
+  - from-file: profiles/common/modules/image-pinned-etcs.yml
+  - from-file: profiles/common/modules/systemd.yml
+  - from-file: profiles/common/modules/chezfiles.yml
+  - from-file: profiles/common/modules/enable-flathub.yml
 
   - from-file: profiles/common/block-hosts.yml
 
