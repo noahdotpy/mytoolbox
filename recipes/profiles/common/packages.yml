@@ -46,6 +46,7 @@ install:
   - jc
   - jetbrains-mono-fonts-all
   - just
+  - kitty
   - lazygit
   - lolcat
   - lsd
