@@ -2,7 +2,7 @@ modules:
   - type: bling
     install: [dconf-update-service]
 
-  - from-file: profiles/common/packages.yml
+  - from-file: profiles/common/modules/packages.yml
 
   - from-file: profiles/common/modules/files.yml
   - from-file: profiles/common/modules/image-pinned-etcs.yml
@@ -10,9 +10,9 @@ modules:
   - from-file: profiles/common/modules/chezfiles.yml
   - from-file: profiles/common/modules/enable-flathub.yml
 
-  - from-file: profiles/common/block-hosts.yml
+  - from-file: profiles/common/modules/block-hosts.yml
 
-  - from-file: profiles/common/install-idwt-rs.yml
+  - from-file: profiles/common/modules/install-idwt-rs.yml
 
   - type: containerfile
     snippets:
