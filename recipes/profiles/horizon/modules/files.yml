@@ -1,5 +1,5 @@
 modules:
-- type: files
-  files:
-    - source: system/hypr/
-      destination: /
+  - type: files
+    files:
+      - source: system/horizon/
+        destination: /

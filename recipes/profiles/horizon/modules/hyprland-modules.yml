@@ -37,4 +37,4 @@ modules:
 
   - type: script
     scripts:
-      - hypr/removeunprofessionalwallpapers.sh
+      - horizon/removeunprofessionalwallpapers.sh
