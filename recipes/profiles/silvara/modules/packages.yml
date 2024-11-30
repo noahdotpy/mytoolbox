@@ -7,5 +7,3 @@ install:
   - openssh-askpass
   - papirus-icon-theme
   - yaru-theme
-remove:
-  - gnome-extensions-app
