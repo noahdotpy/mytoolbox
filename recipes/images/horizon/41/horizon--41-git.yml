@@ -1,4 +1,4 @@
-name: horizon
+name: myfedora/horizon
 description: noahdotpy-ified image of the Hyprland image from Wayblue
 alt-tags: [41-git]
 

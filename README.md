@@ -37,11 +37,11 @@ additional updates on every git commit instead of only weekly.
 
 ## Installation
 
-The image reference format for any image in this repo is `ghcr.io/noahdotpy/{image}:{tag}`.
+The image reference format for any image in this repo is `ghcr.io/noahdotpy/myfedora/{image}:{tag}`.
 
 For example, if you want Silvara on Fedora 41 and image builds weekly and on git
 pushes then you would want the following tag:
-`ghcr.io/noahdotpy/silvara:41-git`.
+`ghcr.io/noahdotpy/myfedora/silvara:41-git`.
 
 ### ISO (recommended)
 
@@ -57,6 +57,6 @@ just build-iso-ghcr silvara:41-git
 
 Below is an example of switching to silvara:41-git
 
-1. `bootc switch ghcr.io/noahdotpy/silvara:41-git`
+1. `bootc switch ghcr.io/noahdotpy/myfedora/silvara:41-git`
 
 2. Reboot computer
