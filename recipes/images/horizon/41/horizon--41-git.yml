@@ -1,9 +1,0 @@
-name: myfedora/horizon
-description: noahdotpy-ified image of the Hyprland image from Wayblue
-alt-tags: [41-git]
-
-base-image: ghcr.io/wayblueorg/hyprland
-image-version: 41
-
-modules:
-  - from-file: image-modules/horizon.yml

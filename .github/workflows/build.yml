@@ -28,9 +28,7 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - images/horizon/41/horizon--41-git.yml
-          - images/kova/41/kova--41-git.yml
-          - images/silvara/41/silvara--41-git.yml
+          - images/fedora/41/fedora--41.yml
 
     steps:
       - name: Build Custom Image

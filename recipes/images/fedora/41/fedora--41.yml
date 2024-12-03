@@ -1,7 +1,7 @@
-name: mytoolbox/horizon
-description: noahdotpy-ified image of the Hyprland image from Wayblue
+name: mytoolbox/fedora
+description: noahdotpy-ified image of the Fedora Toolbox image
 
-base-image: ghcr.io/wayblueorg/hyprland
+base-image: registry.fedoraproject.org/fedora-toolbox
 image-version: 41
 
 modules:
