@@ -1,7 +1,0 @@
-modules:
-  - from-file: profiles/common/profile-pre.yml
-
-  - from-file: profiles/common/profile.yml
-  - from-file: profiles/kova/profile.yml
-
-  - from-file: profiles/common/profile-post.yml

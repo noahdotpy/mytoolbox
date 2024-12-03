@@ -1,4 +1,0 @@
-type: default-flatpaks
-system:
-  repo-name: flathub
-  repo-title: "Flathub"

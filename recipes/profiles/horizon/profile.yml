@@ -1,3 +1,0 @@
-modules:
-  - from-file: profiles/horizon/modules/packages.yml
-  - from-file: profiles/horizon/modules/hyprland-modules.yml

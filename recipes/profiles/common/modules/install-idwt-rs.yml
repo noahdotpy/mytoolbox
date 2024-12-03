@@ -1,7 +1,0 @@
-modules:
-  - type: rpm-ostree
-    install:
-      - jq-devel
-  - type: containerfile
-    snippets:
-      - COPY --from=ghcr.io/noahdotpy/idwt-rs:git /out/bin/idwt /usr/bin/idwt-rs

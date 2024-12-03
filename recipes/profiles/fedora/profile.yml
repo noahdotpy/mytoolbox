@@ -1,0 +1,4 @@
+modules:
+  - type: script
+    snippets:
+      - "touch /usr/share/test.txt"

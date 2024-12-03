@@ -1,9 +1,0 @@
-modules:
-- type: files
-  files:
-    - source: system/common/
-      destination: /
-- type: remove-files
-  files:
-    - /usr/share/sounds/Yaru/stereo/desktop-login.oga
-    - /usr/share/sounds/Yaru/stereo/desktop-logoff.oga

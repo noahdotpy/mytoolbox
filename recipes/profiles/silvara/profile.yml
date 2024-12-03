@@ -1,8 +1,0 @@
-modules:
-  # TODO: Remove gnome classic from silvara
-  # - type: script
-  #   scripts: [silvara/remove-gnome-classic.sh]
-
-  - from-file: profiles/silvara/modules/packages.yml
-  - from-file: profiles/silvara/modules/files.yml
-  - from-file: profiles/silvara/modules/gnome-extensions.yml

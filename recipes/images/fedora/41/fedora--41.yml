@@ -1,0 +1,8 @@
+name: mytoolbox/horizon
+description: noahdotpy-ified image of the Hyprland image from Wayblue
+
+base-image: ghcr.io/wayblueorg/hyprland
+image-version: 41
+
+modules:
+  - from-file: image-modules/fedora.yml

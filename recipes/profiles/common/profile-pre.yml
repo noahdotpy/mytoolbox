@@ -1,3 +1,0 @@
-modules:
-  - type: rpm-ostree
-    install: [nu]

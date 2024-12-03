@@ -1,0 +1,2 @@
+modules:
+  - from-file: profiles/fedora/profile.yml
